@@ -19,7 +19,7 @@ project uses [Semantic Versioning](https://semver.org/).
 - Leads: statuses, follow-up reminders, notes, timeline, quick contact actions, CSV and PDF export.
 - Failed-email flag with "Send email again", duplicate merging and rate limiting.
 - Staff access to Leads for Editors, privacy exporter and eraser, and automatic clean-up.
+- Consent record on every lead: when the customer agreed, the exact wording and the privacy policy link shown, also in the CSV and the personal data export.
 - Volume Calculator block and `[msvcalc_calculator]` shortcode, light, dark or automatic theme.
-- One branded loader everywhere: quote requests, admin saves, lead filters, CSV downloads and PDF reports run in the background, with no page reloads.
 
 [1.0.0]: https://github.com/xaviermsd/moving-storage-volume-calculator/releases/tag/v1.0.0

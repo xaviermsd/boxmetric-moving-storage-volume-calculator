@@ -378,6 +378,9 @@ $msvcalc_form = static function ( string $action ) use ( $lead_id ): void {
 						<?php if ( ! empty( $msvcalc_consent['text'] ) ) : ?>
 							<span class="msvcalc-muted msvcalc-consent-text">“<?php echo esc_html( (string) $msvcalc_consent['text'] ); ?>”</span>
 						<?php endif; ?>
+						<?php if ( ! empty( $msvcalc_consent['privacy'] ) ) : ?>
+							<span class="msvcalc-muted msvcalc-consent-text"><a href="<?php echo esc_url( (string) $msvcalc_consent['privacy'] ); ?>" target="_blank" rel="noopener"><?php esc_html_e( 'Privacy policy shown', 'moving-storage-volume-calculator' ); ?></a></span>
+						<?php endif; ?>
 					</dd></div>
 				<?php endif; ?>
 				<?php if ( '' !== $msvcalc_mail ) : ?>

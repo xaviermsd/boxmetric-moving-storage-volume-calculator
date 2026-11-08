@@ -596,6 +596,14 @@ final class MSVCalc_Admin {
 				foreach ( $tabs as $tab => $label ) {
 					printf( '<div class="msvcalc-tab-panel" id="msvcalc-tab-%1$s" role="tabpanel"%2$s>', esc_attr( $tab ), $first ? '' : ' hidden' );
 					echo '<h2 class="screen-reader-text">' . esc_html( $label ) . '</h2>';
+					if ( 'privacy' === $tab && '' === get_privacy_policy_url() ) {
+						printf(
+							'<div class="notice notice-warning inline"><p>%1$s <a href="%2$s">%3$s</a></p></div>',
+							esc_html__( 'Your site has no published privacy policy page, so the quote form cannot link to one. Publish one so customers can see how their details are used.', 'moving-storage-volume-calculator' ),
+							esc_url( admin_url( 'options-privacy.php' ) ),
+							esc_html__( 'Set up a privacy policy page', 'moving-storage-volume-calculator' )
+						);
+					}
 					do_settings_sections( self::SETTINGS_SLUG . '-' . $tab );
 					echo '</div>';
 					$first = false;

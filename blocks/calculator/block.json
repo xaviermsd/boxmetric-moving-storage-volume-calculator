@@ -6,8 +6,8 @@
 	"title": "Volume Calculator",
 	"category": "widgets",
 	"icon": "calculator",
-	"description": "A room-by-room moving, removal and storage volume calculator with vehicle suggestions and a quote form.",
-	"keywords": [ "moving", "removals", "storage", "volume", "cubic" ],
+	"description": "A room-by-room moving volume calculator in cubic feet or cubic metres, with truck, container and storage unit sizes and a quote form.",
+	"keywords": [ "moving", "removals", "storage", "volume", "cubic feet", "moving quote", "truck" ],
 	"textdomain": "moving-storage-volume-calculator",
 	"attributes": {
 		"title": {

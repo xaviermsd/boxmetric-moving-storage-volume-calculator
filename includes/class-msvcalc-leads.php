@@ -800,8 +800,9 @@ final class MSVCalc_Leads {
 			$post_id,
 			self::CONSENT_META,
 			array(
-				'time' => time(),
-				'text' => MSVCalc_Settings::text( 'consent_text' ),
+				'time'    => time(),
+				'text'    => MSVCalc_Settings::text( 'consent_text' ),
+				'privacy' => (string) get_privacy_policy_url(),
 			)
 		);
 		self::index( $post_id );
@@ -892,6 +893,8 @@ final class MSVCalc_Leads {
 			__( 'Customer message', 'moving-storage-volume-calculator' ),
 			__( 'Lead source', 'moving-storage-volume-calculator' ),
 			__( 'Page', 'moving-storage-volume-calculator' ),
+			__( 'Consent given', 'moving-storage-volume-calculator' ),
+			__( 'Consent text', 'moving-storage-volume-calculator' ),
 			__( 'Internal notes', 'moving-storage-volume-calculator' ),
 			__( 'Inventory', 'moving-storage-volume-calculator' ),
 		);
@@ -909,8 +912,9 @@ final class MSVCalc_Leads {
 					$internal[] = wp_date( 'Y-m-d', (int) $entry['time'] ) . ': ' . (string) $entry['text'];
 				}
 			}
-			$source = (array) get_post_meta( (int) $id, self::SOURCE_META, true );
-			$rows[] = array(
+			$source  = (array) get_post_meta( (int) $id, self::SOURCE_META, true );
+			$consent = (array) get_post_meta( (int) $id, self::CONSENT_META, true );
+			$rows[]  = array(
 				self::reference( (int) $id ),
 				(string) get_the_date( 'Y-m-d H:i', (int) $id ),
 				self::statuses()[ self::status( (int) $id ) ],
@@ -937,6 +941,8 @@ final class MSVCalc_Leads {
 				(string) ( $contact['notes'] ?? '' ),
 				self::source_text( (int) $id ),
 				(string) ( $source['page'] ?? '' ),
+				empty( $consent['time'] ) ? '' : wp_date( 'Y-m-d H:i', (int) $consent['time'] ),
+				(string) ( $consent['text'] ?? '' ),
 				implode( ' | ', $internal ),
 				implode( '; ', $inventory ),
 			);

@@ -8,9 +8,9 @@
 
 <p align="center">
   <b>Know the volume. Quote the move.</b><br>
-  A room-by-room moving volume calculator for removal, moving and storage companies.<br>
-  Customers build their inventory, see the total, the right van, container and storage unit,<br>
-  and send it to you as a ready-to-price lead. No external services, no tracking.
+  A free moving volume calculator for WordPress, in cubic feet or cubic metres.<br>
+  Customers list their items room by room, see what size moving truck, container and storage unit they need,<br>
+  and send it to you as a ready-to-price quote request. No external services, no tracking.
 </p>
 
 <p align="center">
@@ -42,6 +42,8 @@
 ---
 
 ## Why movers use it
+
+Built for **moving companies, removal firms, man and van services, self-storage operators, international movers and office movers** in the UK, Europe, the United States and Australia.
 
 - **Better leads, fewer phone calls.** Every enquiry arrives with the full item list, the volume, the weight and the move details, so you can price it straight away.
 - **Fewer surprises on moving day.** Customers are reminded about the rooms they skipped, the most common reason estimates come out too small.
@@ -228,10 +230,6 @@ Then add the **Volume Calculator** block to a page, or paste the shortcode:
 - **Leads**<br>Every enquiry, as above.
 - **Settings**<br>Calculator, Look & feel, Quote form, Data & privacy.
 
-Every save, filter, CSV download and PDF report runs in the background behind one branded loader, so the screen never reloads.
-
-<img src=".github/media/loader.gif" alt="The branded loader: the logo cube draws itself and glows while a quote is sent on the website and while a lead filter loads in WordPress admin" width="100%">
-
 <details>
 <summary><b>Shortcode options</b></summary>
 <br>
@@ -250,49 +248,120 @@ The block has the same options in its sidebar.
 
 ## FAQ
 
+The questions movers and their customers ask most, answered with the plugin's own default figures.
+
 <details>
-<summary><b>Which regions are supported?</b></summary>
-<br>
-Vehicle and storage sizes are included for the UK, Europe, the United States and Australia. You can edit
-them or add your own under Vehicles & storage.
+<summary><b>How do I add a moving volume calculator to my WordPress website?</b></summary>
+
+Install the plugin, then add the "Volume Calculator" block to any page, or paste the shortcode `[msvcalc_calculator]` anywhere shortcodes work, including page builders. Choose your region, unit (cubic feet or cubic metres) and the email that should receive quote requests under Volume Calculator → Settings.
+
 </details>
 
 <details>
-<summary><b>Do I need an account or API key?</b></summary>
-<br>
-No. Everything runs on your own site.
+<summary><b>Is this a moving cost calculator?</b></summary>
+
+No prices are shown to the customer. Moving costs depend on your rates, distance, access and services, so the calculator gives you what you need to price the job: the volume, weight, item list, addresses, floors, parking, date and extra services. You send the quote yourself.
+
 </details>
 
 <details>
-<summary><b>Where are the leads stored?</b></summary>
-<br>
-In your own WordPress database, as private entries that are never shown on your site.
+<summary><b>How can a moving company get more leads from its website?</b></summary>
+
+Give visitors a useful tool instead of a plain contact form. People planning a move want to know how much they have and what size truck or storage unit they need. This calculator answers that, then asks for their details to "Get my free quote". Every lead arrives complete and is kept under Volume Calculator → Leads, with statuses, follow-up reminders, notes and CSV or PDF export.
+
 </details>
 
 <details>
-<summary><b>What if my site's emails don't arrive?</b></summary>
-<br>
-The plugin uses WordPress's own email function. If other emails from your site also go missing, install an
-SMTP plugin. Requests are still saved under Leads, and a failed email can be sent again from the lead.
+<summary><b>How many cubic feet is a 1, 2, 3 or 4 bedroom house?</b></summary>
+
+These are the plugin's Quick Start totals for a typically furnished home, including a 10% packing margin:
+
+* Studio: about 11 m³ (400 cu ft)
+* 1 bedroom: about 17 m³ (600 cu ft)
+* 2 bedrooms: about 24 m³ (850 cu ft)
+* 3 bedrooms: about 35 m³ (1,250 cu ft)
+* 4 bedrooms: about 46 m³ (1,650 cu ft)
+* 5 bedrooms: about 60 m³ (2,150 cu ft)
+
+Every home is different, so customers adjust the list item by item.
+
 </details>
 
 <details>
-<summary><b>Can I change the items and volumes?</b></summary>
-<br>
-Yes. Every room, item, volume, icon and Quick Start can be changed under Rooms & items.
+<summary><b>What size moving truck or removal van do I need?</b></summary>
+
+It depends on the volume. With the default sizes: a 15 ft truck (about 21 m³) or a Luton van (about 18 m³) suits a 1 bedroom home. A 20 ft truck (about 28 m³) suits 2 bedrooms. A 7.5 tonne lorry (about 35 m³) suits a smaller 3 bedroom home, and a 26 ft truck (about 45 m³) suits a 3 bedroom or lightly furnished 4 bedroom home. Larger homes need an 18 tonne lorry (about 60 m³) or two trips. The calculator picks the best fit and shows how full it will be.
+
+</details>
+
+<details>
+<summary><b>What size storage unit do I need?</b></summary>
+
+As a guide with the default sizes: a 1 bedroom home fits a 10×10 ft or 100 sq ft unit, 2 bedrooms a 10×15 ft or 150 sq ft unit, 3 bedrooms a 10×20 ft or 200 sq ft unit, and 4 bedrooms a 10×30 ft or 300 sq ft unit. The calculator suggests the smallest unit that fits the list. Storage companies can enter their own unit sizes.
+
+</details>
+
+<details>
+<summary><b>Will my furniture fit in a 20 ft or 40 ft shipping container?</b></summary>
+
+A 20 ft container holds about 28 m³ (1,000 cu ft), enough for a studio to a 2 bedroom home. A 40 ft container holds about 58 m³ (2,050 cu ft), enough for a 3 or 4 bedroom home, and a 40 ft high cube about 66 m³. The calculator shows which container fits the list.
+
+</details>
+
+<details>
+<summary><b>How many moving boxes do I need?</b></summary>
+
+The Quick Starts include about 18 boxes for a studio, 25 for 1 bedroom, 38 for 2 bedrooms, 49 for 3 bedrooms, 63 for 4 bedrooms and 75 for 5 bedrooms. The box estimator asks five quick questions (home size, cupboards and wardrobes, books, kitchen, and loft or garage) and suggests a count for each box size.
+
+</details>
+
+<details>
+<summary><b>How do you calculate moving volume?</b></summary>
+
+Add up the volume of every item (length × width × height), then add a margin for the gaps when loading. The calculator does this for 441 common items with typical volumes that include wrapping, and adds a 10% packing margin by default. 1 cubic metre is 35.3 cubic feet.
+
+</details>
+
+<details>
+<summary><b>How accurate is the total?</b></summary>
+
+It is an estimate. Each item has a typical volume, and the packing margin covers gaps when loading. You can change every volume and the margin to match how your team packs.
+
+</details>
+
+<details>
+<summary><b>Does it work for storage, office and international moves?</b></summary>
+
+Yes. Quick Starts cover a storage unit, a garage and shed, a small office, a shop and a café, and the results include storage units and shipping containers as well as vans and trucks. Turn off what you do not offer in the settings.
+
+</details>
+
+<details>
+<summary><b>Can I use my own vans, trucks and storage units?</b></summary>
+
+Yes. Edit the sizes or add your own under Volume Calculator → Vehicles & storage. Every room, item, volume, icon and Quick Start can be changed under Rooms & items.
+
+</details>
+
+<details>
+<summary><b>Can I change the settings for one page only?</b></summary>
+
+Yes. The shortcode accepts `units` (m3 or ft3), `theme` (light, dark or auto), `quote` (yes or no), `title`, `intro` and `accent` (a hex colour). For example: `[msvcalc_calculator units="ft3" theme="dark" quote="no"]`. The block has the same options in its sidebar.
+
+</details>
+
+<details>
+<summary><b>Emails are not arriving. What can I do?</b></summary>
+
+The plugin uses WordPress's own email function. If your site's other emails also go missing, install an SMTP plugin to send through a proper mail service. While "Store requests" is on, every request is also saved under Volume Calculator → Leads, and a failed email is flagged there with a "Send email again" button.
+
 </details>
 
 <details>
 <summary><b>What happens to my data when I delete the plugin?</b></summary>
-<br>
-By default your leads and settings are kept in case you reinstall. Turn on <b>Remove data</b> under
-Settings > Data & privacy to delete them with the plugin.
-</details>
 
-<details>
-<summary><b>Does it track visitors or call outside services?</b></summary>
-<br>
-No. The calculator makes no external requests and collects nothing until the customer sends a request.
+By default your settings, items and quote requests are kept, in case you reinstall. Turn on "Remove data" in Volume Calculator → Settings → Data & privacy to delete them with the plugin.
+
 </details>
 
 ---

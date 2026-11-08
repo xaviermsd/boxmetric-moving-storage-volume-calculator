@@ -1,6 +1,6 @@
 === Moving & Storage Volume Calculator ===
 Contributors: xaviermsd
-Tags: moving calculator, removals, volume calculator, storage calculator, moving quote
+Tags: moving calculator, moving company, volume calculator, moving quote, removals
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
@@ -8,11 +8,15 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Room-by-room moving volume calculator with van, container and storage unit suggestions, and quote requests for removal companies.
+Moving volume calculator in cubic feet and m³. Customers list items room by room, see the truck and storage size, and send you a quote.
 
 == Description ==
 
-Visitors list what they are moving, room by room, and see the total volume update as they go. The calculator then suggests the van or truck, the shipping container and the storage unit that fit, and lets them send you the full list as a quote request.
+**Moving & Storage Volume Calculator** adds a free moving volume calculator to your WordPress site, in cubic feet or cubic metres. It answers the questions your customers already search for: *how much stuff do I have, what size moving truck or removal van do I need, what size storage unit, and how many boxes?* When they are done, they send you the full inventory as a quote request.
+
+Visitors list what they are moving, room by room, and see the total volume update as they go. The calculator suggests the van or truck, the shipping container and the storage unit that fit. Each request reaches you with the item list, volume, weight, addresses, floors, parking and moving date, so you can price the job without a home survey or a long phone call.
+
+**Made for:** moving companies, removal firms, man and van services, self-storage operators, international movers and shipping companies, and office and commercial movers. Sizes are included for the UK, Europe, the United States and Australia.
 
 = For your visitors =
 
@@ -56,25 +60,66 @@ Visitors list what they are moving, room by room, and see the total volume updat
 
 == Frequently Asked Questions ==
 
-= How do I show the calculator? =
+= How do I add a moving volume calculator to my WordPress website? =
 
-Add the "Volume Calculator" block in the block editor, or use the shortcode `[msvcalc_calculator]` anywhere shortcodes work, including page builders.
+Install the plugin, then add the "Volume Calculator" block to any page, or paste the shortcode `[msvcalc_calculator]` anywhere shortcodes work, including page builders. Choose your region, unit (cubic feet or cubic metres) and the email that should receive quote requests under Volume Calculator > Settings.
+
+= Is this a moving cost calculator? =
+
+No prices are shown to the customer. Moving costs depend on your rates, distance, access and services, so the calculator gives you what you need to price the job: the volume, weight, item list, addresses, floors, parking, date and extra services. You send the quote yourself.
+
+= How can a moving company get more leads from its website? =
+
+Give visitors a useful tool instead of a plain contact form. People planning a move want to know how much they have and what size truck or storage unit they need. This calculator answers that, then asks for their details to "Get my free quote". Every lead arrives complete and is kept under Volume Calculator > Leads, with statuses, follow-up reminders, notes and CSV or PDF export.
+
+= How many cubic feet is a 1, 2, 3 or 4 bedroom house? =
+
+These are the plugin's Quick Start totals for a typically furnished home, including a 10% packing margin:
+
+* Studio: about 11 m³ (400 cu ft)
+* 1 bedroom: about 17 m³ (600 cu ft)
+* 2 bedrooms: about 24 m³ (850 cu ft)
+* 3 bedrooms: about 35 m³ (1,250 cu ft)
+* 4 bedrooms: about 46 m³ (1,650 cu ft)
+* 5 bedrooms: about 60 m³ (2,150 cu ft)
+
+Every home is different, so customers adjust the list item by item.
+
+= What size moving truck or removal van do I need? =
+
+It depends on the volume. With the default sizes: a 15 ft truck (about 21 m³) or a Luton van (about 18 m³) suits a 1 bedroom home. A 20 ft truck (about 28 m³) suits 2 bedrooms. A 7.5 tonne lorry (about 35 m³) suits a smaller 3 bedroom home, and a 26 ft truck (about 45 m³) suits a 3 bedroom or lightly furnished 4 bedroom home. Larger homes need an 18 tonne lorry (about 60 m³) or two trips. The calculator picks the best fit and shows how full it will be.
+
+= What size storage unit do I need? =
+
+As a guide with the default sizes: a 1 bedroom home fits a 10×10 ft or 100 sq ft unit, 2 bedrooms a 10×15 ft or 150 sq ft unit, 3 bedrooms a 10×20 ft or 200 sq ft unit, and 4 bedrooms a 10×30 ft or 300 sq ft unit. The calculator suggests the smallest unit that fits the list. Storage companies can enter their own unit sizes.
+
+= Will my furniture fit in a 20 ft or 40 ft shipping container? =
+
+A 20 ft container holds about 28 m³ (1,000 cu ft), enough for a studio to a 2 bedroom home. A 40 ft container holds about 58 m³ (2,050 cu ft), enough for a 3 or 4 bedroom home, and a 40 ft high cube about 66 m³. The calculator shows which container fits the list.
+
+= How many moving boxes do I need? =
+
+The Quick Starts include about 18 boxes for a studio, 25 for 1 bedroom, 38 for 2 bedrooms, 49 for 3 bedrooms, 63 for 4 bedrooms and 75 for 5 bedrooms. The box estimator asks five quick questions (home size, cupboards and wardrobes, books, kitchen, and loft or garage) and suggests a count for each box size.
+
+= How do you calculate moving volume? =
+
+Add up the volume of every item (length × width × height), then add a margin for the gaps when loading. The calculator does this for 441 common items with typical volumes that include wrapping, and adds a 10% packing margin by default. 1 cubic metre is 35.3 cubic feet.
+
+= How accurate is the total? =
+
+It is an estimate. Each item has a typical volume, and the packing margin covers gaps when loading. You can change every volume and the margin to match how your team packs.
+
+= Does it work for storage, office and international moves? =
+
+Yes. Quick Starts cover a storage unit, a garage and shed, a small office, a shop and a café, and the results include storage units and shipping containers as well as vans and trucks. Turn off what you do not offer in the settings.
+
+= Can I use my own vans, trucks and storage units? =
+
+Yes. Edit the sizes or add your own under Volume Calculator > Vehicles & storage. Every room, item, volume, icon and Quick Start can be changed under Rooms & items.
 
 = Can I change the settings for one page only? =
 
 Yes. The shortcode accepts `units` (m3 or ft3), `theme` (light, dark or auto), `quote` (yes or no), `title`, `intro` and `accent` (a hex colour). For example: `[msvcalc_calculator units="ft3" theme="dark" quote="no"]`. The block has the same options in its sidebar.
-
-= How accurate is the total? =
-
-It is an estimate. Each item has a typical volume that includes normal wrapping, and a packing margin (10% by default) is added for gaps when loading. You can change every volume and the margin to match how your team packs.
-
-= Where do the vehicle and storage sizes come from? =
-
-The plugin ships with typical usable capacities for common vans, trucks, containers and storage units in the UK, Europe, the United States and Australia. Edit them under Volume Calculator > Vehicles & storage to match your own fleet and units.
-
-= Does it send data anywhere? =
-
-Only to you. A quote request is saved in your WordPress database and emailed to the address in the settings, using your site's normal email. Nothing is sent to us or to any other service.
 
 = Emails are not arriving. What can I do? =
 
