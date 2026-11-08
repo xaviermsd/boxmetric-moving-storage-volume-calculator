@@ -1,0 +1,14 @@
+/.git
+/.github
+/.wordpress-org
+/bin
+/build
+/node_modules
+/vendor
+.distignore
+.editorconfig
+.gitattributes
+.gitignore
+README.md
+phpcs.xml.dist
+CHANGELOG.md

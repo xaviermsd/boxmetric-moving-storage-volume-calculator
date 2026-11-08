@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "msvcalc/calculator",
+	"version": "1.0.0",
+	"title": "Volume Calculator",
+	"category": "widgets",
+	"icon": "calculator",
+	"description": "A room-by-room moving, removal and storage volume calculator with vehicle suggestions and a quote form.",
+	"keywords": [ "moving", "removals", "storage", "volume", "cubic" ],
+	"textdomain": "moving-storage-volume-calculator",
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"intro": {
+			"type": "string",
+			"default": ""
+		},
+		"accent": {
+			"type": "string",
+			"default": ""
+		},
+		"units": {
+			"type": "string",
+			"enum": [ "", "m3", "ft3" ],
+			"default": ""
+		},
+		"theme": {
+			"type": "string",
+			"enum": [ "", "light", "dark", "auto" ],
+			"default": ""
+		},
+		"showQuote": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ],
+		"spacing": {
+			"margin": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./editor.css"
+}

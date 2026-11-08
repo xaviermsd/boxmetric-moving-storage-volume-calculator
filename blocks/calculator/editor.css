@@ -1,0 +1,86 @@
+/**
+ * Volume Calculator block: editor placeholder.
+ */
+
+.msvcalc-block-preview__card {
+	position: relative;
+	display: flex;
+	gap: 20px;
+	align-items: flex-start;
+	padding: 28px;
+	border-radius: 20px;
+	color: #f2fbff;
+	background:
+		radial-gradient(ellipse 60% 80% at 100% 0%, rgba(45, 226, 230, 0.24), transparent 70%),
+		radial-gradient(ellipse 50% 70% at 0% 100%, rgba(198, 255, 61, 0.14), transparent 70%),
+		linear-gradient(135deg, #08182a 0%, #061019 60%, #040a10 100%);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	overflow: hidden;
+}
+
+.msvcalc-block-preview__mark {
+	display: grid;
+	place-items: center;
+	width: 56px;
+	height: 56px;
+	flex: none;
+	border-radius: 14px;
+	color: #061019;
+	background: linear-gradient(135deg, #2de2e6, #c6ff3d);
+	box-shadow: 0 10px 28px -10px rgba(45, 226, 230, 0.8);
+}
+
+.msvcalc-block-preview__mark svg {
+	width: 30px;
+	height: 30px;
+}
+
+.msvcalc-block-preview__eyebrow {
+	margin: 0 0 4px;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: #2de2e6;
+}
+
+.msvcalc-block-preview__title {
+	margin: 0 0 12px;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1.2;
+	color: #ffffff;
+}
+
+.msvcalc-block-preview__list {
+	margin: 0 0 12px;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	gap: 6px;
+}
+
+.msvcalc-block-preview__list li {
+	position: relative;
+	margin: 0;
+	padding-left: 22px;
+	color: #d6e4ee;
+	font-size: 14px;
+}
+
+.msvcalc-block-preview__list li::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 6px;
+	width: 10px;
+	height: 10px;
+	border-radius: 3px;
+	background: linear-gradient(135deg, #2de2e6, #c6ff3d);
+}
+
+.msvcalc-block-preview__note {
+	margin: 0;
+	font-size: 12px;
+	color: #a9bdcc;
+}

@@ -1,0 +1,6563 @@
+# Copyright (C) 2026 Harsh Prajapati
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Moving & Storage Volume Calculator 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/moving-storage-volume-calculator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-08T14:04:20+01:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: moving-storage-volume-calculator\n"
+
+#. Plugin Name of the plugin
+#: moving-storage-volume-calculator.php
+#: includes/class-msvcalc-admin.php:69
+#: includes/class-msvcalc-admin.php:205
+#: includes/class-msvcalc-admin.php:231
+#: includes/class-msvcalc-privacy.php:45
+msgid "Moving & Storage Volume Calculator"
+msgstr ""
+
+#. Description of the plugin
+#: moving-storage-volume-calculator.php
+msgid "A room-by-room removal, storage and moving volume calculator. Visitors add their items, see the total in cubic metres or cubic feet, get a van, container and storage unit suggestion, and send you a quote request."
+msgstr ""
+
+#. Author of the plugin
+#: moving-storage-volume-calculator.php
+#: includes/class-msvcalc-admin.php:206
+msgid "Harsh Prajapati"
+msgstr ""
+
+#. Author URI of the plugin
+#: moving-storage-volume-calculator.php
+msgid "https://github.com/xaviermsd"
+msgstr ""
+
+#: data/catalogue.php:18
+msgid "Living room"
+msgstr ""
+
+#: data/catalogue.php:24
+msgid "Dining room"
+msgstr ""
+
+#: data/catalogue.php:30
+#: includes/class-msvcalc-frontend.php:364
+msgid "Kitchen"
+msgstr ""
+
+#: data/catalogue.php:36
+msgid "Main bedroom"
+msgstr ""
+
+#: data/catalogue.php:42
+msgid "Other bedrooms"
+msgstr ""
+
+#: data/catalogue.php:48
+msgid "Kids & nursery"
+msgstr ""
+
+#: data/catalogue.php:54
+msgid "Home office"
+msgstr ""
+
+#: data/catalogue.php:60
+msgid "Bathroom"
+msgstr ""
+
+#: data/catalogue.php:66
+msgid "Hallway & stairs"
+msgstr ""
+
+#: data/catalogue.php:72
+msgid "Laundry & utility"
+msgstr ""
+
+#: data/catalogue.php:78
+#: data/catalogue.php:4921
+msgid "Garage & shed"
+msgstr ""
+
+#: data/catalogue.php:84
+msgid "Garden & outdoor"
+msgstr ""
+
+#: data/catalogue.php:90
+msgid "Sports & hobbies"
+msgstr ""
+
+#: data/catalogue.php:96
+msgid "Large & specialty"
+msgstr ""
+
+#: data/catalogue.php:102
+#: includes/class-msvcalc-catalogue.php:92
+#: includes/class-msvcalc-icons.php:359
+msgid "Boxes & packing"
+msgstr ""
+
+#: data/catalogue.php:108
+msgid "Office & business"
+msgstr ""
+
+#: data/catalogue.php:114
+msgid "Shop & retail"
+msgstr ""
+
+#: data/catalogue.php:120
+msgid "Restaurant & café"
+msgstr ""
+
+#: data/catalogue.php:126
+msgid "Salon & clinic"
+msgstr ""
+
+#: data/catalogue.php:132
+msgid "School & classroom"
+msgstr ""
+
+#: data/catalogue.php:138
+msgid "Warehouse & workshop"
+msgstr ""
+
+#: data/catalogue.php:147
+msgid "3-seater sofa"
+msgstr ""
+
+#: data/catalogue.php:148
+#: data/catalogue.php:158
+#: data/catalogue.php:168
+msgid "couch"
+msgstr ""
+
+#: data/catalogue.php:148
+#: data/catalogue.php:158
+msgid "settee"
+msgstr ""
+
+#: data/catalogue.php:148
+msgid "sofa"
+msgstr ""
+
+#: data/catalogue.php:148
+msgid "lounge suite"
+msgstr ""
+
+#: data/catalogue.php:148
+msgid "chesterfield"
+msgstr ""
+
+#: data/catalogue.php:148
+msgid "davenport"
+msgstr ""
+
+#: data/catalogue.php:148
+msgid "three-piece suite"
+msgstr ""
+
+#: data/catalogue.php:157
+msgid "2-seater sofa"
+msgstr ""
+
+#: data/catalogue.php:158
+msgid "loveseat"
+msgstr ""
+
+#: data/catalogue.php:158
+msgid "two-seater lounge"
+msgstr ""
+
+#: data/catalogue.php:167
+msgid "4-seater sofa"
+msgstr ""
+
+#: data/catalogue.php:168
+msgid "large sofa"
+msgstr ""
+
+#: data/catalogue.php:177
+msgid "Corner sofa"
+msgstr ""
+
+#: data/catalogue.php:178
+msgid "sectional"
+msgstr ""
+
+#: data/catalogue.php:178
+msgid "L-shaped sofa"
+msgstr ""
+
+#: data/catalogue.php:178
+msgid "sectional sofa"
+msgstr ""
+
+#: data/catalogue.php:178
+msgid "corner lounge"
+msgstr ""
+
+#: data/catalogue.php:187
+msgid "Sofa bed"
+msgstr ""
+
+#: data/catalogue.php:188
+msgid "futon"
+msgstr ""
+
+#: data/catalogue.php:188
+msgid "sleeper"
+msgstr ""
+
+#: data/catalogue.php:188
+msgid "pull-out couch"
+msgstr ""
+
+#: data/catalogue.php:188
+msgid "sleeper sofa"
+msgstr ""
+
+#: data/catalogue.php:197
+msgid "Armchair"
+msgstr ""
+
+#: data/catalogue.php:198
+msgid "easy chair"
+msgstr ""
+
+#: data/catalogue.php:198
+msgid "club chair"
+msgstr ""
+
+#: data/catalogue.php:198
+msgid "wingback chair"
+msgstr ""
+
+#: data/catalogue.php:198
+msgid "lounge chair"
+msgstr ""
+
+#: data/catalogue.php:207
+msgid "Recliner chair"
+msgstr ""
+
+#: data/catalogue.php:208
+msgid "lazy boy"
+msgstr ""
+
+#: data/catalogue.php:208
+msgid "rocking chair"
+msgstr ""
+
+#: data/catalogue.php:208
+msgid "recliner lounge"
+msgstr ""
+
+#: data/catalogue.php:217
+msgid "Footstool / pouffe"
+msgstr ""
+
+#: data/catalogue.php:218
+#: data/catalogue.php:1137
+msgid "ottoman"
+msgstr ""
+
+#: data/catalogue.php:218
+msgid "hassock"
+msgstr ""
+
+#: data/catalogue.php:218
+msgid "pouf"
+msgstr ""
+
+#: data/catalogue.php:227
+msgid "Coffee table"
+msgstr ""
+
+#: data/catalogue.php:228
+msgid "cocktail table"
+msgstr ""
+
+#: data/catalogue.php:237
+msgid "Side table"
+msgstr ""
+
+#: data/catalogue.php:238
+msgid "end table"
+msgstr ""
+
+#: data/catalogue.php:238
+msgid "lamp table"
+msgstr ""
+
+#: data/catalogue.php:238
+msgid "occasional table"
+msgstr ""
+
+#: data/catalogue.php:247
+msgid "TV (up to 50\")"
+msgstr ""
+
+#: data/catalogue.php:248
+#: data/catalogue.php:258
+#: data/catalogue.php:1177
+#: data/catalogue.php:1439
+msgid "television"
+msgstr ""
+
+#: data/catalogue.php:248
+msgid "telly"
+msgstr ""
+
+#: data/catalogue.php:257
+msgid "Large TV (55\" and up)"
+msgstr ""
+
+#: data/catalogue.php:267
+msgid "TV stand / media unit"
+msgstr ""
+
+#: data/catalogue.php:268
+msgid "tv cabinet"
+msgstr ""
+
+#: data/catalogue.php:268
+msgid "media console"
+msgstr ""
+
+#: data/catalogue.php:268
+msgid "entertainment unit"
+msgstr ""
+
+#: data/catalogue.php:268
+msgid "TV console"
+msgstr ""
+
+#: data/catalogue.php:277
+msgid "Entertainment / wall unit"
+msgstr ""
+
+#: data/catalogue.php:278
+msgid "entertainment center"
+msgstr ""
+
+#: data/catalogue.php:278
+msgid "buffet hutch"
+msgstr ""
+
+#: data/catalogue.php:287
+#: data/catalogue.php:1830
+msgid "Bookcase"
+msgstr ""
+
+#: data/catalogue.php:288
+#: data/catalogue.php:298
+msgid "bookshelf"
+msgstr ""
+
+#: data/catalogue.php:288
+#: data/catalogue.php:1419
+#: data/catalogue.php:1831
+#: data/catalogue.php:1861
+msgid "shelves"
+msgstr ""
+
+#: data/catalogue.php:297
+msgid "Large bookcase"
+msgstr ""
+
+#: data/catalogue.php:298
+msgid "library"
+msgstr ""
+
+#: data/catalogue.php:307
+msgid "Display cabinet"
+msgstr ""
+
+#: data/catalogue.php:308
+msgid "curio"
+msgstr ""
+
+#: data/catalogue.php:308
+msgid "vitrine"
+msgstr ""
+
+#: data/catalogue.php:308
+msgid "china cabinet"
+msgstr ""
+
+#: data/catalogue.php:308
+msgid "curio cabinet"
+msgstr ""
+
+#: data/catalogue.php:308
+msgid "crystal cabinet"
+msgstr ""
+
+#: data/catalogue.php:317
+msgid "Floor lamp"
+msgstr ""
+
+#: data/catalogue.php:318
+msgid "standard lamp"
+msgstr ""
+
+#: data/catalogue.php:318
+msgid "torchiere"
+msgstr ""
+
+#: data/catalogue.php:318
+msgid "lamp stand"
+msgstr ""
+
+#: data/catalogue.php:327
+msgid "Table lamp"
+msgstr ""
+
+#: data/catalogue.php:337
+#: data/catalogue.php:1428
+msgid "Mirror"
+msgstr ""
+
+#: data/catalogue.php:347
+msgid "Picture / painting"
+msgstr ""
+
+#: data/catalogue.php:348
+msgid "artwork"
+msgstr ""
+
+#: data/catalogue.php:348
+msgid "frame"
+msgstr ""
+
+#: data/catalogue.php:357
+msgid "Rug (rolled)"
+msgstr ""
+
+#: data/catalogue.php:358
+msgid "carpet"
+msgstr ""
+
+#: data/catalogue.php:358
+msgid "area rug"
+msgstr ""
+
+#: data/catalogue.php:358
+msgid "mat"
+msgstr ""
+
+#: data/catalogue.php:367
+msgid "Large house plant"
+msgstr ""
+
+#: data/catalogue.php:368
+msgid "pot plant"
+msgstr ""
+
+#: data/catalogue.php:377
+msgid "Speakers (pair)"
+msgstr ""
+
+#: data/catalogue.php:378
+msgid "loudspeakers"
+msgstr ""
+
+#: data/catalogue.php:387
+msgid "Stereo / hi-fi"
+msgstr ""
+
+#: data/catalogue.php:388
+msgid "sound system"
+msgstr ""
+
+#: data/catalogue.php:397
+msgid "Aquarium / fish tank"
+msgstr ""
+
+#: data/catalogue.php:398
+msgid "fish tank"
+msgstr ""
+
+#: data/catalogue.php:407
+msgid "Bean bag"
+msgstr ""
+
+#: data/catalogue.php:408
+msgid "beanbag"
+msgstr ""
+
+#: data/catalogue.php:418
+msgid "Fan or heater"
+msgstr ""
+
+#: data/catalogue.php:419
+msgid "radiator"
+msgstr ""
+
+#: data/catalogue.php:419
+msgid "dehumidifier"
+msgstr ""
+
+#: data/catalogue.php:428
+msgid "Chaise longue"
+msgstr ""
+
+#: data/catalogue.php:429
+msgid "day sofa"
+msgstr ""
+
+#: data/catalogue.php:438
+msgid "Recliner sofa"
+msgstr ""
+
+#: data/catalogue.php:439
+msgid "reclining sofa"
+msgstr ""
+
+#: data/catalogue.php:448
+msgid "Modular sofa (per piece)"
+msgstr ""
+
+#: data/catalogue.php:449
+msgid "sectional piece"
+msgstr ""
+
+#: data/catalogue.php:458
+msgid "Nest of tables"
+msgstr ""
+
+#: data/catalogue.php:468
+msgid "Games console"
+msgstr ""
+
+#: data/catalogue.php:469
+msgid "PlayStation"
+msgstr ""
+
+#: data/catalogue.php:469
+msgid "Xbox"
+msgstr ""
+
+#: data/catalogue.php:469
+msgid "Nintendo"
+msgstr ""
+
+#: data/catalogue.php:478
+msgid "DVD / media player"
+msgstr ""
+
+#: data/catalogue.php:479
+msgid "DVD player"
+msgstr ""
+
+#: data/catalogue.php:479
+msgid "Blu-ray"
+msgstr ""
+
+#: data/catalogue.php:488
+msgid "Record player / radio"
+msgstr ""
+
+#: data/catalogue.php:489
+msgid "turntable"
+msgstr ""
+
+#: data/catalogue.php:498
+msgid "CD / DVD rack"
+msgstr ""
+
+#: data/catalogue.php:499
+msgid "media storage"
+msgstr ""
+
+#: data/catalogue.php:508
+msgid "Projector & screen"
+msgstr ""
+
+#: data/catalogue.php:509
+msgid "home cinema"
+msgstr ""
+
+#: data/catalogue.php:518
+msgid "Ceiling fan / light"
+msgstr ""
+
+#: data/catalogue.php:528
+msgid "Portable air conditioner"
+msgstr ""
+
+#: data/catalogue.php:529
+msgid "AC unit"
+msgstr ""
+
+#: data/catalogue.php:538
+msgid "Fireplace tools & guard"
+msgstr ""
+
+#: data/catalogue.php:539
+msgid "fire guard"
+msgstr ""
+
+#: data/catalogue.php:539
+msgid "log basket"
+msgstr ""
+
+#: data/catalogue.php:548
+msgid "Electric fire / log burner"
+msgstr ""
+
+#: data/catalogue.php:549
+msgid "log burner"
+msgstr ""
+
+#: data/catalogue.php:558
+msgid "Large vase"
+msgstr ""
+
+#: data/catalogue.php:568
+msgid "Ornaments & candles (box)"
+msgstr ""
+
+#: data/catalogue.php:569
+msgid "decor"
+msgstr ""
+
+#: data/catalogue.php:578
+msgid "Curtains & blinds (bag)"
+msgstr ""
+
+#: data/catalogue.php:579
+msgid "blinds"
+msgstr ""
+
+#: data/catalogue.php:588
+msgid "Wall shelf"
+msgstr ""
+
+#: data/catalogue.php:589
+msgid "floating shelf"
+msgstr ""
+
+#: data/catalogue.php:598
+msgid "Room divider / screen"
+msgstr ""
+
+#: data/catalogue.php:599
+msgid "folding screen"
+msgstr ""
+
+#: data/catalogue.php:608
+msgid "Dining table (4 seats)"
+msgstr ""
+
+#: data/catalogue.php:609
+msgid "kitchen table"
+msgstr ""
+
+#: data/catalogue.php:618
+msgid "Dining table (6 seats)"
+msgstr ""
+
+#: data/catalogue.php:628
+msgid "Dining table (8+ seats)"
+msgstr ""
+
+#: data/catalogue.php:629
+msgid "banquet table"
+msgstr ""
+
+#: data/catalogue.php:638
+msgid "Dining chair"
+msgstr ""
+
+#: data/catalogue.php:639
+msgid "chair"
+msgstr ""
+
+#: data/catalogue.php:648
+msgid "Sideboard / buffet"
+msgstr ""
+
+#: data/catalogue.php:649
+msgid "buffet"
+msgstr ""
+
+#: data/catalogue.php:649
+msgid "credenza"
+msgstr ""
+
+#: data/catalogue.php:649
+msgid "buffet table"
+msgstr ""
+
+#: data/catalogue.php:658
+msgid "China cabinet / dresser"
+msgstr ""
+
+#: data/catalogue.php:659
+msgid "hutch"
+msgstr ""
+
+#: data/catalogue.php:659
+msgid "welsh dresser"
+msgstr ""
+
+#: data/catalogue.php:668
+msgid "Corner cabinet"
+msgstr ""
+
+#: data/catalogue.php:669
+msgid "corner unit"
+msgstr ""
+
+#: data/catalogue.php:678
+#: data/catalogue.php:4088
+msgid "Bar stool"
+msgstr ""
+
+#: data/catalogue.php:679
+msgid "stool"
+msgstr ""
+
+#: data/catalogue.php:688
+msgid "Dining bench"
+msgstr ""
+
+#: data/catalogue.php:689
+msgid "bench"
+msgstr ""
+
+#: data/catalogue.php:698
+msgid "Drinks trolley"
+msgstr ""
+
+#: data/catalogue.php:699
+msgid "bar cart"
+msgstr ""
+
+#: data/catalogue.php:708
+msgid "Home bar"
+msgstr ""
+
+#: data/catalogue.php:709
+msgid "bar counter"
+msgstr ""
+
+#: data/catalogue.php:718
+msgid "Wine rack"
+msgstr ""
+
+#: data/catalogue.php:719
+#: data/catalogue.php:779
+msgid "wine fridge"
+msgstr ""
+
+#: data/catalogue.php:728
+msgid "Dining table (2 seats)"
+msgstr ""
+
+#: data/catalogue.php:729
+msgid "bistro table"
+msgstr ""
+
+#: data/catalogue.php:738
+msgid "Drop-leaf / gateleg table"
+msgstr ""
+
+#: data/catalogue.php:739
+msgid "gateleg table"
+msgstr ""
+
+#: data/catalogue.php:748
+msgid "Round dining table"
+msgstr ""
+
+#: data/catalogue.php:758
+msgid "Carver chair"
+msgstr ""
+
+#: data/catalogue.php:759
+msgid "armed dining chair"
+msgstr ""
+
+#: data/catalogue.php:768
+msgid "Bar / high table"
+msgstr ""
+
+#: data/catalogue.php:769
+msgid "poseur table"
+msgstr ""
+
+#: data/catalogue.php:778
+msgid "Wine cabinet / wine fridge"
+msgstr ""
+
+#: data/catalogue.php:788
+msgid "Fridge freezer"
+msgstr ""
+
+#: data/catalogue.php:789
+#: data/catalogue.php:800
+msgid "refrigerator"
+msgstr ""
+
+#: data/catalogue.php:789
+msgid "fridge"
+msgstr ""
+
+#: data/catalogue.php:799
+msgid "American fridge freezer"
+msgstr ""
+
+#: data/catalogue.php:800
+msgid "side-by-side fridge"
+msgstr ""
+
+#: data/catalogue.php:810
+msgid "Under-counter fridge"
+msgstr ""
+
+#: data/catalogue.php:811
+msgid "mini fridge"
+msgstr ""
+
+#: data/catalogue.php:811
+msgid "bar fridge"
+msgstr ""
+
+#: data/catalogue.php:811
+msgid "larder fridge"
+msgstr ""
+
+#: data/catalogue.php:821
+msgid "Chest freezer"
+msgstr ""
+
+#: data/catalogue.php:822
+msgid "deep freeze"
+msgstr ""
+
+#: data/catalogue.php:822
+msgid "deep freezer"
+msgstr ""
+
+#: data/catalogue.php:832
+msgid "Upright freezer"
+msgstr ""
+
+#: data/catalogue.php:833
+msgid "tall freezer"
+msgstr ""
+
+#: data/catalogue.php:843
+msgid "Cooker / oven"
+msgstr ""
+
+#: data/catalogue.php:844
+msgid "stove"
+msgstr ""
+
+#: data/catalogue.php:844
+msgid "oven"
+msgstr ""
+
+#: data/catalogue.php:844
+msgid "range"
+msgstr ""
+
+#: data/catalogue.php:844
+msgid "stove top"
+msgstr ""
+
+#: data/catalogue.php:854
+msgid "Range cooker"
+msgstr ""
+
+#: data/catalogue.php:855
+msgid "AGA"
+msgstr ""
+
+#: data/catalogue.php:865
+msgid "Dishwasher"
+msgstr ""
+
+#: data/catalogue.php:876
+msgid "Microwave"
+msgstr ""
+
+#: data/catalogue.php:886
+msgid "Freestanding cupboard / pantry"
+msgstr ""
+
+#: data/catalogue.php:887
+msgid "pantry"
+msgstr ""
+
+#: data/catalogue.php:887
+msgid "larder"
+msgstr ""
+
+#: data/catalogue.php:887
+msgid "cupboard"
+msgstr ""
+
+#: data/catalogue.php:896
+msgid "Kitchen trolley / island"
+msgstr ""
+
+#: data/catalogue.php:897
+msgid "kitchen cart"
+msgstr ""
+
+#: data/catalogue.php:897
+msgid "island"
+msgstr ""
+
+#: data/catalogue.php:906
+msgid "Kitchen chair"
+msgstr ""
+
+#: data/catalogue.php:916
+msgid "Kitchen bin"
+msgstr ""
+
+#: data/catalogue.php:917
+#: data/catalogue.php:2656
+msgid "trash can"
+msgstr ""
+
+#: data/catalogue.php:917
+#: data/catalogue.php:2656
+msgid "garbage can"
+msgstr ""
+
+#: data/catalogue.php:917
+#: data/catalogue.php:2656
+msgid "rubbish bin"
+msgstr ""
+
+#: data/catalogue.php:926
+msgid "Water dispenser"
+msgstr ""
+
+#: data/catalogue.php:927
+msgid "water cooler"
+msgstr ""
+
+#: data/catalogue.php:936
+msgid "Coffee machine"
+msgstr ""
+
+#: data/catalogue.php:937
+msgid "espresso machine"
+msgstr ""
+
+#: data/catalogue.php:946
+msgid "Small appliances (boxed)"
+msgstr ""
+
+#: data/catalogue.php:947
+msgid "toaster"
+msgstr ""
+
+#: data/catalogue.php:947
+msgid "kettle"
+msgstr ""
+
+#: data/catalogue.php:947
+msgid "blender"
+msgstr ""
+
+#: data/catalogue.php:947
+msgid "mixer"
+msgstr ""
+
+#: data/catalogue.php:947
+msgid "air fryer"
+msgstr ""
+
+#: data/catalogue.php:947
+msgid "food processor"
+msgstr ""
+
+#: data/catalogue.php:947
+msgid "slow cooker"
+msgstr ""
+
+#: data/catalogue.php:947
+msgid "stand mixer"
+msgstr ""
+
+#: data/catalogue.php:956
+msgid "Pots, pans & utensils (box)"
+msgstr ""
+
+#: data/catalogue.php:957
+msgid "cookware"
+msgstr ""
+
+#: data/catalogue.php:957
+msgid "cutlery"
+msgstr ""
+
+#: data/catalogue.php:966
+msgid "Cooker hood"
+msgstr ""
+
+#: data/catalogue.php:967
+msgid "extractor fan"
+msgstr ""
+
+#: data/catalogue.php:976
+msgid "Hob / hotplate"
+msgstr ""
+
+#: data/catalogue.php:977
+msgid "cooktop"
+msgstr ""
+
+#: data/catalogue.php:986
+msgid "Water filter / softener"
+msgstr ""
+
+#: data/catalogue.php:996
+msgid "Trash compactor"
+msgstr ""
+
+#: data/catalogue.php:1006
+#: data/catalogue.php:1318
+msgid "Double bed"
+msgstr ""
+
+#: data/catalogue.php:1007
+#: data/catalogue.php:1319
+msgid "full bed"
+msgstr ""
+
+#: data/catalogue.php:1007
+#: data/catalogue.php:1017
+msgid "bed and mattress"
+msgstr ""
+
+#: data/catalogue.php:1016
+msgid "Queen bed"
+msgstr ""
+
+#: data/catalogue.php:1026
+msgid "King bed"
+msgstr ""
+
+#: data/catalogue.php:1027
+msgid "king size bed"
+msgstr ""
+
+#: data/catalogue.php:1036
+msgid "Super king bed"
+msgstr ""
+
+#: data/catalogue.php:1037
+msgid "california king"
+msgstr ""
+
+#: data/catalogue.php:1046
+msgid "Headboard"
+msgstr ""
+
+#: data/catalogue.php:1056
+#: data/catalogue.php:1358
+msgid "Single wardrobe"
+msgstr ""
+
+#: data/catalogue.php:1057
+#: data/catalogue.php:1067
+#: data/catalogue.php:1077
+#: data/catalogue.php:1187
+#: data/catalogue.php:1197
+#: data/catalogue.php:1359
+#: data/catalogue.php:1369
+msgid "closet"
+msgstr ""
+
+#: data/catalogue.php:1057
+#: data/catalogue.php:1067
+#: data/catalogue.php:1077
+msgid "armoire"
+msgstr ""
+
+#: data/catalogue.php:1057
+#: data/catalogue.php:1067
+msgid "robe"
+msgstr ""
+
+#: data/catalogue.php:1066
+#: data/catalogue.php:1368
+msgid "Double wardrobe"
+msgstr ""
+
+#: data/catalogue.php:1067
+msgid "wardrobe closet"
+msgstr ""
+
+#: data/catalogue.php:1076
+msgid "Triple wardrobe"
+msgstr ""
+
+#: data/catalogue.php:1086
+#: data/catalogue.php:1378
+msgid "Chest of drawers"
+msgstr ""
+
+#: data/catalogue.php:1087
+#: data/catalogue.php:1379
+msgid "dresser"
+msgstr ""
+
+#: data/catalogue.php:1087
+msgid "drawers"
+msgstr ""
+
+#: data/catalogue.php:1087
+msgid "bureau"
+msgstr ""
+
+#: data/catalogue.php:1087
+msgid "chest"
+msgstr ""
+
+#: data/catalogue.php:1096
+msgid "Tallboy / tall chest"
+msgstr ""
+
+#: data/catalogue.php:1097
+msgid "highboy"
+msgstr ""
+
+#: data/catalogue.php:1106
+#: data/catalogue.php:1388
+msgid "Bedside table"
+msgstr ""
+
+#: data/catalogue.php:1107
+#: data/catalogue.php:1389
+msgid "nightstand"
+msgstr ""
+
+#: data/catalogue.php:1116
+#: data/catalogue.php:1499
+msgid "Dressing table"
+msgstr ""
+
+#: data/catalogue.php:1117
+#: data/catalogue.php:1500
+msgid "vanity"
+msgstr ""
+
+#: data/catalogue.php:1117
+msgid "makeup vanity"
+msgstr ""
+
+#: data/catalogue.php:1126
+msgid "Dressing table stool"
+msgstr ""
+
+#: data/catalogue.php:1136
+msgid "Blanket box / chest"
+msgstr ""
+
+#: data/catalogue.php:1137
+#: data/catalogue.php:3576
+msgid "trunk"
+msgstr ""
+
+#: data/catalogue.php:1137
+msgid "hope chest"
+msgstr ""
+
+#: data/catalogue.php:1137
+msgid "cedar chest"
+msgstr ""
+
+#: data/catalogue.php:1146
+msgid "Full-length mirror"
+msgstr ""
+
+#: data/catalogue.php:1147
+msgid "cheval mirror"
+msgstr ""
+
+#: data/catalogue.php:1156
+msgid "Bedroom chair"
+msgstr ""
+
+#: data/catalogue.php:1157
+msgid "accent chair"
+msgstr ""
+
+#: data/catalogue.php:1166
+msgid "Clothes rail"
+msgstr ""
+
+#: data/catalogue.php:1167
+msgid "garment rack"
+msgstr ""
+
+#: data/catalogue.php:1176
+msgid "Bedroom TV"
+msgstr ""
+
+#: data/catalogue.php:1186
+msgid "4-door wardrobe"
+msgstr ""
+
+#: data/catalogue.php:1196
+msgid "Sliding-door wardrobe"
+msgstr ""
+
+#: data/catalogue.php:1206
+msgid "Walk-in wardrobe system"
+msgstr ""
+
+#: data/catalogue.php:1207
+msgid "dressing room"
+msgstr ""
+
+#: data/catalogue.php:1216
+msgid "Double mattress only"
+msgstr ""
+
+#: data/catalogue.php:1217
+#: data/catalogue.php:1228
+#: data/catalogue.php:1459
+msgid "mattress"
+msgstr ""
+
+#: data/catalogue.php:1227
+msgid "King mattress only"
+msgstr ""
+
+#: data/catalogue.php:1238
+msgid "Ottoman storage bed"
+msgstr ""
+
+#: data/catalogue.php:1239
+msgid "divan with storage"
+msgstr ""
+
+#: data/catalogue.php:1248
+msgid "Adjustable bed"
+msgstr ""
+
+#: data/catalogue.php:1249
+msgid "electric bed"
+msgstr ""
+
+#: data/catalogue.php:1258
+msgid "Waterbed (drained)"
+msgstr ""
+
+#: data/catalogue.php:1268
+msgid "Small chest of drawers"
+msgstr ""
+
+#: data/catalogue.php:1269
+msgid "bachelor chest"
+msgstr ""
+
+#: data/catalogue.php:1278
+msgid "Jewellery armoire"
+msgstr ""
+
+#: data/catalogue.php:1288
+msgid "Bed-end bench"
+msgstr ""
+
+#: data/catalogue.php:1289
+msgid "ottoman bench"
+msgstr ""
+
+#: data/catalogue.php:1298
+msgid "Single bed"
+msgstr ""
+
+#: data/catalogue.php:1299
+msgid "twin bed"
+msgstr ""
+
+#: data/catalogue.php:1299
+msgid "king single"
+msgstr ""
+
+#: data/catalogue.php:1308
+msgid "Small double bed"
+msgstr ""
+
+#: data/catalogue.php:1309
+msgid "three-quarter bed"
+msgstr ""
+
+#: data/catalogue.php:1328
+msgid "Bunk beds"
+msgstr ""
+
+#: data/catalogue.php:1329
+msgid "bunk bed"
+msgstr ""
+
+#: data/catalogue.php:1338
+msgid "Day bed"
+msgstr ""
+
+#: data/catalogue.php:1339
+msgid "trundle bed"
+msgstr ""
+
+#: data/catalogue.php:1348
+msgid "Folding / guest bed"
+msgstr ""
+
+#: data/catalogue.php:1349
+msgid "camp bed"
+msgstr ""
+
+#: data/catalogue.php:1398
+msgid "Small desk"
+msgstr ""
+
+#: data/catalogue.php:1399
+msgid "study desk"
+msgstr ""
+
+#: data/catalogue.php:1408
+msgid "Desk chair"
+msgstr ""
+
+#: data/catalogue.php:1418
+msgid "Small bookcase"
+msgstr ""
+
+#: data/catalogue.php:1438
+msgid "TV"
+msgstr ""
+
+#: data/catalogue.php:1448
+msgid "Chair"
+msgstr ""
+
+#: data/catalogue.php:1458
+msgid "Single mattress only"
+msgstr ""
+
+#: data/catalogue.php:1469
+msgid "High sleeper / cabin bed"
+msgstr ""
+
+#: data/catalogue.php:1470
+msgid "loft bed"
+msgstr ""
+
+#: data/catalogue.php:1479
+msgid "Gaming chair"
+msgstr ""
+
+#: data/catalogue.php:1489
+msgid "Fabric / canvas wardrobe"
+msgstr ""
+
+#: data/catalogue.php:1490
+msgid "canvas wardrobe"
+msgstr ""
+
+#: data/catalogue.php:1509
+msgid "Cot / crib"
+msgstr ""
+
+#: data/catalogue.php:1510
+msgid "crib"
+msgstr ""
+
+#: data/catalogue.php:1519
+msgid "Cot bed / toddler bed"
+msgstr ""
+
+#: data/catalogue.php:1520
+msgid "toddler bed"
+msgstr ""
+
+#: data/catalogue.php:1529
+msgid "Changing table"
+msgstr ""
+
+#: data/catalogue.php:1530
+msgid "changing unit"
+msgstr ""
+
+#: data/catalogue.php:1539
+msgid "High chair"
+msgstr ""
+
+#: data/catalogue.php:1549
+msgid "Pram / pushchair"
+msgstr ""
+
+#: data/catalogue.php:1550
+msgid "stroller"
+msgstr ""
+
+#: data/catalogue.php:1550
+msgid "buggy"
+msgstr ""
+
+#: data/catalogue.php:1550
+msgid "baby carriage"
+msgstr ""
+
+#: data/catalogue.php:1550
+msgid "pusher"
+msgstr ""
+
+#: data/catalogue.php:1559
+msgid "Toy box"
+msgstr ""
+
+#: data/catalogue.php:1560
+msgid "toy chest"
+msgstr ""
+
+#: data/catalogue.php:1569
+msgid "Play kitchen / dolls house"
+msgstr ""
+
+#: data/catalogue.php:1570
+msgid "ride-on toy"
+msgstr ""
+
+#: data/catalogue.php:1579
+msgid "Rocking horse"
+msgstr ""
+
+#: data/catalogue.php:1589
+msgid "Kids table & chairs"
+msgstr ""
+
+#: data/catalogue.php:1590
+msgid "play table"
+msgstr ""
+
+#: data/catalogue.php:1599
+msgid "Playpen"
+msgstr ""
+
+#: data/catalogue.php:1600
+msgid "play yard"
+msgstr ""
+
+#: data/catalogue.php:1609
+msgid "Bassinet / Moses basket"
+msgstr ""
+
+#: data/catalogue.php:1610
+msgid "Moses basket"
+msgstr ""
+
+#: data/catalogue.php:1619
+msgid "Baby bouncer / swing"
+msgstr ""
+
+#: data/catalogue.php:1629
+msgid "Car seat"
+msgstr ""
+
+#: data/catalogue.php:1639
+msgid "Child's bike / scooter"
+msgstr ""
+
+#: data/catalogue.php:1640
+msgid "tricycle"
+msgstr ""
+
+#: data/catalogue.php:1640
+#: data/catalogue.php:3024
+msgid "scooter"
+msgstr ""
+
+#: data/catalogue.php:1650
+msgid "Large toy"
+msgstr ""
+
+#: data/catalogue.php:1660
+msgid "Cradle"
+msgstr ""
+
+#: data/catalogue.php:1670
+msgid "Travel cot"
+msgstr ""
+
+#: data/catalogue.php:1671
+msgid "portable cot"
+msgstr ""
+
+#: data/catalogue.php:1680
+msgid "Child's chair"
+msgstr ""
+
+#: data/catalogue.php:1690
+msgid "Child's wagon"
+msgstr ""
+
+#: data/catalogue.php:1700
+msgid "Sandpit"
+msgstr ""
+
+#: data/catalogue.php:1701
+msgid "sandbox"
+msgstr ""
+
+#: data/catalogue.php:1710
+msgid "Stair / baby gate"
+msgstr ""
+
+#: data/catalogue.php:1711
+msgid "stair gate"
+msgstr ""
+
+#: data/catalogue.php:1720
+msgid "Nursing / glider chair"
+msgstr ""
+
+#: data/catalogue.php:1721
+msgid "glider"
+msgstr ""
+
+#: data/catalogue.php:1730
+msgid "Baby bath"
+msgstr ""
+
+#: data/catalogue.php:1740
+msgid "Child's wardrobe"
+msgstr ""
+
+#: data/catalogue.php:1750
+msgid "Toy storage unit"
+msgstr ""
+
+#: data/catalogue.php:1751
+msgid "kids bookshelf"
+msgstr ""
+
+#: data/catalogue.php:1760
+msgid "Ride-on car"
+msgstr ""
+
+#: data/catalogue.php:1761
+msgid "electric car"
+msgstr ""
+
+#: data/catalogue.php:1770
+msgid "Indoor slide / climber"
+msgstr ""
+
+#: data/catalogue.php:1771
+#: data/catalogue.php:2606
+msgid "climbing frame"
+msgstr ""
+
+#: data/catalogue.php:1780
+msgid "Desk"
+msgstr ""
+
+#: data/catalogue.php:1781
+msgid "computer desk"
+msgstr ""
+
+#: data/catalogue.php:1790
+msgid "Corner / large desk"
+msgstr ""
+
+#: data/catalogue.php:1791
+msgid "L-shaped desk"
+msgstr ""
+
+#: data/catalogue.php:1791
+msgid "secretary desk"
+msgstr ""
+
+#: data/catalogue.php:1800
+#: data/catalogue.php:3695
+msgid "Office chair"
+msgstr ""
+
+#: data/catalogue.php:1801
+#: data/catalogue.php:3696
+msgid "desk chair"
+msgstr ""
+
+#: data/catalogue.php:1810
+msgid "Filing cabinet (2 drawers)"
+msgstr ""
+
+#: data/catalogue.php:1811
+#: data/catalogue.php:1821
+#: data/catalogue.php:3726
+msgid "file cabinet"
+msgstr ""
+
+#: data/catalogue.php:1820
+#: data/catalogue.php:3725
+msgid "Filing cabinet (4 drawers)"
+msgstr ""
+
+#: data/catalogue.php:1840
+msgid "Computer & monitor"
+msgstr ""
+
+#: data/catalogue.php:1841
+msgid "PC"
+msgstr ""
+
+#: data/catalogue.php:1841
+msgid "monitor"
+msgstr ""
+
+#: data/catalogue.php:1841
+msgid "laptop"
+msgstr ""
+
+#: data/catalogue.php:1850
+msgid "Printer"
+msgstr ""
+
+#: data/catalogue.php:1851
+msgid "scanner"
+msgstr ""
+
+#: data/catalogue.php:1860
+msgid "Shelving unit"
+msgstr ""
+
+#: data/catalogue.php:1870
+msgid "Storage cupboard"
+msgstr ""
+
+#: data/catalogue.php:1871
+msgid "cabinet"
+msgstr ""
+
+#: data/catalogue.php:1880
+msgid "Laptop / tablet (boxed)"
+msgstr ""
+
+#: data/catalogue.php:1881
+msgid "tablet"
+msgstr ""
+
+#: data/catalogue.php:1890
+msgid "Paper shredder"
+msgstr ""
+
+#: data/catalogue.php:1900
+msgid "Standing desk"
+msgstr ""
+
+#: data/catalogue.php:1901
+msgid "sit-stand desk"
+msgstr ""
+
+#: data/catalogue.php:1910
+msgid "Router / network kit"
+msgstr ""
+
+#: data/catalogue.php:1911
+msgid "modem"
+msgstr ""
+
+#: data/catalogue.php:1920
+msgid "Plan chest"
+msgstr ""
+
+#: data/catalogue.php:1921
+msgid "map chest"
+msgstr ""
+
+#: data/catalogue.php:1930
+msgid "Bathroom cabinet"
+msgstr ""
+
+#: data/catalogue.php:1931
+msgid "medicine cabinet"
+msgstr ""
+
+#: data/catalogue.php:1940
+msgid "Laundry basket"
+msgstr ""
+
+#: data/catalogue.php:1941
+msgid "hamper"
+msgstr ""
+
+#: data/catalogue.php:1950
+msgid "Shelf / tower unit"
+msgstr ""
+
+#: data/catalogue.php:1951
+msgid "towel rack"
+msgstr ""
+
+#: data/catalogue.php:1960
+msgid "Bathroom mirror"
+msgstr ""
+
+#: data/catalogue.php:1970
+msgid "Stool / small chair"
+msgstr ""
+
+#: data/catalogue.php:1980
+msgid "Vanity / basin unit"
+msgstr ""
+
+#: data/catalogue.php:1981
+msgid "basin unit"
+msgstr ""
+
+#: data/catalogue.php:1990
+msgid "Freestanding towel rail"
+msgstr ""
+
+#: data/catalogue.php:2000
+msgid "Toiletries & scales (box)"
+msgstr ""
+
+#: data/catalogue.php:2001
+msgid "toiletries"
+msgstr ""
+
+#: data/catalogue.php:2010
+msgid "Hall / console table"
+msgstr ""
+
+#: data/catalogue.php:2011
+msgid "console table"
+msgstr ""
+
+#: data/catalogue.php:2011
+msgid "entry table"
+msgstr ""
+
+#: data/catalogue.php:2011
+msgid "foyer table"
+msgstr ""
+
+#: data/catalogue.php:2020
+msgid "Coat stand"
+msgstr ""
+
+#: data/catalogue.php:2021
+msgid "coat rack"
+msgstr ""
+
+#: data/catalogue.php:2021
+msgid "hat stand"
+msgstr ""
+
+#: data/catalogue.php:2021
+msgid "valet stand"
+msgstr ""
+
+#: data/catalogue.php:2030
+msgid "Shoe rack / cabinet"
+msgstr ""
+
+#: data/catalogue.php:2031
+msgid "shoe cabinet"
+msgstr ""
+
+#: data/catalogue.php:2040
+msgid "Hall bench / settle"
+msgstr ""
+
+#: data/catalogue.php:2041
+msgid "settle"
+msgstr ""
+
+#: data/catalogue.php:2041
+msgid "mudroom bench"
+msgstr ""
+
+#: data/catalogue.php:2050
+msgid "Hall mirror"
+msgstr ""
+
+#: data/catalogue.php:2060
+msgid "Hall cupboard"
+msgstr ""
+
+#: data/catalogue.php:2070
+msgid "Umbrella stand"
+msgstr ""
+
+#: data/catalogue.php:2080
+msgid "Hall stand"
+msgstr ""
+
+#: data/catalogue.php:2081
+msgid "hall tree"
+msgstr ""
+
+#: data/catalogue.php:2090
+msgid "Shoe bench"
+msgstr ""
+
+#: data/catalogue.php:2100
+msgid "Washing machine"
+msgstr ""
+
+#: data/catalogue.php:2101
+msgid "washer"
+msgstr ""
+
+#: data/catalogue.php:2111
+msgid "Tumble dryer"
+msgstr ""
+
+#: data/catalogue.php:2112
+msgid "dryer"
+msgstr ""
+
+#: data/catalogue.php:2112
+msgid "clothes dryer"
+msgstr ""
+
+#: data/catalogue.php:2122
+msgid "Ironing board"
+msgstr ""
+
+#: data/catalogue.php:2132
+msgid "Clothes airer"
+msgstr ""
+
+#: data/catalogue.php:2133
+msgid "drying rack"
+msgstr ""
+
+#: data/catalogue.php:2133
+msgid "clothes horse"
+msgstr ""
+
+#: data/catalogue.php:2133
+msgid "clothes maiden"
+msgstr ""
+
+#: data/catalogue.php:2142
+msgid "Vacuum cleaner"
+msgstr ""
+
+#: data/catalogue.php:2143
+msgid "hoover"
+msgstr ""
+
+#: data/catalogue.php:2152
+msgid "Utility shelving"
+msgstr ""
+
+#: data/catalogue.php:2162
+msgid "Mop, broom & bucket"
+msgstr ""
+
+#: data/catalogue.php:2163
+msgid "broom"
+msgstr ""
+
+#: data/catalogue.php:2172
+msgid "Washer dryer"
+msgstr ""
+
+#: data/catalogue.php:2173
+msgid "combo washer"
+msgstr ""
+
+#: data/catalogue.php:2183
+msgid "Laundry trolley"
+msgstr ""
+
+#: data/catalogue.php:2193
+msgid "Steam generator / press"
+msgstr ""
+
+#: data/catalogue.php:2194
+msgid "steam iron"
+msgstr ""
+
+#: data/catalogue.php:2203
+msgid "Freestanding utility sink"
+msgstr ""
+
+#: data/catalogue.php:2204
+msgid "laundry tub"
+msgstr ""
+
+#: data/catalogue.php:2213
+msgid "Dehumidifier / air purifier"
+msgstr ""
+
+#: data/catalogue.php:2214
+msgid "air purifier"
+msgstr ""
+
+#: data/catalogue.php:2223
+msgid "Lawn mower"
+msgstr ""
+
+#: data/catalogue.php:2224
+msgid "mower"
+msgstr ""
+
+#: data/catalogue.php:2224
+msgid "lawnmower"
+msgstr ""
+
+#: data/catalogue.php:2233
+msgid "Ride-on mower"
+msgstr ""
+
+#: data/catalogue.php:2234
+msgid "lawn tractor"
+msgstr ""
+
+#: data/catalogue.php:2244
+msgid "Toolbox"
+msgstr ""
+
+#: data/catalogue.php:2245
+msgid "tools"
+msgstr ""
+
+#: data/catalogue.php:2254
+msgid "Tool chest / cabinet"
+msgstr ""
+
+#: data/catalogue.php:2255
+msgid "roll cab"
+msgstr ""
+
+#: data/catalogue.php:2264
+msgid "Workbench"
+msgstr ""
+
+#: data/catalogue.php:2274
+msgid "Garden tools (bundle)"
+msgstr ""
+
+#: data/catalogue.php:2275
+msgid "rake"
+msgstr ""
+
+#: data/catalogue.php:2275
+msgid "spade"
+msgstr ""
+
+#: data/catalogue.php:2275
+msgid "shovel"
+msgstr ""
+
+#: data/catalogue.php:2275
+msgid "hoe"
+msgstr ""
+
+#: data/catalogue.php:2275
+msgid "pitchfork"
+msgstr ""
+
+#: data/catalogue.php:2284
+msgid "Ladder"
+msgstr ""
+
+#: data/catalogue.php:2285
+msgid "extension ladder"
+msgstr ""
+
+#: data/catalogue.php:2294
+msgid "Step ladder"
+msgstr ""
+
+#: data/catalogue.php:2304
+msgid "Wheelbarrow"
+msgstr ""
+
+#: data/catalogue.php:2314
+msgid "Garage shelving / racking"
+msgstr ""
+
+#: data/catalogue.php:2315
+#: data/catalogue.php:3787
+#: data/catalogue.php:4009
+msgid "racking"
+msgstr ""
+
+#: data/catalogue.php:2324
+msgid "Pressure washer"
+msgstr ""
+
+#: data/catalogue.php:2325
+msgid "jet washer"
+msgstr ""
+
+#: data/catalogue.php:2334
+msgid "Strimmer / hedge trimmer"
+msgstr ""
+
+#: data/catalogue.php:2335
+msgid "leaf blower"
+msgstr ""
+
+#: data/catalogue.php:2335
+msgid "weed eater"
+msgstr ""
+
+#: data/catalogue.php:2335
+msgid "weed whacker"
+msgstr ""
+
+#: data/catalogue.php:2335
+msgid "whipper snipper"
+msgstr ""
+
+#: data/catalogue.php:2335
+msgid "line trimmer"
+msgstr ""
+
+#: data/catalogue.php:2344
+msgid "Car tyres (set of 4)"
+msgstr ""
+
+#: data/catalogue.php:2345
+msgid "tires"
+msgstr ""
+
+#: data/catalogue.php:2354
+msgid "Hose & reel"
+msgstr ""
+
+#: data/catalogue.php:2364
+msgid "Generator / compressor"
+msgstr ""
+
+#: data/catalogue.php:2365
+msgid "compressor"
+msgstr ""
+
+#: data/catalogue.php:2374
+msgid "Snow blower"
+msgstr ""
+
+#: data/catalogue.php:2375
+msgid "snowblower"
+msgstr ""
+
+#: data/catalogue.php:2375
+msgid "snow thrower"
+msgstr ""
+
+#: data/catalogue.php:2384
+msgid "Garage freezer"
+msgstr ""
+
+#: data/catalogue.php:2385
+msgid "chest freezer"
+msgstr ""
+
+#: data/catalogue.php:2395
+msgid "Power tool (each)"
+msgstr ""
+
+#: data/catalogue.php:2396
+msgid "drill"
+msgstr ""
+
+#: data/catalogue.php:2396
+msgid "sander"
+msgstr ""
+
+#: data/catalogue.php:2405
+msgid "Table saw / bench tool"
+msgstr ""
+
+#: data/catalogue.php:2406
+msgid "mitre saw"
+msgstr ""
+
+#: data/catalogue.php:2406
+msgid "lathe"
+msgstr ""
+
+#: data/catalogue.php:2415
+msgid "Chainsaw"
+msgstr ""
+
+#: data/catalogue.php:2425
+msgid "Car roof box"
+msgstr ""
+
+#: data/catalogue.php:2426
+msgid "cargo box"
+msgstr ""
+
+#: data/catalogue.php:2435
+msgid "Bike rack"
+msgstr ""
+
+#: data/catalogue.php:2445
+msgid "Fuel can (empty)"
+msgstr ""
+
+#: data/catalogue.php:2446
+msgid "petrol can"
+msgstr ""
+
+#: data/catalogue.php:2455
+msgid "Paint tins (box)"
+msgstr ""
+
+#: data/catalogue.php:2465
+msgid "Lawn roller / spreader"
+msgstr ""
+
+#: data/catalogue.php:2466
+msgid "spreader"
+msgstr ""
+
+#: data/catalogue.php:2466
+msgid "leaf sweeper"
+msgstr ""
+
+#: data/catalogue.php:2475
+msgid "Welder"
+msgstr ""
+
+#: data/catalogue.php:2485
+msgid "Car parts (box)"
+msgstr ""
+
+#: data/catalogue.php:2495
+msgid "Garage storage bins"
+msgstr ""
+
+#: data/catalogue.php:2496
+msgid "stacking bins"
+msgstr ""
+
+#: data/catalogue.php:2505
+msgid "Garden table"
+msgstr ""
+
+#: data/catalogue.php:2506
+msgid "patio table"
+msgstr ""
+
+#: data/catalogue.php:2515
+msgid "Garden chair"
+msgstr ""
+
+#: data/catalogue.php:2516
+msgid "patio chair"
+msgstr ""
+
+#: data/catalogue.php:2516
+msgid "lawn chair"
+msgstr ""
+
+#: data/catalogue.php:2516
+msgid "adirondack chair"
+msgstr ""
+
+#: data/catalogue.php:2516
+msgid "muskoka chair"
+msgstr ""
+
+#: data/catalogue.php:2516
+msgid "deck chair"
+msgstr ""
+
+#: data/catalogue.php:2525
+msgid "Sun lounger"
+msgstr ""
+
+#: data/catalogue.php:2526
+msgid "chaise longue"
+msgstr ""
+
+#: data/catalogue.php:2535
+msgid "Garden bench"
+msgstr ""
+
+#: data/catalogue.php:2545
+msgid "Parasol"
+msgstr ""
+
+#: data/catalogue.php:2546
+msgid "umbrella"
+msgstr ""
+
+#: data/catalogue.php:2546
+msgid "patio umbrella"
+msgstr ""
+
+#: data/catalogue.php:2546
+msgid "beach umbrella"
+msgstr ""
+
+#: data/catalogue.php:2555
+msgid "Barbecue (large)"
+msgstr ""
+
+#: data/catalogue.php:2556
+#: data/catalogue.php:2566
+msgid "grill"
+msgstr ""
+
+#: data/catalogue.php:2556
+msgid "BBQ"
+msgstr ""
+
+#: data/catalogue.php:2556
+msgid "barbie"
+msgstr ""
+
+#: data/catalogue.php:2565
+msgid "Barbecue (portable)"
+msgstr ""
+
+#: data/catalogue.php:2575
+msgid "Plant pot (large)"
+msgstr ""
+
+#: data/catalogue.php:2576
+msgid "planter"
+msgstr ""
+
+#: data/catalogue.php:2585
+msgid "Garden ornament / bird bath"
+msgstr ""
+
+#: data/catalogue.php:2586
+msgid "statue"
+msgstr ""
+
+#: data/catalogue.php:2586
+msgid "fountain"
+msgstr ""
+
+#: data/catalogue.php:2595
+msgid "Trampoline"
+msgstr ""
+
+#: data/catalogue.php:2605
+msgid "Swing set / climbing frame"
+msgstr ""
+
+#: data/catalogue.php:2606
+msgid "slide"
+msgstr ""
+
+#: data/catalogue.php:2615
+msgid "Garden storage box"
+msgstr ""
+
+#: data/catalogue.php:2616
+msgid "deck box"
+msgstr ""
+
+#: data/catalogue.php:2625
+msgid "Rattan / lounge set"
+msgstr ""
+
+#: data/catalogue.php:2626
+msgid "patio set"
+msgstr ""
+
+#: data/catalogue.php:2626
+msgid "outdoor sofa"
+msgstr ""
+
+#: data/catalogue.php:2626
+msgid "patio furniture"
+msgstr ""
+
+#: data/catalogue.php:2626
+msgid "outdoor setting"
+msgstr ""
+
+#: data/catalogue.php:2635
+msgid "Fire pit / patio heater"
+msgstr ""
+
+#: data/catalogue.php:2636
+msgid "patio heater"
+msgstr ""
+
+#: data/catalogue.php:2645
+msgid "Garden shed (dismantled)"
+msgstr ""
+
+#: data/catalogue.php:2646
+msgid "greenhouse"
+msgstr ""
+
+#: data/catalogue.php:2646
+msgid "tool shed"
+msgstr ""
+
+#: data/catalogue.php:2655
+msgid "Wheelie bin"
+msgstr ""
+
+#: data/catalogue.php:2656
+msgid "recycling bin"
+msgstr ""
+
+#: data/catalogue.php:2665
+msgid "Kennel / pet house"
+msgstr ""
+
+#: data/catalogue.php:2666
+msgid "dog crate"
+msgstr ""
+
+#: data/catalogue.php:2666
+msgid "rabbit hutch"
+msgstr ""
+
+#: data/catalogue.php:2666
+msgid "dog house"
+msgstr ""
+
+#: data/catalogue.php:2675
+msgid "Gazebo / marquee (packed)"
+msgstr ""
+
+#: data/catalogue.php:2676
+msgid "marquee"
+msgstr ""
+
+#: data/catalogue.php:2685
+msgid "Swing seat / hammock"
+msgstr ""
+
+#: data/catalogue.php:2686
+msgid "hammock"
+msgstr ""
+
+#: data/catalogue.php:2695
+msgid "Compost bin"
+msgstr ""
+
+#: data/catalogue.php:2705
+msgid "Water butt"
+msgstr ""
+
+#: data/catalogue.php:2706
+msgid "rain barrel"
+msgstr ""
+
+#: data/catalogue.php:2715
+msgid "Outdoor pizza oven"
+msgstr ""
+
+#: data/catalogue.php:2725
+msgid "Potting bench"
+msgstr ""
+
+#: data/catalogue.php:2735
+msgid "Paddling pool & pool kit"
+msgstr ""
+
+#: data/catalogue.php:2736
+msgid "pool pump"
+msgstr ""
+
+#: data/catalogue.php:2745
+msgid "Outdoor fridge / cooler"
+msgstr ""
+
+#: data/catalogue.php:2756
+msgid "Bird table / feeder"
+msgstr ""
+
+#: data/catalogue.php:2766
+msgid "Garden arch / trellis"
+msgstr ""
+
+#: data/catalogue.php:2767
+msgid "trellis"
+msgstr ""
+
+#: data/catalogue.php:2776
+msgid "Log store"
+msgstr ""
+
+#: data/catalogue.php:2786
+msgid "Chicken coop"
+msgstr ""
+
+#: data/catalogue.php:2787
+msgid "hen house"
+msgstr ""
+
+#: data/catalogue.php:2796
+msgid "Bike / garden store"
+msgstr ""
+
+#: data/catalogue.php:2806
+msgid "Rotary washing line"
+msgstr ""
+
+#: data/catalogue.php:2807
+msgid "washing line"
+msgstr ""
+
+#: data/catalogue.php:2816
+msgid "Bicycle"
+msgstr ""
+
+#: data/catalogue.php:2817
+msgid "bike"
+msgstr ""
+
+#: data/catalogue.php:2826
+msgid "Exercise bike"
+msgstr ""
+
+#: data/catalogue.php:2827
+msgid "spin bike"
+msgstr ""
+
+#: data/catalogue.php:2827
+msgid "stationary bike"
+msgstr ""
+
+#: data/catalogue.php:2837
+msgid "Treadmill"
+msgstr ""
+
+#: data/catalogue.php:2838
+msgid "running machine"
+msgstr ""
+
+#: data/catalogue.php:2848
+msgid "Cross trainer"
+msgstr ""
+
+#: data/catalogue.php:2849
+msgid "elliptical"
+msgstr ""
+
+#: data/catalogue.php:2858
+msgid "Rowing machine"
+msgstr ""
+
+#: data/catalogue.php:2859
+msgid "rower"
+msgstr ""
+
+#: data/catalogue.php:2868
+msgid "Weight bench"
+msgstr ""
+
+#: data/catalogue.php:2879
+msgid "Multi-gym / squat rack"
+msgstr ""
+
+#: data/catalogue.php:2880
+msgid "home gym"
+msgstr ""
+
+#: data/catalogue.php:2880
+msgid "power rack"
+msgstr ""
+
+#: data/catalogue.php:2890
+msgid "Dumbbells & weights"
+msgstr ""
+
+#: data/catalogue.php:2891
+msgid "kettlebells"
+msgstr ""
+
+#: data/catalogue.php:2901
+msgid "Golf clubs & bag"
+msgstr ""
+
+#: data/catalogue.php:2911
+msgid "Skis / snowboard"
+msgstr ""
+
+#: data/catalogue.php:2912
+msgid "snowboard"
+msgstr ""
+
+#: data/catalogue.php:2921
+msgid "Surfboard / paddle board"
+msgstr ""
+
+#: data/catalogue.php:2922
+msgid "SUP"
+msgstr ""
+
+#: data/catalogue.php:2931
+msgid "Kayak / canoe"
+msgstr ""
+
+#: data/catalogue.php:2932
+msgid "canoe"
+msgstr ""
+
+#: data/catalogue.php:2941
+msgid "Fishing gear"
+msgstr ""
+
+#: data/catalogue.php:2942
+msgid "fishing rods"
+msgstr ""
+
+#: data/catalogue.php:2951
+msgid "Tent & camping gear"
+msgstr ""
+
+#: data/catalogue.php:2952
+msgid "cool box"
+msgstr ""
+
+#: data/catalogue.php:2952
+msgid "esky"
+msgstr ""
+
+#: data/catalogue.php:2952
+msgid "cooler"
+msgstr ""
+
+#: data/catalogue.php:2952
+msgid "chilly bin"
+msgstr ""
+
+#: data/catalogue.php:2961
+msgid "Table tennis table"
+msgstr ""
+
+#: data/catalogue.php:2962
+msgid "ping pong table"
+msgstr ""
+
+#: data/catalogue.php:2971
+msgid "Guitar / small instrument"
+msgstr ""
+
+#: data/catalogue.php:2972
+msgid "violin"
+msgstr ""
+
+#: data/catalogue.php:2981
+msgid "Drum kit"
+msgstr ""
+
+#: data/catalogue.php:2982
+msgid "drums"
+msgstr ""
+
+#: data/catalogue.php:2992
+msgid "Sewing machine"
+msgstr ""
+
+#: data/catalogue.php:2993
+msgid "overlocker"
+msgstr ""
+
+#: data/catalogue.php:3002
+msgid "Games / poker table"
+msgstr ""
+
+#: data/catalogue.php:3003
+msgid "card table"
+msgstr ""
+
+#: data/catalogue.php:3012
+msgid "Electric bike"
+msgstr ""
+
+#: data/catalogue.php:3013
+msgid "e-bike"
+msgstr ""
+
+#: data/catalogue.php:3023
+msgid "Skateboard / scooter"
+msgstr ""
+
+#: data/catalogue.php:3033
+msgid "Bowling ball & bag"
+msgstr ""
+
+#: data/catalogue.php:3043
+msgid "Yoga mats & exercise kit"
+msgstr ""
+
+#: data/catalogue.php:3044
+msgid "exercise ball"
+msgstr ""
+
+#: data/catalogue.php:3053
+msgid "Football table"
+msgstr ""
+
+#: data/catalogue.php:3054
+msgid "foosball"
+msgstr ""
+
+#: data/catalogue.php:3063
+msgid "Air hockey table"
+msgstr ""
+
+#: data/catalogue.php:3073
+msgid "Punch bag"
+msgstr ""
+
+#: data/catalogue.php:3074
+msgid "boxing bag"
+msgstr ""
+
+#: data/catalogue.php:3083
+msgid "Easel & art kit"
+msgstr ""
+
+#: data/catalogue.php:3084
+msgid "art supplies"
+msgstr ""
+
+#: data/catalogue.php:3093
+msgid "Telescope"
+msgstr ""
+
+#: data/catalogue.php:3103
+msgid "Amplifier / PA speaker"
+msgstr ""
+
+#: data/catalogue.php:3104
+msgid "amp"
+msgstr ""
+
+#: data/catalogue.php:3113
+msgid "Cello / double bass"
+msgstr ""
+
+#: data/catalogue.php:3114
+msgid "double bass"
+msgstr ""
+
+#: data/catalogue.php:3123
+msgid "Harp"
+msgstr ""
+
+#: data/catalogue.php:3134
+msgid "Sledge"
+msgstr ""
+
+#: data/catalogue.php:3135
+msgid "sled"
+msgstr ""
+
+#: data/catalogue.php:3144
+msgid "Sports kit bag"
+msgstr ""
+
+#: data/catalogue.php:3145
+msgid "cricket bag"
+msgstr ""
+
+#: data/catalogue.php:3154
+msgid "Rackets & balls"
+msgstr ""
+
+#: data/catalogue.php:3155
+msgid "tennis rackets"
+msgstr ""
+
+#: data/catalogue.php:3164
+msgid "Sewing table"
+msgstr ""
+
+#: data/catalogue.php:3174
+msgid "Vinyl records (box)"
+msgstr ""
+
+#: data/catalogue.php:3184
+msgid "Model railway board"
+msgstr ""
+
+#: data/catalogue.php:3185
+msgid "train set"
+msgstr ""
+
+#: data/catalogue.php:3194
+msgid "Saddle & tack"
+msgstr ""
+
+#: data/catalogue.php:3204
+msgid "Upright piano"
+msgstr ""
+
+#: data/catalogue.php:3205
+msgid "piano"
+msgstr ""
+
+#: data/catalogue.php:3215
+msgid "Grand piano"
+msgstr ""
+
+#: data/catalogue.php:3216
+msgid "baby grand"
+msgstr ""
+
+#: data/catalogue.php:3226
+msgid "Digital piano / keyboard"
+msgstr ""
+
+#: data/catalogue.php:3227
+msgid "keyboard"
+msgstr ""
+
+#: data/catalogue.php:3227
+msgid "organ"
+msgstr ""
+
+#: data/catalogue.php:3237
+msgid "Pool / snooker table"
+msgstr ""
+
+#: data/catalogue.php:3238
+msgid "billiard table"
+msgstr ""
+
+#: data/catalogue.php:3238
+msgid "snooker table"
+msgstr ""
+
+#: data/catalogue.php:3248
+msgid "Hot tub (empty)"
+msgstr ""
+
+#: data/catalogue.php:3249
+msgid "jacuzzi"
+msgstr ""
+
+#: data/catalogue.php:3249
+msgid "spa"
+msgstr ""
+
+#: data/catalogue.php:3249
+msgid "spa pool"
+msgstr ""
+
+#: data/catalogue.php:3258
+msgid "Safe / gun cabinet"
+msgstr ""
+
+#: data/catalogue.php:3259
+msgid "gun cabinet"
+msgstr ""
+
+#: data/catalogue.php:3269
+msgid "Grandfather clock"
+msgstr ""
+
+#: data/catalogue.php:3270
+msgid "longcase clock"
+msgstr ""
+
+#: data/catalogue.php:3279
+msgid "Motorbike / scooter"
+msgstr ""
+
+#: data/catalogue.php:3280
+msgid "motorcycle"
+msgstr ""
+
+#: data/catalogue.php:3280
+msgid "moped"
+msgstr ""
+
+#: data/catalogue.php:3280
+msgid "dirt bike"
+msgstr ""
+
+#: data/catalogue.php:3290
+msgid "Mobility scooter"
+msgstr ""
+
+#: data/catalogue.php:3300
+msgid "Massage chair"
+msgstr ""
+
+#: data/catalogue.php:3310
+msgid "Arcade machine / jukebox"
+msgstr ""
+
+#: data/catalogue.php:3311
+msgid "pinball machine"
+msgstr ""
+
+#: data/catalogue.php:3311
+msgid "jukebox"
+msgstr ""
+
+#: data/catalogue.php:3320
+msgid "Chandelier"
+msgstr ""
+
+#: data/catalogue.php:3321
+msgid "ceiling light"
+msgstr ""
+
+#: data/catalogue.php:3330
+msgid "Antique armoire"
+msgstr ""
+
+#: data/catalogue.php:3331
+msgid "antique wardrobe"
+msgstr ""
+
+#: data/catalogue.php:3340
+msgid "Car (for transport)"
+msgstr ""
+
+#: data/catalogue.php:3341
+msgid "vehicle"
+msgstr ""
+
+#: data/catalogue.php:3350
+msgid "Piano stool / bench"
+msgstr ""
+
+#: data/catalogue.php:3360
+msgid "Baby grand piano"
+msgstr ""
+
+#: data/catalogue.php:3371
+msgid "Church / pipe organ (console)"
+msgstr ""
+
+#: data/catalogue.php:3382
+msgid "Large statue / sculpture"
+msgstr ""
+
+#: data/catalogue.php:3383
+msgid "sculpture"
+msgstr ""
+
+#: data/catalogue.php:3393
+msgid "Large artwork (crated)"
+msgstr ""
+
+#: data/catalogue.php:3403
+msgid "Large ornate mirror"
+msgstr ""
+
+#: data/catalogue.php:3404
+msgid "overmantel mirror"
+msgstr ""
+
+#: data/catalogue.php:3413
+msgid "Marble / stone table"
+msgstr ""
+
+#: data/catalogue.php:3424
+msgid "Hospital / care bed"
+msgstr ""
+
+#: data/catalogue.php:3425
+msgid "care bed"
+msgstr ""
+
+#: data/catalogue.php:3434
+msgid "Wheelchair"
+msgstr ""
+
+#: data/catalogue.php:3444
+msgid "Quad bike / ATV"
+msgstr ""
+
+#: data/catalogue.php:3445
+msgid "ATV"
+msgstr ""
+
+#: data/catalogue.php:3455
+msgid "Jet ski (on trailer)"
+msgstr ""
+
+#: data/catalogue.php:3465
+msgid "Golf buggy"
+msgstr ""
+
+#: data/catalogue.php:3466
+msgid "golf cart"
+msgstr ""
+
+#: data/catalogue.php:3475
+msgid "Other large item"
+msgstr ""
+
+#: data/catalogue.php:3476
+msgid "other"
+msgstr ""
+
+#: data/catalogue.php:3485
+msgid "Small box (books)"
+msgstr ""
+
+#: data/catalogue.php:3486
+msgid "book box"
+msgstr ""
+
+#: data/catalogue.php:3486
+#: data/catalogue.php:3496
+#: data/catalogue.php:3506
+#: data/catalogue.php:3516
+#: data/catalogue.php:4049
+msgid "carton"
+msgstr ""
+
+#: data/catalogue.php:3486
+msgid "book carton"
+msgstr ""
+
+#: data/catalogue.php:3486
+msgid "wine carton"
+msgstr ""
+
+#: data/catalogue.php:3495
+msgid "Medium box"
+msgstr ""
+
+#: data/catalogue.php:3496
+#: data/catalogue.php:3506
+msgid "moving box"
+msgstr ""
+
+#: data/catalogue.php:3496
+msgid "cardboard box"
+msgstr ""
+
+#: data/catalogue.php:3505
+msgid "Large box"
+msgstr ""
+
+#: data/catalogue.php:3515
+msgid "Extra large box"
+msgstr ""
+
+#: data/catalogue.php:3525
+msgid "Wardrobe box"
+msgstr ""
+
+#: data/catalogue.php:3526
+msgid "hanging box"
+msgstr ""
+
+#: data/catalogue.php:3535
+msgid "Dish pack / china box"
+msgstr ""
+
+#: data/catalogue.php:3536
+msgid "tea chest"
+msgstr ""
+
+#: data/catalogue.php:3536
+msgid "china box"
+msgstr ""
+
+#: data/catalogue.php:3536
+msgid "dish barrel"
+msgstr ""
+
+#: data/catalogue.php:3545
+msgid "Picture / mirror box"
+msgstr ""
+
+#: data/catalogue.php:3555
+msgid "TV box"
+msgstr ""
+
+#: data/catalogue.php:3565
+msgid "Plastic storage crate"
+msgstr ""
+
+#: data/catalogue.php:3566
+msgid "storage tub"
+msgstr ""
+
+#: data/catalogue.php:3566
+msgid "plastic box"
+msgstr ""
+
+#: data/catalogue.php:3575
+msgid "Suitcase"
+msgstr ""
+
+#: data/catalogue.php:3576
+msgid "luggage"
+msgstr ""
+
+#: data/catalogue.php:3585
+msgid "Bag / holdall"
+msgstr ""
+
+#: data/catalogue.php:3586
+msgid "duffel bag"
+msgstr ""
+
+#: data/catalogue.php:3595
+msgid "Flat-pack furniture (boxed)"
+msgstr ""
+
+#: data/catalogue.php:3596
+msgid "IKEA box"
+msgstr ""
+
+#: data/catalogue.php:3605
+msgid "Lamp box"
+msgstr ""
+
+#: data/catalogue.php:3615
+msgid "Garment bag"
+msgstr ""
+
+#: data/catalogue.php:3616
+msgid "suit carrier"
+msgstr ""
+
+#: data/catalogue.php:3625
+msgid "Lidded storage box"
+msgstr ""
+
+#: data/catalogue.php:3635
+msgid "Archive / file box"
+msgstr ""
+
+#: data/catalogue.php:3636
+#: data/catalogue.php:3827
+msgid "file box"
+msgstr ""
+
+#: data/catalogue.php:3645
+msgid "Bag of bedding / soft items"
+msgstr ""
+
+#: data/catalogue.php:3646
+msgid "bedding bag"
+msgstr ""
+
+#: data/catalogue.php:3655
+msgid "Vacuum storage bag"
+msgstr ""
+
+#: data/catalogue.php:3665
+msgid "Office desk / workstation"
+msgstr ""
+
+#: data/catalogue.php:3666
+msgid "workstation"
+msgstr ""
+
+#: data/catalogue.php:3675
+msgid "Executive desk"
+msgstr ""
+
+#: data/catalogue.php:3685
+msgid "Meeting table"
+msgstr ""
+
+#: data/catalogue.php:3686
+msgid "boardroom table"
+msgstr ""
+
+#: data/catalogue.php:3705
+msgid "Meeting / visitor chair"
+msgstr ""
+
+#: data/catalogue.php:3706
+msgid "stacking chair"
+msgstr ""
+
+#: data/catalogue.php:3715
+msgid "Desk pedestal"
+msgstr ""
+
+#: data/catalogue.php:3716
+msgid "drawer unit"
+msgstr ""
+
+#: data/catalogue.php:3735
+msgid "Tall storage cupboard"
+msgstr ""
+
+#: data/catalogue.php:3736
+msgid "stationery cupboard"
+msgstr ""
+
+#: data/catalogue.php:3736
+msgid "sundries cupboard"
+msgstr ""
+
+#: data/catalogue.php:3745
+msgid "Lockers (bank)"
+msgstr ""
+
+#: data/catalogue.php:3755
+msgid "Photocopier"
+msgstr ""
+
+#: data/catalogue.php:3756
+msgid "copier"
+msgstr ""
+
+#: data/catalogue.php:3766
+msgid "Server / network rack"
+msgstr ""
+
+#: data/catalogue.php:3767
+msgid "network cabinet"
+msgstr ""
+
+#: data/catalogue.php:3776
+msgid "Reception desk"
+msgstr ""
+
+#: data/catalogue.php:3786
+msgid "Office shelving"
+msgstr ""
+
+#: data/catalogue.php:3796
+msgid "Whiteboard / flip chart"
+msgstr ""
+
+#: data/catalogue.php:3797
+msgid "notice board"
+msgstr ""
+
+#: data/catalogue.php:3806
+msgid "Reception sofa"
+msgstr ""
+
+#: data/catalogue.php:3816
+msgid "Office fridge"
+msgstr ""
+
+#: data/catalogue.php:3826
+msgid "Archive box"
+msgstr ""
+
+#: data/catalogue.php:3836
+msgid "IT / cable box"
+msgstr ""
+
+#: data/catalogue.php:3846
+msgid "Waiting room seat"
+msgstr ""
+
+#: data/catalogue.php:3856
+msgid "Desk screen / partition"
+msgstr ""
+
+#: data/catalogue.php:3857
+msgid "acoustic panel"
+msgstr ""
+
+#: data/catalogue.php:3866
+msgid "Security / fireproof cabinet"
+msgstr ""
+
+#: data/catalogue.php:3867
+msgid "fireproof cabinet"
+msgstr ""
+
+#: data/catalogue.php:3877
+msgid "UPS / battery unit"
+msgstr ""
+
+#: data/catalogue.php:3887
+msgid "Router / switch (boxed)"
+msgstr ""
+
+#: data/catalogue.php:3888
+msgid "network switch"
+msgstr ""
+
+#: data/catalogue.php:3897
+msgid "Office shredder"
+msgstr ""
+
+#: data/catalogue.php:3907
+msgid "Office coffee machine"
+msgstr ""
+
+#: data/catalogue.php:3908
+msgid "bean to cup"
+msgstr ""
+
+#: data/catalogue.php:3917
+msgid "Shop shelving / gondola"
+msgstr ""
+
+#: data/catalogue.php:3918
+msgid "gondola"
+msgstr ""
+
+#: data/catalogue.php:3927
+msgid "Shop counter"
+msgstr ""
+
+#: data/catalogue.php:3928
+msgid "till counter"
+msgstr ""
+
+#: data/catalogue.php:3937
+msgid "Till / POS terminal"
+msgstr ""
+
+#: data/catalogue.php:3938
+msgid "cash register"
+msgstr ""
+
+#: data/catalogue.php:3947
+msgid "Mannequin"
+msgstr ""
+
+#: data/catalogue.php:3948
+msgid "dress form"
+msgstr ""
+
+#: data/catalogue.php:3957
+msgid "Garment rail"
+msgstr ""
+
+#: data/catalogue.php:3967
+msgid "Glass display case"
+msgstr ""
+
+#: data/catalogue.php:3968
+msgid "showcase"
+msgstr ""
+
+#: data/catalogue.php:3977
+msgid "Sign / light box"
+msgstr ""
+
+#: data/catalogue.php:3978
+msgid "light box"
+msgstr ""
+
+#: data/catalogue.php:3987
+msgid "Stock trolley / roll cage"
+msgstr ""
+
+#: data/catalogue.php:3988
+msgid "roll cage"
+msgstr ""
+
+#: data/catalogue.php:3997
+msgid "Display fridge"
+msgstr ""
+
+#: data/catalogue.php:3998
+msgid "chiller"
+msgstr ""
+
+#: data/catalogue.php:4008
+msgid "Stockroom racking"
+msgstr ""
+
+#: data/catalogue.php:4018
+msgid "Fitting room frame & curtain"
+msgstr ""
+
+#: data/catalogue.php:4028
+msgid "Shop mirror"
+msgstr ""
+
+#: data/catalogue.php:4038
+msgid "Vending machine"
+msgstr ""
+
+#: data/catalogue.php:4048
+msgid "Stock box"
+msgstr ""
+
+#: data/catalogue.php:4058
+msgid "Restaurant table"
+msgstr ""
+
+#: data/catalogue.php:4059
+msgid "café table"
+msgstr ""
+
+#: data/catalogue.php:4068
+msgid "Restaurant chair"
+msgstr ""
+
+#: data/catalogue.php:4078
+msgid "Booth seating (per section)"
+msgstr ""
+
+#: data/catalogue.php:4079
+msgid "banquette"
+msgstr ""
+
+#: data/catalogue.php:4098
+msgid "Bar counter / back bar"
+msgstr ""
+
+#: data/catalogue.php:4108
+msgid "Commercial upright fridge"
+msgstr ""
+
+#: data/catalogue.php:4109
+msgid "upright chiller"
+msgstr ""
+
+#: data/catalogue.php:4119
+msgid "Commercial chest freezer"
+msgstr ""
+
+#: data/catalogue.php:4130
+msgid "Combi / commercial oven"
+msgstr ""
+
+#: data/catalogue.php:4140
+msgid "Commercial range"
+msgstr ""
+
+#: data/catalogue.php:4150
+msgid "Deep fat fryer"
+msgstr ""
+
+#: data/catalogue.php:4160
+msgid "Stainless prep table"
+msgstr ""
+
+#: data/catalogue.php:4161
+msgid "steel table"
+msgstr ""
+
+#: data/catalogue.php:4170
+msgid "Ice machine"
+msgstr ""
+
+#: data/catalogue.php:4180
+msgid "Commercial dishwasher"
+msgstr ""
+
+#: data/catalogue.php:4190
+msgid "Catering racking"
+msgstr ""
+
+#: data/catalogue.php:4191
+msgid "dunnage"
+msgstr ""
+
+#: data/catalogue.php:4200
+msgid "Espresso machine"
+msgstr ""
+
+#: data/catalogue.php:4201
+msgid "barista machine"
+msgstr ""
+
+#: data/catalogue.php:4210
+msgid "Folding banquet table"
+msgstr ""
+
+#: data/catalogue.php:4211
+msgid "trestle table"
+msgstr ""
+
+#: data/catalogue.php:4220
+msgid "Salon styling chair"
+msgstr ""
+
+#: data/catalogue.php:4221
+msgid "barber chair"
+msgstr ""
+
+#: data/catalogue.php:4230
+msgid "Styling station / mirror"
+msgstr ""
+
+#: data/catalogue.php:4240
+msgid "Backwash / basin unit"
+msgstr ""
+
+#: data/catalogue.php:4241
+msgid "backwash"
+msgstr ""
+
+#: data/catalogue.php:4250
+msgid "Nail / manicure table"
+msgstr ""
+
+#: data/catalogue.php:4251
+msgid "manicure table"
+msgstr ""
+
+#: data/catalogue.php:4260
+msgid "Treatment / massage bed"
+msgstr ""
+
+#: data/catalogue.php:4261
+msgid "massage table"
+msgstr ""
+
+#: data/catalogue.php:4270
+msgid "Examination couch"
+msgstr ""
+
+#: data/catalogue.php:4280
+msgid "Dental / treatment chair"
+msgstr ""
+
+#: data/catalogue.php:4290
+msgid "Medical trolley"
+msgstr ""
+
+#: data/catalogue.php:4300
+msgid "Steriliser / autoclave"
+msgstr ""
+
+#: data/catalogue.php:4310
+msgid "Portable X-ray / scanner"
+msgstr ""
+
+#: data/catalogue.php:4311
+msgid "ultrasound"
+msgstr ""
+
+#: data/catalogue.php:4320
+msgid "Lab bench equipment"
+msgstr ""
+
+#: data/catalogue.php:4330
+msgid "Medical fridge"
+msgstr ""
+
+#: data/catalogue.php:4340
+msgid "Privacy screen"
+msgstr ""
+
+#: data/catalogue.php:4350
+msgid "Hood dryer / steamer"
+msgstr ""
+
+#: data/catalogue.php:4360
+msgid "Pupil desk"
+msgstr ""
+
+#: data/catalogue.php:4370
+msgid "Pupil chair"
+msgstr ""
+
+#: data/catalogue.php:4380
+msgid "Teacher's desk"
+msgstr ""
+
+#: data/catalogue.php:4390
+msgid "Projector / smartboard (boxed)"
+msgstr ""
+
+#: data/catalogue.php:4391
+msgid "interactive whiteboard"
+msgstr ""
+
+#: data/catalogue.php:4400
+msgid "Classroom tray unit"
+msgstr ""
+
+#: data/catalogue.php:4401
+msgid "tray unit"
+msgstr ""
+
+#: data/catalogue.php:4410
+msgid "Library shelving"
+msgstr ""
+
+#: data/catalogue.php:4420
+msgid "Lab stool"
+msgstr ""
+
+#: data/catalogue.php:4430
+msgid "Gym mats (stack)"
+msgstr ""
+
+#: data/catalogue.php:4440
+msgid "Folding canteen table"
+msgstr ""
+
+#: data/catalogue.php:4450
+msgid "Mobile whiteboard"
+msgstr ""
+
+#: data/catalogue.php:4460
+msgid "Loaded pallet"
+msgstr ""
+
+#: data/catalogue.php:4461
+msgid "skid"
+msgstr ""
+
+#: data/catalogue.php:4470
+msgid "Pallet truck"
+msgstr ""
+
+#: data/catalogue.php:4471
+msgid "pallet jack"
+msgstr ""
+
+#: data/catalogue.php:4481
+msgid "Forklift"
+msgstr ""
+
+#: data/catalogue.php:4492
+msgid "Pallet racking (per bay)"
+msgstr ""
+
+#: data/catalogue.php:4502
+msgid "IBC / drum (empty)"
+msgstr ""
+
+#: data/catalogue.php:4503
+msgid "oil drum"
+msgstr ""
+
+#: data/catalogue.php:4512
+msgid "Machine (small)"
+msgstr ""
+
+#: data/catalogue.php:4522
+msgid "Machine (medium)"
+msgstr ""
+
+#: data/catalogue.php:4532
+msgid "Conveyor section"
+msgstr ""
+
+#: data/catalogue.php:4542
+msgid "Industrial workbench"
+msgstr ""
+
+#: data/catalogue.php:4552
+msgid "Sack truck"
+msgstr ""
+
+#: data/catalogue.php:4553
+msgid "hand truck"
+msgstr ""
+
+#: data/catalogue.php:4562
+msgid "Gas bottle (empty)"
+msgstr ""
+
+#: data/catalogue.php:4563
+msgid "gas cylinder"
+msgstr ""
+
+#: data/catalogue.php:4572
+msgid "Packing bench"
+msgstr ""
+
+#: data/catalogue.php:4582
+msgid "Chemical / safety cabinet"
+msgstr ""
+
+#: data/catalogue.php:4583
+msgid "COSHH cabinet"
+msgstr ""
+
+#: data/catalogue.php:4592
+msgid "Rolling tool chest"
+msgstr ""
+
+#: data/catalogue.php:4603
+msgid "Boxes only"
+msgstr ""
+
+#: data/catalogue.php:4616
+msgid "Few items"
+msgstr ""
+
+#: data/catalogue.php:4628
+msgid "Student room"
+msgstr ""
+
+#: data/catalogue.php:4650
+#: includes/class-msvcalc-frontend.php:284
+msgid "Studio"
+msgstr ""
+
+#: data/catalogue.php:4676
+#: includes/class-msvcalc-frontend.php:285
+msgid "1 bed"
+msgstr ""
+
+#: data/catalogue.php:4710
+#: includes/class-msvcalc-frontend.php:286
+msgid "2 bed"
+msgstr ""
+
+#: data/catalogue.php:4753
+#: includes/class-msvcalc-frontend.php:287
+msgid "3 bed"
+msgstr ""
+
+#: data/catalogue.php:4804
+#: includes/class-msvcalc-frontend.php:288
+msgid "4 bed"
+msgstr ""
+
+#: data/catalogue.php:4860
+msgid "5 bed"
+msgstr ""
+
+#: data/catalogue.php:4946
+#: includes/class-msvcalc-admin.php:377
+#: includes/class-msvcalc-frontend.php:407
+#: includes/class-msvcalc-leads.php:891
+#: templates/admin-lead.php:59
+#: templates/email.php:41
+#: templates/lead-report.php:178
+msgid "Storage unit"
+msgstr ""
+
+#: data/catalogue.php:4961
+msgid "Small office"
+msgstr ""
+
+#: data/catalogue.php:4984
+msgid "Small shop"
+msgstr ""
+
+#: data/catalogue.php:5004
+msgid "Café"
+msgstr ""
+
+#: data/tables.php:21
+#: data/tables.php:65
+msgid "Small van"
+msgstr ""
+
+#: data/tables.php:22
+msgid "Short wheelbase, about 1 room"
+msgstr ""
+
+#: data/tables.php:28
+#: data/tables.php:72
+msgid "Large van"
+msgstr ""
+
+#: data/tables.php:29
+msgid "Long wheelbase, studio or small flat"
+msgstr ""
+
+#: data/tables.php:35
+msgid "Luton van"
+msgstr ""
+
+#: data/tables.php:36
+msgid "3.5 tonne box van, 1 to 2 bedrooms"
+msgstr ""
+
+#: data/tables.php:42
+msgid "7.5 tonne lorry"
+msgstr ""
+
+#: data/tables.php:43
+#: data/tables.php:87
+#: data/tables.php:131
+#: data/tables.php:175
+msgid "2 to 3 bedrooms"
+msgstr ""
+
+#: data/tables.php:49
+msgid "18 tonne lorry"
+msgstr ""
+
+#: data/tables.php:50
+#: data/tables.php:189
+msgid "4 to 5 bedrooms"
+msgstr ""
+
+#: data/tables.php:56
+msgid "Removal pantechnicon"
+msgstr ""
+
+#: data/tables.php:57
+msgid "Articulated, large houses"
+msgstr ""
+
+#: data/tables.php:66
+#: data/tables.php:110
+#: data/tables.php:154
+msgid "About 1 room"
+msgstr ""
+
+#: data/tables.php:73
+msgid "High roof, studio flat"
+msgstr ""
+
+#: data/tables.php:79
+msgid "Box van (3.5 t)"
+msgstr ""
+
+#: data/tables.php:80
+msgid "Standard car licence, 1 to 2 rooms"
+msgstr ""
+
+#: data/tables.php:86
+msgid "7.5 t truck"
+msgstr ""
+
+#: data/tables.php:93
+msgid "12 t truck"
+msgstr ""
+
+#: data/tables.php:94
+#: data/tables.php:182
+msgid "3 to 4 bedrooms"
+msgstr ""
+
+#: data/tables.php:100
+msgid "18 t truck"
+msgstr ""
+
+#: data/tables.php:101
+msgid "Large houses"
+msgstr ""
+
+#: data/tables.php:109
+msgid "Cargo van"
+msgstr ""
+
+#: data/tables.php:116
+msgid "10 ft truck"
+msgstr ""
+
+#: data/tables.php:117
+#: data/tables.php:161
+msgid "Studio or 1 bedroom"
+msgstr ""
+
+#: data/tables.php:123
+msgid "15 ft truck"
+msgstr ""
+
+#: data/tables.php:124
+#: data/tables.php:168
+msgid "1 to 2 bedrooms"
+msgstr ""
+
+#: data/tables.php:130
+msgid "20 ft truck"
+msgstr ""
+
+#: data/tables.php:137
+msgid "26 ft truck"
+msgstr ""
+
+#: data/tables.php:138
+msgid "3 to 5 bedrooms"
+msgstr ""
+
+#: data/tables.php:144
+msgid "53 ft trailer"
+msgstr ""
+
+#: data/tables.php:145
+msgid "Long distance, large homes"
+msgstr ""
+
+#: data/tables.php:153
+msgid "Van"
+msgstr ""
+
+#: data/tables.php:160
+msgid "2 tonne truck"
+msgstr ""
+
+#: data/tables.php:167
+msgid "3 tonne truck"
+msgstr ""
+
+#: data/tables.php:174
+msgid "4.5 tonne truck"
+msgstr ""
+
+#: data/tables.php:181
+msgid "6 tonne truck"
+msgstr ""
+
+#: data/tables.php:188
+msgid "8 tonne truck"
+msgstr ""
+
+#: data/tables.php:199
+msgid "25 sq ft unit"
+msgstr ""
+
+#: data/tables.php:200
+msgid "Like a garden shed, about 2 m²"
+msgstr ""
+
+#: data/tables.php:206
+msgid "35 sq ft unit"
+msgstr ""
+
+#: data/tables.php:207
+msgid "About 3 m²"
+msgstr ""
+
+#: data/tables.php:213
+msgid "50 sq ft unit"
+msgstr ""
+
+#: data/tables.php:214
+msgid "Like a box room, about 5 m²"
+msgstr ""
+
+#: data/tables.php:220
+msgid "75 sq ft unit"
+msgstr ""
+
+#: data/tables.php:221
+msgid "About 7 m²"
+msgstr ""
+
+#: data/tables.php:227
+msgid "100 sq ft unit"
+msgstr ""
+
+#: data/tables.php:228
+msgid "Like a single garage, about 9 m²"
+msgstr ""
+
+#: data/tables.php:234
+msgid "150 sq ft unit"
+msgstr ""
+
+#: data/tables.php:235
+msgid "About 14 m²"
+msgstr ""
+
+#: data/tables.php:241
+msgid "200 sq ft unit"
+msgstr ""
+
+#: data/tables.php:242
+msgid "Like a double garage, about 19 m²"
+msgstr ""
+
+#: data/tables.php:248
+msgid "300 sq ft unit"
+msgstr ""
+
+#: data/tables.php:249
+msgid "About 28 m²"
+msgstr ""
+
+#: data/tables.php:257
+msgid "1 m² unit"
+msgstr ""
+
+#: data/tables.php:258
+msgid "Locker, about 2.5 m³"
+msgstr ""
+
+#: data/tables.php:264
+msgid "2 m² unit"
+msgstr ""
+
+#: data/tables.php:265
+msgid "About 5 m³"
+msgstr ""
+
+#: data/tables.php:271
+msgid "3 m² unit"
+msgstr ""
+
+#: data/tables.php:272
+msgid "About 7.5 m³"
+msgstr ""
+
+#: data/tables.php:278
+msgid "5 m² unit"
+msgstr ""
+
+#: data/tables.php:279
+msgid "About 12.5 m³"
+msgstr ""
+
+#: data/tables.php:285
+msgid "7.5 m² unit"
+msgstr ""
+
+#: data/tables.php:286
+msgid "About 19 m³"
+msgstr ""
+
+#: data/tables.php:292
+msgid "10 m² unit"
+msgstr ""
+
+#: data/tables.php:293
+msgid "About 25 m³"
+msgstr ""
+
+#: data/tables.php:299
+msgid "15 m² unit"
+msgstr ""
+
+#: data/tables.php:300
+msgid "About 37 m³"
+msgstr ""
+
+#: data/tables.php:306
+msgid "20 m² unit"
+msgstr ""
+
+#: data/tables.php:307
+msgid "About 50 m³"
+msgstr ""
+
+#: data/tables.php:313
+msgid "30 m² unit"
+msgstr ""
+
+#: data/tables.php:314
+msgid "About 75 m³"
+msgstr ""
+
+#: data/tables.php:322
+msgid "5×5 unit"
+msgstr ""
+
+#: data/tables.php:323
+msgid "25 sq ft, like a closet"
+msgstr ""
+
+#: data/tables.php:329
+msgid "5×10 unit"
+msgstr ""
+
+#: data/tables.php:330
+msgid "50 sq ft, like a walk-in closet"
+msgstr ""
+
+#: data/tables.php:336
+msgid "10×10 unit"
+msgstr ""
+
+#: data/tables.php:337
+msgid "100 sq ft, half a garage"
+msgstr ""
+
+#: data/tables.php:343
+msgid "10×15 unit"
+msgstr ""
+
+#: data/tables.php:344
+msgid "150 sq ft, like a large bedroom"
+msgstr ""
+
+#: data/tables.php:350
+msgid "10×20 unit"
+msgstr ""
+
+#: data/tables.php:351
+msgid "200 sq ft, a one-car garage"
+msgstr ""
+
+#: data/tables.php:357
+msgid "10×30 unit"
+msgstr ""
+
+#: data/tables.php:358
+msgid "300 sq ft, a large garage"
+msgstr ""
+
+#: data/tables.php:366
+msgid "1.5 × 1.5 m unit"
+msgstr ""
+
+#: data/tables.php:367
+msgid "About 2.25 m²"
+msgstr ""
+
+#: data/tables.php:373
+msgid "1.5 × 3 m unit"
+msgstr ""
+
+#: data/tables.php:374
+msgid "About 4.5 m²"
+msgstr ""
+
+#: data/tables.php:380
+msgid "3 × 3 m unit"
+msgstr ""
+
+#: data/tables.php:381
+msgid "About 9 m², a single garage"
+msgstr ""
+
+#: data/tables.php:387
+msgid "3 × 4.5 m unit"
+msgstr ""
+
+#: data/tables.php:388
+msgid "About 13.5 m²"
+msgstr ""
+
+#: data/tables.php:394
+msgid "3 × 6 m unit"
+msgstr ""
+
+#: data/tables.php:395
+msgid "About 18 m², a double garage"
+msgstr ""
+
+#: data/tables.php:401
+msgid "4.5 × 6 m unit"
+msgstr ""
+
+#: data/tables.php:402
+msgid "About 27 m²"
+msgstr ""
+
+#: data/tables.php:411
+msgid "Liftvan"
+msgstr ""
+
+#: data/tables.php:412
+msgid "Wooden crate for shared shipping"
+msgstr ""
+
+#: data/tables.php:418
+msgid "20 ft container"
+msgstr ""
+
+#: data/tables.php:419
+msgid "33 m³ total, about 28 m³ usable"
+msgstr ""
+
+#: data/tables.php:425
+msgid "40 ft container"
+msgstr ""
+
+#: data/tables.php:426
+msgid "67 m³ total, about 58 m³ usable"
+msgstr ""
+
+#: data/tables.php:432
+msgid "40 ft high cube"
+msgstr ""
+
+#: data/tables.php:433
+msgid "76 m³ total, about 66 m³ usable"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:70
+#: blocks/calculator/index.js:157
+msgid "Volume Calculator"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:77
+#: includes/class-msvcalc-admin.php:279
+msgid "Overview"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:78
+#: includes/class-msvcalc-admin.php:609
+msgid "Rooms & items"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:79
+#: includes/class-msvcalc-admin.php:674
+msgid "Vehicles & storage"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:81
+#: includes/class-msvcalc-admin.php:188
+#: includes/class-msvcalc-admin.php:564
+msgid "Settings"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:174
+msgid "United Kingdom & Ireland"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:175
+msgid "Europe"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:176
+msgid "United States & Canada"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:177
+msgid "Australia & New Zealand"
+msgstr ""
+
+#. translators: 1: plugin name, 2: author name, 3: link to leave a review.
+#: includes/class-msvcalc-admin.php:204
+#, php-format
+msgid "Thank you for using %1$s by %2$s. Enjoying it? %3$s"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:207
+msgid "Leave a ★★★★★ review"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:242
+msgid "Changes saved."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:243
+msgid "Items imported."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:244
+msgid "Defaults restored."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:245
+msgid "Nothing was saved: the data was not valid."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:246
+msgid "Please choose a JSON file exported from this plugin (2 MB or smaller)."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:247
+msgid "That file has no valid rooms and items."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:285
+msgid "items in"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:285
+msgid "rooms"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:290
+msgid "quote requests"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:295
+msgid "waiting for a reply"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:301
+msgid "Add the calculator to a page"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:302
+msgid "In the block editor, add the \"Volume Calculator\" block. Anywhere else (classic editor, page builders, widgets), paste this shortcode:"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:305
+#: includes/class-msvcalc-frontend.php:464
+msgid "Copy"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:307
+msgid "Optional attributes: units=\"m3\" or \"ft3\", theme=\"light\", \"dark\" or \"auto\", quote=\"no\" to hide the quote form, title=\"…\", intro=\"…\", accent=\"#0fb5ba\"."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:310
+msgid "Make it yours"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:312
+msgid "Colours, units, region and the quote form"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:313
+msgid "Rooms, items, volumes and quick-start presets"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:314
+msgid "Your vans, trucks, containers and storage units"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:315
+msgid "Leads: follow-ups, notes, CSV and PDF export"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:320
+msgid "Live preview"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:321
+msgid "This is how visitors see the calculator. Quote requests sent from this preview are real."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:338
+#: blocks/calculator/index.js:65
+msgid "Calculator"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:339
+msgid "Look & feel"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:340
+#: includes/class-msvcalc-admin.php:397
+msgid "Quote form"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:341
+msgid "Data & privacy"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:352
+msgid "Required"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:353
+msgid "Optional"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:354
+msgid "Hidden"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:360
+msgid "Default unit"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:363
+#: blocks/calculator/index.js:91
+msgid "Cubic metres (m³)"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:364
+#: blocks/calculator/index.js:92
+msgid "Cubic feet (ft³)"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:367
+msgid "Unit switch"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:367
+msgid "Let visitors switch between m³ and ft³"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:368
+#: includes/class-msvcalc-admin.php:911
+msgid "Region"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:368
+msgid "Picks the vehicle and storage unit sizes used for suggestions."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:369
+msgid "Packing margin"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:369
+msgid "Extra space for packing, padding and gaps, added to the total. 10% is typical."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:370
+#: includes/class-msvcalc-frontend.php:328
+msgid "Quick start"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:370
+msgid "Show ready-made lists (few items, studio, 1 to 5 bed, garage, storage unit, office, shop, café)"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:371
+msgid "Search"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:371
+msgid "Show the item search"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:372
+#: includes/class-msvcalc-calculator.php:99
+#: includes/class-msvcalc-frontend.php:396
+msgid "Custom items"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:372
+msgid "Let visitors add items that are not listed"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:373
+msgid "Box count"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:373
+msgid "Show the number of boxes"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:374
+msgid "Weight"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:374
+msgid "Show an estimated weight"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:375
+#: includes/class-msvcalc-leads.php:889
+msgid "Vehicle"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:375
+msgid "Suggest a van or truck"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:376
+msgid "Container"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:376
+msgid "Suggest a shipping container (for international moves)"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:377
+msgid "Suggest a storage unit size"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:378
+#: includes/class-msvcalc-frontend.php:414
+msgid "Print"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:378
+msgid "Show a print button for the inventory"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:379
+msgid "Remember the list"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:379
+msgid "Keep the visitor's list in their browser so they can come back to it"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:380
+#: blocks/calculator/index.js:67
+msgid "Heading"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:380
+#: includes/class-msvcalc-settings.php:287
+#: blocks/calculator/index.js:158
+msgid "How much are you moving?"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:381
+#: blocks/calculator/index.js:77
+msgid "Introduction"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:384
+#: blocks/calculator/index.js:101
+msgid "Theme"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:387
+#: blocks/calculator/index.js:105
+msgid "Light"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:388
+#: blocks/calculator/index.js:106
+msgid "Dark"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:389
+#: blocks/calculator/index.js:107
+msgid "Follow the visitor's device"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:392
+msgid "Main colour"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:393
+msgid "Gradient colour"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:393
+msgid "Blended with the main colour in buttons, the total and the fill bars."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:394
+msgid "Corner roundness"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:395
+msgid "Animations"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:395
+msgid "Use smooth transitions (always off for visitors who prefer reduced motion)"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:396
+msgid "Plugin credit"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:396
+msgid "Show a small \"Powered by Moving & Storage Volume Calculator\" link under the calculator and in customer emails. Off unless you turn it on; it helps other businesses find this free plugin."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:397
+msgid "Let visitors send their inventory for a quote"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:398
+msgid "Send requests to"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:399
+msgid "Company name"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:400
+msgid "Customer copy"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:400
+msgid "Email the customer a copy of their inventory"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:401
+msgid "Phone field"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:402
+msgid "From / to fields"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:403
+msgid "Moving date field"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:404
+msgid "Service field"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:405
+msgid "Floor, lift and parking"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:406
+#: includes/class-msvcalc-frontend.php:346
+#: includes/class-msvcalc-leads.php:736
+#: includes/class-msvcalc-leads.php:883
+msgid "Extra services"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:407
+msgid "Button text"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:408
+msgid "Consent text"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:409
+msgid "Thank-you message"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:410
+msgid "Thank-you page"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:410
+msgid "Optional. Send visitors to this page after a request, for example to track conversions."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:411
+msgid "Store requests"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:411
+msgid "Keep quote requests in WordPress (Volume Calculator > Leads) as well as emailing them"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:414
+msgid "Who can manage leads"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:417
+msgid "Administrators only"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:418
+msgid "Administrators and Editors"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:420
+msgid "Editors see only the Leads screen, never the plugin settings. A role editor plugin can also give the msvcalc_manage_leads capability to any other role."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:422
+msgid "Keep requests for"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:422
+msgid "days"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:422
+msgid "Older requests are deleted automatically. 0 keeps them until you delete them."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:423
+msgid "Remove data"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:423
+msgid "Delete all settings, edited items and quote requests when the plugin is deleted"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:521
+msgid "Leave empty to use the default text shown in grey."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:541
+msgid "— Stay on the calculator —"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:612
+msgid "Rename, add or remove rooms and items, tune volumes to match your own surveys, and choose which items show first. Volumes are entered in your default unit."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:614
+msgid "Customised"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:623
+#: includes/class-msvcalc-admin.php:683
+msgid "Loading the editor…"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:626
+msgid "Save rooms & items"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:627
+#: includes/class-msvcalc-admin.php:687
+#: includes/class-msvcalc-admin.php:914
+msgid "You have unsaved changes."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:633
+msgid "Export"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:634
+msgid "Download your rooms, items and presets as a JSON file, to back them up or copy them to another site."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:638
+msgid "Download JSON"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:642
+#: includes/class-msvcalc-admin.php:648
+msgid "Import"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:643
+msgid "Replace the current rooms, items and presets with a file exported from this plugin."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:652
+#: includes/class-msvcalc-admin.php:657
+#: includes/class-msvcalc-admin.php:694
+msgid "Restore defaults"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:653
+msgid "Go back to the rooms, items and presets that ship with the plugin. Your edits are removed."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:654
+msgid "Restore the default rooms and items? Your edits will be lost."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:676
+msgid "The calculator suggests the smallest vehicle, container and storage unit that holds the visitor's load. Enter usable (load) capacity, not the gross body size. Add your own fleet and unit sizes for an exact match."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:686
+msgid "Save vehicles & storage"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:691
+msgid "Restore the default vehicles, containers and storage units?"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:706
+msgid "You are not allowed to change the volume calculator."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:868
+#: includes/class-msvcalc-frontend.php:335
+msgid "Rooms"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:869
+msgid "Add room"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:870
+msgid "Room name"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:871
+msgid "Category"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:872
+msgid "Choose icon"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:873
+#: includes/class-msvcalc-frontend.php:338
+msgid "Find an icon"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:874
+#: includes/class-msvcalc-frontend.php:339
+msgid "No icons match."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:875
+msgid "New room"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:876
+msgid "Delete room"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:877
+msgid "Delete this room and all its items?"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:878
+msgid "Move up"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:879
+msgid "Move down"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:880
+#: includes/class-msvcalc-frontend.php:340
+msgid "Icon"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:881
+#: includes/class-msvcalc-frontend.php:450
+#: templates/admin-lead.php:237
+#: templates/lead-report.php:230
+msgid "Item"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:882
+#: includes/class-msvcalc-frontend.php:402
+#: includes/class-msvcalc-frontend.php:452
+#: includes/class-msvcalc-leads.php:887
+#: templates/admin-lead.php:49
+#: templates/admin-lead.php:259
+#: templates/email.php:31
+#: templates/lead-report.php:167
+msgid "Items"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:883
+#: includes/class-msvcalc-frontend.php:395
+msgid "Add item"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:884
+msgid "New item"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:885
+#: includes/class-msvcalc-frontend.php:451
+#: templates/admin-lead.php:238
+#: templates/lead-report.php:92
+#: templates/lead-report.php:231
+msgid "Volume"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:886
+#: includes/class-msvcalc-leads.php:886
+msgid "Weight (kg)"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:887
+msgid "Search words"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:888
+msgid "Comma separated, e.g. couch, settee"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:889
+msgid "Common"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:890
+msgid "Shown before \"Show all items\""
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:891
+msgid "Box"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:892
+msgid "Counted as a packing box"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:893
+msgid "Delete"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:894
+msgid "Filter items"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:895
+msgid "Quick-start presets"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:896
+msgid "Typical inventories visitors can start from. Set the quantity of each item."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:897
+msgid "Preset"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:898
+msgid "Add preset"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:899
+msgid "New preset"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:900
+msgid "Delete preset"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:901
+msgid "Preset total"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:902
+msgid "Add an item to this preset…"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:903
+#: includes/class-msvcalc-frontend.php:394
+#: includes/class-msvcalc-frontend.php:449
+#: templates/admin-lead.php:236
+#: templates/lead-report.php:229
+msgid "Qty"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:904
+#: includes/class-msvcalc-leads.php:726
+#: includes/class-msvcalc-leads.php:873
+#: includes/class-msvcalc-privacy.php:127
+msgid "Name"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:905
+msgid "Note"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:906
+msgid "Usable capacity"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:907
+msgid "Add row"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:908
+msgid "Vans & trucks"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:909
+msgid "Shipping containers"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:910
+msgid "Storage units"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:912
+msgid "Average density"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:913
+msgid "kg per m³ of household goods, used for the weight estimate when an item has no weight. 150–200 is typical."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:915
+#: includes/class-msvcalc-frontend.php:465
+msgid "Copied"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:916
+msgid "Nothing here yet."
+msgstr ""
+
+#. translators: %d: number of items.
+#: includes/class-msvcalc-admin.php:918
+#: includes/class-msvcalc-frontend.php:372
+#, php-format
+msgid "%d items"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:919
+msgid "Enter a volume above zero."
+msgstr ""
+
+#. translators: 1: number of vehicles or units, 2: their name.
+#: includes/class-msvcalc-calculator.php:158
+#: includes/class-msvcalc-calculator.php:169
+#, php-format
+msgid "%1$d × %2$s"
+msgstr ""
+
+#. translators: %s: volume in cubic feet.
+#: includes/class-msvcalc-calculator.php:192
+#, php-format
+msgid "%s ft³"
+msgstr ""
+
+#. translators: %s: volume in cubic metres.
+#: includes/class-msvcalc-calculator.php:195
+#, php-format
+msgid "%s m³"
+msgstr ""
+
+#: includes/class-msvcalc-catalogue.php:77
+msgid "Home"
+msgstr ""
+
+#: includes/class-msvcalc-catalogue.php:82
+#: includes/class-msvcalc-icons.php:349
+msgid "Garage & garden"
+msgstr ""
+
+#: includes/class-msvcalc-catalogue.php:87
+msgid "Specialty items"
+msgstr ""
+
+#: includes/class-msvcalc-catalogue.php:97
+msgid "Business"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:178
+msgid "Loading the calculator…"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:181
+msgid "Please turn on JavaScript to use the volume calculator."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:186
+#: includes/class-msvcalc-frontend.php:457
+#: templates/email.php:289
+msgid "Powered by Moving & Storage Volume Calculator"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:289
+msgid "5+ bed"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:292
+msgid "Fairly empty"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:293
+#: includes/class-msvcalc-frontend.php:303
+msgid "Average"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:294
+msgid "Packed full"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:297
+msgid "A few"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:298
+#: includes/class-msvcalc-frontend.php:308
+msgid "Some"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:299
+msgid "Lots"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:302
+msgid "Rarely cook"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:304
+msgid "Keen cook"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:307
+msgid "None"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:309
+msgid "Full"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:321
+msgid "m³"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:322
+msgid "ft³"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:323
+msgid "kg"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:324
+msgid "lb"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:325
+msgid "Cubic metres"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:326
+msgid "Cubic feet"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:327
+#: templates/admin-lead.php:386
+msgid "Units"
+msgstr ""
+
+#. translators: %d: number of hidden quick start options.
+#: includes/class-msvcalc-frontend.php:330
+#, php-format
+msgid "+%d more"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:331
+msgid "Fewer"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:332
+msgid "Pick your home size to fill in a typical inventory, then adjust it."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:333
+msgid "Typical inventory added. Adjust the quantities to match your home."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:334
+msgid "Replace your current list with a typical inventory?"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:336
+msgid "Categories"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:337
+msgid "Choose an icon"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:341
+#: includes/class-msvcalc-leads-table.php:112
+msgid "All"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:342
+msgid "Floor (moving from)"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:343
+msgid "Floor (moving to)"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:344
+msgid "There is a lift"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:345
+msgid "Parking for the van"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:347
+msgid "Share list"
+msgstr ""
+
+#. translators: %s: total volume.
+#: includes/class-msvcalc-frontend.php:349
+#, php-format
+msgid "My moving inventory: %s"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:350
+msgid "Link copied. Anyone with it can open this list."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:351
+msgid "Copy this link:"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:352
+msgid "Open the shared list? It replaces the list you have here."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:353
+msgid "List cleared."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:354
+msgid "Shared list opened. Adjust it as you like."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:355
+msgid "List restored."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:356
+msgid "Undo"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:357
+msgid "Anything from these areas?"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:358
+msgid "You have not added anything from them yet. Forgotten items are the main reason estimates come out too small."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:359
+msgid "How many boxes do I need?"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:360
+msgid "Answer a few quick questions for a suggested box count."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:361
+msgid "Home size"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:362
+msgid "How full are your cupboards and wardrobes?"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:363
+msgid "Books, games and records"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:365
+msgid "Loft, garage or shed contents"
+msgstr ""
+
+#. translators: %s: number of boxes.
+#: includes/class-msvcalc-frontend.php:367
+#, php-format
+msgid "About %s boxes"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:368
+msgid "Use these box counts"
+msgstr ""
+
+#. translators: %s: number of boxes.
+#: includes/class-msvcalc-frontend.php:370
+#, php-format
+msgid "%s boxes set in your list."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:373
+msgid "Search items, e.g. sofa, fridge, boxes"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:374
+msgid "Search all items"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:375
+msgid "No items match. Add it as a custom item below."
+msgstr ""
+
+#. translators: %d: number of matching items.
+#: includes/class-msvcalc-frontend.php:377
+#, php-format
+msgid "%d matching items"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:378
+msgid "Show all items"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:379
+msgid "Show common items only"
+msgstr ""
+
+#. translators: %s: item name.
+#: includes/class-msvcalc-frontend.php:381
+#, php-format
+msgid "Add one %s"
+msgstr ""
+
+#. translators: %s: item name.
+#: includes/class-msvcalc-frontend.php:383
+#, php-format
+msgid "Remove one %s"
+msgstr ""
+
+#. translators: %s: item name.
+#: includes/class-msvcalc-frontend.php:385
+#, php-format
+msgid "Quantity of %s"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:386
+msgid "Something not listed?"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:387
+msgid "Add it with its width, depth and height."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:388
+msgid "Item name"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:389
+msgid "Length"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:390
+msgid "Width"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:391
+msgid "Height"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:392
+msgid "cm"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:393
+msgid "in"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:397
+msgid "Enter a name and all three measurements."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:398
+msgid "Your move"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:399
+#: templates/admin-lead.php:48
+#: templates/admin-lead.php:121
+#: templates/admin-lead.php:273
+#: templates/email.php:108
+#: templates/email.php:265
+#: templates/lead-report.php:75
+#: templates/lead-report.php:166
+#: templates/lead-report.php:262
+msgid "Total volume"
+msgstr ""
+
+#. translators: %d: packing margin percentage.
+#: includes/class-msvcalc-frontend.php:401
+#, php-format
+msgid "Includes %d%% for packing and gaps."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:403
+#: includes/class-msvcalc-leads.php:888
+#: templates/admin-lead.php:50
+#: templates/email.php:32
+#: templates/lead-report.php:168
+msgid "Boxes"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:404
+#: templates/admin-lead.php:51
+#: templates/email.php:33
+#: templates/lead-report.php:169
+msgid "Est. weight"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:405
+#: templates/admin-lead.php:57
+#: templates/email.php:39
+#: templates/lead-report.php:176
+msgid "Recommended vehicle"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:406
+#: includes/class-msvcalc-leads.php:890
+#: templates/admin-lead.php:58
+#: templates/email.php:40
+#: templates/lead-report.php:177
+msgid "Shipping container"
+msgstr ""
+
+#. translators: %d: percentage of capacity used.
+#. translators: %d: how full, in percent.
+#: includes/class-msvcalc-frontend.php:409
+#: templates/admin-lead.php:189
+#: templates/email.php:163
+#: templates/lead-report.php:193
+#, php-format
+msgid "%d%% full"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:410
+msgid "Your list is empty. Add items from the rooms, or use a quick start."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:411
+msgid "Your list"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:412
+msgid "Start over"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:413
+msgid "Clear your whole list?"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:415
+msgid "Back to my items"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:416
+msgid "Get your quote"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:417
+msgid "Send us your inventory and we will reply with a quote."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:418
+msgid "Full name"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:419
+#: includes/class-msvcalc-frontend.php:467
+#: includes/class-msvcalc-leads-table.php:234
+#: includes/class-msvcalc-leads.php:727
+#: includes/class-msvcalc-leads.php:874
+#: includes/class-msvcalc-privacy.php:128
+#: templates/admin-lead.php:139
+msgid "Email"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:420
+#: includes/class-msvcalc-leads.php:728
+#: includes/class-msvcalc-leads.php:875
+#: includes/class-msvcalc-privacy.php:129
+msgid "Phone"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:421
+#: includes/class-msvcalc-leads.php:730
+#: includes/class-msvcalc-leads.php:877
+#: includes/class-msvcalc-privacy.php:130
+msgid "Moving from"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:422
+#: includes/class-msvcalc-leads.php:732
+#: includes/class-msvcalc-leads.php:879
+#: includes/class-msvcalc-privacy.php:131
+msgid "Moving to"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:423
+msgid "Town or postcode"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:424
+msgid "Moving date"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:425
+#: includes/class-msvcalc-leads-table.php:134
+#: includes/class-msvcalc-leads.php:729
+#: includes/class-msvcalc-leads.php:876
+msgid "Service"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:426
+msgid "Choose…"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:427
+msgid "Anything else we should know?"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:428
+msgid "Stairs, lift, parking, fragile items…"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:429
+#: templates/admin-lead.php:327
+msgid "(optional)"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:430
+msgid "Privacy policy"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:431
+msgid "Sending…"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:432
+msgid "This field is required."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:433
+#: includes/class-msvcalc-rest.php:244
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:434
+#: includes/class-msvcalc-rest.php:139
+msgid "Please add at least one item before asking for a quote."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:435
+msgid "Something went wrong. Please try again."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:436
+msgid "Request sent"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:437
+msgid "Leave this field empty"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:438
+msgid "Volumes and weights are estimates based on typical item sizes."
+msgstr ""
+
+#. translators: %s: room name.
+#: includes/class-msvcalc-frontend.php:440
+#, php-format
+msgid "%s total"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:441
+msgid "View summary"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:442
+msgid "Close"
+msgstr ""
+
+#. translators: %s: item name.
+#: includes/class-msvcalc-frontend.php:444
+#, php-format
+msgid "%s added"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:445
+msgid "Moving inventory"
+msgstr ""
+
+#. translators: %s: date.
+#: includes/class-msvcalc-frontend.php:447
+#: templates/lead-report.php:63
+#, php-format
+msgid "Prepared on %s"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:448
+#: templates/email.php:146
+msgid "What it fits in"
+msgstr ""
+
+#. translators: %d: packing margin percentage.
+#: includes/class-msvcalc-frontend.php:454
+#: templates/admin-lead.php:266
+#: templates/email.php:258
+#: templates/lead-report.php:255
+#, php-format
+msgid "Packing and gaps (%d%%)"
+msgstr ""
+
+#. translators: %s: web address of the calculator page.
+#: includes/class-msvcalc-frontend.php:456
+#, php-format
+msgid "Made with the volume calculator at %s"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:458
+msgid "Print a copy"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:459
+msgid "Change my list"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:460
+msgid "Start a new list"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:461
+msgid "Share your list"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:462
+msgid "Anyone with this link sees the same list. It holds your items only, never your contact details."
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:463
+msgid "Link to your list"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:466
+#: templates/admin-lead.php:143
+msgid "WhatsApp"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:468
+msgid "Text message"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:469
+msgid "More options"
+msgstr ""
+
+#: includes/class-msvcalc-frontend.php:470
+msgid "More than one vehicle needed"
+msgstr ""
+
+#: includes/class-msvcalc-icons.php:314
+msgid "Rooms & places"
+msgstr ""
+
+#: includes/class-msvcalc-icons.php:319
+msgid "Sofas & seating"
+msgstr ""
+
+#: includes/class-msvcalc-icons.php:324
+msgid "Beds & wardrobes"
+msgstr ""
+
+#: includes/class-msvcalc-icons.php:329
+msgid "Tables & storage"
+msgstr ""
+
+#: includes/class-msvcalc-icons.php:334
+msgid "Kitchen & appliances"
+msgstr ""
+
+#: includes/class-msvcalc-icons.php:339
+msgid "Electronics & decor"
+msgstr ""
+
+#: includes/class-msvcalc-icons.php:344
+msgid "Kids & baby"
+msgstr ""
+
+#: includes/class-msvcalc-icons.php:354
+msgid "Hobbies, sport & vehicles"
+msgstr ""
+
+#: includes/class-msvcalc-icons.php:364
+msgid "Business & trade"
+msgstr ""
+
+#: includes/class-msvcalc-icons.php:369
+msgid "Vans & storage"
+msgstr ""
+
+#: includes/class-msvcalc-icons.php:383
+msgid "Other"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:51
+#: includes/class-msvcalc-leads-admin.php:59
+#: includes/class-msvcalc-leads-admin.php:297
+#: templates/lead-report.php:74
+msgid "Leads"
+msgstr ""
+
+#. translators: %s: number of leads.
+#: includes/class-msvcalc-leads-admin.php:201
+#, php-format
+msgid "%s quote request email could not be sent."
+msgid_plural "%s quote request emails could not be sent."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-msvcalc-leads-admin.php:205
+msgid "The enquiries are safe in Leads; open them to reply or send the email again."
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:207
+msgid "Show them"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:217
+msgid "You are not allowed to manage leads."
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:221
+msgid "That lead no longer exists."
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:316
+msgid "Lead updated."
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:317
+msgid "Lead deleted."
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:318
+msgid "Please pick a follow-up date."
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:319
+msgid "Notification email sent again."
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:320
+msgid "The email could not be sent again. Check your site can send email (for example with an SMTP plugin). The lead is safe here."
+msgstr ""
+
+#. translators: %s: number of leads.
+#: includes/class-msvcalc-leads-admin.php:322
+#, php-format
+msgid "%s lead updated."
+msgid_plural "%s leads updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: number of leads.
+#: includes/class-msvcalc-leads-admin.php:324
+#, php-format
+msgid "%s lead deleted."
+msgid_plural "%s leads deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-msvcalc-leads-admin.php:342
+msgid "Total leads"
+msgstr ""
+
+#. translators: %s: number of leads.
+#: includes/class-msvcalc-leads-admin.php:345
+#, php-format
+msgid "%s this month"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:351
+msgid "New enquiries"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:353
+msgid "Waiting for a first reply"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:359
+#: includes/class-msvcalc-leads-table.php:116
+msgid "Follow-ups due"
+msgstr ""
+
+#. translators: %s: number of overdue follow-ups.
+#: includes/class-msvcalc-leads-admin.php:362
+#, php-format
+msgid "%s overdue"
+msgstr ""
+
+#. translators: %s: number of overdue follow-ups.
+#: includes/class-msvcalc-leads-admin.php:362
+msgid "Nothing overdue"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:368
+#: includes/class-msvcalc-leads.php:185
+#: templates/lead-report.php:83
+msgid "Converted"
+msgstr ""
+
+#. translators: %s: conversion rate in percent.
+#: includes/class-msvcalc-leads-admin.php:371
+#, php-format
+msgid "%s%% of closed leads"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:389
+msgid "Leads by status"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:417
+msgid "Export CSV"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:418
+msgid "Export PDF"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:426
+msgid "Search leads"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:447
+msgid "You are not allowed to export leads."
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:495
+msgid "Website"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:509
+msgid "Quote request received"
+msgstr ""
+
+#. translators: %s: status name.
+#: includes/class-msvcalc-leads-admin.php:512
+#, php-format
+msgid "Status set to %s"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:514
+msgid "Note added"
+msgstr ""
+
+#. translators: %s: date.
+#: includes/class-msvcalc-leads-admin.php:518
+#, php-format
+msgid "Follow-up set for %s"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:520
+msgid "Follow-up done"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:523
+#: templates/admin-lead.php:153
+msgid "by email"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:524
+#: templates/admin-lead.php:154
+msgid "by phone"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:525
+#: templates/admin-lead.php:155
+msgid "on WhatsApp"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:527
+msgid "Customer contacted"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:529
+msgid "Customer sent the same list again (not duplicated)"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:531
+msgid "Notification email could not be sent"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:533
+msgid "Notification email sent again"
+msgstr ""
+
+#: includes/class-msvcalc-leads-table.php:55
+#: templates/lead-report.php:89
+msgid "Customer"
+msgstr ""
+
+#: includes/class-msvcalc-leads-table.php:56
+msgid "Quote"
+msgstr ""
+
+#: includes/class-msvcalc-leads-table.php:57
+#: templates/lead-report.php:90
+msgid "Move"
+msgstr ""
+
+#: includes/class-msvcalc-leads-table.php:58
+#: includes/class-msvcalc-leads.php:871
+#: includes/class-msvcalc-privacy.php:143
+#: templates/admin-lead.php:283
+#: templates/admin-lead.php:296
+#: templates/lead-report.php:91
+msgid "Status"
+msgstr ""
+
+#: includes/class-msvcalc-leads-table.php:59
+#: includes/class-msvcalc-leads.php:872
+#: includes/class-msvcalc-privacy.php:155
+#: templates/admin-lead.php:307
+msgid "Follow-up"
+msgstr ""
+
+#: includes/class-msvcalc-leads-table.php:60
+#: includes/class-msvcalc-leads.php:870
+#: templates/admin-lead.php:361
+msgid "Received"
+msgstr ""
+
+#. translators: %s: status name.
+#: includes/class-msvcalc-leads-table.php:87
+#, php-format
+msgid "Mark as %s"
+msgstr ""
+
+#: includes/class-msvcalc-leads-table.php:89
+msgid "Delete permanently"
+msgstr ""
+
+#: includes/class-msvcalc-leads-table.php:118
+#: templates/admin-lead.php:384
+msgid "Email failed"
+msgstr ""
+
+#: includes/class-msvcalc-leads-table.php:136
+msgid "All services"
+msgstr ""
+
+#: includes/class-msvcalc-leads-table.php:142
+msgid "From"
+msgstr ""
+
+#: includes/class-msvcalc-leads-table.php:146
+msgid "To"
+msgstr ""
+
+#: includes/class-msvcalc-leads-table.php:149
+msgid "Filter"
+msgstr ""
+
+#: includes/class-msvcalc-leads-table.php:151
+msgid "Clear filters"
+msgstr ""
+
+#: includes/class-msvcalc-leads-table.php:186
+#: templates/lead-report.php:56
+msgid "No leads match these filters."
+msgstr ""
+
+#: includes/class-msvcalc-leads-table.php:189
+msgid "No leads yet. Every quote request sent from the calculator appears here."
+msgstr ""
+
+#: includes/class-msvcalc-leads-table.php:202
+msgid "Select lead"
+msgstr ""
+
+#: includes/class-msvcalc-leads-table.php:231
+msgid "Open"
+msgstr ""
+
+#: includes/class-msvcalc-leads-table.php:236
+#: templates/admin-lead.php:160
+msgid "PDF"
+msgstr ""
+
+#. translators: %s: time span, e.g. "2 hours".
+#: includes/class-msvcalc-leads-table.php:325
+#, php-format
+msgid "%s ago"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:135
+#: includes/class-msvcalc-leads.php:137
+#: includes/class-msvcalc-leads.php:138
+msgid "Quote requests"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:136
+#: includes/class-msvcalc-leads.php:139
+msgid "Quote request"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:140
+msgid "View quote request"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:141
+msgid "Search quote requests"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:142
+msgid "No quote requests yet. They appear here when visitors send their inventory."
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:143
+msgid "No quote requests in the trash."
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:182
+#: templates/lead-report.php:82
+msgid "New"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:183
+msgid "Contacted"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:184
+msgid "In progress"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:186
+msgid "Lost"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:283
+msgid "Website calculator"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:641
+msgid "Ground floor"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:642
+msgid "House with upstairs"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:643
+msgid "1st floor"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:644
+msgid "2nd floor"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:645
+msgid "3rd floor"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:646
+msgid "4th floor"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:647
+msgid "5th floor or higher"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:658
+msgid "Parking right outside"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:659
+msgid "Parking within 20 m (65 ft)"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:660
+msgid "Long carry or parking permit needed"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:671
+msgid "Packing service"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:672
+msgid "Boxes and packing materials"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:673
+msgid "Furniture dismantling and reassembly"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:674
+#: includes/class-msvcalc-leads.php:748
+msgid "Storage"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:675
+msgid "Disposal of unwanted items"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:676
+msgid "Cleaning"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:694
+msgid "lift available"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:696
+msgid "no lift"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:731
+#: includes/class-msvcalc-leads.php:878
+msgid "Access (from)"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:733
+#: includes/class-msvcalc-leads.php:880
+msgid "Access (to)"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:734
+#: includes/class-msvcalc-leads.php:881
+msgid "Parking"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:735
+#: includes/class-msvcalc-leads.php:882
+#: includes/class-msvcalc-privacy.php:132
+msgid "Move date"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:747
+msgid "House or flat removal"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:749
+msgid "Removal and storage"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:750
+msgid "Office move"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:751
+msgid "International move"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:752
+msgid "Man and van"
+msgstr ""
+
+#. translators: 1: customer name, 2: volume.
+#: includes/class-msvcalc-leads.php:767
+#, php-format
+msgid "%1$s – %2$s"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:847
+msgid "You are not allowed to export quote requests."
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:869
+#: templates/admin-lead.php:360
+msgid "Reference"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:884
+#: includes/class-msvcalc-privacy.php:134
+msgid "Volume (m³)"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:885
+msgid "Volume (ft³)"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:892
+msgid "Customer message"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:893
+#: templates/admin-lead.php:362
+msgid "Lead source"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:894
+#: templates/admin-lead.php:364
+msgid "Page"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:895
+#: templates/lead-report.php:217
+msgid "Internal notes"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:896
+#: includes/class-msvcalc-privacy.php:135
+#: templates/admin-lead.php:225
+#: templates/email.php:238
+#: templates/lead-report.php:225
+msgid "Inventory"
+msgstr ""
+
+#. translators: 1: customer name, 2: volume.
+#: includes/class-msvcalc-mailer.php:36
+#, php-format
+msgid "New quote request: %1$s (%2$s)"
+msgstr ""
+
+#. translators: %s: company name.
+#: includes/class-msvcalc-mailer.php:53
+#, php-format
+msgid "Your moving inventory for %s"
+msgstr ""
+
+#: includes/class-msvcalc-privacy.php:39
+msgid "Moving & Storage Volume Calculator does not track visitors and makes no requests to outside services. It only handles personal data when a visitor sends a quote request."
+msgstr ""
+
+#: includes/class-msvcalc-privacy.php:40
+msgid "Suggested text:"
+msgstr ""
+
+#: includes/class-msvcalc-privacy.php:41
+msgid "When you ask for a quote with our volume calculator, we collect the details you enter (such as your name, email address, phone number, moving addresses and date) and your list of items. We use them only to prepare and send your quote. They are emailed to us and kept in our website database until we delete them, or for the period we set for quote requests. You can ask us for a copy of this data or ask us to erase it."
+msgstr ""
+
+#: includes/class-msvcalc-privacy.php:42
+msgid "With your request we also record when you agreed to our consent statement and its wording, the page you sent it from and the website that referred you (if any). Our team may add internal notes and reminders about your enquiry. All of this is included when you ask for a copy of your data and removed when you ask us to erase it."
+msgstr ""
+
+#: includes/class-msvcalc-privacy.php:43
+msgid "If you use the calculator without sending a request, your list is kept only in your own browser (local storage) so you can come back to it. It is not sent to us."
+msgstr ""
+
+#: includes/class-msvcalc-privacy.php:56
+#: includes/class-msvcalc-privacy.php:70
+#: includes/class-msvcalc-privacy.php:177
+msgid "Volume calculator quote requests"
+msgstr ""
+
+#: includes/class-msvcalc-privacy.php:126
+msgid "Sent"
+msgstr ""
+
+#: includes/class-msvcalc-privacy.php:133
+msgid "Notes"
+msgstr ""
+
+#: includes/class-msvcalc-privacy.php:147
+msgid "Consent given"
+msgstr ""
+
+#: includes/class-msvcalc-privacy.php:150
+msgid "Sent from page"
+msgstr ""
+
+#: includes/class-msvcalc-privacy.php:151
+msgid "Referring site"
+msgstr ""
+
+#: includes/class-msvcalc-privacy.php:163
+msgid "Notes by our team"
+msgstr ""
+
+#: includes/class-msvcalc-rest.php:81
+msgid "Quote requests are turned off."
+msgstr ""
+
+#: includes/class-msvcalc-rest.php:107
+msgid "Your session has expired. Please try again."
+msgstr ""
+
+#: includes/class-msvcalc-rest.php:122
+msgid "Too many requests. Please wait a few minutes and try again."
+msgstr ""
+
+#: includes/class-msvcalc-rest.php:166
+msgid "Sorry, we could not send your request. Please try again or contact us directly."
+msgstr ""
+
+#: includes/class-msvcalc-rest.php:241
+msgid "Please enter your name."
+msgstr ""
+
+#: includes/class-msvcalc-rest.php:253
+msgid "Please enter a valid phone number."
+msgstr ""
+
+#: includes/class-msvcalc-rest.php:263
+msgid "Please tell us where you are moving from."
+msgstr ""
+
+#: includes/class-msvcalc-rest.php:266
+msgid "Please tell us where you are moving to."
+msgstr ""
+
+#: includes/class-msvcalc-rest.php:278
+msgid "Please pick a moving date from today onwards."
+msgstr ""
+
+#: includes/class-msvcalc-rest.php:287
+msgid "Please choose the service you need."
+msgstr ""
+
+#: includes/class-msvcalc-rest.php:299
+msgid "Please choose the floor."
+msgstr ""
+
+#: includes/class-msvcalc-rest.php:318
+msgid "Please agree so we can prepare your quote."
+msgstr ""
+
+#: includes/class-msvcalc-rest.php:324
+msgid "Please check the highlighted fields."
+msgstr ""
+
+#: includes/class-msvcalc-settings.php:289
+msgid "Add your furniture and boxes room by room. We work out the volume, the right vehicle and the storage space you need."
+msgstr ""
+
+#: includes/class-msvcalc-settings.php:291
+msgid "Get my free quote"
+msgstr ""
+
+#: includes/class-msvcalc-settings.php:293
+msgid "I agree that my details and inventory are stored and used to prepare my quote."
+msgstr ""
+
+#: includes/class-msvcalc-settings.php:295
+msgid "Thank you! Your inventory is on its way. We will be in touch shortly with your quote."
+msgstr ""
+
+#: includes/class-msvcalc-settings.php:362
+msgid "The notification email address is not valid, so the site admin email will be used."
+msgstr ""
+
+#. translators: %s: business name.
+#: templates/admin-lead.php:39
+#, php-format
+msgid "Your moving quote from %s"
+msgstr ""
+
+#. translators: %s: weight in pounds.
+#: templates/admin-lead.php:43
+#: templates/email.php:26
+#: templates/lead-report.php:125
+#, php-format
+msgid "%s lb"
+msgstr ""
+
+#. translators: %s: weight in kilograms.
+#: templates/admin-lead.php:45
+#: templates/email.php:28
+#: templates/lead-report.php:127
+#, php-format
+msgid "%s kg"
+msgstr ""
+
+#: templates/admin-lead.php:87
+msgid "All leads"
+msgstr ""
+
+#. translators: %s: date.
+#: templates/admin-lead.php:100
+#: templates/lead-report.php:159
+#, php-format
+msgid "Follow up %s"
+msgstr ""
+
+#. translators: 1: date and time, 2: time span, 3: lead source.
+#: templates/admin-lead.php:111
+#, php-format
+msgid "Received %1$s (%2$s ago) · %3$s"
+msgstr ""
+
+#: templates/admin-lead.php:129
+msgid "The notification email for this request could not be sent."
+msgstr ""
+
+#: templates/admin-lead.php:129
+msgid "Nothing is lost: every detail is below. Reply to the customer directly, or try the email again once your site can send mail."
+msgstr ""
+
+#: templates/admin-lead.php:132
+msgid "Send email again"
+msgstr ""
+
+#: templates/admin-lead.php:142
+msgid "Call"
+msgstr ""
+
+#: templates/admin-lead.php:147
+msgid "Copy email"
+msgstr ""
+
+#: templates/admin-lead.php:151
+msgid "How did you contact them?"
+msgstr ""
+
+#: templates/admin-lead.php:157
+msgid "Log contact"
+msgstr ""
+
+#: templates/admin-lead.php:161
+msgid "CSV"
+msgstr ""
+
+#: templates/admin-lead.php:167
+msgid "Quote summary"
+msgstr ""
+
+#. translators: %d: packing margin percentage.
+#: templates/admin-lead.php:201
+#, php-format
+msgid "Includes a %d%% margin for packing and gaps."
+msgstr ""
+
+#: templates/admin-lead.php:208
+#: templates/email.php:178
+#: templates/lead-report.php:200
+msgid "Customer and move"
+msgstr ""
+
+#: templates/admin-lead.php:218
+#: templates/lead-report.php:212
+msgid "Message from the customer"
+msgstr ""
+
+#. translators: %s: number of rooms.
+#: templates/admin-lead.php:229
+#, php-format
+msgid "%s room"
+msgid_plural "%s rooms"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/admin-lead.php:302
+msgid "Update"
+msgstr ""
+
+#: templates/admin-lead.php:319
+msgid "Done"
+msgstr ""
+
+#: templates/admin-lead.php:325
+msgid "Change the date"
+msgstr ""
+
+#: templates/admin-lead.php:325
+msgid "Remind me on"
+msgstr ""
+
+#: templates/admin-lead.php:327
+msgid "What to do"
+msgstr ""
+
+#: templates/admin-lead.php:328
+msgid "e.g. Call about the piano"
+msgstr ""
+
+#: templates/admin-lead.php:329
+msgid "Save follow-up"
+msgstr ""
+
+#: templates/admin-lead.php:334
+msgid "Notes and activity"
+msgstr ""
+
+#: templates/admin-lead.php:337
+msgid "Internal note"
+msgstr ""
+
+#: templates/admin-lead.php:338
+msgid "Add an internal note. Customers never see these."
+msgstr ""
+
+#: templates/admin-lead.php:339
+msgid "Add note"
+msgstr ""
+
+#: templates/admin-lead.php:358
+msgid "Lead information"
+msgstr ""
+
+#: templates/admin-lead.php:367
+msgid "Referrer"
+msgstr ""
+
+#: templates/admin-lead.php:370
+msgid "Campaign"
+msgstr ""
+
+#: templates/admin-lead.php:373
+msgid "Consent"
+msgstr ""
+
+#. translators: %s: date and time.
+#: templates/admin-lead.php:376
+#, php-format
+msgid "Given %s"
+msgstr ""
+
+#: templates/admin-lead.php:384
+msgid "Notification"
+msgstr ""
+
+#: templates/admin-lead.php:384
+msgid "Email sent"
+msgstr ""
+
+#: templates/admin-lead.php:388
+msgid "Delete this lead for good? This cannot be undone."
+msgstr ""
+
+#: templates/admin-lead.php:390
+msgid "Delete lead"
+msgstr ""
+
+#. translators: 1: customer name, 2: volume.
+#: templates/email.php:79
+#, php-format
+msgid "%1$s sent an inventory of %2$s."
+msgstr ""
+
+#. translators: %s: volume.
+#: templates/email.php:82
+#, php-format
+msgid "Your inventory of %s is with us."
+msgstr ""
+
+#: templates/email.php:98
+msgid "New quote request"
+msgstr ""
+
+#: templates/email.php:98
+msgid "Your moving inventory"
+msgstr ""
+
+#. translators: %s: customer name.
+#: templates/email.php:114
+#, php-format
+msgid "%s has sent their inventory and is waiting for your quote."
+msgstr ""
+
+#. translators: %s: customer first name.
+#: templates/email.php:117
+#, php-format
+msgid "Thanks, %s. Here is a copy of the inventory you sent us. We will be in touch with your quote."
+msgstr ""
+
+#: templates/email.php:178
+msgid "Your details"
+msgstr ""
+
+#: templates/email.php:202
+msgid "Open in WordPress"
+msgstr ""
+
+#. translators: %s: customer first name.
+#: templates/email.php:208
+#, php-format
+msgid "Reply to %s"
+msgstr ""
+
+#: templates/email.php:219
+msgid "What happens next"
+msgstr ""
+
+#: templates/email.php:222
+msgid "We check your inventory and access details."
+msgstr ""
+
+#: templates/email.php:223
+msgid "We send you a quote, or call if anything needs a quick chat."
+msgstr ""
+
+#: templates/email.php:224
+msgid "Reply to this email any time to add or change items."
+msgstr ""
+
+#. translators: %s: site name.
+#: templates/email.php:279
+#, php-format
+msgid "Sent from the volume calculator on %s. Volumes and weights are estimates based on typical item sizes."
+msgstr ""
+
+#: templates/email.php:285
+#: templates/lead-report.php:272
+msgid "Moving & Storage Volume Calculator for WordPress"
+msgstr ""
+
+#. translators: %s: lead reference.
+#: templates/lead-report.php:19
+#, php-format
+msgid "Lead %s"
+msgstr ""
+
+#. translators: %s: date.
+#: templates/lead-report.php:20
+#: templates/lead-report.php:63
+msgid "Leads report"
+msgstr ""
+
+#: templates/lead-report.php:52
+msgid "Save as PDF"
+msgstr ""
+
+#. translators: 1: leads in this report, 2: leads matching the filters.
+#: templates/lead-report.php:69
+#, php-format
+msgid "This report shows the newest %1$s of %2$s matching leads. Narrow the filters, or use Export CSV for all of them."
+msgstr ""
+
+#: templates/lead-report.php:88
+msgid "Ref."
+msgstr ""
+
+#. translators: 1: lead reference, 2: date and time.
+#: templates/lead-report.php:150
+#, php-format
+msgid "%1$s · received %2$s"
+msgstr ""
+
+#. translators: %s: business name.
+#: templates/lead-report.php:270
+#, php-format
+msgid "%s · Volumes and weights are estimates based on typical item sizes."
+msgstr ""
+
+#: blocks/calculator/index.js:35
+msgid "Teal"
+msgstr ""
+
+#: blocks/calculator/index.js:36
+msgid "Blue"
+msgstr ""
+
+#: blocks/calculator/index.js:37
+msgid "Green"
+msgstr ""
+
+#: blocks/calculator/index.js:38
+msgid "Orange"
+msgstr ""
+
+#: blocks/calculator/index.js:39
+msgid "Purple"
+msgstr ""
+
+#: blocks/calculator/index.js:40
+msgid "Charcoal"
+msgstr ""
+
+#: blocks/calculator/index.js:44
+msgid "Visitors add items room by room"
+msgstr ""
+
+#: blocks/calculator/index.js:45
+msgid "The total updates live in m³ or ft³"
+msgstr ""
+
+#: blocks/calculator/index.js:46
+msgid "Van, container and storage unit suggestions"
+msgstr ""
+
+#: blocks/calculator/index.js:47
+msgid "Quote requests land in your inbox"
+msgstr ""
+
+#: blocks/calculator/index.js:68
+msgid "Leave empty to use the heading from the plugin settings."
+msgstr ""
+
+#: blocks/calculator/index.js:78
+msgid "Leave empty to use the introduction from the plugin settings."
+msgstr ""
+
+#: blocks/calculator/index.js:87
+msgid "Unit"
+msgstr ""
+
+#: blocks/calculator/index.js:90
+#: blocks/calculator/index.js:104
+msgid "Plugin setting"
+msgstr ""
+
+#: blocks/calculator/index.js:116
+msgid "Show the quote form"
+msgstr ""
+
+#: blocks/calculator/index.js:126
+msgid "Colour"
+msgstr ""
+
+#: blocks/calculator/index.js:131
+msgid "Accent colour"
+msgstr ""
+
+#: blocks/calculator/index.js:132
+msgid "Clear it to use the colour from the plugin settings."
+msgstr ""
+
+#: blocks/calculator/index.js:166
+msgid "The live calculator shows on the published page."
+msgstr ""
+
+#: blocks/calculator/block.json
+msgctxt "block title"
+msgid "Volume Calculator"
+msgstr ""
+
+#: blocks/calculator/block.json
+msgctxt "block description"
+msgid "A room-by-room moving, removal and storage volume calculator with vehicle suggestions and a quote form."
+msgstr ""
+
+#: blocks/calculator/block.json
+msgctxt "block keyword"
+msgid "moving"
+msgstr ""
+
+#: blocks/calculator/block.json
+msgctxt "block keyword"
+msgid "removals"
+msgstr ""
+
+#: blocks/calculator/block.json
+msgctxt "block keyword"
+msgid "storage"
+msgstr ""
+
+#: blocks/calculator/block.json
+msgctxt "block keyword"
+msgid "volume"
+msgstr ""
+
+#: blocks/calculator/block.json
+msgctxt "block keyword"
+msgid "cubic"
+msgstr ""
