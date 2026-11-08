@@ -230,6 +230,8 @@ Then add the **Volume Calculator** block to a page, or paste the shortcode:
 
 Every save, filter, CSV download and PDF report runs in the background behind one branded loader, so the screen never reloads.
 
+<img src=".github/media/loader.gif" alt="The branded loader: the logo cube draws itself and glows while a quote is sent on the website and while a lead filter loads in WordPress admin" width="100%">
+
 <details>
 <summary><b>Shortcode options</b></summary>
 <br>

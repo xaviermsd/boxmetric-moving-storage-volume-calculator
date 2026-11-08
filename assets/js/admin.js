@@ -1069,6 +1069,21 @@
 	 * The plugin's one branded loader (the same ring and cube as the
 	 * calculator), laid over the admin content while a request runs.
 	 */
+	let loaderCount = 0;
+
+	/**
+	 * The loader mark, shared with PHP through icons.js.
+	 *
+	 * @param {string} cls Wrapper class.
+	 * @return {Element} Wrapper with the animated mark.
+	 */
+	function loaderMark( cls ) {
+		const wrap = h( cls, { 'aria-hidden': 'true' } );
+		loaderCount += 1;
+		wrap.innerHTML = String( window.msvcalcLoader || '' ).replace( /__ID__/g, 'msvcalc-loader-js-' + loaderCount );
+		return wrap;
+	}
+
 	const Busy = ( function () {
 		let layer = null;
 		let shownAt = 0;
@@ -1076,10 +1091,7 @@
 			show: function ( text ) {
 				if ( ! layer ) {
 					layer = h( 'div.msvcalc-busy', { role: 'status', 'aria-live': 'polite' }, [
-						h( 'span.msvcalc-loader', { 'aria-hidden': 'true' }, [
-							h( 'span.msvcalc-loader__ring' ),
-							h( 'span.msvcalc-loader__mark', {}, [ icon( 'cube', 24 ) ] ),
-						] ),
+						loaderMark( 'span.msvcalc-loader' ),
 						h( 'span.msvcalc-busy__text' ),
 					] );
 					document.body.appendChild( layer );

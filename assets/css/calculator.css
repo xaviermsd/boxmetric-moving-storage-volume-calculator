@@ -3329,43 +3329,9 @@ html.msvcalc-lock body {
 	height: 64px;
 }
 
-.msvcalc__loader-ring {
-	position: absolute;
-	inset: 0;
-	border-radius: 50%;
-	background: conic-gradient(from 0deg, transparent 0deg, var(--msvcalc-accent) 200deg, var(--msvcalc-accent-2) 360deg);
-	-webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3px));
-	mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3px));
-	animation: msvcalc-spin 1s linear infinite;
-}
-
-.msvcalc__loader-mark {
-	display: grid;
-	place-items: center;
-	width: 42px;
-	height: 42px;
-	border-radius: 13px;
-	background: var(--msvcalc-gradient);
-	color: #ffffff;
-	box-shadow: 0 10px 22px -12px var(--msvcalc-accent);
-	animation: msvcalc-loader-bob 1.2s var(--msvcalc-ease) infinite;
-}
-
 .msvcalc__loading-text {
 	font-size: 0.9375rem;
 	letter-spacing: 0.01em;
-}
-
-@keyframes msvcalc-loader-bob {
-
-	0%,
-	100% {
-		transform: translateY(0) scale(1);
-	}
-
-	50% {
-		transform: translateY(-3px) scale(1.04);
-	}
 }
 
 .msvcalc__done .msvcalc__button {
@@ -4183,6 +4149,104 @@ html.msvcalc-lock body {
 	position: relative;
 }
 
+/* The loader mark: the logo's cube draws itself, then glows. */
+.msvcalc-loader-logo {
+	display: block;
+	width: 64px;
+	height: 64px;
+	filter: drop-shadow(0 12px 24px rgba(6, 16, 25, 0.28));
+}
+
+.msvcalc-loader-logo__line {
+	stroke-dasharray: 1 1.02;
+	stroke-dashoffset: 1.01;
+	animation: 1.64s linear infinite;
+}
+
+/* Outline first, then the fold, then the stem, as in the logo. */
+.msvcalc-loader-logo__line--edge {
+	animation-name: msvcalc-logo-edge;
+}
+
+.msvcalc-loader-logo__line--fold {
+	animation-name: msvcalc-logo-fold;
+}
+
+.msvcalc-loader-logo__line--stem {
+	animation-name: msvcalc-logo-stem;
+}
+
+.msvcalc-loader-logo__glow {
+	opacity: 0;
+	animation: msvcalc-logo-glow 1.64s ease-in-out infinite;
+}
+
+@keyframes msvcalc-logo-edge {
+
+	0% {
+		stroke-dashoffset: 1.01;
+	}
+
+	40%,
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes msvcalc-logo-fold {
+
+	0%,
+	40% {
+		stroke-dashoffset: 1.01;
+	}
+
+	54%,
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes msvcalc-logo-stem {
+
+	0%,
+	54% {
+		stroke-dashoffset: 1.01;
+	}
+
+	64%,
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes msvcalc-logo-glow {
+
+	0%,
+	62% {
+		opacity: 0;
+	}
+
+	82% {
+		opacity: 0.9;
+	}
+
+	100% {
+		opacity: 0.2;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.msvcalc-loader-logo__line {
+		stroke-dashoffset: 0;
+		animation: none;
+	}
+
+	.msvcalc-loader-logo__glow {
+		animation-duration: 3s;
+	}
+}
+
 .msvcalc__loading.msvcalc__overlay {
 	position: absolute;
 	inset: 0;
@@ -4191,9 +4255,7 @@ html.msvcalc-lock body {
 	border-radius: calc(var(--msvcalc-radius) + 4px);
 	color: var(--msvcalc-text);
 	font-weight: 600;
-	background: color-mix(in srgb, var(--msvcalc-card) 78%, transparent);
-	-webkit-backdrop-filter: blur(3px);
-	backdrop-filter: blur(3px);
+	background: color-mix(in srgb, var(--msvcalc-card) 35%, transparent);
 	animation: msvcalc-fade-in var(--msvcalc-fast) var(--msvcalc-ease);
 }
 
@@ -4206,4 +4268,13 @@ html.msvcalc-lock body {
 	to {
 		opacity: 1;
 	}
+}
+
+.msvcalc__loading.msvcalc__overlay .msvcalc__loading-text {
+	padding: 6px 14px;
+	border-radius: 999px;
+	color: #f2fbff;
+	font-size: 0.875rem;
+	background: #061019;
+	box-shadow: 0 10px 24px -12px rgba(6, 16, 25, 0.6);
 }

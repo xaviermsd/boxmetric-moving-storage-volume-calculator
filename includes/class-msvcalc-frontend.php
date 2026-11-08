@@ -174,7 +174,7 @@ final class MSVCalc_Frontend {
 			</div>
 			<div class="msvcalc__app" aria-live="polite">
 				<div class="msvcalc__loading" role="status">
-					<span class="msvcalc__loader" aria-hidden="true"><span class="msvcalc__loader-ring"></span><span class="msvcalc__loader-mark"><?php MSVCalc_Icons::render( 'cube', 24 ); ?></span></span>
+					<span class="msvcalc__loader" aria-hidden="true"><?php echo wp_kses( MSVCalc_Icons::loader(), MSVCalc_Icons::allowed_html() ); ?></span>
 					<span class="msvcalc__loading-text"><?php esc_html_e( 'Loading the calculator…', 'moving-storage-volume-calculator' ); ?></span>
 				</div>
 			</div>

@@ -445,6 +445,22 @@ final class MSVCalc_Icons {
 	}
 
 	/**
+	 * The loader mark: the logo's cube drawing itself on the dark tile, then
+	 * glowing, as in the animated plugin icon. "__ID__" is replaced with a
+	 * unique id so several loaders can share a page.
+	 */
+	const LOADER = '<svg class="msvcalc-loader-logo" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><defs><linearGradient id="__ID__-s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2de2e6"/><stop offset="1" stop-color="#c6ff3d"/></linearGradient><radialGradient id="__ID__-g" cx="0.28" cy="0.2" r="0.8"><stop offset="0" stop-color="#0fb5ba" stop-opacity="0.42"/><stop offset="1" stop-color="#0fb5ba" stop-opacity="0"/></radialGradient><filter id="__ID__-b" x="-0.4" y="-0.4" width="1.8" height="1.8"><feGaussianBlur stdDeviation="1.6"/></filter></defs><rect x="1" y="1" width="62" height="62" rx="16" fill="#061019"/><rect x="1" y="1" width="62" height="62" rx="16" fill="url(#__ID__-g)" stroke="#0fb5ba" stroke-opacity="0.5" stroke-width="1.5"/><g transform="translate(14 14) scale(1.5)" fill="none" stroke="url(#__ID__-s)" stroke-linecap="round" stroke-linejoin="round"><path class="msvcalc-loader-logo__glow" d="M12 2.75 20.25 7.4v9.2L12 21.25 3.75 16.6V7.4L12 2.75M3.75 7.4 12 12l8.25-4.6M12 12v9.25" stroke-width="2.6" filter="url(#__ID__-b)"/><path class="msvcalc-loader-logo__line msvcalc-loader-logo__line--edge" d="M12 2.75 20.25 7.4v9.2L12 21.25 3.75 16.6V7.4z" stroke-width="2" pathLength="1"/><path class="msvcalc-loader-logo__line msvcalc-loader-logo__line--fold" d="M3.75 7.4 12 12l8.25-4.6" stroke-width="2" pathLength="1"/><path class="msvcalc-loader-logo__line msvcalc-loader-logo__line--stem" d="M12 12v9.25" stroke-width="2" pathLength="1"/></g></svg>';
+
+	/**
+	 * The loader mark with unique gradient ids.
+	 *
+	 * @return string
+	 */
+	public static function loader(): string {
+		return str_replace( '__ID__', 'msvcalc-loader-' . wp_unique_id(), self::LOADER );
+	}
+
+	/**
 	 * Allowed tags and attributes for the plugin's SVG output.
 	 *
 	 * @return array<string, array<string, bool>>
@@ -472,6 +488,10 @@ final class MSVCalc_Icons {
 			'stroke-linejoin' => true,
 			'transform'       => true,
 			'opacity'         => true,
+			'class'           => true,
+			'pathlength'      => true,
+			'stroke-opacity'  => true,
+			'filter'          => true,
 		);
 
 		return array(
@@ -498,9 +518,26 @@ final class MSVCalc_Icons {
 				'y1' => true,
 				'y2' => true,
 			),
+			'radialgradient' => array(
+				'id' => true,
+				'cx' => true,
+				'cy' => true,
+				'r'  => true,
+			),
 			'stop'           => array(
-				'offset'     => true,
-				'stop-color' => true,
+				'offset'       => true,
+				'stop-color'   => true,
+				'stop-opacity' => true,
+			),
+			'filter'         => array(
+				'id'     => true,
+				'x'      => true,
+				'y'      => true,
+				'width'  => true,
+				'height' => true,
+			),
+			'fegaussianblur' => array(
+				'stddeviation' => true,
 			),
 			'g'              => $shape,
 			'path'           => $shape,

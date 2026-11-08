@@ -1979,9 +1979,7 @@ body.msvcalc-report {
 	font-size: 14px;
 	font-weight: 600;
 	letter-spacing: 0.01em;
-	background: rgba(240, 246, 248, 0.72);
-	-webkit-backdrop-filter: blur(3px);
-	backdrop-filter: blur(3px);
+	background: rgba(240, 246, 248, 0.3);
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity 0.18s ease, visibility 0s linear 0.18s;
@@ -1991,6 +1989,14 @@ body.msvcalc-report {
 	opacity: 1;
 	visibility: visible;
 	transition: opacity 0.18s ease, visibility 0s;
+}
+
+.msvcalc-busy__text {
+	padding: 6px 14px;
+	border-radius: 999px;
+	color: #f2fbff;
+	background: #061019;
+	box-shadow: 0 10px 24px -12px rgba(6, 16, 25, 0.6);
 }
 
 .msvcalc-is-busy #wpbody-content {
@@ -2005,26 +2011,102 @@ body.msvcalc-report {
 	height: 64px;
 }
 
-.msvcalc-loader__ring {
-	position: absolute;
-	inset: 0;
-	border-radius: 50%;
-	background: conic-gradient(from 0deg, transparent 0deg, #0fb5ba 200deg, #84cc16 360deg);
-	-webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3px));
-	mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3px));
-	animation: msvcalc-admin-spin 1s linear infinite;
+/* The loader mark: the logo's cube draws itself, then glows. */
+.msvcalc-loader-logo {
+	display: block;
+	width: 64px;
+	height: 64px;
+	filter: drop-shadow(0 12px 24px rgba(6, 16, 25, 0.28));
 }
 
-.msvcalc-loader__mark {
-	display: grid;
-	place-items: center;
-	width: 42px;
-	height: 42px;
-	border-radius: 13px;
-	color: #fff;
-	background: linear-gradient(135deg, #0fb5ba, #84cc16);
-	box-shadow: 0 10px 22px -12px #0fb5ba;
-	animation: msvcalc-admin-bob 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+.msvcalc-loader-logo__line {
+	stroke-dasharray: 1 1.02;
+	stroke-dashoffset: 1.01;
+	animation: 1.64s linear infinite;
+}
+
+/* Outline first, then the fold, then the stem, as in the logo. */
+.msvcalc-loader-logo__line--edge {
+	animation-name: msvcalc-logo-edge;
+}
+
+.msvcalc-loader-logo__line--fold {
+	animation-name: msvcalc-logo-fold;
+}
+
+.msvcalc-loader-logo__line--stem {
+	animation-name: msvcalc-logo-stem;
+}
+
+.msvcalc-loader-logo__glow {
+	opacity: 0;
+	animation: msvcalc-logo-glow 1.64s ease-in-out infinite;
+}
+
+@keyframes msvcalc-logo-edge {
+
+	0% {
+		stroke-dashoffset: 1.01;
+	}
+
+	40%,
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes msvcalc-logo-fold {
+
+	0%,
+	40% {
+		stroke-dashoffset: 1.01;
+	}
+
+	54%,
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes msvcalc-logo-stem {
+
+	0%,
+	54% {
+		stroke-dashoffset: 1.01;
+	}
+
+	64%,
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes msvcalc-logo-glow {
+
+	0%,
+	62% {
+		opacity: 0;
+	}
+
+	82% {
+		opacity: 0.9;
+	}
+
+	100% {
+		opacity: 0.2;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.msvcalc-loader-logo__line {
+		stroke-dashoffset: 0;
+		animation: none;
+	}
+
+	.msvcalc-loader-logo__glow {
+		animation-duration: 3s;
+	}
 }
 
 .msvcalc-report-frame {
@@ -2036,33 +2118,6 @@ body.msvcalc-report {
 	border: 0;
 	opacity: 0;
 	pointer-events: none;
-}
-
-@keyframes msvcalc-admin-spin {
-
-	to {
-		transform: rotate(360deg);
-	}
-}
-
-@keyframes msvcalc-admin-bob {
-
-	0%,
-	100% {
-		transform: translateY(0) scale(1);
-	}
-
-	50% {
-		transform: translateY(-3px) scale(1.04);
-	}
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-	.msvcalc-loader__ring,
-	.msvcalc-loader__mark {
-		animation-duration: 3s;
-	}
 }
 
 @media screen and (max-width: 782px) {

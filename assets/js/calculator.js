@@ -293,12 +293,24 @@
 	 * @param {string} text Message under the loader.
 	 * @return {HTMLElement} Loader block.
 	 */
+	let loaderCount = 0;
+
+	/**
+	 * The loader mark, shared with PHP through icons.js.
+	 *
+	 * @param {string} cls Wrapper class.
+	 * @return {Element} Wrapper with the animated mark.
+	 */
+	function loaderMark( cls ) {
+		const wrap = h( cls, { 'aria-hidden': 'true' } );
+		loaderCount += 1;
+		wrap.innerHTML = String( window.msvcalcLoader || '' ).replace( /__ID__/g, 'msvcalc-loader-js-' + loaderCount );
+		return wrap;
+	}
+
 	function loader( text ) {
 		return h( 'div.msvcalc__loading', { role: 'status' }, [
-			h( 'span.msvcalc__loader', { 'aria-hidden': 'true' }, [
-				h( 'span.msvcalc__loader-ring' ),
-				h( 'span.msvcalc__loader-mark', {}, [ icon( 'cube', 24 ) ] ),
-			] ),
+			loaderMark( 'span.msvcalc__loader' ),
 			h( 'span.msvcalc__loading-text', { text: text } ),
 		] );
 	}
