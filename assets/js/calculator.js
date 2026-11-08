@@ -637,7 +637,7 @@
 				} )
 				.slice( 0, 30 )
 				.map( function ( row, index ) {
-					return { id: 'c' + index + Date.now(), name: row.name.slice( 0, 60 ), m3: Number( row.m3 ), qty: clampQty( row.qty ), icon: validIcon( row.icon ) };
+					return { id: 'c' + index + Date.now(), name: row.name.slice( 0, 60 ), m3: Number( row.m3 ), qty: clampQty( row.qty ), icon: validIcon( row.icon ), dims: 'string' === typeof row.dims ? row.dims.slice( 0, 40 ) : '' };
 				} );
 			if ( s.unitToggle && ( 'm3' === saved.units || 'ft3' === saved.units ) ) {
 				this.state.units = saved.units;
@@ -653,7 +653,7 @@
 		}
 		try {
 			const custom = this.state.custom.map( function ( row ) {
-				return { name: row.name, m3: row.m3, qty: row.qty, icon: row.icon };
+				return { name: row.name, m3: row.m3, qty: row.qty, icon: row.icon, dims: row.dims || '' };
 			} );
 			window.localStorage.setItem(
 				this.storageKey(),
@@ -709,7 +709,12 @@
 	};
 
 	Calculator.prototype.volumeText = function ( m3, withUnit ) {
-		const text = 'ft3' === this.state.units ? fmt( m3 * FT3, m3 * FT3 < 10 ? 1 : 0 ) : fmt( m3, 2 );
+		const ft = 'ft3' === this.state.units;
+		let text = ft ? fmt( m3 * FT3, m3 * FT3 < 10 ? 1 : 0 ) : fmt( m3, 2 );
+		// A small item never reads as nothing.
+		if ( m3 > 0 && ( ft ? m3 * FT3 < 0.05 : m3 < 0.005 ) ) {
+			text = '< ' + ( ft ? fmt( 0.1, 1 ) : fmt( 0.01, 2 ) );
+		}
 		return withUnit ? text + ' ' + t[ this.state.units ] : text;
 	};
 
@@ -1348,6 +1353,9 @@
 					self.state.custom.push( {
 						id: 'c' + Date.now(),
 						name: name,
+						dims: [ l, w, hgt ].map( function ( n ) {
+							return fmt( n, n % 1 ? 1 : 0 );
+						} ).join( ' × ' ) + ' ' + ( 'm3' === self.state.units ? t.cm : t.in ),
 						m3: Math.min( 100, Math.round( m3 * 1000 ) / 1000 || 0.001 ),
 						qty: qty,
 						icon: chosenIcon,
@@ -2145,7 +2153,7 @@
 			} );
 		} );
 		this.state.custom.forEach( function ( row ) {
-			lines.push( { custom: row.id, room: t.customRoom, name: row.name, qty: row.qty, m3: row.m3 * row.qty } );
+			lines.push( { custom: row.id, room: t.customRoom, name: row.name, dims: row.dims || '', qty: row.qty, m3: row.m3 * row.qty } );
 		} );
 		return lines;
 	};
@@ -2250,7 +2258,8 @@
 			errors[ key ] = error;
 			return h( 'div.msvcalc__field.msvcalc__field--' + key, {}, [
 				h( 'label', { for: id }, [ h( 'span', { text: label } ), 'optional' === rule ? h( 'small', { text: ' ' + t.optional } ) : null ] ),
-				control,
+				// Selects get our own chevron, so a theme's select arrow cannot double up.
+				'SELECT' === control.tagName ? h( 'span.msvcalc__select', {}, [ control, icon( 'chevron', 18 ) ] ) : control,
 				help ? h( 'small.msvcalc__help', { text: help } ) : null,
 				error,
 			] );
@@ -2352,8 +2361,13 @@
 		inputs.consent = h( 'input', { type: 'checkbox', id: consentId, name: 'consent', required: true, 'aria-describedby': consentId + '-error' } );
 		errors.consent = h( 'span.msvcalc__field-error', { id: consentId + '-error', role: 'alert' } );
 		const consent = h( 'div.msvcalc__consent', {}, [
-			h( 'label', { for: consentId }, [ inputs.consent, h( 'span.msvcalc__check', { 'aria-hidden': 'true' }, [ icon( 'check', 14 ) ] ), h( 'span', { text: s.consent } ) ] ),
-			s.privacyUrl ? h( 'a', { href: s.privacyUrl, target: '_blank', rel: 'noopener', text: t.privacy } ) : null,
+			inputs.consent,
+			h( 'label.msvcalc__check', { for: consentId, 'aria-hidden': 'true' }, [ icon( 'check', 14 ) ] ),
+			h( 'p.msvcalc__consent-text', {}, [
+				h( 'label', { for: consentId, text: s.consent } ),
+				s.privacyUrl ? ' ' : null,
+				s.privacyUrl ? h( 'a', { href: s.privacyUrl, target: '_blank', rel: 'noopener', text: t.privacy } ) : null,
+			] ),
 			errors.consent,
 		] );
 
@@ -3106,7 +3120,11 @@
 				'div.msvcalc-print__stats',
 				{},
 				stats.map( function ( stat, index ) {
-					return h( 'div.msvcalc-print__stat' + ( 0 === index ? '.is-main' : '' ), {}, [ h( 'span', { text: stat[ 0 ] } ), h( 'strong', { text: stat[ 1 ] } ) ] );
+					return h( 'div.msvcalc-print__stat' + ( 0 === index ? '.is-main' : '' ), {}, [
+						h( 'span', { text: stat[ 0 ] } ),
+						h( 'strong', { text: stat[ 1 ] } ),
+						0 === index && totals.load ? h( 'small', { text: self.totalAlt.textContent } ) : null,
+					] );
 				} )
 			)
 		);
@@ -3125,8 +3143,22 @@
 				[ [ 'width', '100' ], [ 'height', '6' ], [ 'rx', '3' ], [ 'fill', '#e8f0f2' ] ].forEach( function ( a ) {
 					track.setAttribute( a[ 0 ], a[ 1 ] );
 				} );
+				// Each bar carries its own gradient: the calculator's shared one
+				// is hidden while printing.
+				const gradId = self.uid + '-print-' + pair[ 0 ];
+				const grad = document.createElementNS( ns, 'linearGradient' );
+				grad.setAttribute( 'id', gradId );
+				[ [ '0', sheet.style.getPropertyValue( '--msvcalc-print-a' ) ], [ '1', sheet.style.getPropertyValue( '--msvcalc-print-b' ) ] ].forEach( function ( stop ) {
+					const el = document.createElementNS( ns, 'stop' );
+					el.setAttribute( 'offset', stop[ 0 ] );
+					el.setAttribute( 'stop-color', stop[ 1 ] );
+					grad.appendChild( el );
+				} );
+				const defs = document.createElementNS( ns, 'defs' );
+				defs.appendChild( grad );
+				bar.appendChild( defs );
 				const level = document.createElementNS( ns, 'rect' );
-				[ [ 'width', String( Math.max( 2, Math.min( 100, fit.fill || 0 ) ) ) ], [ 'height', '6' ], [ 'rx', '3' ], [ 'fill', self.gradUrl ] ].forEach( function ( a ) {
+				[ [ 'width', String( Math.max( 2, Math.min( 100, fit.fill || 0 ) ) ) ], [ 'height', '6' ], [ 'rx', '3' ], [ 'fill', 'url(#' + gradId + ')' ] ].forEach( function ( a ) {
 					level.setAttribute( a[ 0 ], a[ 1 ] );
 				} );
 				bar.appendChild( track );
@@ -3135,6 +3167,7 @@
 					h( 'div.msvcalc-print__fit', {}, [
 						h( 'span.msvcalc-print__fit-label', { text: pair[ 1 ] } ),
 						h( 'strong', { text: fit.label } ),
+						( fit.count > 1 ? fit.note : fit.row && fit.row.note ) ? h( 'span.msvcalc-print__fit-note', { text: fit.count > 1 ? fit.note : fit.row.note } ) : null,
 						bar,
 						h( 'span.msvcalc-print__fit-pct', { text: sprintf( t.fill, Math.min( 100, fit.fill || 0 ) ) } ),
 					] )
@@ -3173,7 +3206,13 @@
 				] )
 			);
 			group.lines.forEach( function ( line ) {
-				body.appendChild( h( 'tr', {}, [ h( 'td', { text: fmt( line.qty, 0 ) + ' ×' } ), h( 'td', { text: line.name } ), h( 'td', { text: self.volumeText( line.m3, true ) } ) ] ) );
+				body.appendChild(
+					h( 'tr', {}, [
+						h( 'td', { text: fmt( line.qty, 0 ) + ' ×' } ),
+						h( 'td', {}, [ line.name, line.dims ? h( 'span.msvcalc-print__dims', { text: line.dims } ) : null ] ),
+						h( 'td', { text: self.volumeText( line.m3, true ) } ),
+					] )
+				);
 			} );
 			table.appendChild( body );
 		} );

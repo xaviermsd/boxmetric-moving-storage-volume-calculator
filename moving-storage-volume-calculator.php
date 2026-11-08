@@ -29,6 +29,7 @@ require_once MSVCALC_DIR . 'includes/class-msvcalc-catalogue.php';
 require_once MSVCALC_DIR . 'includes/class-msvcalc-calculator.php';
 require_once MSVCALC_DIR . 'includes/class-msvcalc-icons.php';
 require_once MSVCALC_DIR . 'includes/class-msvcalc-leads.php';
+require_once MSVCALC_DIR . 'includes/class-msvcalc-xlsx.php';
 require_once MSVCALC_DIR . 'includes/class-msvcalc-mailer.php';
 require_once MSVCALC_DIR . 'includes/class-msvcalc-rest.php';
 require_once MSVCALC_DIR . 'includes/class-msvcalc-frontend.php';

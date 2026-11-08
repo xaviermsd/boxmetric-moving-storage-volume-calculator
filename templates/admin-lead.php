@@ -30,6 +30,7 @@ $msvcalc_datetime = (string) get_option( 'date_format' ) . ' ' . (string) get_op
 $msvcalc_list_url = admin_url( 'admin.php?page=' . MSVCalc_Admin::LEADS_SLUG );
 $msvcalc_pdf_url  = wp_nonce_url( admin_url( 'admin-post.php?action=msvcalc_lead_report&lead=' . $lead_id ), 'msvcalc_lead_report' );
 $msvcalc_csv_url  = wp_nonce_url( admin_url( 'admin-post.php?action=msvcalc_export_leads&lead=' . $lead_id ), 'msvcalc_export_leads' );
+$msvcalc_xlsx_url = wp_nonce_url( admin_url( 'admin-post.php?action=msvcalc_export_leads&format=xlsx&lead=' . $lead_id ), 'msvcalc_export_leads' );
 $msvcalc_today    = wp_date( 'Y-m-d' );
 $msvcalc_is_open  = in_array( $msvcalc_status, MSVCalc_Leads::open_statuses(), true );
 $msvcalc_mail     = (string) get_post_meta( $lead_id, MSVCalc_Leads::MAIL_META, true );
@@ -158,6 +159,7 @@ $msvcalc_form = static function ( string $action ) use ( $lead_id ): void {
 	</form>
 	<span class="msvcalc-quick__spacer"></span>
 	<a class="button" target="_blank" rel="noopener" href="<?php echo esc_url( $msvcalc_pdf_url ); ?>"><?php MSVCalc_Icons::render( 'print', 16 ); ?><?php esc_html_e( 'PDF', 'moving-storage-volume-calculator' ); ?></a>
+	<a class="button" href="<?php echo esc_url( $msvcalc_xlsx_url ); ?>"><?php MSVCalc_Icons::render( 'list', 16 ); ?><?php esc_html_e( 'Excel', 'moving-storage-volume-calculator' ); ?></a>
 	<a class="button" href="<?php echo esc_url( $msvcalc_csv_url ); ?>"><?php MSVCalc_Icons::render( 'list', 16 ); ?><?php esc_html_e( 'CSV', 'moving-storage-volume-calculator' ); ?></a>
 </div>
 

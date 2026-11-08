@@ -1598,6 +1598,38 @@
 	font-weight: 600;
 }
 
+/* One control height across the row: icon, inputs and the add button. */
+.msvcalc__custom-form .msvcalc__input,
+.msvcalc__custom-form .msvcalc__custom-add {
+	box-sizing: border-box !important;
+	height: 46px !important;
+	min-height: 46px !important;
+	margin: 0 !important;
+}
+
+.msvcalc__custom-form .msvcalc__input {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.msvcalc__custom-form .msvcalc__custom-add {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	white-space: nowrap;
+}
+
+.msvcalc__custom-form .msvcalc__times,
+.msvcalc__custom-form .msvcalc__dim-unit {
+	display: flex;
+	align-items: center;
+	height: 46px;
+	padding-bottom: 0;
+	line-height: 1;
+}
+
 .msvcalc__custom-form .msvcalc__error {
 	grid-column: 1 / -1;
 	color: var(--msvcalc-danger);
@@ -1823,12 +1855,41 @@
 
 .msvcalc select.msvcalc__input {
 	-webkit-appearance: none;
+	-moz-appearance: none;
 	appearance: none;
-	padding-right: 40px;
-	background-image: linear-gradient(45deg, transparent 50%, var(--msvcalc-muted) 50%), linear-gradient(135deg, var(--msvcalc-muted) 50%, transparent 50%);
-	background-position: calc(100% - 20px) 50%, calc(100% - 15px) 50%;
-	background-size: 5px 5px;
-	background-repeat: no-repeat;
+	padding-right: 44px;
+	background-image: none !important;
+	cursor: pointer;
+}
+
+.msvcalc select.msvcalc__input::-ms-expand {
+	display: none;
+}
+
+/* Our chevron, drawn over the select so theme arrows never show twice. */
+.msvcalc__select {
+	position: relative;
+	display: block;
+}
+
+.msvcalc__select > .msvcalc-icon {
+	position: absolute;
+	top: 50%;
+	right: 14px;
+	margin: 0;
+	transform: translateY(-50%);
+	color: var(--msvcalc-accent);
+	pointer-events: none;
+	transition: transform var(--msvcalc-fast);
+}
+
+.msvcalc__select:focus-within > .msvcalc-icon {
+	transform: translateY(-50%) rotate(180deg);
+}
+
+.msvcalc input[type="date"].msvcalc__input::-webkit-calendar-picker-indicator {
+	opacity: 0.55;
+	cursor: pointer;
 }
 
 .msvcalc .msvcalc__input:focus {
@@ -2463,25 +2524,41 @@
 }
 
 .msvcalc__consent {
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
 	gap: 6px 12px;
+	padding: 12px 14px;
+	border-radius: var(--msvcalc-r-sm);
+	border: 1px solid var(--msvcalc-line);
+	background: color-mix(in srgb, var(--msvcalc-soft) 55%, var(--msvcalc-card));
 	font-size: 0.875rem;
 	color: var(--msvcalc-muted);
 }
 
-.msvcalc__consent label {
-	position: relative;
-	display: flex;
-	align-items: flex-start;
-	gap: 10px;
-	flex: 1 1 280px;
+.msvcalc__consent > .msvcalc__check {
+	cursor: pointer;
+}
+
+.msvcalc .msvcalc__consent-text {
+	flex: 1 1 0;
+	min-width: 0;
+	margin: 1px 0 0;
+	padding: 0;
+	font-size: inherit;
+	line-height: 1.5;
+	color: inherit;
+}
+
+.msvcalc__consent-text label {
 	cursor: pointer;
 }
 
 .msvcalc__consent input {
 	position: absolute;
+	top: 12px;
+	left: 14px;
 	opacity: 0;
 	width: 22px;
 	height: 22px;
@@ -2509,6 +2586,26 @@
 	gap: 8px;
 	font-size: 0.85rem;
 	cursor: pointer;
+}
+
+.msvcalc .msvcalc__toggle-check,
+.msvcalc .msvcalc__extra {
+	margin: 0;
+	line-height: 22px;
+	vertical-align: middle;
+}
+
+.msvcalc__toggle-check {
+	align-self: flex-start;
+	margin-top: 2px !important;
+}
+
+/* Centre the words on the box whatever the theme font's ascender. */
+.msvcalc__toggle-check > span:last-child,
+.msvcalc__extra > span:last-child {
+	display: block;
+	line-height: 1.2;
+	text-box: trim-both cap alphabetic;
 }
 
 .msvcalc__toggle-check input,
@@ -2545,16 +2642,31 @@
 }
 
 .msvcalc__extra {
-	padding: 8px 12px 8px 8px;
+	min-height: 38px;
+	padding: 6px 14px 6px 8px;
 	border-radius: 999px;
 	border: 1px solid var(--msvcalc-line);
 	background: var(--msvcalc-card);
-	transition: border-color var(--msvcalc-fast), background var(--msvcalc-fast);
+	color: var(--msvcalc-text);
+	line-height: 1.25;
+	transition: border-color var(--msvcalc-fast), background var(--msvcalc-fast), box-shadow var(--msvcalc-fast);
+}
+
+.msvcalc__extra:hover {
+	border-color: color-mix(in srgb, var(--msvcalc-accent) 55%, var(--msvcalc-line));
+}
+
+.msvcalc__extra .msvcalc__check {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
 }
 
 .msvcalc__extra:has(input:checked) {
-	border-color: var(--msvcalc-accent);
+	border-color: transparent;
 	background: var(--msvcalc-soft);
+	box-shadow: inset 0 0 0 1.5px var(--msvcalc-accent);
+	font-weight: 600;
 }
 
 .msvcalc__toggle-check input:checked + .msvcalc__check,
@@ -2576,6 +2688,9 @@
 .msvcalc__consent a {
 	color: var(--msvcalc-accent);
 	font-weight: 600;
+	text-decoration: underline;
+	text-underline-offset: 2px;
+	white-space: nowrap;
 }
 
 .msvcalc__consent .msvcalc__field-error {
@@ -3819,6 +3934,27 @@ html.msvcalc-lock body {
 		display: block;
 		width: 100%;
 		height: 5pt;
+	}
+
+	.msvcalc-print__fit-note {
+		display: block;
+		grid-column: 1 / -1;
+		margin-top: -1pt;
+		font-size: 8.5pt;
+		color: #5b6b78;
+	}
+
+	.msvcalc-print__dims {
+		margin-left: 6pt;
+		font-size: 8.5pt;
+		color: #5b6b78;
+	}
+
+	.msvcalc-print__stat small {
+		display: block;
+		margin-top: 1pt;
+		font-size: 8.5pt;
+		opacity: 0.9;
 	}
 
 	.msvcalc-print__fit-pct {

@@ -414,7 +414,8 @@ final class MSVCalc_Leads_Admin {
 		<div class="msvcalc-leads__bar">
 			<?php $table->views(); ?>
 			<div class="msvcalc-leads__exports">
-				<a class="button" href="<?php echo esc_url( wp_nonce_url( add_query_arg( $export, admin_url( 'admin-post.php?action=msvcalc_export_leads' ) ), 'msvcalc_export_leads' ) ); ?>"><?php MSVCalc_Icons::render( 'list', 16 ); ?><?php esc_html_e( 'Export CSV', 'moving-storage-volume-calculator' ); ?></a>
+				<a class="button button-primary" href="<?php echo esc_url( wp_nonce_url( add_query_arg( array_merge( $export, array( 'format' => 'xlsx' ) ), admin_url( 'admin-post.php?action=msvcalc_export_leads' ) ), 'msvcalc_export_leads' ) ); ?>"><?php MSVCalc_Icons::render( 'list', 16 ); ?><?php esc_html_e( 'Export Excel', 'moving-storage-volume-calculator' ); ?></a>
+				<a class="button" title="<?php esc_attr_e( 'Plain CSV, for importing into a CRM or another app', 'moving-storage-volume-calculator' ); ?>" href="<?php echo esc_url( wp_nonce_url( add_query_arg( $export, admin_url( 'admin-post.php?action=msvcalc_export_leads' ) ), 'msvcalc_export_leads' ) ); ?>"><?php MSVCalc_Icons::render( 'list', 16 ); ?><?php esc_html_e( 'Export CSV', 'moving-storage-volume-calculator' ); ?></a>
 				<a class="button" target="_blank" rel="noopener" href="<?php echo esc_url( wp_nonce_url( add_query_arg( $export, admin_url( 'admin-post.php?action=msvcalc_lead_report' ) ), 'msvcalc_lead_report' ) ); ?>"><?php MSVCalc_Icons::render( 'print', 16 ); ?><?php esc_html_e( 'Export PDF', 'moving-storage-volume-calculator' ); ?></a>
 			</div>
 		</div>

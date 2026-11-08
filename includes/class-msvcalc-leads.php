@@ -841,7 +841,8 @@ final class MSVCalc_Leads {
 	}
 
 	/**
-	 * Streams every lead as a CSV file.
+	 * Streams leads as a branded Excel workbook (format=xlsx) or a plain
+	 * CSV file for importing into a CRM.
 	 */
 	public static function export_csv(): void {
 		if ( ! current_user_can( self::CAP ) ) {
@@ -849,7 +850,8 @@ final class MSVCalc_Leads {
 		}
 		check_admin_referer( 'msvcalc_export_leads' );
 
-		$lead = isset( $_GET['lead'] ) ? absint( wp_unslash( $_GET['lead'] ) ) : 0;
+		$lead   = isset( $_GET['lead'] ) ? absint( wp_unslash( $_GET['lead'] ) ) : 0;
+		$format = isset( $_GET['format'] ) && 'xlsx' === sanitize_key( wp_unslash( $_GET['format'] ) ) ? 'xlsx' : 'csv';
 		if ( $lead ) {
 			$ids = self::POST_TYPE === get_post_type( $lead ) ? array( $lead ) : array();
 		} else {
@@ -865,46 +867,177 @@ final class MSVCalc_Leads {
 			);
 		}
 
-		$rows   = array();
-		$rows[] = array(
-			__( 'Reference', 'moving-storage-volume-calculator' ),
-			__( 'Received', 'moving-storage-volume-calculator' ),
-			__( 'Status', 'moving-storage-volume-calculator' ),
-			__( 'Follow-up', 'moving-storage-volume-calculator' ),
-			__( 'Name', 'moving-storage-volume-calculator' ),
-			__( 'Email', 'moving-storage-volume-calculator' ),
-			__( 'Phone', 'moving-storage-volume-calculator' ),
-			__( 'Service', 'moving-storage-volume-calculator' ),
-			__( 'Moving from', 'moving-storage-volume-calculator' ),
-			__( 'Access (from)', 'moving-storage-volume-calculator' ),
-			__( 'Moving to', 'moving-storage-volume-calculator' ),
-			__( 'Access (to)', 'moving-storage-volume-calculator' ),
-			__( 'Parking', 'moving-storage-volume-calculator' ),
-			__( 'Move date', 'moving-storage-volume-calculator' ),
-			__( 'Extra services', 'moving-storage-volume-calculator' ),
-			__( 'Volume (m³)', 'moving-storage-volume-calculator' ),
-			__( 'Volume (ft³)', 'moving-storage-volume-calculator' ),
-			__( 'Weight (kg)', 'moving-storage-volume-calculator' ),
-			__( 'Items', 'moving-storage-volume-calculator' ),
-			__( 'Boxes', 'moving-storage-volume-calculator' ),
-			__( 'Vehicle', 'moving-storage-volume-calculator' ),
-			__( 'Shipping container', 'moving-storage-volume-calculator' ),
-			__( 'Storage unit', 'moving-storage-volume-calculator' ),
-			__( 'Customer message', 'moving-storage-volume-calculator' ),
-			__( 'Lead source', 'moving-storage-volume-calculator' ),
-			__( 'Page', 'moving-storage-volume-calculator' ),
-			__( 'Consent given', 'moving-storage-volume-calculator' ),
-			__( 'Consent text', 'moving-storage-volume-calculator' ),
-			__( 'Internal notes', 'moving-storage-volume-calculator' ),
-			__( 'Inventory', 'moving-storage-volume-calculator' ),
+		$status_map     = array_flip( self::statuses() );
+		$columns        = array(
+			array(
+				'label' => __( 'Reference', 'moving-storage-volume-calculator' ),
+				'type'  => 'text',
+				'width' => 16,
+			),
+			array(
+				'label' => __( 'Received', 'moving-storage-volume-calculator' ),
+				'type'  => 'datetime',
+				'width' => 18,
+			),
+			array(
+				'label'  => __( 'Status', 'moving-storage-volume-calculator' ),
+				'type'   => 'status',
+				'width'  => 14,
+				'status' => $status_map,
+			),
+			array(
+				'label' => __( 'Follow-up', 'moving-storage-volume-calculator' ),
+				'type'  => 'date',
+				'width' => 12,
+			),
+			array(
+				'label' => __( 'Name', 'moving-storage-volume-calculator' ),
+				'type'  => 'text',
+				'width' => 28,
+			),
+			array(
+				'label' => __( 'Email', 'moving-storage-volume-calculator' ),
+				'type'  => 'text',
+				'width' => 34,
+			),
+			array(
+				'label' => __( 'Phone', 'moving-storage-volume-calculator' ),
+				'type'  => 'text',
+				'width' => 18,
+			),
+			array(
+				'label' => __( 'Service', 'moving-storage-volume-calculator' ),
+				'type'  => 'text',
+				'width' => 22,
+			),
+			array(
+				'label' => __( 'Moving from', 'moving-storage-volume-calculator' ),
+				'type'  => 'text',
+				'width' => 34,
+			),
+			array(
+				'label' => __( 'Access (from)', 'moving-storage-volume-calculator' ),
+				'type'  => 'text',
+				'width' => 26,
+			),
+			array(
+				'label' => __( 'Moving to', 'moving-storage-volume-calculator' ),
+				'type'  => 'text',
+				'width' => 34,
+			),
+			array(
+				'label' => __( 'Access (to)', 'moving-storage-volume-calculator' ),
+				'type'  => 'text',
+				'width' => 26,
+			),
+			array(
+				'label' => __( 'Parking', 'moving-storage-volume-calculator' ),
+				'type'  => 'text',
+				'width' => 26,
+			),
+			array(
+				'label' => __( 'Move date', 'moving-storage-volume-calculator' ),
+				'type'  => 'date',
+				'width' => 12,
+			),
+			array(
+				'label' => __( 'Extra services', 'moving-storage-volume-calculator' ),
+				'type'  => 'text',
+				'width' => 40,
+			),
+			array(
+				'label' => __( 'Volume (m³)', 'moving-storage-volume-calculator' ),
+				'type'  => 'num2',
+				'width' => 12,
+			),
+			array(
+				'label' => __( 'Volume (ft³)', 'moving-storage-volume-calculator' ),
+				'type'  => 'num1',
+				'width' => 12,
+			),
+			array(
+				'label' => __( 'Weight (kg)', 'moving-storage-volume-calculator' ),
+				'type'  => 'int',
+				'width' => 12,
+			),
+			array(
+				'label' => __( 'Items', 'moving-storage-volume-calculator' ),
+				'type'  => 'int',
+				'width' => 9,
+			),
+			array(
+				'label' => __( 'Boxes', 'moving-storage-volume-calculator' ),
+				'type'  => 'int',
+				'width' => 9,
+			),
+			array(
+				'label' => __( 'Vehicle', 'moving-storage-volume-calculator' ),
+				'type'  => 'text',
+				'width' => 24,
+			),
+			array(
+				'label' => __( 'Shipping container', 'moving-storage-volume-calculator' ),
+				'type'  => 'text',
+				'width' => 22,
+			),
+			array(
+				'label' => __( 'Storage unit', 'moving-storage-volume-calculator' ),
+				'type'  => 'text',
+				'width' => 22,
+			),
+			array(
+				'label' => __( 'Customer message', 'moving-storage-volume-calculator' ),
+				'type'  => 'wrap',
+				'width' => 48,
+			),
+			array(
+				'label' => __( 'Lead source', 'moving-storage-volume-calculator' ),
+				'type'  => 'text',
+				'width' => 30,
+			),
+			array(
+				'label' => __( 'Page', 'moving-storage-volume-calculator' ),
+				'type'  => 'text',
+				'width' => 40,
+			),
+			array(
+				'label' => __( 'Consent given', 'moving-storage-volume-calculator' ),
+				'type'  => 'datetime',
+				'width' => 18,
+			),
+			array(
+				'label' => __( 'Consent text', 'moving-storage-volume-calculator' ),
+				'type'  => 'text',
+				'width' => 40,
+			),
+			array(
+				'label' => __( 'Internal notes', 'moving-storage-volume-calculator' ),
+				'type'  => 'wrap',
+				'width' => 48,
+			),
+			array(
+				'label' => __( 'Inventory', 'moving-storage-volume-calculator' ),
+				'type'  => 'text',
+				'width' => 60,
+			),
 		);
+		$rows           = array();
+		$inventory_rows = array();
 		foreach ( $ids as $id ) {
 			$data      = self::data( (int) $id );
 			$contact   = (array) ( $data['contact'] ?? array() );
 			$result    = (array) ( $data['result'] ?? array() );
 			$inventory = array();
 			foreach ( (array) ( $result['lines'] ?? array() ) as $line ) {
-				$inventory[] = sprintf( '%d x %s', (int) ( $line['qty'] ?? 0 ), (string) ( $line['name'] ?? '' ) );
+				$inventory[]      = sprintf( '%d x %s', (int) ( $line['qty'] ?? 0 ), (string) ( $line['name'] ?? '' ) );
+				$inventory_rows[] = array(
+					self::reference( (int) $id ),
+					(string) ( $contact['name'] ?? '' ),
+					(string) ( $line['room'] ?? '' ),
+					(string) ( $line['name'] ?? '' ),
+					(string) (int) ( $line['qty'] ?? 0 ),
+					(string) ( $line['m3'] ?? '' ),
+				);
 			}
 			$internal = array();
 			foreach ( self::history( (int) $id ) as $entry ) {
@@ -948,11 +1081,78 @@ final class MSVCalc_Leads {
 			);
 		}
 
+		$file = ( $lead ? 'lead-' . self::reference( $lead ) : 'leads' ) . '-' . gmdate( 'Y-m-d' );
 		nocache_headers();
+
+		if ( 'xlsx' === $format ) {
+			$company = MSVCalc_Settings::text( 'company_name' );
+			$company = '' === $company ? wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES ) : $company;
+			$stamp   = wp_date( (string) get_option( 'date_format' ) . ' ' . (string) get_option( 'time_format' ) );
+			$title   = $lead
+				/* translators: %s: lead reference. */
+				? sprintf( __( 'Quote request %s', 'moving-storage-volume-calculator' ), self::reference( $lead ) )
+				/* translators: %s: business name. */
+				: sprintf( __( '%s · Quote requests', 'moving-storage-volume-calculator' ), $company );
+			/* translators: 1: export date and time, 2: number of quote requests. */
+			$subtitle = sprintf( _n( 'Exported %1$s · %2$s quote request · Moving & Storage Volume Calculator', 'Exported %1$s · %2$s quote requests · Moving & Storage Volume Calculator', count( $rows ), 'moving-storage-volume-calculator' ), $stamp, number_format_i18n( count( $rows ) ) );
+			$sheets   = array(
+				array(
+					'name'     => __( 'Quote requests', 'moving-storage-volume-calculator' ),
+					'title'    => $title,
+					'subtitle' => $subtitle,
+					'columns'  => $columns,
+					'rows'     => $rows,
+				),
+				array(
+					'name'     => __( 'Inventory', 'moving-storage-volume-calculator' ),
+					'title'    => __( 'Inventory, item by item', 'moving-storage-volume-calculator' ),
+					'subtitle' => $subtitle,
+					'columns'  => array(
+						array(
+							'label' => __( 'Reference', 'moving-storage-volume-calculator' ),
+							'type'  => 'text',
+							'width' => 16,
+						),
+						array(
+							'label' => __( 'Name', 'moving-storage-volume-calculator' ),
+							'type'  => 'text',
+							'width' => 28,
+						),
+						array(
+							'label' => __( 'Room', 'moving-storage-volume-calculator' ),
+							'type'  => 'text',
+							'width' => 24,
+						),
+						array(
+							'label' => __( 'Item', 'moving-storage-volume-calculator' ),
+							'type'  => 'text',
+							'width' => 40,
+						),
+						array(
+							'label' => __( 'Quantity', 'moving-storage-volume-calculator' ),
+							'type'  => 'int',
+							'width' => 11,
+						),
+						array(
+							'label' => __( 'Volume (m³)', 'moving-storage-volume-calculator' ),
+							'type'  => 'num2',
+							'width' => 13,
+						),
+					),
+					'rows'     => $inventory_rows,
+				),
+			);
+			header( 'Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' );
+			header( 'Content-Disposition: attachment; filename=' . $file . '.xlsx' );
+			echo MSVCalc_Xlsx::build( $sheets, $title ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Binary .xlsx download; every cell is XML-escaped in MSVCalc_Xlsx.
+			exit;
+		}
+
 		header( 'Content-Type: text/csv; charset=utf-8' );
-		header( 'Content-Disposition: attachment; filename=' . ( $lead ? 'lead-' . self::reference( $lead ) : 'leads' ) . '-' . gmdate( 'Y-m-d' ) . '.csv' );
+		header( 'Content-Disposition: attachment; filename=' . $file . '.csv' );
 
 		echo "\xEF\xBB\xBF"; // UTF-8 byte order mark, so spreadsheet apps read accents correctly.
+		echo self::csv_line( wp_list_pluck( $columns, 'label' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- CSV file download, every cell is quoted and formula-neutralised in csv_line().
 		foreach ( $rows as $row ) {
 			echo self::csv_line( $row ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- CSV file download, every cell is quoted and formula-neutralised in csv_line().
 		}
