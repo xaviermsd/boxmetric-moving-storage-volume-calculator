@@ -1960,3 +1960,114 @@ body.msvcalc-report {
 	background: #fff7ed;
 	border-radius: 8px;
 }
+
+/* Branded loader: the calculator's ring and cube, over the screen while a
+   save, filter, download or report runs in the background. */
+.msvcalc-busy {
+	position: fixed;
+	top: var(--wp-admin--admin-bar--height, 32px);
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9990;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 14px;
+	color: #0f1d29;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	background: rgba(240, 246, 248, 0.72);
+	-webkit-backdrop-filter: blur(3px);
+	backdrop-filter: blur(3px);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.18s ease, visibility 0s linear 0.18s;
+}
+
+.msvcalc-busy.is-on {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 0.18s ease, visibility 0s;
+}
+
+.msvcalc-is-busy #wpbody-content {
+	pointer-events: none;
+}
+
+.msvcalc-loader {
+	position: relative;
+	display: grid;
+	place-items: center;
+	width: 64px;
+	height: 64px;
+}
+
+.msvcalc-loader__ring {
+	position: absolute;
+	inset: 0;
+	border-radius: 50%;
+	background: conic-gradient(from 0deg, transparent 0deg, #0fb5ba 200deg, #84cc16 360deg);
+	-webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3px));
+	mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3px));
+	animation: msvcalc-admin-spin 1s linear infinite;
+}
+
+.msvcalc-loader__mark {
+	display: grid;
+	place-items: center;
+	width: 42px;
+	height: 42px;
+	border-radius: 13px;
+	color: #fff;
+	background: linear-gradient(135deg, #0fb5ba, #84cc16);
+	box-shadow: 0 10px 22px -12px #0fb5ba;
+	animation: msvcalc-admin-bob 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+}
+
+.msvcalc-report-frame {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	width: 1px;
+	height: 1px;
+	border: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+@keyframes msvcalc-admin-spin {
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes msvcalc-admin-bob {
+
+	0%,
+	100% {
+		transform: translateY(0) scale(1);
+	}
+
+	50% {
+		transform: translateY(-3px) scale(1.04);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.msvcalc-loader__ring,
+	.msvcalc-loader__mark {
+		animation-duration: 3s;
+	}
+}
+
+@media screen and (max-width: 782px) {
+
+	.msvcalc-busy {
+		top: 46px;
+	}
+}

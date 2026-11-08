@@ -59,6 +59,17 @@ final class MSVCalc_Admin {
 		add_action( 'admin_post_msvcalc_reset_tables', array( __CLASS__, 'reset_tables' ) );
 		add_filter( 'plugin_action_links_' . plugin_basename( MSVCALC_FILE ), array( __CLASS__, 'action_links' ) );
 		add_filter( 'admin_footer_text', array( __CLASS__, 'footer_text' ) );
+		add_filter( 'removable_query_args', array( __CLASS__, 'removable_args' ) );
+	}
+
+	/**
+	 * Notice arguments WordPress drops from the address once shown.
+	 *
+	 * @param string[] $args Arguments.
+	 * @return string[]
+	 */
+	public static function removable_args( $args ) {
+		return array_merge( (array) $args, array( 'msvcalc_notice', 'msvcalc_count' ) );
 	}
 
 	/**
@@ -562,7 +573,7 @@ final class MSVCalc_Admin {
 		?>
 		<div class="wrap msvcalc-wrap">
 			<?php self::header( __( 'Settings', 'moving-storage-volume-calculator' ) ); ?>
-			<?php settings_errors( MSVCalc_Settings::OPTION ); ?>
+			<?php settings_errors(); ?>
 			<form method="post" action="options.php" class="msvcalc-settings">
 				<?php settings_fields( MSVCalc_Settings::GROUP ); ?>
 				<nav class="nav-tab-wrapper msvcalc-tabs" role="tablist">
@@ -913,6 +924,12 @@ final class MSVCalc_Admin {
 			'densityHelp'   => __( 'kg per m³ of household goods, used for the weight estimate when an item has no weight. 150–200 is typical.', 'moving-storage-volume-calculator' ),
 			'unsaved'       => __( 'You have unsaved changes.', 'moving-storage-volume-calculator' ),
 			'copied'        => __( 'Copied', 'moving-storage-volume-calculator' ),
+			'working'       => __( 'Working on it…', 'moving-storage-volume-calculator' ),
+			'saving'        => __( 'Saving…', 'moving-storage-volume-calculator' ),
+			'loading'       => __( 'Loading…', 'moving-storage-volume-calculator' ),
+			'preparingCsv'  => __( 'Preparing your download…', 'moving-storage-volume-calculator' ),
+			'preparingPdf'  => __( 'Preparing your PDF…', 'moving-storage-volume-calculator' ),
+			'failed'        => __( 'That did not work. Please try again.', 'moving-storage-volume-calculator' ),
 			'none'          => __( 'Nothing here yet.', 'moving-storage-volume-calculator' ),
 			/* translators: %d: number of items. */
 			'itemCount'     => __( '%d items', 'moving-storage-volume-calculator' ),

@@ -216,15 +216,6 @@
 	color: var(--msvcalc-muted);
 }
 
-.msvcalc__spinner {
-	width: 22px;
-	height: 22px;
-	border-radius: 50%;
-	border: 3px solid var(--msvcalc-soft-2);
-	border-top-color: var(--msvcalc-accent);
-	animation: msvcalc-spin 0.8s linear infinite;
-}
-
 .msvcalc__credit {
 	display: flex;
 	justify-content: center;
@@ -1939,14 +1930,6 @@
 	width: 100%;
 }
 
-.msvcalc__button.is-busy {
-	pointer-events: none;
-}
-
-.msvcalc__button.is-busy .msvcalc-icon {
-	animation: msvcalc-nudge 0.8s var(--msvcalc-ease) infinite;
-}
-
 .msvcalc__icon-button {
 	display: grid;
 	place-items: center;
@@ -3385,21 +3368,6 @@ html.msvcalc-lock body {
 	}
 }
 
-.msvcalc__busy {
-	display: inline-block;
-	width: 18px;
-	height: 18px;
-	flex: none;
-	border-radius: 50%;
-	border: 2.5px solid rgba(255, 255, 255, 0.35);
-	border-top-color: #ffffff;
-	animation: msvcalc-spin 0.7s linear infinite;
-}
-
-.msvcalc__button.is-busy .msvcalc-icon {
-	display: none;
-}
-
 .msvcalc__done .msvcalc__button {
 	min-width: 200px;
 	margin-top: 12px;
@@ -4208,4 +4176,34 @@ html.msvcalc-lock body {
 	color: var(--msvcalc-accent);
 	background: #ffffff;
 	box-shadow: 0 2px 8px -2px rgba(6, 16, 25, 0.35);
+}
+
+/* The branded loader laid over a view while it waits (quote submit). */
+.msvcalc__view {
+	position: relative;
+}
+
+.msvcalc__loading.msvcalc__overlay {
+	position: absolute;
+	inset: 0;
+	z-index: 20;
+	padding: 0;
+	border-radius: calc(var(--msvcalc-radius) + 4px);
+	color: var(--msvcalc-text);
+	font-weight: 600;
+	background: color-mix(in srgb, var(--msvcalc-card) 78%, transparent);
+	-webkit-backdrop-filter: blur(3px);
+	backdrop-filter: blur(3px);
+	animation: msvcalc-fade-in var(--msvcalc-fast) var(--msvcalc-ease);
+}
+
+@keyframes msvcalc-fade-in {
+
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }

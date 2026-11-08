@@ -287,6 +287,23 @@
 	}
 
 	/**
+	 * The plugin's one branded loader: a gradient ring around the cube mark,
+	 * the same as the start screen. Used wherever the visitor has to wait.
+	 *
+	 * @param {string} text Message under the loader.
+	 * @return {HTMLElement} Loader block.
+	 */
+	function loader( text ) {
+		return h( 'div.msvcalc__loading', { role: 'status' }, [
+			h( 'span.msvcalc__loader', { 'aria-hidden': 'true' }, [
+				h( 'span.msvcalc__loader-ring' ),
+				h( 'span.msvcalc__loader-mark', {}, [ icon( 'cube', 24 ) ] ),
+			] ),
+			h( 'span.msvcalc__loading-text', { text: text } ),
+		] );
+	}
+
+	/**
 	 * Wraps a horizontal strip with edge fades and previous/next buttons that
 	 * appear only while there is more to scroll. A mouse can also drag it.
 	 *
@@ -2445,12 +2462,12 @@
 		};
 
 		submit.disabled = true;
-		submit.classList.add( 'is-busy' );
-		const busy = h( 'span.msvcalc__busy', { 'aria-hidden': 'true' } );
-		submit.insertBefore( busy, submit.firstChild );
+		// The same branded loader as the start screen, over the form.
+		const busy = loader( t.sending );
+		busy.classList.add( 'msvcalc__overlay' );
+		this.quoteView.appendChild( busy );
 		const idle = function () {
 			submit.disabled = false;
-			submit.classList.remove( 'is-busy' );
 			busy.remove();
 		};
 		status.textContent = t.sending;

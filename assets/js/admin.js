@@ -174,7 +174,8 @@
 		form.addEventListener( 'change', mark );
 		form.addEventListener( 'msvcalc:change', mark );
 		window.addEventListener( 'beforeunload', function ( event ) {
-			if ( dirty ) {
+			// A form replaced by a background update no longer counts.
+			if ( dirty && document.body.contains( form ) ) {
 				event.preventDefault();
 				event.returnValue = '';
 			}
@@ -1060,8 +1061,369 @@
 		} );
 	}
 
+	/* ------------------------------------------------------------------ */
+	/* Background requests with the branded loader                          */
+	/* ------------------------------------------------------------------ */
+
+	/**
+	 * The plugin's one branded loader (the same ring and cube as the
+	 * calculator), laid over the admin content while a request runs.
+	 */
+	const Busy = ( function () {
+		let layer = null;
+		let shownAt = 0;
+		return {
+			show: function ( text ) {
+				if ( ! layer ) {
+					layer = h( 'div.msvcalc-busy', { role: 'status', 'aria-live': 'polite' }, [
+						h( 'span.msvcalc-loader', { 'aria-hidden': 'true' }, [
+							h( 'span.msvcalc-loader__ring' ),
+							h( 'span.msvcalc-loader__mark', {}, [ icon( 'cube', 24 ) ] ),
+						] ),
+						h( 'span.msvcalc-busy__text' ),
+					] );
+					document.body.appendChild( layer );
+				}
+				const content = document.getElementById( 'wpcontent' );
+				layer.style.left = ( content ? Math.max( 0, content.getBoundingClientRect().left ) : 0 ) + 'px';
+				layer.querySelector( '.msvcalc-busy__text' ).textContent = text || t.working || '';
+				layer.classList.add( 'is-on' );
+				document.body.classList.add( 'msvcalc-is-busy' );
+				shownAt = Date.now();
+			},
+			hide: function () {
+				if ( ! layer ) {
+					return Promise.resolve();
+				}
+				// Stay up long enough to be seen, never a flicker.
+				const wait = Math.max( 0, 350 - ( Date.now() - shownAt ) );
+				return new Promise( function ( resolve ) {
+					window.setTimeout( function () {
+						layer.classList.remove( 'is-on' );
+						document.body.classList.remove( 'msvcalc-is-busy' );
+						resolve();
+					}, wait );
+				} );
+			},
+		};
+	}() );
+
+	function param( url, key ) {
+		try {
+			return new URL( url, window.location.href ).searchParams.get( key ) || '';
+		} catch ( e ) {
+			return '';
+		}
+	}
+
+	/**
+	 * Whether two addresses show the same view of a screen (the same lead,
+	 * the same settings), so the scroll position can stay.
+	 *
+	 * @param {string} a Address.
+	 * @param {string} b Address.
+	 * @return {boolean} Same view.
+	 */
+	function sameView( a, b ) {
+		return [ 'page', 'lead', 'tab' ].every( function ( key ) {
+			return param( a, key ) === param( b, key );
+		} );
+	}
+
+	const NOTICES = '.notice, div.updated, div.error';
+
+	function readSettings( doc ) {
+		const script = doc.getElementById( 'msvcalc-admin-js-before' );
+		if ( ! script ) {
+			return;
+		}
+		const text = script.textContent;
+		try {
+			const next = JSON.parse( text.slice( text.indexOf( '{' ), text.lastIndexOf( '}' ) + 1 ) );
+			Object.keys( next ).forEach( function ( key ) {
+				if ( 'i18n' !== key ) {
+					data[ key ] = next[ key ];
+				}
+			} );
+		} catch ( e ) {}
+	}
+
+	let shownPath = window.location.pathname + window.location.search;
+
+	/**
+	 * Puts a fetched copy of this screen in place: content (or only its
+	 * notices), the menu badge, the title and the address.
+	 *
+	 * @param {Document} doc  Fetched page.
+	 * @param {string}   url  Address it came from.
+	 * @param {Object}   opts { push, keepScroll, noticesOnly }.
+	 */
+	function swapIn( doc, url, opts ) {
+		const fresh = doc.getElementById( 'wpbody-content' );
+		const here = document.getElementById( 'wpbody-content' );
+		if ( ! fresh || ! here ) {
+			window.location.assign( url );
+			return;
+		}
+		readSettings( doc );
+		const scroll = window.scrollY;
+		if ( opts.noticesOnly ) {
+			here.querySelectorAll( NOTICES ).forEach( function ( n ) {
+				n.remove();
+			} );
+			const end = here.querySelector( '.wp-header-end' );
+			Array.from( fresh.querySelectorAll( NOTICES ) ).reverse().forEach( function ( n ) {
+				if ( end ) {
+					end.after( document.importNode( n, true ) );
+				}
+			} );
+		} else {
+			here.innerHTML = fresh.innerHTML;
+			// WordPress moves notices under the header; do the same.
+			const end = here.querySelector( '.wp-header-end' );
+			if ( end ) {
+				Array.from( here.querySelectorAll( NOTICES ) )
+					.filter( function ( n ) {
+						return ! n.closest( '.msvcalc-wrap' ) || n.parentNode === end.parentNode;
+					} )
+					.reverse()
+					.forEach( function ( n ) {
+						if ( n.compareDocumentPosition( end ) & Node.DOCUMENT_POSITION_FOLLOWING ) {
+							end.after( n );
+						}
+					} );
+			}
+		}
+		const menu = document.getElementById( 'toplevel_page_msvcalc' );
+		const freshMenu = doc.getElementById( 'toplevel_page_msvcalc' );
+		if ( menu && freshMenu ) {
+			menu.innerHTML = freshMenu.innerHTML;
+		}
+		if ( doc.title ) {
+			document.title = doc.title;
+		}
+		const canonical = doc.getElementById( 'wp-admin-canonical' );
+		const clean = canonical && canonical.getAttribute( 'href' ) ? canonical.getAttribute( 'href' ) + window.location.hash : url;
+		window.history[ opts.push ? 'pushState' : 'replaceState' ]( { msvcalc: true }, '', clean );
+		shownPath = window.location.pathname + window.location.search;
+		if ( ! opts.noticesOnly ) {
+			init();
+		}
+		if ( window.jQuery ) {
+			window.jQuery( document ).trigger( 'wp-updates-notice-added' );
+		}
+		window.scrollTo( 0, opts.keepScroll ? scroll : 0 );
+		// Bring the result notice into view, gently, when it is above.
+		const notice = here.querySelector( '.wp-header-end ~ .notice' );
+		if ( opts.keepScroll && notice && notice.getBoundingClientRect().top < 40 ) {
+			window.scrollTo( { top: Math.max( 0, notice.getBoundingClientRect().top + window.scrollY - 60 ), behavior: 'smooth' } );
+		}
+	}
+
+	function failed() {
+		Busy.hide();
+		window.alert( t.failed || 'Error' );
+	}
+
+	/**
+	 * Fetches a page and swaps it in when it is this screen; any other
+	 * screen loads normally, as it has its own scripts.
+	 *
+	 * @param {string} url  Address.
+	 * @param {Object} req  fetch() options.
+	 * @param {Object} opts { text, push, keepScroll, noticesOnly }.
+	 */
+	function go( url, req, opts ) {
+		const from = window.location.href;
+		Busy.show( opts.text || t.loading );
+		return window
+			.fetch( url, Object.assign( { credentials: 'same-origin' }, req || {} ) )
+			.then( function ( response ) {
+				const type = response.headers.get( 'Content-Type' ) || '';
+				if ( ! response.ok || -1 === type.indexOf( 'text/html' ) ) {
+					throw new Error( String( response.status ) );
+				}
+				if ( param( response.url, 'page' ) !== param( from, 'page' ) || -1 === response.url.indexOf( '/wp-admin/admin.php' ) ) {
+					window.location.assign( response.url );
+					return null;
+				}
+				return response.text().then( function ( html ) {
+					const doc = new window.DOMParser().parseFromString( html, 'text/html' );
+					swapIn( doc, response.url, {
+						push: !! opts.push,
+						keepScroll: !! opts.keepScroll && sameView( response.url, from ),
+						noticesOnly: !! opts.noticesOnly && sameView( response.url, from ),
+					} );
+					return Busy.hide();
+				} );
+			} )
+			.catch( failed );
+	}
+
+	/**
+	 * Downloads a file (lead CSV, catalogue JSON) in the background.
+	 *
+	 * @param {string} url Address.
+	 * @param {Object} req fetch() options.
+	 */
+	function download( url, req ) {
+		Busy.show( t.preparingCsv );
+		return window
+			.fetch( url, Object.assign( { credentials: 'same-origin' }, req || {} ) )
+			.then( function ( response ) {
+				const disposition = response.headers.get( 'Content-Disposition' ) || '';
+				if ( ! response.ok || -1 === disposition.indexOf( 'attachment' ) ) {
+					throw new Error( String( response.status ) );
+				}
+				const match = /filename\*?=(?:UTF-8'')?"?([^";]+)"?/i.exec( disposition );
+				return response.blob().then( function ( blob ) {
+					const link = h( 'a', {
+						href: URL.createObjectURL( blob ),
+						download: match ? decodeURIComponent( match[ 1 ] ) : 'export',
+						hidden: true,
+					} );
+					document.body.appendChild( link );
+					link.click();
+					window.setTimeout( function () {
+						URL.revokeObjectURL( link.href );
+						link.remove();
+					}, 1000 );
+					return Busy.hide();
+				} );
+			} )
+			.catch( failed );
+	}
+
+	/**
+	 * Opens the print dialog for a lead report without leaving the screen:
+	 * the report loads in a hidden frame and prints itself from there.
+	 *
+	 * @param {string} url Report address.
+	 */
+	function printReport( url ) {
+		Busy.show( t.preparingPdf );
+		const old = document.getElementById( 'msvcalc-report-frame' );
+		if ( old ) {
+			old.remove();
+		}
+		const frame = h( 'iframe.msvcalc-report-frame', {
+			id: 'msvcalc-report-frame',
+			title: t.preparingPdf,
+			'aria-hidden': 'true',
+			tabindex: '-1',
+		} );
+		frame.addEventListener( 'load', function () {
+			Busy.hide();
+		} );
+		frame.src = url;
+		document.body.appendChild( frame );
+	}
+
+	let backgroundReady = false;
+
+	/**
+	 * Runs the plugin screens' links and forms in the background. Bound
+	 * once on the document, so it keeps working after each update.
+	 */
+	function initBackground() {
+		if ( backgroundReady || ! window.fetch || ! window.DOMParser || ! window.URL || ! document.querySelector( '.msvcalc-wrap' ) ) {
+			return;
+		}
+		backgroundReady = true;
+
+		document.addEventListener( 'click', function ( event ) {
+			if ( event.defaultPrevented || 0 !== event.button || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey ) {
+				return;
+			}
+			const link = event.target.closest ? event.target.closest( '.msvcalc-wrap a[href]' ) : null;
+			if ( ! link || link.hasAttribute( 'download' ) || 0 !== link.href.indexOf( window.location.origin + '/' ) ) {
+				return;
+			}
+			const href = link.href;
+			const action = param( href, 'action' );
+			if ( -1 !== href.indexOf( '/wp-admin/admin-post.php' ) && 'msvcalc_export_leads' === action ) {
+				event.preventDefault();
+				download( href );
+				return;
+			}
+			if ( -1 !== href.indexOf( '/wp-admin/admin-post.php' ) && 'msvcalc_lead_report' === action ) {
+				event.preventDefault();
+				printReport( href );
+				return;
+			}
+			if ( link.target || -1 === href.indexOf( '/wp-admin/admin.php' ) || 0 !== param( href, 'page' ).indexOf( 'msvcalc' ) ) {
+				return;
+			}
+			if ( -1 !== href.indexOf( '#' ) && href.split( '#' )[ 0 ] === window.location.href.split( '#' )[ 0 ] ) {
+				return;
+			}
+			if ( param( href, 'page' ) !== param( window.location.href, 'page' ) ) {
+				// Another plugin screen: it loads normally, with the loader up.
+				Busy.show( t.loading );
+				return;
+			}
+			event.preventDefault();
+			go( href, null, { push: true } );
+		} );
+
+		document.addEventListener( 'submit', function ( event ) {
+			const form = event.target;
+			if ( event.defaultPrevented || ! form.closest || ! form.closest( '.msvcalc-wrap' ) || form.target ) {
+				return;
+			}
+			const body = new window.FormData( form, event.submitter || undefined );
+			const target = new URL( form.getAttribute( 'action' ) || window.location.href, window.location.href );
+			if ( 'msvcalc_export_catalogue' === body.get( 'action' ) ) {
+				event.preventDefault();
+				download( target.href, { method: 'POST', body: body } );
+				return;
+			}
+			if ( 'get' === ( form.getAttribute( 'method' ) || 'get' ).toLowerCase() ) {
+				target.search = new URLSearchParams( body ).toString();
+				if ( param( target.href, 'page' ) !== param( window.location.href, 'page' ) ) {
+					return;
+				}
+				event.preventDefault();
+				go( target.href, null, { push: true } );
+				return;
+			}
+			event.preventDefault();
+			// The rooms and vehicle editors already show what was saved, so
+			// only the notice changes and the editor keeps its place.
+			const editor = 'msvcalc-items-form' === form.id || 'msvcalc-tables-form' === form.id;
+			go( target.href, { method: 'POST', body: body }, { text: t.saving, keepScroll: true, noticesOnly: editor } );
+		} );
+
+		// Select-all boxes in a list table that came in the background.
+		document.addEventListener( 'change', function ( event ) {
+			const box = event.target;
+			if ( ! box.matches || ! box.matches( '.msvcalc-wrap thead .check-column input, .msvcalc-wrap tfoot .check-column input' ) ) {
+				return;
+			}
+			box.closest( 'table' ).querySelectorAll( '.check-column input[type="checkbox"]' ).forEach( function ( other ) {
+				other.checked = box.checked;
+			} );
+		} );
+
+		window.addEventListener( 'popstate', function () {
+			const path = window.location.pathname + window.location.search;
+			if ( path !== shownPath && 0 === param( window.location.href, 'page' ).indexOf( 'msvcalc' ) ) {
+				go( window.location.href, null, { push: false } );
+			}
+		} );
+
+		// Coming back from another screen through the browser's cache.
+		window.addEventListener( 'pageshow', function ( event ) {
+			if ( event.persisted ) {
+				Busy.hide();
+			}
+		} );
+	}
+
+
 	function init() {
 		initCommon();
+		initBackground();
 		const itemsRoot = document.getElementById( 'msvcalc-items-editor' );
 		const itemsForm = document.getElementById( 'msvcalc-items-form' );
 		if ( itemsRoot && itemsForm && data.catalogue ) {
