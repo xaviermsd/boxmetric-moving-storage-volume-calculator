@@ -228,6 +228,8 @@ Then add the **Volume Calculator** block to a page, or paste the shortcode:
 - **Leads**<br>Every enquiry, as above.
 - **Settings**<br>Calculator, Look & feel, Quote form, Data & privacy.
 
+Every save, filter, CSV download and PDF report runs in the background behind one branded loader, so the screen never reloads.
+
 <details>
 <summary><b>Shortcode options</b></summary>
 <br>
