@@ -549,7 +549,7 @@ final class MSVCalc_Admin {
 						'name'              => esc_attr( $name ),
 						'id'                => esc_attr( $id ),
 						'selected'          => (int) $value,
-						'show_option_none'  => esc_html__( '— Stay on the calculator —', 'moving-storage-volume-calculator' ),
+						'show_option_none'  => esc_html__( 'Stay on the calculator', 'moving-storage-volume-calculator' ),
 						'option_none_value' => '0',
 					)
 				);
@@ -929,7 +929,7 @@ final class MSVCalc_Admin {
 			'storage'       => __( 'Storage units', 'moving-storage-volume-calculator' ),
 			'region'        => __( 'Region', 'moving-storage-volume-calculator' ),
 			'density'       => __( 'Average density', 'moving-storage-volume-calculator' ),
-			'densityHelp'   => __( 'kg per m³ of household goods, used for the weight estimate when an item has no weight. 150–200 is typical.', 'moving-storage-volume-calculator' ),
+			'densityHelp'   => __( 'kg per m³ of household goods, used for the weight estimate when an item has no weight. 150-200 is typical.', 'moving-storage-volume-calculator' ),
 			'unsaved'       => __( 'You have unsaved changes.', 'moving-storage-volume-calculator' ),
 			'copied'        => __( 'Copied', 'moving-storage-volume-calculator' ),
 			'working'       => __( 'Working on it…', 'moving-storage-volume-calculator' ),

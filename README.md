@@ -61,7 +61,7 @@ Click a task to jump straight to how it works.
 - **Help customers who have no idea how many boxes they need**<br>A **box estimator**: five questions, one count per box size · [Show me](#count-the-boxes)
 - **Get the address, floors, parking and date with the list**<br>A **short quote form** under the inventory · [Show me](#get-the-quote-request)
 - **Receive enquiries you can price at a glance**<br>A **branded email** with the volume, weight and best-fit vehicle · [Show me](#every-request-in-your-inbox)
-- **Follow up every enquiry until it is booked**<br>**Leads**: statuses, follow-up reminders, notes, CSV and PDF · [Show me](#manage-every-lead)
+- **Follow up every enquiry until it is booked**<br>**Leads**: statuses, follow-up reminders, notes, Excel, CSV and PDF · [Show me](#manage-every-lead)
 
 > [!TIP]
 > Add the **Volume Calculator** block to any page, or the shortcode `[msvcalc_calculator]`. It works out of
@@ -162,14 +162,14 @@ container and storage unit, every customer and move detail, and the full item li
 
 ## Manage every lead
 
-<img src=".wordpress-org/screenshot-6.png" alt="The Leads list with totals, status views, filters and CSV and PDF export" width="100%">
+<img src=".wordpress-org/screenshot-6.png" alt="The Leads list with totals, status views, filters and Excel, CSV and PDF export" width="100%">
 
 **Volume Calculator > Leads** keeps every enquiry in one place.
 
 - Totals for new enquiries, follow-ups due and your conversion rate.
 - Status views: New, Contacted, In progress, Converted and Lost.
 - Search, filter by service and date, sort and bulk-update.
-- Export the filtered list as **CSV** or a **PDF report**.
+- Export the filtered list as a branded **Excel** workbook (with an item-by-item inventory sheet), a plain **CSV** for your CRM, or a **PDF report**.
 
 <img src=".wordpress-org/screenshot-7.png" alt="A lead with quick contact actions, the status pipeline and a follow-up reminder" width="100%">
 
@@ -269,7 +269,7 @@ No prices are shown to the customer. Moving costs depend on your rates, distance
 <details>
 <summary><b>How can a moving company get more leads from its website?</b></summary>
 
-Give visitors a useful tool instead of a plain contact form. People planning a move want to know how much they have and what size truck or storage unit they need. This calculator answers that, then asks for their details to "Get my free quote". Every lead arrives complete and is kept under Volume Calculator → Leads, with statuses, follow-up reminders, notes and CSV or PDF export.
+Give visitors a useful tool instead of a plain contact form. People planning a move want to know how much they have and what size truck or storage unit they need. This calculator answers that, then asks for their details to "Get my free quote". Every lead arrives complete and is kept under Volume Calculator → Leads, with statuses, follow-up reminders, notes and Excel, CSV or PDF export.
 
 </details>
 
@@ -281,9 +281,9 @@ These are the plugin's Quick Start totals for a typically furnished home, includ
 * Studio: about 11 m³ (400 cu ft)
 * 1 bedroom: about 17 m³ (600 cu ft)
 * 2 bedrooms: about 24 m³ (850 cu ft)
-* 3 bedrooms: about 35 m³ (1,250 cu ft)
-* 4 bedrooms: about 46 m³ (1,650 cu ft)
-* 5 bedrooms: about 60 m³ (2,150 cu ft)
+* 3 bedrooms: about 36 m³ (1,250 cu ft)
+* 4 bedrooms: about 47 m³ (1,650 cu ft)
+* 5 bedrooms: about 60 m³ (2,100 cu ft)
 
 Every home is different, so customers adjust the list item by item.
 
@@ -292,7 +292,7 @@ Every home is different, so customers adjust the list item by item.
 <details>
 <summary><b>What size moving truck or removal van do I need?</b></summary>
 
-It depends on the volume. With the default sizes: a 15 ft truck (about 21 m³) or a Luton van (about 18 m³) suits a 1 bedroom home. A 20 ft truck (about 28 m³) suits 2 bedrooms. A 7.5 tonne lorry (about 35 m³) suits a smaller 3 bedroom home, and a 26 ft truck (about 45 m³) suits a 3 bedroom or lightly furnished 4 bedroom home. Larger homes need an 18 tonne lorry (about 60 m³) or two trips. The calculator picks the best fit and shows how full it will be.
+It depends on the volume. With the default sizes: a 15 ft truck (about 21 m³) or a Luton van (about 18 m³) suits a 1 bedroom home. A 20 ft truck (about 28 m³) suits 2 bedrooms. A 7.5 tonne lorry (about 35 m³) suits a smaller 3 bedroom home, and a 26 ft truck (about 45 m³) suits a 3 bedroom or lightly furnished 4 bedroom home. A 4 bedroom home needs an 18 tonne lorry (about 50 m³), and larger homes a removal pantechnicon (about 85 m³) or two trips. The calculator picks the best fit and shows how full it will be.
 
 </details>
 

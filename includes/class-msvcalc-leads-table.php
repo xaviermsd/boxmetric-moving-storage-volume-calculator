@@ -267,7 +267,7 @@ final class MSVCalc_Leads_Table extends WP_List_Table {
 		$data    = MSVCalc_Leads::data( (int) $item->ID );
 		$contact = (array) ( $data['contact'] ?? array() );
 		$parts   = array_filter( array( (string) ( $contact['from'] ?? '' ), (string) ( $contact['to'] ?? '' ) ) );
-		$out     = $parts ? esc_html( implode( ' → ', $parts ) ) : '<span class="msvcalc-muted">—</span>';
+		$out     = $parts ? esc_html( implode( ' → ', $parts ) ) : '<span class="msvcalc-muted">-</span>';
 		$meta    = array_filter(
 			array(
 				(string) ( MSVCalc_Leads::services()[ $contact['service'] ?? '' ] ?? '' ),
@@ -300,7 +300,7 @@ final class MSVCalc_Leads_Table extends WP_List_Table {
 	protected function column_followup( $item ) {
 		$date = (string) get_post_meta( (int) $item->ID, MSVCalc_Leads::FOLLOWUP_META, true );
 		if ( '' === $date ) {
-			return '<span class="msvcalc-muted">—</span>';
+			return '<span class="msvcalc-muted">-</span>';
 		}
 		$today = wp_date( 'Y-m-d' );
 		$open  = in_array( MSVCalc_Leads::status( (int) $item->ID ), MSVCalc_Leads::open_statuses(), true );

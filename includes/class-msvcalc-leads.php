@@ -764,7 +764,7 @@ final class MSVCalc_Leads {
 	public static function create( array $contact, array $result, array $source = array() ): int {
 		$title = sprintf(
 			/* translators: 1: customer name, 2: volume. */
-			__( '%1$s – %2$s', 'moving-storage-volume-calculator' ),
+			__( '%1$s, %2$s', 'moving-storage-volume-calculator' ),
 			$contact['name'],
 			MSVCalc_Calculator::format_volume( (float) $result['m3'], (string) MSVCalc_Settings::get( 'units' ) )
 		);

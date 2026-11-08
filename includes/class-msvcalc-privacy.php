@@ -144,7 +144,7 @@ final class MSVCalc_Privacy {
 
 			$consent = (array) get_post_meta( $id, MSVCalc_Leads::CONSENT_META, true );
 			if ( ! empty( $consent['time'] ) ) {
-				$fields[ __( 'Consent given', 'moving-storage-volume-calculator' ) ] = wp_date( 'Y-m-d H:i', (int) $consent['time'] ) . ( empty( $consent['text'] ) ? '' : ' – ' . (string) $consent['text'] );
+				$fields[ __( 'Consent given', 'moving-storage-volume-calculator' ) ] = wp_date( 'Y-m-d H:i', (int) $consent['time'] ) . ( empty( $consent['text'] ) ? '' : ', ' . (string) $consent['text'] );
 				if ( ! empty( $consent['privacy'] ) ) {
 					$fields[ __( 'Privacy policy shown', 'moving-storage-volume-calculator' ) ] = (string) $consent['privacy'];
 				}

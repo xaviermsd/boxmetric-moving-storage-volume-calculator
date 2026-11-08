@@ -1031,8 +1031,8 @@
 			tables.vehicles[ region ] = tables.vehicles[ region ] || [];
 			tables.storage[ region ] = tables.storage[ region ] || [];
 			root.appendChild( h( 'div.msvcalc-ed-stack', {}, [
-				section( t.vehicles + ' – ' + regions[ region ], tables.vehicles[ region ], [ 'van', 'luton', 'truck', 'lorry' ] ),
-				section( t.storage + ' – ' + regions[ region ], tables.storage[ region ], [ 'storage' ] ),
+				section( t.vehicles + ': ' + regions[ region ], tables.vehicles[ region ], [ 'van', 'luton', 'truck', 'lorry' ] ),
+				section( t.storage + ': ' + regions[ region ], tables.storage[ region ], [ 'storage' ] ),
 			] ) );
 			root.appendChild( section( t.containers, tables.containers, [ 'container' ] ) );
 

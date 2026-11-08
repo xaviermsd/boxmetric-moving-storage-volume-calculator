@@ -97,6 +97,13 @@
 
 	const BOX_IDS = [ 'box-small', 'box-medium', 'box-large', 'box-wardrobe' ];
 	const FORGOT_ROOMS = [ 'kitchen', 'garage', 'garden', 'boxes', 'bathroom', 'laundry', 'hallway' ];
+	// Areas people tend to forget, by the service picked in the quote form.
+	const FORGOT_BY_SERVICE = {
+		office: [ 'business', 'boxes', 'warehouse' ],
+		storage: [ 'boxes', 'garage', 'garden', 'leisure' ],
+	};
+	// A shop, café or other business list: only the usual extras.
+	const FORGOT_BUSINESS = [ 'boxes', 'warehouse' ];
 	const SHARE_KEY = 'msvcalc';
 
 	/**
@@ -2053,7 +2060,7 @@
 	Calculator.prototype.renderFit = function ( card, result ) {
 		if ( ! result ) {
 			card.el.classList.add( 'is-empty' );
-			card.name.textContent = '–';
+			card.name.textContent = '-';
 			card.note.textContent = '';
 			card.pct.textContent = '';
 			card.bar.style.width = '0%';
@@ -2275,6 +2282,11 @@
 			const select = h( 'select.msvcalc__input', {}, [ h( 'option', { value: '', text: t.choose } ) ] );
 			Object.keys( s.services ).forEach( function ( key ) {
 				select.appendChild( h( 'option', { value: key, text: s.services[ key ] } ) );
+			} );
+			// The "Anything from these areas?" reminder follows the service.
+			self.quoteService = select;
+			select.addEventListener( 'change', function () {
+				self.renderForgotten();
 			} );
 			fieldsWrap.appendChild( row( 'service', t.service, select, f.service ) );
 		}
@@ -2784,8 +2796,9 @@
 	/* ------------------------- Forgotten spaces ------------------------- */
 
 	/**
-	 * Before the quote, lists home areas the visitor has not added anything
-	 * from (garage, garden, boxes...), with links back to them.
+	 * Before the quote, lists the areas the visitor has not added anything
+	 * from yet, with links back to them. The areas follow the service they
+	 * pick (a home move, an office move or storage) and what is on the list.
 	 */
 	Calculator.prototype.renderForgotten = function () {
 		const self = this;
@@ -2803,12 +2816,13 @@
 		const business = catalogue.rooms.some( function ( room ) {
 			return 'business' === room.group && used[ room.id ];
 		} );
-		if ( business ) {
-			box.hidden = true;
-			return;
+		const service = this.quoteService ? this.quoteService.value : '';
+		let areas = FORGOT_BY_SERVICE[ service ] || FORGOT_ROOMS;
+		if ( business && ! FORGOT_BY_SERVICE[ service ] ) {
+			areas = FORGOT_BUSINESS;
 		}
 		const missing = catalogue.rooms.filter( function ( room ) {
-			return -1 !== FORGOT_ROOMS.indexOf( room.id ) && ! used[ room.id ] && ( itemsByRoom[ room.id ] || [] ).length;
+			return -1 !== areas.indexOf( room.id ) && ! used[ room.id ] && ( itemsByRoom[ room.id ] || [] ).length;
 		} );
 		if ( ! missing.length ) {
 			box.hidden = true;

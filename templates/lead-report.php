@@ -43,7 +43,7 @@ $msvcalc_head = static function ( string $title, string $sub ) use ( $msvcalc_co
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php echo esc_html( $msvcalc_title . ' – ' . $msvcalc_company ); ?></title>
+<title><?php echo esc_html( $msvcalc_title . ' | ' . $msvcalc_company ); ?></title>
 <?php wp_print_styles( 'msvcalc-admin' ); ?>
 </head>
 <body class="msvcalc-report" style="--msvcalc-r-a:<?php echo esc_attr( $msvcalc_accent ); ?>;--msvcalc-r-b:<?php echo esc_attr( $msvcalc_accent_2 ); ?>;">

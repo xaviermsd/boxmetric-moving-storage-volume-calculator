@@ -47,8 +47,8 @@ return array(
 			array(
 				'id'   => 'lorry-18t',
 				'name' => __( '18 tonne lorry', 'moving-storage-volume-calculator' ),
-				'note' => __( '4 to 5 bedrooms', 'moving-storage-volume-calculator' ),
-				'm3'   => 60,
+				'note' => __( 'About 4 bedrooms', 'moving-storage-volume-calculator' ),
+				'm3'   => 50,
 				'icon' => 'lorry',
 			),
 			array(
@@ -78,7 +78,7 @@ return array(
 				'id'   => 'box-van',
 				'name' => __( 'Box van (3.5 t)', 'moving-storage-volume-calculator' ),
 				'note' => __( 'Standard car licence, 1 to 2 rooms', 'moving-storage-volume-calculator' ),
-				'm3'   => 20,
+				'm3'   => 18,
 				'icon' => 'luton',
 			),
 			array(
@@ -159,7 +159,7 @@ return array(
 				'id'   => 'truck-2t',
 				'name' => __( '2 tonne truck', 'moving-storage-volume-calculator' ),
 				'note' => __( 'Studio or 1 bedroom', 'moving-storage-volume-calculator' ),
-				'm3'   => 15,
+				'm3'   => 12,
 				'icon' => 'luton',
 			),
 			array(
@@ -173,21 +173,28 @@ return array(
 				'id'   => 'truck-4t',
 				'name' => __( '4.5 tonne truck', 'moving-storage-volume-calculator' ),
 				'note' => __( '2 to 3 bedrooms', 'moving-storage-volume-calculator' ),
-				'm3'   => 35,
+				'm3'   => 27,
 				'icon' => 'truck',
 			),
 			array(
 				'id'   => 'truck-6t',
 				'name' => __( '6 tonne truck', 'moving-storage-volume-calculator' ),
 				'note' => __( '3 to 4 bedrooms', 'moving-storage-volume-calculator' ),
-				'm3'   => 45,
+				'm3'   => 35,
 				'icon' => 'truck',
 			),
 			array(
 				'id'   => 'truck-8t',
 				'name' => __( '8 tonne truck', 'moving-storage-volume-calculator' ),
-				'note' => __( '4 to 5 bedrooms', 'moving-storage-volume-calculator' ),
-				'm3'   => 60,
+				'note' => __( 'About 4 bedrooms', 'moving-storage-volume-calculator' ),
+				'm3'   => 45,
+				'icon' => 'lorry',
+			),
+			array(
+				'id'   => 'truck-12t',
+				'name' => __( '12 tonne pantech', 'moving-storage-volume-calculator' ),
+				'note' => __( 'Large homes, 4 to 5 bedrooms', 'moving-storage-volume-calculator' ),
+				'm3'   => 65,
 				'icon' => 'lorry',
 			),
 		),
@@ -225,7 +232,7 @@ return array(
 			array(
 				'id'   => 's100',
 				'name' => __( '100 sq ft unit', 'moving-storage-volume-calculator' ),
-				'note' => __( 'Like a single garage, about 9 m²', 'moving-storage-volume-calculator' ),
+				'note' => __( 'Like half a single garage, about 9 m²', 'moving-storage-volume-calculator' ),
 				'm3'   => 22,
 				'icon' => 'storage',
 			),
@@ -239,7 +246,7 @@ return array(
 			array(
 				'id'   => 's200',
 				'name' => __( '200 sq ft unit', 'moving-storage-volume-calculator' ),
-				'note' => __( 'Like a double garage, about 19 m²', 'moving-storage-volume-calculator' ),
+				'note' => __( 'Like a single garage, about 19 m²', 'moving-storage-volume-calculator' ),
 				'm3'   => 44,
 				'icon' => 'storage',
 			),
@@ -378,7 +385,7 @@ return array(
 			array(
 				'id'   => 'a9',
 				'name' => __( '3 × 3 m unit', 'moving-storage-volume-calculator' ),
-				'note' => __( 'About 9 m², a single garage', 'moving-storage-volume-calculator' ),
+				'note' => __( 'About 9 m², half a single garage', 'moving-storage-volume-calculator' ),
 				'm3'   => 19.4,
 				'icon' => 'storage',
 			),
@@ -392,7 +399,7 @@ return array(
 			array(
 				'id'   => 'a18',
 				'name' => __( '3 × 6 m unit', 'moving-storage-volume-calculator' ),
-				'note' => __( 'About 18 m², a double garage', 'moving-storage-volume-calculator' ),
+				'note' => __( 'About 18 m², a single garage', 'moving-storage-volume-calculator' ),
 				'm3'   => 39,
 				'icon' => 'storage',
 			),

@@ -212,7 +212,7 @@ $msvcalc_form = static function ( string $action ) use ( $lead_id ): void {
 				<?php foreach ( MSVCalc_Leads::detail_rows( $msvcalc_contact ) as $msvcalc_label => $msvcalc_value ) : ?>
 					<div>
 						<dt><?php echo esc_html( $msvcalc_label ); ?></dt>
-						<dd><?php echo '' !== (string) $msvcalc_value ? esc_html( (string) $msvcalc_value ) : '<span class="msvcalc-muted">—</span>'; ?></dd>
+						<dd><?php echo '' !== (string) $msvcalc_value ? esc_html( (string) $msvcalc_value ) : '<span class="msvcalc-muted">-</span>'; ?></dd>
 					</div>
 				<?php endforeach; ?>
 			</dl>

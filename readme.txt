@@ -20,7 +20,7 @@ Visitors list what they are moving, room by room, and see the total volume updat
 
 = For your visitors =
 
-* **441 items in 21 rooms**, from sofas and wardrobes to pianos, hot tubs, shop fittings, salon chairs and pallets. Volumes are set from published industry figures.
+* **441 items in 21 rooms**, from sofas and wardrobes to pianos, hot tubs, shop fittings, salon chairs and pallets. Volumes are checked against a dozen published moving-company calculators.
 * **Five clear categories:** Home, Garage & garden, Specialty items, Boxes & packing, and Business. Pick a category, then a room.
 * **14 Quick Starts.** One tap fills a typical list for boxes only, a few items, a student room, a studio, a 1 to 5 bedroom home, a garage and shed, a storage unit, a small office, a shop or a café. Totals are checked against published moving-company figures.
 * **Search in your own words:** UK, US, Canadian, Australian and New Zealand names work, for example "couch", "settee", "chesterfield", "hoover", "esky" or "chilly bin".
@@ -30,7 +30,7 @@ Visitors list what they are moving, room by room, and see the total volume updat
 * **What fits.** The right van or truck, shipping container and storage unit, shown as animated drawings that fill up as items are added.
 * **A packing margin** is added to the total for gaps when loading.
 * **Share** the list with a link (it opens on any device and nothing is stored on your server), **print** it, or come back later: the list is remembered in the visitor's browser.
-* **A forgotten-areas check** before the quote reminds visitors of areas they skipped, such as the garage or garden.
+* **A forgotten-areas check** before the quote reminds visitors of areas they skipped, such as the garage or garden. It follows the service they pick, so an office move gets office areas and storage gets the usual storage extras.
 * **Undo** after clearing the list.
 * Light, dark or automatic theme in your brand colours.
 * **No credit links unless you want them.** An optional "Powered by" line can be turned on under Volume Calculator > Settings > Look & feel; it is off by default.
@@ -39,7 +39,7 @@ Visitors list what they are moving, room by room, and see the total volume updat
 
 * **Quote requests** with the visitor's name, email, phone, addresses, moving date and service, floor and lift at each address, parking and extra services (packing, dismantling, storage, disposal, cleaning), plus the full item list and totals.
 * **Email notification** to you, with an optional copy to the customer.
-* **Quote requests are kept in WordPress** under Volume Calculator > Leads, with a status, follow-ups and notes for each, and can be exported as a CSV file or a PDF report.
+* **Quote requests are kept in WordPress** under Volume Calculator > Leads, with a status, follow-ups and notes for each, and can be exported as a branded Excel file, a plain CSV file for your CRM, or a PDF report.
 * **Edit everything.** Change any room, item, volume or preset, and choose from more than 220 icons sorted into categories. Add your own vans, trucks and storage units. Export and import your item list as JSON.
 * **Regional tables** for the UK, Europe, the United States and Australia.
 * **Spam protection** with a hidden field, a security token and a limit on requests per visitor. No captcha and no third-party service.
@@ -70,7 +70,7 @@ No prices are shown to the customer. Moving costs depend on your rates, distance
 
 = How can a moving company get more leads from its website? =
 
-Give visitors a useful tool instead of a plain contact form. People planning a move want to know how much they have and what size truck or storage unit they need. This calculator answers that, then asks for their details to "Get my free quote". Every lead arrives complete and is kept under Volume Calculator > Leads, with statuses, follow-up reminders, notes and CSV or PDF export.
+Give visitors a useful tool instead of a plain contact form. People planning a move want to know how much they have and what size truck or storage unit they need. This calculator answers that, then asks for their details to "Get my free quote". Every lead arrives complete and is kept under Volume Calculator > Leads, with statuses, follow-up reminders, notes and Excel, CSV or PDF export.
 
 = How many cubic feet is a 1, 2, 3 or 4 bedroom house? =
 
@@ -79,15 +79,15 @@ These are the plugin's Quick Start totals for a typically furnished home, includ
 * Studio: about 11 m³ (400 cu ft)
 * 1 bedroom: about 17 m³ (600 cu ft)
 * 2 bedrooms: about 24 m³ (850 cu ft)
-* 3 bedrooms: about 35 m³ (1,250 cu ft)
-* 4 bedrooms: about 46 m³ (1,650 cu ft)
-* 5 bedrooms: about 60 m³ (2,150 cu ft)
+* 3 bedrooms: about 36 m³ (1,250 cu ft)
+* 4 bedrooms: about 47 m³ (1,650 cu ft)
+* 5 bedrooms: about 60 m³ (2,100 cu ft)
 
 Every home is different, so customers adjust the list item by item.
 
 = What size moving truck or removal van do I need? =
 
-It depends on the volume. With the default sizes: a 15 ft truck (about 21 m³) or a Luton van (about 18 m³) suits a 1 bedroom home. A 20 ft truck (about 28 m³) suits 2 bedrooms. A 7.5 tonne lorry (about 35 m³) suits a smaller 3 bedroom home, and a 26 ft truck (about 45 m³) suits a 3 bedroom or lightly furnished 4 bedroom home. Larger homes need an 18 tonne lorry (about 60 m³) or two trips. The calculator picks the best fit and shows how full it will be.
+It depends on the volume. With the default sizes: a 15 ft truck (about 21 m³) or a Luton van (about 18 m³) suits a 1 bedroom home. A 20 ft truck (about 28 m³) suits 2 bedrooms. A 7.5 tonne lorry (about 35 m³) suits a smaller 3 bedroom home, and a 26 ft truck (about 45 m³) suits a 3 bedroom or lightly furnished 4 bedroom home. A 4 bedroom home needs an 18 tonne lorry (about 50 m³), and larger homes a removal pantechnicon (about 85 m³) or two trips. The calculator picks the best fit and shows how full it will be.
 
 = What size storage unit do I need? =
 
@@ -136,7 +136,7 @@ By default your settings, items and quote requests are kept, in case you reinsta
 3. "Get my free quote" in one short form that reminds customers about rooms they may have missed.
 4. Share the list with a link, or print a branded copy.
 5. Every request lands in your inbox as a branded email.
-6. Leads: every enquiry in one place, with follow-ups, filters and CSV or PDF export.
+6. Leads: every enquiry in one place, with follow-ups, filters and Excel, CSV or PDF export.
 7. Follow each lead through to a booking with quick contact actions, a status, follow-up reminders and notes.
 
 == Changelog ==

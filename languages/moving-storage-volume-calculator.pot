@@ -9,16 +9,16 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-08T14:04:20+01:00\n"
+"POT-Creation-Date: 2026-11-08T16:20:18+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: moving-storage-volume-calculator\n"
 
 #. Plugin Name of the plugin
 #: moving-storage-volume-calculator.php
-#: includes/class-msvcalc-admin.php:69
-#: includes/class-msvcalc-admin.php:205
-#: includes/class-msvcalc-admin.php:231
+#: includes/class-msvcalc-admin.php:80
+#: includes/class-msvcalc-admin.php:216
+#: includes/class-msvcalc-admin.php:242
 #: includes/class-msvcalc-privacy.php:45
 msgid "Moving & Storage Volume Calculator"
 msgstr ""
@@ -30,7 +30,7 @@ msgstr ""
 
 #. Author of the plugin
 #: moving-storage-volume-calculator.php
-#: includes/class-msvcalc-admin.php:206
+#: includes/class-msvcalc-admin.php:217
 msgid "Harsh Prajapati"
 msgstr ""
 
@@ -81,7 +81,7 @@ msgid "Laundry & utility"
 msgstr ""
 
 #: data/catalogue.php:78
-#: data/catalogue.php:4921
+#: data/catalogue.php:4923
 msgid "Garage & shed"
 msgstr ""
 
@@ -717,7 +717,7 @@ msgid "corner unit"
 msgstr ""
 
 #: data/catalogue.php:678
-#: data/catalogue.php:4088
+#: data/catalogue.php:4090
 msgid "Bar stool"
 msgstr ""
 
@@ -1171,7 +1171,7 @@ msgid "Blanket box / chest"
 msgstr ""
 
 #: data/catalogue.php:1137
-#: data/catalogue.php:3576
+#: data/catalogue.php:3578
 msgid "trunk"
 msgstr ""
 
@@ -1588,12 +1588,12 @@ msgid "secretary desk"
 msgstr ""
 
 #: data/catalogue.php:1800
-#: data/catalogue.php:3695
+#: data/catalogue.php:3697
 msgid "Office chair"
 msgstr ""
 
 #: data/catalogue.php:1801
-#: data/catalogue.php:3696
+#: data/catalogue.php:3698
 msgid "desk chair"
 msgstr ""
 
@@ -1603,12 +1603,12 @@ msgstr ""
 
 #: data/catalogue.php:1811
 #: data/catalogue.php:1821
-#: data/catalogue.php:3726
+#: data/catalogue.php:3728
 msgid "file cabinet"
 msgstr ""
 
 #: data/catalogue.php:1820
-#: data/catalogue.php:3725
+#: data/catalogue.php:3727
 msgid "Filing cabinet (4 drawers)"
 msgstr ""
 
@@ -1993,8 +1993,8 @@ msgid "Garage shelving / racking"
 msgstr ""
 
 #: data/catalogue.php:2315
-#: data/catalogue.php:3787
-#: data/catalogue.php:4009
+#: data/catalogue.php:3789
+#: data/catalogue.php:4011
 msgid "racking"
 msgstr ""
 
@@ -2759,892 +2759,892 @@ msgstr ""
 msgid "spa pool"
 msgstr ""
 
-#: data/catalogue.php:3258
+#: data/catalogue.php:3259
 msgid "Safe / gun cabinet"
 msgstr ""
 
-#: data/catalogue.php:3259
+#: data/catalogue.php:3260
 msgid "gun cabinet"
 msgstr ""
 
-#: data/catalogue.php:3269
+#: data/catalogue.php:3270
 msgid "Grandfather clock"
 msgstr ""
 
-#: data/catalogue.php:3270
+#: data/catalogue.php:3271
 msgid "longcase clock"
 msgstr ""
 
-#: data/catalogue.php:3279
+#: data/catalogue.php:3280
 msgid "Motorbike / scooter"
 msgstr ""
 
-#: data/catalogue.php:3280
+#: data/catalogue.php:3281
 msgid "motorcycle"
 msgstr ""
 
-#: data/catalogue.php:3280
+#: data/catalogue.php:3281
 msgid "moped"
 msgstr ""
 
-#: data/catalogue.php:3280
+#: data/catalogue.php:3281
 msgid "dirt bike"
 msgstr ""
 
-#: data/catalogue.php:3290
+#: data/catalogue.php:3291
 msgid "Mobility scooter"
 msgstr ""
 
-#: data/catalogue.php:3300
+#: data/catalogue.php:3301
 msgid "Massage chair"
 msgstr ""
 
-#: data/catalogue.php:3310
+#: data/catalogue.php:3311
 msgid "Arcade machine / jukebox"
 msgstr ""
 
-#: data/catalogue.php:3311
+#: data/catalogue.php:3312
 msgid "pinball machine"
 msgstr ""
 
-#: data/catalogue.php:3311
+#: data/catalogue.php:3312
 msgid "jukebox"
 msgstr ""
 
-#: data/catalogue.php:3320
+#: data/catalogue.php:3321
 msgid "Chandelier"
 msgstr ""
 
-#: data/catalogue.php:3321
+#: data/catalogue.php:3322
 msgid "ceiling light"
 msgstr ""
 
-#: data/catalogue.php:3330
+#: data/catalogue.php:3331
 msgid "Antique armoire"
 msgstr ""
 
-#: data/catalogue.php:3331
+#: data/catalogue.php:3332
 msgid "antique wardrobe"
 msgstr ""
 
-#: data/catalogue.php:3340
+#: data/catalogue.php:3341
 msgid "Car (for transport)"
 msgstr ""
 
-#: data/catalogue.php:3341
+#: data/catalogue.php:3342
 msgid "vehicle"
 msgstr ""
 
-#: data/catalogue.php:3350
+#: data/catalogue.php:3351
 msgid "Piano stool / bench"
 msgstr ""
 
-#: data/catalogue.php:3360
+#: data/catalogue.php:3361
 msgid "Baby grand piano"
 msgstr ""
 
-#: data/catalogue.php:3371
+#: data/catalogue.php:3372
 msgid "Church / pipe organ (console)"
 msgstr ""
 
-#: data/catalogue.php:3382
+#: data/catalogue.php:3383
 msgid "Large statue / sculpture"
 msgstr ""
 
-#: data/catalogue.php:3383
+#: data/catalogue.php:3384
 msgid "sculpture"
 msgstr ""
 
-#: data/catalogue.php:3393
+#: data/catalogue.php:3394
 msgid "Large artwork (crated)"
 msgstr ""
 
-#: data/catalogue.php:3403
+#: data/catalogue.php:3404
 msgid "Large ornate mirror"
 msgstr ""
 
-#: data/catalogue.php:3404
+#: data/catalogue.php:3405
 msgid "overmantel mirror"
 msgstr ""
 
-#: data/catalogue.php:3413
+#: data/catalogue.php:3414
 msgid "Marble / stone table"
 msgstr ""
 
-#: data/catalogue.php:3424
+#: data/catalogue.php:3425
 msgid "Hospital / care bed"
 msgstr ""
 
-#: data/catalogue.php:3425
+#: data/catalogue.php:3426
 msgid "care bed"
 msgstr ""
 
-#: data/catalogue.php:3434
+#: data/catalogue.php:3435
 msgid "Wheelchair"
 msgstr ""
 
-#: data/catalogue.php:3444
+#: data/catalogue.php:3445
 msgid "Quad bike / ATV"
 msgstr ""
 
-#: data/catalogue.php:3445
+#: data/catalogue.php:3446
 msgid "ATV"
 msgstr ""
 
-#: data/catalogue.php:3455
+#: data/catalogue.php:3456
 msgid "Jet ski (on trailer)"
 msgstr ""
 
-#: data/catalogue.php:3465
+#: data/catalogue.php:3467
 msgid "Golf buggy"
 msgstr ""
 
-#: data/catalogue.php:3466
+#: data/catalogue.php:3468
 msgid "golf cart"
 msgstr ""
 
-#: data/catalogue.php:3475
+#: data/catalogue.php:3477
 msgid "Other large item"
 msgstr ""
 
-#: data/catalogue.php:3476
+#: data/catalogue.php:3478
 msgid "other"
 msgstr ""
 
-#: data/catalogue.php:3485
+#: data/catalogue.php:3487
 msgid "Small box (books)"
 msgstr ""
 
-#: data/catalogue.php:3486
+#: data/catalogue.php:3488
 msgid "book box"
 msgstr ""
 
-#: data/catalogue.php:3486
-#: data/catalogue.php:3496
-#: data/catalogue.php:3506
-#: data/catalogue.php:3516
-#: data/catalogue.php:4049
+#: data/catalogue.php:3488
+#: data/catalogue.php:3498
+#: data/catalogue.php:3508
+#: data/catalogue.php:3518
+#: data/catalogue.php:4051
 msgid "carton"
 msgstr ""
 
-#: data/catalogue.php:3486
+#: data/catalogue.php:3488
 msgid "book carton"
 msgstr ""
 
-#: data/catalogue.php:3486
+#: data/catalogue.php:3488
 msgid "wine carton"
 msgstr ""
 
-#: data/catalogue.php:3495
+#: data/catalogue.php:3497
 msgid "Medium box"
 msgstr ""
 
-#: data/catalogue.php:3496
-#: data/catalogue.php:3506
+#: data/catalogue.php:3498
+#: data/catalogue.php:3508
 msgid "moving box"
 msgstr ""
 
-#: data/catalogue.php:3496
+#: data/catalogue.php:3498
 msgid "cardboard box"
 msgstr ""
 
-#: data/catalogue.php:3505
+#: data/catalogue.php:3507
 msgid "Large box"
 msgstr ""
 
-#: data/catalogue.php:3515
+#: data/catalogue.php:3517
 msgid "Extra large box"
 msgstr ""
 
-#: data/catalogue.php:3525
+#: data/catalogue.php:3527
 msgid "Wardrobe box"
 msgstr ""
 
-#: data/catalogue.php:3526
+#: data/catalogue.php:3528
 msgid "hanging box"
 msgstr ""
 
-#: data/catalogue.php:3535
+#: data/catalogue.php:3537
 msgid "Dish pack / china box"
 msgstr ""
 
-#: data/catalogue.php:3536
+#: data/catalogue.php:3538
 msgid "tea chest"
 msgstr ""
 
-#: data/catalogue.php:3536
+#: data/catalogue.php:3538
 msgid "china box"
 msgstr ""
 
-#: data/catalogue.php:3536
+#: data/catalogue.php:3538
 msgid "dish barrel"
 msgstr ""
 
-#: data/catalogue.php:3545
+#: data/catalogue.php:3547
 msgid "Picture / mirror box"
 msgstr ""
 
-#: data/catalogue.php:3555
+#: data/catalogue.php:3557
 msgid "TV box"
 msgstr ""
 
-#: data/catalogue.php:3565
+#: data/catalogue.php:3567
 msgid "Plastic storage crate"
 msgstr ""
 
-#: data/catalogue.php:3566
+#: data/catalogue.php:3568
 msgid "storage tub"
 msgstr ""
 
-#: data/catalogue.php:3566
+#: data/catalogue.php:3568
 msgid "plastic box"
 msgstr ""
 
-#: data/catalogue.php:3575
+#: data/catalogue.php:3577
 msgid "Suitcase"
 msgstr ""
 
-#: data/catalogue.php:3576
+#: data/catalogue.php:3578
 msgid "luggage"
 msgstr ""
 
-#: data/catalogue.php:3585
+#: data/catalogue.php:3587
 msgid "Bag / holdall"
 msgstr ""
 
-#: data/catalogue.php:3586
+#: data/catalogue.php:3588
 msgid "duffel bag"
 msgstr ""
 
-#: data/catalogue.php:3595
+#: data/catalogue.php:3597
 msgid "Flat-pack furniture (boxed)"
 msgstr ""
 
-#: data/catalogue.php:3596
+#: data/catalogue.php:3598
 msgid "IKEA box"
 msgstr ""
 
-#: data/catalogue.php:3605
+#: data/catalogue.php:3607
 msgid "Lamp box"
 msgstr ""
 
-#: data/catalogue.php:3615
+#: data/catalogue.php:3617
 msgid "Garment bag"
 msgstr ""
 
-#: data/catalogue.php:3616
+#: data/catalogue.php:3618
 msgid "suit carrier"
 msgstr ""
 
-#: data/catalogue.php:3625
+#: data/catalogue.php:3627
 msgid "Lidded storage box"
 msgstr ""
 
-#: data/catalogue.php:3635
+#: data/catalogue.php:3637
 msgid "Archive / file box"
 msgstr ""
 
-#: data/catalogue.php:3636
-#: data/catalogue.php:3827
+#: data/catalogue.php:3638
+#: data/catalogue.php:3829
 msgid "file box"
 msgstr ""
 
-#: data/catalogue.php:3645
+#: data/catalogue.php:3647
 msgid "Bag of bedding / soft items"
 msgstr ""
 
-#: data/catalogue.php:3646
+#: data/catalogue.php:3648
 msgid "bedding bag"
 msgstr ""
 
-#: data/catalogue.php:3655
+#: data/catalogue.php:3657
 msgid "Vacuum storage bag"
 msgstr ""
 
-#: data/catalogue.php:3665
+#: data/catalogue.php:3667
 msgid "Office desk / workstation"
 msgstr ""
 
-#: data/catalogue.php:3666
+#: data/catalogue.php:3668
 msgid "workstation"
 msgstr ""
 
-#: data/catalogue.php:3675
+#: data/catalogue.php:3677
 msgid "Executive desk"
 msgstr ""
 
-#: data/catalogue.php:3685
+#: data/catalogue.php:3687
 msgid "Meeting table"
 msgstr ""
 
-#: data/catalogue.php:3686
+#: data/catalogue.php:3688
 msgid "boardroom table"
 msgstr ""
 
-#: data/catalogue.php:3705
+#: data/catalogue.php:3707
 msgid "Meeting / visitor chair"
 msgstr ""
 
-#: data/catalogue.php:3706
+#: data/catalogue.php:3708
 msgid "stacking chair"
 msgstr ""
 
-#: data/catalogue.php:3715
+#: data/catalogue.php:3717
 msgid "Desk pedestal"
 msgstr ""
 
-#: data/catalogue.php:3716
+#: data/catalogue.php:3718
 msgid "drawer unit"
 msgstr ""
 
-#: data/catalogue.php:3735
+#: data/catalogue.php:3737
 msgid "Tall storage cupboard"
 msgstr ""
 
-#: data/catalogue.php:3736
+#: data/catalogue.php:3738
 msgid "stationery cupboard"
 msgstr ""
 
-#: data/catalogue.php:3736
+#: data/catalogue.php:3738
 msgid "sundries cupboard"
 msgstr ""
 
-#: data/catalogue.php:3745
+#: data/catalogue.php:3747
 msgid "Lockers (bank)"
 msgstr ""
 
-#: data/catalogue.php:3755
+#: data/catalogue.php:3757
 msgid "Photocopier"
 msgstr ""
 
-#: data/catalogue.php:3756
+#: data/catalogue.php:3758
 msgid "copier"
 msgstr ""
 
-#: data/catalogue.php:3766
+#: data/catalogue.php:3768
 msgid "Server / network rack"
 msgstr ""
 
-#: data/catalogue.php:3767
+#: data/catalogue.php:3769
 msgid "network cabinet"
 msgstr ""
 
-#: data/catalogue.php:3776
+#: data/catalogue.php:3778
 msgid "Reception desk"
 msgstr ""
 
-#: data/catalogue.php:3786
+#: data/catalogue.php:3788
 msgid "Office shelving"
 msgstr ""
 
-#: data/catalogue.php:3796
+#: data/catalogue.php:3798
 msgid "Whiteboard / flip chart"
 msgstr ""
 
-#: data/catalogue.php:3797
+#: data/catalogue.php:3799
 msgid "notice board"
 msgstr ""
 
-#: data/catalogue.php:3806
+#: data/catalogue.php:3808
 msgid "Reception sofa"
 msgstr ""
 
-#: data/catalogue.php:3816
+#: data/catalogue.php:3818
 msgid "Office fridge"
 msgstr ""
 
-#: data/catalogue.php:3826
+#: data/catalogue.php:3828
 msgid "Archive box"
 msgstr ""
 
-#: data/catalogue.php:3836
+#: data/catalogue.php:3838
 msgid "IT / cable box"
 msgstr ""
 
-#: data/catalogue.php:3846
+#: data/catalogue.php:3848
 msgid "Waiting room seat"
 msgstr ""
 
-#: data/catalogue.php:3856
+#: data/catalogue.php:3858
 msgid "Desk screen / partition"
 msgstr ""
 
-#: data/catalogue.php:3857
+#: data/catalogue.php:3859
 msgid "acoustic panel"
 msgstr ""
 
-#: data/catalogue.php:3866
+#: data/catalogue.php:3868
 msgid "Security / fireproof cabinet"
 msgstr ""
 
-#: data/catalogue.php:3867
+#: data/catalogue.php:3869
 msgid "fireproof cabinet"
 msgstr ""
 
-#: data/catalogue.php:3877
+#: data/catalogue.php:3879
 msgid "UPS / battery unit"
 msgstr ""
 
-#: data/catalogue.php:3887
+#: data/catalogue.php:3889
 msgid "Router / switch (boxed)"
 msgstr ""
 
-#: data/catalogue.php:3888
+#: data/catalogue.php:3890
 msgid "network switch"
 msgstr ""
 
-#: data/catalogue.php:3897
+#: data/catalogue.php:3899
 msgid "Office shredder"
 msgstr ""
 
-#: data/catalogue.php:3907
+#: data/catalogue.php:3909
 msgid "Office coffee machine"
 msgstr ""
 
-#: data/catalogue.php:3908
+#: data/catalogue.php:3910
 msgid "bean to cup"
 msgstr ""
 
-#: data/catalogue.php:3917
+#: data/catalogue.php:3919
 msgid "Shop shelving / gondola"
 msgstr ""
 
-#: data/catalogue.php:3918
+#: data/catalogue.php:3920
 msgid "gondola"
 msgstr ""
 
-#: data/catalogue.php:3927
+#: data/catalogue.php:3929
 msgid "Shop counter"
 msgstr ""
 
-#: data/catalogue.php:3928
+#: data/catalogue.php:3930
 msgid "till counter"
 msgstr ""
 
-#: data/catalogue.php:3937
+#: data/catalogue.php:3939
 msgid "Till / POS terminal"
 msgstr ""
 
-#: data/catalogue.php:3938
+#: data/catalogue.php:3940
 msgid "cash register"
 msgstr ""
 
-#: data/catalogue.php:3947
+#: data/catalogue.php:3949
 msgid "Mannequin"
 msgstr ""
 
-#: data/catalogue.php:3948
+#: data/catalogue.php:3950
 msgid "dress form"
 msgstr ""
 
-#: data/catalogue.php:3957
+#: data/catalogue.php:3959
 msgid "Garment rail"
 msgstr ""
 
-#: data/catalogue.php:3967
+#: data/catalogue.php:3969
 msgid "Glass display case"
 msgstr ""
 
-#: data/catalogue.php:3968
+#: data/catalogue.php:3970
 msgid "showcase"
 msgstr ""
 
-#: data/catalogue.php:3977
+#: data/catalogue.php:3979
 msgid "Sign / light box"
 msgstr ""
 
-#: data/catalogue.php:3978
+#: data/catalogue.php:3980
 msgid "light box"
 msgstr ""
 
-#: data/catalogue.php:3987
+#: data/catalogue.php:3989
 msgid "Stock trolley / roll cage"
 msgstr ""
 
-#: data/catalogue.php:3988
+#: data/catalogue.php:3990
 msgid "roll cage"
 msgstr ""
 
-#: data/catalogue.php:3997
+#: data/catalogue.php:3999
 msgid "Display fridge"
 msgstr ""
 
-#: data/catalogue.php:3998
+#: data/catalogue.php:4000
 msgid "chiller"
 msgstr ""
 
-#: data/catalogue.php:4008
+#: data/catalogue.php:4010
 msgid "Stockroom racking"
 msgstr ""
 
-#: data/catalogue.php:4018
+#: data/catalogue.php:4020
 msgid "Fitting room frame & curtain"
 msgstr ""
 
-#: data/catalogue.php:4028
+#: data/catalogue.php:4030
 msgid "Shop mirror"
 msgstr ""
 
-#: data/catalogue.php:4038
+#: data/catalogue.php:4040
 msgid "Vending machine"
 msgstr ""
 
-#: data/catalogue.php:4048
+#: data/catalogue.php:4050
 msgid "Stock box"
 msgstr ""
 
-#: data/catalogue.php:4058
+#: data/catalogue.php:4060
 msgid "Restaurant table"
 msgstr ""
 
-#: data/catalogue.php:4059
+#: data/catalogue.php:4061
 msgid "café table"
 msgstr ""
 
-#: data/catalogue.php:4068
+#: data/catalogue.php:4070
 msgid "Restaurant chair"
 msgstr ""
 
-#: data/catalogue.php:4078
+#: data/catalogue.php:4080
 msgid "Booth seating (per section)"
 msgstr ""
 
-#: data/catalogue.php:4079
+#: data/catalogue.php:4081
 msgid "banquette"
 msgstr ""
 
-#: data/catalogue.php:4098
+#: data/catalogue.php:4100
 msgid "Bar counter / back bar"
 msgstr ""
 
-#: data/catalogue.php:4108
+#: data/catalogue.php:4110
 msgid "Commercial upright fridge"
 msgstr ""
 
-#: data/catalogue.php:4109
+#: data/catalogue.php:4111
 msgid "upright chiller"
 msgstr ""
 
-#: data/catalogue.php:4119
+#: data/catalogue.php:4121
 msgid "Commercial chest freezer"
 msgstr ""
 
-#: data/catalogue.php:4130
+#: data/catalogue.php:4132
 msgid "Combi / commercial oven"
 msgstr ""
 
-#: data/catalogue.php:4140
+#: data/catalogue.php:4142
 msgid "Commercial range"
 msgstr ""
 
-#: data/catalogue.php:4150
+#: data/catalogue.php:4152
 msgid "Deep fat fryer"
 msgstr ""
 
-#: data/catalogue.php:4160
+#: data/catalogue.php:4162
 msgid "Stainless prep table"
 msgstr ""
 
-#: data/catalogue.php:4161
+#: data/catalogue.php:4163
 msgid "steel table"
 msgstr ""
 
-#: data/catalogue.php:4170
+#: data/catalogue.php:4172
 msgid "Ice machine"
 msgstr ""
 
-#: data/catalogue.php:4180
+#: data/catalogue.php:4182
 msgid "Commercial dishwasher"
 msgstr ""
 
-#: data/catalogue.php:4190
+#: data/catalogue.php:4192
 msgid "Catering racking"
 msgstr ""
 
-#: data/catalogue.php:4191
+#: data/catalogue.php:4193
 msgid "dunnage"
 msgstr ""
 
-#: data/catalogue.php:4200
+#: data/catalogue.php:4202
 msgid "Espresso machine"
 msgstr ""
 
-#: data/catalogue.php:4201
+#: data/catalogue.php:4203
 msgid "barista machine"
 msgstr ""
 
-#: data/catalogue.php:4210
+#: data/catalogue.php:4212
 msgid "Folding banquet table"
 msgstr ""
 
-#: data/catalogue.php:4211
+#: data/catalogue.php:4213
 msgid "trestle table"
 msgstr ""
 
-#: data/catalogue.php:4220
+#: data/catalogue.php:4222
 msgid "Salon styling chair"
 msgstr ""
 
-#: data/catalogue.php:4221
+#: data/catalogue.php:4223
 msgid "barber chair"
 msgstr ""
 
-#: data/catalogue.php:4230
+#: data/catalogue.php:4232
 msgid "Styling station / mirror"
 msgstr ""
 
-#: data/catalogue.php:4240
+#: data/catalogue.php:4242
 msgid "Backwash / basin unit"
 msgstr ""
 
-#: data/catalogue.php:4241
+#: data/catalogue.php:4243
 msgid "backwash"
 msgstr ""
 
-#: data/catalogue.php:4250
+#: data/catalogue.php:4252
 msgid "Nail / manicure table"
 msgstr ""
 
-#: data/catalogue.php:4251
+#: data/catalogue.php:4253
 msgid "manicure table"
 msgstr ""
 
-#: data/catalogue.php:4260
+#: data/catalogue.php:4262
 msgid "Treatment / massage bed"
 msgstr ""
 
-#: data/catalogue.php:4261
+#: data/catalogue.php:4263
 msgid "massage table"
 msgstr ""
 
-#: data/catalogue.php:4270
+#: data/catalogue.php:4272
 msgid "Examination couch"
 msgstr ""
 
-#: data/catalogue.php:4280
+#: data/catalogue.php:4282
 msgid "Dental / treatment chair"
 msgstr ""
 
-#: data/catalogue.php:4290
+#: data/catalogue.php:4292
 msgid "Medical trolley"
 msgstr ""
 
-#: data/catalogue.php:4300
+#: data/catalogue.php:4302
 msgid "Steriliser / autoclave"
 msgstr ""
 
-#: data/catalogue.php:4310
+#: data/catalogue.php:4312
 msgid "Portable X-ray / scanner"
 msgstr ""
 
-#: data/catalogue.php:4311
+#: data/catalogue.php:4313
 msgid "ultrasound"
 msgstr ""
 
-#: data/catalogue.php:4320
+#: data/catalogue.php:4322
 msgid "Lab bench equipment"
 msgstr ""
 
-#: data/catalogue.php:4330
+#: data/catalogue.php:4332
 msgid "Medical fridge"
 msgstr ""
 
-#: data/catalogue.php:4340
+#: data/catalogue.php:4342
 msgid "Privacy screen"
 msgstr ""
 
-#: data/catalogue.php:4350
+#: data/catalogue.php:4352
 msgid "Hood dryer / steamer"
 msgstr ""
 
-#: data/catalogue.php:4360
+#: data/catalogue.php:4362
 msgid "Pupil desk"
 msgstr ""
 
-#: data/catalogue.php:4370
+#: data/catalogue.php:4372
 msgid "Pupil chair"
 msgstr ""
 
-#: data/catalogue.php:4380
+#: data/catalogue.php:4382
 msgid "Teacher's desk"
 msgstr ""
 
-#: data/catalogue.php:4390
+#: data/catalogue.php:4392
 msgid "Projector / smartboard (boxed)"
 msgstr ""
 
-#: data/catalogue.php:4391
+#: data/catalogue.php:4393
 msgid "interactive whiteboard"
 msgstr ""
 
-#: data/catalogue.php:4400
+#: data/catalogue.php:4402
 msgid "Classroom tray unit"
 msgstr ""
 
-#: data/catalogue.php:4401
+#: data/catalogue.php:4403
 msgid "tray unit"
 msgstr ""
 
-#: data/catalogue.php:4410
+#: data/catalogue.php:4412
 msgid "Library shelving"
 msgstr ""
 
-#: data/catalogue.php:4420
+#: data/catalogue.php:4422
 msgid "Lab stool"
 msgstr ""
 
-#: data/catalogue.php:4430
+#: data/catalogue.php:4432
 msgid "Gym mats (stack)"
 msgstr ""
 
-#: data/catalogue.php:4440
+#: data/catalogue.php:4442
 msgid "Folding canteen table"
 msgstr ""
 
-#: data/catalogue.php:4450
+#: data/catalogue.php:4452
 msgid "Mobile whiteboard"
 msgstr ""
 
-#: data/catalogue.php:4460
+#: data/catalogue.php:4462
 msgid "Loaded pallet"
 msgstr ""
 
-#: data/catalogue.php:4461
+#: data/catalogue.php:4463
 msgid "skid"
 msgstr ""
 
-#: data/catalogue.php:4470
+#: data/catalogue.php:4472
 msgid "Pallet truck"
 msgstr ""
 
-#: data/catalogue.php:4471
+#: data/catalogue.php:4473
 msgid "pallet jack"
 msgstr ""
 
-#: data/catalogue.php:4481
+#: data/catalogue.php:4483
 msgid "Forklift"
 msgstr ""
 
-#: data/catalogue.php:4492
+#: data/catalogue.php:4494
 msgid "Pallet racking (per bay)"
 msgstr ""
 
-#: data/catalogue.php:4502
+#: data/catalogue.php:4504
 msgid "IBC / drum (empty)"
 msgstr ""
 
-#: data/catalogue.php:4503
+#: data/catalogue.php:4505
 msgid "oil drum"
 msgstr ""
 
-#: data/catalogue.php:4512
+#: data/catalogue.php:4514
 msgid "Machine (small)"
 msgstr ""
 
-#: data/catalogue.php:4522
+#: data/catalogue.php:4524
 msgid "Machine (medium)"
 msgstr ""
 
-#: data/catalogue.php:4532
+#: data/catalogue.php:4534
 msgid "Conveyor section"
 msgstr ""
 
-#: data/catalogue.php:4542
+#: data/catalogue.php:4544
 msgid "Industrial workbench"
 msgstr ""
 
-#: data/catalogue.php:4552
+#: data/catalogue.php:4554
 msgid "Sack truck"
 msgstr ""
 
-#: data/catalogue.php:4553
+#: data/catalogue.php:4555
 msgid "hand truck"
 msgstr ""
 
-#: data/catalogue.php:4562
+#: data/catalogue.php:4564
 msgid "Gas bottle (empty)"
 msgstr ""
 
-#: data/catalogue.php:4563
+#: data/catalogue.php:4565
 msgid "gas cylinder"
 msgstr ""
 
-#: data/catalogue.php:4572
+#: data/catalogue.php:4574
 msgid "Packing bench"
 msgstr ""
 
-#: data/catalogue.php:4582
+#: data/catalogue.php:4584
 msgid "Chemical / safety cabinet"
 msgstr ""
 
-#: data/catalogue.php:4583
+#: data/catalogue.php:4585
 msgid "COSHH cabinet"
 msgstr ""
 
-#: data/catalogue.php:4592
+#: data/catalogue.php:4594
 msgid "Rolling tool chest"
 msgstr ""
 
-#: data/catalogue.php:4603
+#: data/catalogue.php:4605
 msgid "Boxes only"
 msgstr ""
 
-#: data/catalogue.php:4616
+#: data/catalogue.php:4618
 msgid "Few items"
 msgstr ""
 
-#: data/catalogue.php:4628
+#: data/catalogue.php:4630
 msgid "Student room"
 msgstr ""
 
-#: data/catalogue.php:4650
+#: data/catalogue.php:4652
 #: includes/class-msvcalc-frontend.php:284
 msgid "Studio"
 msgstr ""
 
-#: data/catalogue.php:4676
+#: data/catalogue.php:4678
 #: includes/class-msvcalc-frontend.php:285
 msgid "1 bed"
 msgstr ""
 
-#: data/catalogue.php:4710
+#: data/catalogue.php:4712
 #: includes/class-msvcalc-frontend.php:286
 msgid "2 bed"
 msgstr ""
 
-#: data/catalogue.php:4753
+#: data/catalogue.php:4755
 #: includes/class-msvcalc-frontend.php:287
 msgid "3 bed"
 msgstr ""
 
-#: data/catalogue.php:4804
+#: data/catalogue.php:4806
 #: includes/class-msvcalc-frontend.php:288
 msgid "4 bed"
 msgstr ""
 
-#: data/catalogue.php:4860
+#: data/catalogue.php:4862
 msgid "5 bed"
 msgstr ""
 
-#: data/catalogue.php:4946
-#: includes/class-msvcalc-admin.php:377
+#: data/catalogue.php:4948
+#: includes/class-msvcalc-admin.php:388
 #: includes/class-msvcalc-frontend.php:407
-#: includes/class-msvcalc-leads.php:891
-#: templates/admin-lead.php:59
+#: includes/class-msvcalc-leads.php:984
+#: templates/admin-lead.php:60
 #: templates/email.php:41
 #: templates/lead-report.php:178
 msgid "Storage unit"
 msgstr ""
 
-#: data/catalogue.php:4961
+#: data/catalogue.php:4963
 msgid "Small office"
 msgstr ""
 
-#: data/catalogue.php:4984
+#: data/catalogue.php:4986
 msgid "Small shop"
 msgstr ""
 
-#: data/catalogue.php:5004
+#: data/catalogue.php:5006
 msgid "Café"
 msgstr ""
 
@@ -3691,7 +3691,7 @@ msgstr ""
 
 #: data/tables.php:50
 #: data/tables.php:189
-msgid "4 to 5 bedrooms"
+msgid "About 4 bedrooms"
 msgstr ""
 
 #: data/tables.php:56
@@ -3807,1042 +3807,1085 @@ msgstr ""
 msgid "8 tonne truck"
 msgstr ""
 
-#: data/tables.php:199
-msgid "25 sq ft unit"
+#: data/tables.php:195
+msgid "12 tonne pantech"
 msgstr ""
 
-#: data/tables.php:200
-msgid "Like a garden shed, about 2 m²"
+#: data/tables.php:196
+msgid "Large homes, 4 to 5 bedrooms"
 msgstr ""
 
 #: data/tables.php:206
-msgid "35 sq ft unit"
+msgid "25 sq ft unit"
 msgstr ""
 
 #: data/tables.php:207
-msgid "About 3 m²"
+msgid "Like a garden shed, about 2 m²"
 msgstr ""
 
 #: data/tables.php:213
-msgid "50 sq ft unit"
+msgid "35 sq ft unit"
 msgstr ""
 
 #: data/tables.php:214
-msgid "Like a box room, about 5 m²"
+msgid "About 3 m²"
 msgstr ""
 
 #: data/tables.php:220
-msgid "75 sq ft unit"
+msgid "50 sq ft unit"
 msgstr ""
 
 #: data/tables.php:221
-msgid "About 7 m²"
+msgid "Like a box room, about 5 m²"
 msgstr ""
 
 #: data/tables.php:227
-msgid "100 sq ft unit"
+msgid "75 sq ft unit"
 msgstr ""
 
 #: data/tables.php:228
-msgid "Like a single garage, about 9 m²"
+msgid "About 7 m²"
 msgstr ""
 
 #: data/tables.php:234
-msgid "150 sq ft unit"
+msgid "100 sq ft unit"
 msgstr ""
 
 #: data/tables.php:235
-msgid "About 14 m²"
+msgid "Like half a single garage, about 9 m²"
 msgstr ""
 
 #: data/tables.php:241
-msgid "200 sq ft unit"
+msgid "150 sq ft unit"
 msgstr ""
 
 #: data/tables.php:242
-msgid "Like a double garage, about 19 m²"
+msgid "About 14 m²"
 msgstr ""
 
 #: data/tables.php:248
-msgid "300 sq ft unit"
+msgid "200 sq ft unit"
 msgstr ""
 
 #: data/tables.php:249
+msgid "Like a single garage, about 19 m²"
+msgstr ""
+
+#: data/tables.php:255
+msgid "300 sq ft unit"
+msgstr ""
+
+#: data/tables.php:256
 msgid "About 28 m²"
 msgstr ""
 
-#: data/tables.php:257
+#: data/tables.php:264
 msgid "1 m² unit"
 msgstr ""
 
-#: data/tables.php:258
+#: data/tables.php:265
 msgid "Locker, about 2.5 m³"
 msgstr ""
 
-#: data/tables.php:264
+#: data/tables.php:271
 msgid "2 m² unit"
 msgstr ""
 
-#: data/tables.php:265
+#: data/tables.php:272
 msgid "About 5 m³"
 msgstr ""
 
-#: data/tables.php:271
+#: data/tables.php:278
 msgid "3 m² unit"
 msgstr ""
 
-#: data/tables.php:272
+#: data/tables.php:279
 msgid "About 7.5 m³"
 msgstr ""
 
-#: data/tables.php:278
+#: data/tables.php:285
 msgid "5 m² unit"
 msgstr ""
 
-#: data/tables.php:279
+#: data/tables.php:286
 msgid "About 12.5 m³"
 msgstr ""
 
-#: data/tables.php:285
+#: data/tables.php:292
 msgid "7.5 m² unit"
 msgstr ""
 
-#: data/tables.php:286
+#: data/tables.php:293
 msgid "About 19 m³"
 msgstr ""
 
-#: data/tables.php:292
+#: data/tables.php:299
 msgid "10 m² unit"
 msgstr ""
 
-#: data/tables.php:293
+#: data/tables.php:300
 msgid "About 25 m³"
 msgstr ""
 
-#: data/tables.php:299
+#: data/tables.php:306
 msgid "15 m² unit"
 msgstr ""
 
-#: data/tables.php:300
+#: data/tables.php:307
 msgid "About 37 m³"
 msgstr ""
 
-#: data/tables.php:306
+#: data/tables.php:313
 msgid "20 m² unit"
 msgstr ""
 
-#: data/tables.php:307
+#: data/tables.php:314
 msgid "About 50 m³"
 msgstr ""
 
-#: data/tables.php:313
+#: data/tables.php:320
 msgid "30 m² unit"
 msgstr ""
 
-#: data/tables.php:314
+#: data/tables.php:321
 msgid "About 75 m³"
 msgstr ""
 
-#: data/tables.php:322
+#: data/tables.php:329
 msgid "5×5 unit"
 msgstr ""
 
-#: data/tables.php:323
+#: data/tables.php:330
 msgid "25 sq ft, like a closet"
 msgstr ""
 
-#: data/tables.php:329
+#: data/tables.php:336
 msgid "5×10 unit"
 msgstr ""
 
-#: data/tables.php:330
+#: data/tables.php:337
 msgid "50 sq ft, like a walk-in closet"
 msgstr ""
 
-#: data/tables.php:336
+#: data/tables.php:343
 msgid "10×10 unit"
 msgstr ""
 
-#: data/tables.php:337
+#: data/tables.php:344
 msgid "100 sq ft, half a garage"
 msgstr ""
 
-#: data/tables.php:343
+#: data/tables.php:350
 msgid "10×15 unit"
 msgstr ""
 
-#: data/tables.php:344
+#: data/tables.php:351
 msgid "150 sq ft, like a large bedroom"
 msgstr ""
 
-#: data/tables.php:350
+#: data/tables.php:357
 msgid "10×20 unit"
 msgstr ""
 
-#: data/tables.php:351
+#: data/tables.php:358
 msgid "200 sq ft, a one-car garage"
 msgstr ""
 
-#: data/tables.php:357
+#: data/tables.php:364
 msgid "10×30 unit"
 msgstr ""
 
-#: data/tables.php:358
+#: data/tables.php:365
 msgid "300 sq ft, a large garage"
 msgstr ""
 
-#: data/tables.php:366
+#: data/tables.php:373
 msgid "1.5 × 1.5 m unit"
 msgstr ""
 
-#: data/tables.php:367
+#: data/tables.php:374
 msgid "About 2.25 m²"
 msgstr ""
 
-#: data/tables.php:373
+#: data/tables.php:380
 msgid "1.5 × 3 m unit"
 msgstr ""
 
-#: data/tables.php:374
+#: data/tables.php:381
 msgid "About 4.5 m²"
 msgstr ""
 
-#: data/tables.php:380
+#: data/tables.php:387
 msgid "3 × 3 m unit"
 msgstr ""
 
-#: data/tables.php:381
-msgid "About 9 m², a single garage"
-msgstr ""
-
-#: data/tables.php:387
-msgid "3 × 4.5 m unit"
-msgstr ""
-
 #: data/tables.php:388
-msgid "About 13.5 m²"
+msgid "About 9 m², half a single garage"
 msgstr ""
 
 #: data/tables.php:394
-msgid "3 × 6 m unit"
+msgid "3 × 4.5 m unit"
 msgstr ""
 
 #: data/tables.php:395
-msgid "About 18 m², a double garage"
+msgid "About 13.5 m²"
 msgstr ""
 
 #: data/tables.php:401
-msgid "4.5 × 6 m unit"
+msgid "3 × 6 m unit"
 msgstr ""
 
 #: data/tables.php:402
+msgid "About 18 m², a single garage"
+msgstr ""
+
+#: data/tables.php:408
+msgid "4.5 × 6 m unit"
+msgstr ""
+
+#: data/tables.php:409
 msgid "About 27 m²"
 msgstr ""
 
-#: data/tables.php:411
+#: data/tables.php:418
 msgid "Liftvan"
 msgstr ""
 
-#: data/tables.php:412
+#: data/tables.php:419
 msgid "Wooden crate for shared shipping"
 msgstr ""
 
-#: data/tables.php:418
+#: data/tables.php:425
 msgid "20 ft container"
 msgstr ""
 
-#: data/tables.php:419
+#: data/tables.php:426
 msgid "33 m³ total, about 28 m³ usable"
 msgstr ""
 
-#: data/tables.php:425
+#: data/tables.php:432
 msgid "40 ft container"
 msgstr ""
 
-#: data/tables.php:426
+#: data/tables.php:433
 msgid "67 m³ total, about 58 m³ usable"
 msgstr ""
 
-#: data/tables.php:432
+#: data/tables.php:439
 msgid "40 ft high cube"
 msgstr ""
 
-#: data/tables.php:433
+#: data/tables.php:440
 msgid "76 m³ total, about 66 m³ usable"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:70
+#: includes/class-msvcalc-admin.php:81
 #: blocks/calculator/index.js:157
 msgid "Volume Calculator"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:77
-#: includes/class-msvcalc-admin.php:279
+#: includes/class-msvcalc-admin.php:88
+#: includes/class-msvcalc-admin.php:290
 msgid "Overview"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:78
-#: includes/class-msvcalc-admin.php:609
+#: includes/class-msvcalc-admin.php:89
+#: includes/class-msvcalc-admin.php:628
 msgid "Rooms & items"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:79
-#: includes/class-msvcalc-admin.php:674
+#: includes/class-msvcalc-admin.php:90
+#: includes/class-msvcalc-admin.php:693
 msgid "Vehicles & storage"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:81
-#: includes/class-msvcalc-admin.php:188
-#: includes/class-msvcalc-admin.php:564
+#: includes/class-msvcalc-admin.php:92
+#: includes/class-msvcalc-admin.php:199
+#: includes/class-msvcalc-admin.php:575
 msgid "Settings"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:174
+#: includes/class-msvcalc-admin.php:185
 msgid "United Kingdom & Ireland"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:175
+#: includes/class-msvcalc-admin.php:186
 msgid "Europe"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:176
+#: includes/class-msvcalc-admin.php:187
 msgid "United States & Canada"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:177
+#: includes/class-msvcalc-admin.php:188
 msgid "Australia & New Zealand"
 msgstr ""
 
 #. translators: 1: plugin name, 2: author name, 3: link to leave a review.
-#: includes/class-msvcalc-admin.php:204
+#: includes/class-msvcalc-admin.php:215
 #, php-format
 msgid "Thank you for using %1$s by %2$s. Enjoying it? %3$s"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:207
+#: includes/class-msvcalc-admin.php:218
 msgid "Leave a ★★★★★ review"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:242
+#: includes/class-msvcalc-admin.php:253
 msgid "Changes saved."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:243
+#: includes/class-msvcalc-admin.php:254
 msgid "Items imported."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:244
+#: includes/class-msvcalc-admin.php:255
 msgid "Defaults restored."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:245
+#: includes/class-msvcalc-admin.php:256
 msgid "Nothing was saved: the data was not valid."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:246
+#: includes/class-msvcalc-admin.php:257
 msgid "Please choose a JSON file exported from this plugin (2 MB or smaller)."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:247
+#: includes/class-msvcalc-admin.php:258
 msgid "That file has no valid rooms and items."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:285
+#: includes/class-msvcalc-admin.php:296
 msgid "items in"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:285
+#: includes/class-msvcalc-admin.php:296
 msgid "rooms"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:290
+#: includes/class-msvcalc-admin.php:301
 msgid "quote requests"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:295
+#: includes/class-msvcalc-admin.php:306
 msgid "waiting for a reply"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:301
+#: includes/class-msvcalc-admin.php:312
 msgid "Add the calculator to a page"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:302
+#: includes/class-msvcalc-admin.php:313
 msgid "In the block editor, add the \"Volume Calculator\" block. Anywhere else (classic editor, page builders, widgets), paste this shortcode:"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:305
+#: includes/class-msvcalc-admin.php:316
 #: includes/class-msvcalc-frontend.php:464
 msgid "Copy"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:307
+#: includes/class-msvcalc-admin.php:318
 msgid "Optional attributes: units=\"m3\" or \"ft3\", theme=\"light\", \"dark\" or \"auto\", quote=\"no\" to hide the quote form, title=\"…\", intro=\"…\", accent=\"#0fb5ba\"."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:310
+#: includes/class-msvcalc-admin.php:321
 msgid "Make it yours"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:312
+#: includes/class-msvcalc-admin.php:323
 msgid "Colours, units, region and the quote form"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:313
+#: includes/class-msvcalc-admin.php:324
 msgid "Rooms, items, volumes and quick-start presets"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:314
+#: includes/class-msvcalc-admin.php:325
 msgid "Your vans, trucks, containers and storage units"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:315
+#: includes/class-msvcalc-admin.php:326
 msgid "Leads: follow-ups, notes, CSV and PDF export"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:320
+#: includes/class-msvcalc-admin.php:331
 msgid "Live preview"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:321
+#: includes/class-msvcalc-admin.php:332
 msgid "This is how visitors see the calculator. Quote requests sent from this preview are real."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:338
+#: includes/class-msvcalc-admin.php:349
 #: blocks/calculator/index.js:65
 msgid "Calculator"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:339
+#: includes/class-msvcalc-admin.php:350
 msgid "Look & feel"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:340
-#: includes/class-msvcalc-admin.php:397
+#: includes/class-msvcalc-admin.php:351
+#: includes/class-msvcalc-admin.php:408
 msgid "Quote form"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:341
+#: includes/class-msvcalc-admin.php:352
 msgid "Data & privacy"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:352
+#: includes/class-msvcalc-admin.php:363
 msgid "Required"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:353
+#: includes/class-msvcalc-admin.php:364
 msgid "Optional"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:354
+#: includes/class-msvcalc-admin.php:365
 msgid "Hidden"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:360
+#: includes/class-msvcalc-admin.php:371
 msgid "Default unit"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:363
+#: includes/class-msvcalc-admin.php:374
 #: blocks/calculator/index.js:91
 msgid "Cubic metres (m³)"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:364
+#: includes/class-msvcalc-admin.php:375
 #: blocks/calculator/index.js:92
 msgid "Cubic feet (ft³)"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:367
+#: includes/class-msvcalc-admin.php:378
 msgid "Unit switch"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:367
+#: includes/class-msvcalc-admin.php:378
 msgid "Let visitors switch between m³ and ft³"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:368
-#: includes/class-msvcalc-admin.php:911
+#: includes/class-msvcalc-admin.php:379
+#: includes/class-msvcalc-admin.php:930
 msgid "Region"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:368
+#: includes/class-msvcalc-admin.php:379
 msgid "Picks the vehicle and storage unit sizes used for suggestions."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:369
+#: includes/class-msvcalc-admin.php:380
 msgid "Packing margin"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:369
+#: includes/class-msvcalc-admin.php:380
 msgid "Extra space for packing, padding and gaps, added to the total. 10% is typical."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:370
+#: includes/class-msvcalc-admin.php:381
 #: includes/class-msvcalc-frontend.php:328
 msgid "Quick start"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:370
+#: includes/class-msvcalc-admin.php:381
 msgid "Show ready-made lists (few items, studio, 1 to 5 bed, garage, storage unit, office, shop, café)"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:371
+#: includes/class-msvcalc-admin.php:382
 msgid "Search"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:371
+#: includes/class-msvcalc-admin.php:382
 msgid "Show the item search"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:372
+#: includes/class-msvcalc-admin.php:383
 #: includes/class-msvcalc-calculator.php:99
 #: includes/class-msvcalc-frontend.php:396
 msgid "Custom items"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:372
+#: includes/class-msvcalc-admin.php:383
 msgid "Let visitors add items that are not listed"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:373
+#: includes/class-msvcalc-admin.php:384
 msgid "Box count"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:373
+#: includes/class-msvcalc-admin.php:384
 msgid "Show the number of boxes"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:374
+#: includes/class-msvcalc-admin.php:385
 msgid "Weight"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:374
+#: includes/class-msvcalc-admin.php:385
 msgid "Show an estimated weight"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:375
-#: includes/class-msvcalc-leads.php:889
+#: includes/class-msvcalc-admin.php:386
+#: includes/class-msvcalc-leads.php:974
 msgid "Vehicle"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:375
+#: includes/class-msvcalc-admin.php:386
 msgid "Suggest a van or truck"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:376
+#: includes/class-msvcalc-admin.php:387
 msgid "Container"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:376
+#: includes/class-msvcalc-admin.php:387
 msgid "Suggest a shipping container (for international moves)"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:377
+#: includes/class-msvcalc-admin.php:388
 msgid "Suggest a storage unit size"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:378
+#: includes/class-msvcalc-admin.php:389
 #: includes/class-msvcalc-frontend.php:414
 msgid "Print"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:378
+#: includes/class-msvcalc-admin.php:389
 msgid "Show a print button for the inventory"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:379
+#: includes/class-msvcalc-admin.php:390
 msgid "Remember the list"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:379
+#: includes/class-msvcalc-admin.php:390
 msgid "Keep the visitor's list in their browser so they can come back to it"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:380
+#: includes/class-msvcalc-admin.php:391
 #: blocks/calculator/index.js:67
 msgid "Heading"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:380
+#: includes/class-msvcalc-admin.php:391
 #: includes/class-msvcalc-settings.php:287
 #: blocks/calculator/index.js:158
 msgid "How much are you moving?"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:381
+#: includes/class-msvcalc-admin.php:392
 #: blocks/calculator/index.js:77
 msgid "Introduction"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:384
+#: includes/class-msvcalc-admin.php:395
 #: blocks/calculator/index.js:101
 msgid "Theme"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:387
+#: includes/class-msvcalc-admin.php:398
 #: blocks/calculator/index.js:105
 msgid "Light"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:388
+#: includes/class-msvcalc-admin.php:399
 #: blocks/calculator/index.js:106
 msgid "Dark"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:389
+#: includes/class-msvcalc-admin.php:400
 #: blocks/calculator/index.js:107
 msgid "Follow the visitor's device"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:392
+#: includes/class-msvcalc-admin.php:403
 msgid "Main colour"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:393
+#: includes/class-msvcalc-admin.php:404
 msgid "Gradient colour"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:393
+#: includes/class-msvcalc-admin.php:404
 msgid "Blended with the main colour in buttons, the total and the fill bars."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:394
+#: includes/class-msvcalc-admin.php:405
 msgid "Corner roundness"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:395
+#: includes/class-msvcalc-admin.php:406
 msgid "Animations"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:395
+#: includes/class-msvcalc-admin.php:406
 msgid "Use smooth transitions (always off for visitors who prefer reduced motion)"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:396
+#: includes/class-msvcalc-admin.php:407
 msgid "Plugin credit"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:396
+#: includes/class-msvcalc-admin.php:407
 msgid "Show a small \"Powered by Moving & Storage Volume Calculator\" link under the calculator and in customer emails. Off unless you turn it on; it helps other businesses find this free plugin."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:397
+#: includes/class-msvcalc-admin.php:408
 msgid "Let visitors send their inventory for a quote"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:398
+#: includes/class-msvcalc-admin.php:409
 msgid "Send requests to"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:399
+#: includes/class-msvcalc-admin.php:410
 msgid "Company name"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:400
+#: includes/class-msvcalc-admin.php:411
 msgid "Customer copy"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:400
+#: includes/class-msvcalc-admin.php:411
 msgid "Email the customer a copy of their inventory"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:401
+#: includes/class-msvcalc-admin.php:412
 msgid "Phone field"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:402
+#: includes/class-msvcalc-admin.php:413
 msgid "From / to fields"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:403
+#: includes/class-msvcalc-admin.php:414
 msgid "Moving date field"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:404
+#: includes/class-msvcalc-admin.php:415
 msgid "Service field"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:405
+#: includes/class-msvcalc-admin.php:416
 msgid "Floor, lift and parking"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:406
+#: includes/class-msvcalc-admin.php:417
 #: includes/class-msvcalc-frontend.php:346
 #: includes/class-msvcalc-leads.php:736
-#: includes/class-msvcalc-leads.php:883
+#: includes/class-msvcalc-leads.php:944
 msgid "Extra services"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:407
+#: includes/class-msvcalc-admin.php:418
 msgid "Button text"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:408
+#: includes/class-msvcalc-admin.php:419
+#: includes/class-msvcalc-leads.php:1009
 msgid "Consent text"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:409
+#: includes/class-msvcalc-admin.php:420
 msgid "Thank-you message"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:410
+#: includes/class-msvcalc-admin.php:421
 msgid "Thank-you page"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:410
+#: includes/class-msvcalc-admin.php:421
 msgid "Optional. Send visitors to this page after a request, for example to track conversions."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:411
+#: includes/class-msvcalc-admin.php:422
 msgid "Store requests"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:411
+#: includes/class-msvcalc-admin.php:422
 msgid "Keep quote requests in WordPress (Volume Calculator > Leads) as well as emailing them"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:414
+#: includes/class-msvcalc-admin.php:425
 msgid "Who can manage leads"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:417
+#: includes/class-msvcalc-admin.php:428
 msgid "Administrators only"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:418
+#: includes/class-msvcalc-admin.php:429
 msgid "Administrators and Editors"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:420
+#: includes/class-msvcalc-admin.php:431
 msgid "Editors see only the Leads screen, never the plugin settings. A role editor plugin can also give the msvcalc_manage_leads capability to any other role."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:422
+#: includes/class-msvcalc-admin.php:433
 msgid "Keep requests for"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:422
+#: includes/class-msvcalc-admin.php:433
 msgid "days"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:422
+#: includes/class-msvcalc-admin.php:433
 msgid "Older requests are deleted automatically. 0 keeps them until you delete them."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:423
+#: includes/class-msvcalc-admin.php:434
 msgid "Remove data"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:423
+#: includes/class-msvcalc-admin.php:434
 msgid "Delete all settings, edited items and quote requests when the plugin is deleted"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:521
+#: includes/class-msvcalc-admin.php:532
 msgid "Leave empty to use the default text shown in grey."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:541
-msgid "— Stay on the calculator —"
+#: includes/class-msvcalc-admin.php:552
+msgid "Stay on the calculator"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:612
+#: includes/class-msvcalc-admin.php:602
+msgid "Your site has no published privacy policy page, so the quote form cannot link to one. Publish one so customers can see how their details are used."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:604
+msgid "Set up a privacy policy page"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:631
 msgid "Rename, add or remove rooms and items, tune volumes to match your own surveys, and choose which items show first. Volumes are entered in your default unit."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:614
+#: includes/class-msvcalc-admin.php:633
 msgid "Customised"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:623
-#: includes/class-msvcalc-admin.php:683
+#: includes/class-msvcalc-admin.php:642
+#: includes/class-msvcalc-admin.php:702
 msgid "Loading the editor…"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:626
+#: includes/class-msvcalc-admin.php:645
 msgid "Save rooms & items"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:627
-#: includes/class-msvcalc-admin.php:687
-#: includes/class-msvcalc-admin.php:914
+#: includes/class-msvcalc-admin.php:646
+#: includes/class-msvcalc-admin.php:706
+#: includes/class-msvcalc-admin.php:933
 msgid "You have unsaved changes."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:633
+#: includes/class-msvcalc-admin.php:652
 msgid "Export"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:634
+#: includes/class-msvcalc-admin.php:653
 msgid "Download your rooms, items and presets as a JSON file, to back them up or copy them to another site."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:638
+#: includes/class-msvcalc-admin.php:657
 msgid "Download JSON"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:642
-#: includes/class-msvcalc-admin.php:648
+#: includes/class-msvcalc-admin.php:661
+#: includes/class-msvcalc-admin.php:667
 msgid "Import"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:643
+#: includes/class-msvcalc-admin.php:662
 msgid "Replace the current rooms, items and presets with a file exported from this plugin."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:652
-#: includes/class-msvcalc-admin.php:657
-#: includes/class-msvcalc-admin.php:694
+#: includes/class-msvcalc-admin.php:671
+#: includes/class-msvcalc-admin.php:676
+#: includes/class-msvcalc-admin.php:713
 msgid "Restore defaults"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:653
+#: includes/class-msvcalc-admin.php:672
 msgid "Go back to the rooms, items and presets that ship with the plugin. Your edits are removed."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:654
+#: includes/class-msvcalc-admin.php:673
 msgid "Restore the default rooms and items? Your edits will be lost."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:676
+#: includes/class-msvcalc-admin.php:695
 msgid "The calculator suggests the smallest vehicle, container and storage unit that holds the visitor's load. Enter usable (load) capacity, not the gross body size. Add your own fleet and unit sizes for an exact match."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:686
+#: includes/class-msvcalc-admin.php:705
 msgid "Save vehicles & storage"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:691
+#: includes/class-msvcalc-admin.php:710
 msgid "Restore the default vehicles, containers and storage units?"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:706
+#: includes/class-msvcalc-admin.php:725
 msgid "You are not allowed to change the volume calculator."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:868
+#: includes/class-msvcalc-admin.php:887
 #: includes/class-msvcalc-frontend.php:335
 msgid "Rooms"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:869
+#: includes/class-msvcalc-admin.php:888
 msgid "Add room"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:870
+#: includes/class-msvcalc-admin.php:889
 msgid "Room name"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:871
+#: includes/class-msvcalc-admin.php:890
 msgid "Category"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:872
+#: includes/class-msvcalc-admin.php:891
 msgid "Choose icon"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:873
+#: includes/class-msvcalc-admin.php:892
 #: includes/class-msvcalc-frontend.php:338
 msgid "Find an icon"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:874
+#: includes/class-msvcalc-admin.php:893
 #: includes/class-msvcalc-frontend.php:339
 msgid "No icons match."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:875
+#: includes/class-msvcalc-admin.php:894
 msgid "New room"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:876
+#: includes/class-msvcalc-admin.php:895
 msgid "Delete room"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:877
+#: includes/class-msvcalc-admin.php:896
 msgid "Delete this room and all its items?"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:878
+#: includes/class-msvcalc-admin.php:897
 msgid "Move up"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:879
+#: includes/class-msvcalc-admin.php:898
 msgid "Move down"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:880
+#: includes/class-msvcalc-admin.php:899
 #: includes/class-msvcalc-frontend.php:340
 msgid "Icon"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:881
+#: includes/class-msvcalc-admin.php:900
 #: includes/class-msvcalc-frontend.php:450
-#: templates/admin-lead.php:237
+#: includes/class-msvcalc-leads.php:1127
+#: templates/admin-lead.php:239
 #: templates/lead-report.php:230
 msgid "Item"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:882
+#: includes/class-msvcalc-admin.php:901
 #: includes/class-msvcalc-frontend.php:402
 #: includes/class-msvcalc-frontend.php:452
-#: includes/class-msvcalc-leads.php:887
-#: templates/admin-lead.php:49
-#: templates/admin-lead.php:259
+#: includes/class-msvcalc-leads.php:964
+#: templates/admin-lead.php:50
+#: templates/admin-lead.php:261
 #: templates/email.php:31
 #: templates/lead-report.php:167
 msgid "Items"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:883
+#: includes/class-msvcalc-admin.php:902
 #: includes/class-msvcalc-frontend.php:395
 msgid "Add item"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:884
+#: includes/class-msvcalc-admin.php:903
 msgid "New item"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:885
+#: includes/class-msvcalc-admin.php:904
 #: includes/class-msvcalc-frontend.php:451
-#: templates/admin-lead.php:238
+#: templates/admin-lead.php:240
 #: templates/lead-report.php:92
 #: templates/lead-report.php:231
 msgid "Volume"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:886
-#: includes/class-msvcalc-leads.php:886
+#: includes/class-msvcalc-admin.php:905
+#: includes/class-msvcalc-leads.php:959
 msgid "Weight (kg)"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:887
+#: includes/class-msvcalc-admin.php:906
 msgid "Search words"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:888
+#: includes/class-msvcalc-admin.php:907
 msgid "Comma separated, e.g. couch, settee"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:889
+#: includes/class-msvcalc-admin.php:908
 msgid "Common"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:890
+#: includes/class-msvcalc-admin.php:909
 msgid "Shown before \"Show all items\""
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:891
+#: includes/class-msvcalc-admin.php:910
 msgid "Box"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:892
+#: includes/class-msvcalc-admin.php:911
 msgid "Counted as a packing box"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:893
+#: includes/class-msvcalc-admin.php:912
 msgid "Delete"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:894
+#: includes/class-msvcalc-admin.php:913
 msgid "Filter items"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:895
+#: includes/class-msvcalc-admin.php:914
 msgid "Quick-start presets"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:896
+#: includes/class-msvcalc-admin.php:915
 msgid "Typical inventories visitors can start from. Set the quantity of each item."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:897
+#: includes/class-msvcalc-admin.php:916
 msgid "Preset"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:898
+#: includes/class-msvcalc-admin.php:917
 msgid "Add preset"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:899
+#: includes/class-msvcalc-admin.php:918
 msgid "New preset"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:900
+#: includes/class-msvcalc-admin.php:919
 msgid "Delete preset"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:901
+#: includes/class-msvcalc-admin.php:920
 msgid "Preset total"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:902
+#: includes/class-msvcalc-admin.php:921
 msgid "Add an item to this preset…"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:903
+#: includes/class-msvcalc-admin.php:922
 #: includes/class-msvcalc-frontend.php:394
 #: includes/class-msvcalc-frontend.php:449
-#: templates/admin-lead.php:236
+#: templates/admin-lead.php:238
 #: templates/lead-report.php:229
 msgid "Qty"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:904
+#: includes/class-msvcalc-admin.php:923
 #: includes/class-msvcalc-leads.php:726
-#: includes/class-msvcalc-leads.php:873
+#: includes/class-msvcalc-leads.php:894
+#: includes/class-msvcalc-leads.php:1117
 #: includes/class-msvcalc-privacy.php:127
 msgid "Name"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:905
+#: includes/class-msvcalc-admin.php:924
 msgid "Note"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:906
+#: includes/class-msvcalc-admin.php:925
 msgid "Usable capacity"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:907
+#: includes/class-msvcalc-admin.php:926
 msgid "Add row"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:908
+#: includes/class-msvcalc-admin.php:927
 msgid "Vans & trucks"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:909
+#: includes/class-msvcalc-admin.php:928
 msgid "Shipping containers"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:910
+#: includes/class-msvcalc-admin.php:929
 msgid "Storage units"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:912
+#: includes/class-msvcalc-admin.php:931
 msgid "Average density"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:913
-msgid "kg per m³ of household goods, used for the weight estimate when an item has no weight. 150–200 is typical."
+#: includes/class-msvcalc-admin.php:932
+msgid "kg per m³ of household goods, used for the weight estimate when an item has no weight. 150-200 is typical."
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:915
+#: includes/class-msvcalc-admin.php:934
 #: includes/class-msvcalc-frontend.php:465
 msgid "Copied"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:916
+#: includes/class-msvcalc-admin.php:935
+msgid "Working on it…"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:936
+msgid "Saving…"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:937
+msgid "Loading…"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:938
+msgid "Preparing your download…"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:939
+msgid "Preparing your PDF…"
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:940
+msgid "That did not work. Please try again."
+msgstr ""
+
+#: includes/class-msvcalc-admin.php:941
 msgid "Nothing here yet."
 msgstr ""
 
 #. translators: %d: number of items.
-#: includes/class-msvcalc-admin.php:918
+#: includes/class-msvcalc-admin.php:943
 #: includes/class-msvcalc-frontend.php:372
 #, php-format
 msgid "%d items"
 msgstr ""
 
-#: includes/class-msvcalc-admin.php:919
+#: includes/class-msvcalc-admin.php:944
 msgid "Enter a volume above zero."
 msgstr ""
 
@@ -4892,7 +4935,7 @@ msgstr ""
 
 #: includes/class-msvcalc-frontend.php:186
 #: includes/class-msvcalc-frontend.php:457
-#: templates/email.php:289
+#: templates/email.php:290
 msgid "Powered by Moving & Storage Volume Calculator"
 msgstr ""
 
@@ -4967,7 +5010,7 @@ msgid "Cubic feet"
 msgstr ""
 
 #: includes/class-msvcalc-frontend.php:327
-#: templates/admin-lead.php:386
+#: templates/admin-lead.php:391
 msgid "Units"
 msgstr ""
 
@@ -5193,11 +5236,11 @@ msgid "Your move"
 msgstr ""
 
 #: includes/class-msvcalc-frontend.php:399
-#: templates/admin-lead.php:48
-#: templates/admin-lead.php:121
-#: templates/admin-lead.php:273
-#: templates/email.php:108
-#: templates/email.php:265
+#: templates/admin-lead.php:49
+#: templates/admin-lead.php:122
+#: templates/admin-lead.php:275
+#: templates/email.php:109
+#: templates/email.php:266
 #: templates/lead-report.php:75
 #: templates/lead-report.php:166
 #: templates/lead-report.php:262
@@ -5211,30 +5254,30 @@ msgid "Includes %d%% for packing and gaps."
 msgstr ""
 
 #: includes/class-msvcalc-frontend.php:403
-#: includes/class-msvcalc-leads.php:888
-#: templates/admin-lead.php:50
+#: includes/class-msvcalc-leads.php:969
+#: templates/admin-lead.php:51
 #: templates/email.php:32
 #: templates/lead-report.php:168
 msgid "Boxes"
 msgstr ""
 
 #: includes/class-msvcalc-frontend.php:404
-#: templates/admin-lead.php:51
+#: templates/admin-lead.php:52
 #: templates/email.php:33
 #: templates/lead-report.php:169
 msgid "Est. weight"
 msgstr ""
 
 #: includes/class-msvcalc-frontend.php:405
-#: templates/admin-lead.php:57
+#: templates/admin-lead.php:58
 #: templates/email.php:39
 #: templates/lead-report.php:176
 msgid "Recommended vehicle"
 msgstr ""
 
 #: includes/class-msvcalc-frontend.php:406
-#: includes/class-msvcalc-leads.php:890
-#: templates/admin-lead.php:58
+#: includes/class-msvcalc-leads.php:979
+#: templates/admin-lead.php:59
 #: templates/email.php:40
 #: templates/lead-report.php:177
 msgid "Shipping container"
@@ -5243,8 +5286,8 @@ msgstr ""
 #. translators: %d: percentage of capacity used.
 #. translators: %d: how full, in percent.
 #: includes/class-msvcalc-frontend.php:409
-#: templates/admin-lead.php:189
-#: templates/email.php:163
+#: templates/admin-lead.php:191
+#: templates/email.php:164
 #: templates/lead-report.php:193
 #, php-format
 msgid "%d%% full"
@@ -5286,29 +5329,29 @@ msgstr ""
 #: includes/class-msvcalc-frontend.php:467
 #: includes/class-msvcalc-leads-table.php:234
 #: includes/class-msvcalc-leads.php:727
-#: includes/class-msvcalc-leads.php:874
+#: includes/class-msvcalc-leads.php:899
 #: includes/class-msvcalc-privacy.php:128
-#: templates/admin-lead.php:139
+#: templates/admin-lead.php:140
 msgid "Email"
 msgstr ""
 
 #: includes/class-msvcalc-frontend.php:420
 #: includes/class-msvcalc-leads.php:728
-#: includes/class-msvcalc-leads.php:875
+#: includes/class-msvcalc-leads.php:904
 #: includes/class-msvcalc-privacy.php:129
 msgid "Phone"
 msgstr ""
 
 #: includes/class-msvcalc-frontend.php:421
 #: includes/class-msvcalc-leads.php:730
-#: includes/class-msvcalc-leads.php:877
+#: includes/class-msvcalc-leads.php:914
 #: includes/class-msvcalc-privacy.php:130
 msgid "Moving from"
 msgstr ""
 
 #: includes/class-msvcalc-frontend.php:422
 #: includes/class-msvcalc-leads.php:732
-#: includes/class-msvcalc-leads.php:879
+#: includes/class-msvcalc-leads.php:924
 #: includes/class-msvcalc-privacy.php:131
 msgid "Moving to"
 msgstr ""
@@ -5324,7 +5367,7 @@ msgstr ""
 #: includes/class-msvcalc-frontend.php:425
 #: includes/class-msvcalc-leads-table.php:134
 #: includes/class-msvcalc-leads.php:729
-#: includes/class-msvcalc-leads.php:876
+#: includes/class-msvcalc-leads.php:909
 msgid "Service"
 msgstr ""
 
@@ -5341,7 +5384,7 @@ msgid "Stairs, lift, parking, fragile items…"
 msgstr ""
 
 #: includes/class-msvcalc-frontend.php:429
-#: templates/admin-lead.php:327
+#: templates/admin-lead.php:329
 msgid "(optional)"
 msgstr ""
 
@@ -5415,14 +5458,14 @@ msgid "Prepared on %s"
 msgstr ""
 
 #: includes/class-msvcalc-frontend.php:448
-#: templates/email.php:146
+#: templates/email.php:147
 msgid "What it fits in"
 msgstr ""
 
 #. translators: %d: packing margin percentage.
 #: includes/class-msvcalc-frontend.php:454
-#: templates/admin-lead.php:266
-#: templates/email.php:258
+#: templates/admin-lead.php:268
+#: templates/email.php:259
 #: templates/lead-report.php:255
 #, php-format
 msgid "Packing and gaps (%d%%)"
@@ -5459,7 +5502,7 @@ msgid "Link to your list"
 msgstr ""
 
 #: includes/class-msvcalc-frontend.php:466
-#: templates/admin-lead.php:143
+#: templates/admin-lead.php:144
 msgid "WhatsApp"
 msgstr ""
 
@@ -5637,77 +5680,85 @@ msgid "Leads by status"
 msgstr ""
 
 #: includes/class-msvcalc-leads-admin.php:417
-msgid "Export CSV"
+msgid "Export Excel"
 msgstr ""
 
 #: includes/class-msvcalc-leads-admin.php:418
+msgid "Plain CSV, for importing into a CRM or another app"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:418
+msgid "Export CSV"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:419
 msgid "Export PDF"
 msgstr ""
 
-#: includes/class-msvcalc-leads-admin.php:426
+#: includes/class-msvcalc-leads-admin.php:427
 msgid "Search leads"
 msgstr ""
 
-#: includes/class-msvcalc-leads-admin.php:447
+#: includes/class-msvcalc-leads-admin.php:448
 msgid "You are not allowed to export leads."
 msgstr ""
 
-#: includes/class-msvcalc-leads-admin.php:495
+#: includes/class-msvcalc-leads-admin.php:496
 msgid "Website"
 msgstr ""
 
-#: includes/class-msvcalc-leads-admin.php:509
+#: includes/class-msvcalc-leads-admin.php:510
 msgid "Quote request received"
 msgstr ""
 
 #. translators: %s: status name.
-#: includes/class-msvcalc-leads-admin.php:512
+#: includes/class-msvcalc-leads-admin.php:513
 #, php-format
 msgid "Status set to %s"
 msgstr ""
 
-#: includes/class-msvcalc-leads-admin.php:514
+#: includes/class-msvcalc-leads-admin.php:515
 msgid "Note added"
 msgstr ""
 
 #. translators: %s: date.
-#: includes/class-msvcalc-leads-admin.php:518
+#: includes/class-msvcalc-leads-admin.php:519
 #, php-format
 msgid "Follow-up set for %s"
 msgstr ""
 
-#: includes/class-msvcalc-leads-admin.php:520
+#: includes/class-msvcalc-leads-admin.php:521
 msgid "Follow-up done"
-msgstr ""
-
-#: includes/class-msvcalc-leads-admin.php:523
-#: templates/admin-lead.php:153
-msgid "by email"
 msgstr ""
 
 #: includes/class-msvcalc-leads-admin.php:524
 #: templates/admin-lead.php:154
-msgid "by phone"
+msgid "by email"
 msgstr ""
 
 #: includes/class-msvcalc-leads-admin.php:525
 #: templates/admin-lead.php:155
+msgid "by phone"
+msgstr ""
+
+#: includes/class-msvcalc-leads-admin.php:526
+#: templates/admin-lead.php:156
 msgid "on WhatsApp"
 msgstr ""
 
-#: includes/class-msvcalc-leads-admin.php:527
+#: includes/class-msvcalc-leads-admin.php:528
 msgid "Customer contacted"
 msgstr ""
 
-#: includes/class-msvcalc-leads-admin.php:529
+#: includes/class-msvcalc-leads-admin.php:530
 msgid "Customer sent the same list again (not duplicated)"
 msgstr ""
 
-#: includes/class-msvcalc-leads-admin.php:531
+#: includes/class-msvcalc-leads-admin.php:532
 msgid "Notification email could not be sent"
 msgstr ""
 
-#: includes/class-msvcalc-leads-admin.php:533
+#: includes/class-msvcalc-leads-admin.php:534
 msgid "Notification email sent again"
 msgstr ""
 
@@ -5726,24 +5777,24 @@ msgid "Move"
 msgstr ""
 
 #: includes/class-msvcalc-leads-table.php:58
-#: includes/class-msvcalc-leads.php:871
+#: includes/class-msvcalc-leads.php:883
 #: includes/class-msvcalc-privacy.php:143
-#: templates/admin-lead.php:283
-#: templates/admin-lead.php:296
+#: templates/admin-lead.php:285
+#: templates/admin-lead.php:298
 #: templates/lead-report.php:91
 msgid "Status"
 msgstr ""
 
 #: includes/class-msvcalc-leads-table.php:59
-#: includes/class-msvcalc-leads.php:872
-#: includes/class-msvcalc-privacy.php:155
-#: templates/admin-lead.php:307
+#: includes/class-msvcalc-leads.php:889
+#: includes/class-msvcalc-privacy.php:158
+#: templates/admin-lead.php:309
 msgid "Follow-up"
 msgstr ""
 
 #: includes/class-msvcalc-leads-table.php:60
-#: includes/class-msvcalc-leads.php:870
-#: templates/admin-lead.php:361
+#: includes/class-msvcalc-leads.php:878
+#: templates/admin-lead.php:363
 msgid "Received"
 msgstr ""
 
@@ -5758,7 +5809,7 @@ msgid "Delete permanently"
 msgstr ""
 
 #: includes/class-msvcalc-leads-table.php:118
-#: templates/admin-lead.php:384
+#: templates/admin-lead.php:389
 msgid "Email failed"
 msgstr ""
 
@@ -5800,7 +5851,7 @@ msgid "Open"
 msgstr ""
 
 #: includes/class-msvcalc-leads-table.php:236
-#: templates/admin-lead.php:160
+#: templates/admin-lead.php:161
 msgid "PDF"
 msgstr ""
 
@@ -5813,6 +5864,7 @@ msgstr ""
 #: includes/class-msvcalc-leads.php:135
 #: includes/class-msvcalc-leads.php:137
 #: includes/class-msvcalc-leads.php:138
+#: includes/class-msvcalc-leads.php:1100
 msgid "Quote requests"
 msgstr ""
 
@@ -5932,22 +5984,22 @@ msgid "no lift"
 msgstr ""
 
 #: includes/class-msvcalc-leads.php:731
-#: includes/class-msvcalc-leads.php:878
+#: includes/class-msvcalc-leads.php:919
 msgid "Access (from)"
 msgstr ""
 
 #: includes/class-msvcalc-leads.php:733
-#: includes/class-msvcalc-leads.php:880
+#: includes/class-msvcalc-leads.php:929
 msgid "Access (to)"
 msgstr ""
 
 #: includes/class-msvcalc-leads.php:734
-#: includes/class-msvcalc-leads.php:881
+#: includes/class-msvcalc-leads.php:934
 msgid "Parking"
 msgstr ""
 
 #: includes/class-msvcalc-leads.php:735
-#: includes/class-msvcalc-leads.php:882
+#: includes/class-msvcalc-leads.php:939
 #: includes/class-msvcalc-privacy.php:132
 msgid "Move date"
 msgstr ""
@@ -5975,52 +6027,92 @@ msgstr ""
 #. translators: 1: customer name, 2: volume.
 #: includes/class-msvcalc-leads.php:767
 #, php-format
-msgid "%1$s – %2$s"
+msgid "%1$s, %2$s"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:847
+#: includes/class-msvcalc-leads.php:849
 msgid "You are not allowed to export quote requests."
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:869
-#: templates/admin-lead.php:360
+#: includes/class-msvcalc-leads.php:873
+#: includes/class-msvcalc-leads.php:1112
+#: templates/admin-lead.php:362
 msgid "Reference"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:884
+#: includes/class-msvcalc-leads.php:949
+#: includes/class-msvcalc-leads.php:1137
 #: includes/class-msvcalc-privacy.php:134
 msgid "Volume (m³)"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:885
+#: includes/class-msvcalc-leads.php:954
 msgid "Volume (ft³)"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:892
+#: includes/class-msvcalc-leads.php:989
 msgid "Customer message"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:893
-#: templates/admin-lead.php:362
+#: includes/class-msvcalc-leads.php:994
+#: templates/admin-lead.php:364
 msgid "Lead source"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:894
-#: templates/admin-lead.php:364
+#: includes/class-msvcalc-leads.php:999
+#: templates/admin-lead.php:366
 msgid "Page"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:895
+#: includes/class-msvcalc-leads.php:1004
+#: includes/class-msvcalc-privacy.php:147
+msgid "Consent given"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:1014
 #: templates/lead-report.php:217
 msgid "Internal notes"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:896
+#: includes/class-msvcalc-leads.php:1019
+#: includes/class-msvcalc-leads.php:1107
 #: includes/class-msvcalc-privacy.php:135
-#: templates/admin-lead.php:225
-#: templates/email.php:238
+#: templates/admin-lead.php:227
+#: templates/email.php:239
 #: templates/lead-report.php:225
 msgid "Inventory"
+msgstr ""
+
+#. translators: %s: lead reference.
+#: includes/class-msvcalc-leads.php:1093
+#, php-format
+msgid "Quote request %s"
+msgstr ""
+
+#. translators: %s: business name.
+#: includes/class-msvcalc-leads.php:1095
+#, php-format
+msgid "%s · Quote requests"
+msgstr ""
+
+#. translators: 1: export date and time, 2: number of quote requests.
+#: includes/class-msvcalc-leads.php:1097
+#, php-format
+msgid "Exported %1$s · %2$s quote request · Moving & Storage Volume Calculator"
+msgid_plural "Exported %1$s · %2$s quote requests · Moving & Storage Volume Calculator"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-msvcalc-leads.php:1108
+msgid "Inventory, item by item"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:1122
+msgid "Room"
+msgstr ""
+
+#: includes/class-msvcalc-leads.php:1132
+msgid "Quantity"
 msgstr ""
 
 #. translators: 1: customer name, 2: volume.
@@ -6057,7 +6149,7 @@ msgstr ""
 
 #: includes/class-msvcalc-privacy.php:56
 #: includes/class-msvcalc-privacy.php:70
-#: includes/class-msvcalc-privacy.php:177
+#: includes/class-msvcalc-privacy.php:180
 msgid "Volume calculator quote requests"
 msgstr ""
 
@@ -6069,19 +6161,20 @@ msgstr ""
 msgid "Notes"
 msgstr ""
 
-#: includes/class-msvcalc-privacy.php:147
-msgid "Consent given"
+#: includes/class-msvcalc-privacy.php:149
+#: templates/admin-lead.php:384
+msgid "Privacy policy shown"
 msgstr ""
 
-#: includes/class-msvcalc-privacy.php:150
+#: includes/class-msvcalc-privacy.php:153
 msgid "Sent from page"
 msgstr ""
 
-#: includes/class-msvcalc-privacy.php:151
+#: includes/class-msvcalc-privacy.php:154
 msgid "Referring site"
 msgstr ""
 
-#: includes/class-msvcalc-privacy.php:163
+#: includes/class-msvcalc-privacy.php:166
 msgid "Notes by our team"
 msgstr ""
 
@@ -6158,13 +6251,13 @@ msgid "The notification email address is not valid, so the site admin email will
 msgstr ""
 
 #. translators: %s: business name.
-#: templates/admin-lead.php:39
+#: templates/admin-lead.php:40
 #, php-format
 msgid "Your moving quote from %s"
 msgstr ""
 
 #. translators: %s: weight in pounds.
-#: templates/admin-lead.php:43
+#: templates/admin-lead.php:44
 #: templates/email.php:26
 #: templates/lead-report.php:125
 #, php-format
@@ -6172,242 +6265,246 @@ msgid "%s lb"
 msgstr ""
 
 #. translators: %s: weight in kilograms.
-#: templates/admin-lead.php:45
+#: templates/admin-lead.php:46
 #: templates/email.php:28
 #: templates/lead-report.php:127
 #, php-format
 msgid "%s kg"
 msgstr ""
 
-#: templates/admin-lead.php:87
+#: templates/admin-lead.php:88
 msgid "All leads"
 msgstr ""
 
 #. translators: %s: date.
-#: templates/admin-lead.php:100
+#: templates/admin-lead.php:101
 #: templates/lead-report.php:159
 #, php-format
 msgid "Follow up %s"
 msgstr ""
 
 #. translators: 1: date and time, 2: time span, 3: lead source.
-#: templates/admin-lead.php:111
+#: templates/admin-lead.php:112
 #, php-format
 msgid "Received %1$s (%2$s ago) · %3$s"
 msgstr ""
 
-#: templates/admin-lead.php:129
+#: templates/admin-lead.php:130
 msgid "The notification email for this request could not be sent."
 msgstr ""
 
-#: templates/admin-lead.php:129
+#: templates/admin-lead.php:130
 msgid "Nothing is lost: every detail is below. Reply to the customer directly, or try the email again once your site can send mail."
 msgstr ""
 
-#: templates/admin-lead.php:132
+#: templates/admin-lead.php:133
 msgid "Send email again"
 msgstr ""
 
-#: templates/admin-lead.php:142
+#: templates/admin-lead.php:143
 msgid "Call"
 msgstr ""
 
-#: templates/admin-lead.php:147
+#: templates/admin-lead.php:148
 msgid "Copy email"
 msgstr ""
 
-#: templates/admin-lead.php:151
+#: templates/admin-lead.php:152
 msgid "How did you contact them?"
 msgstr ""
 
-#: templates/admin-lead.php:157
+#: templates/admin-lead.php:158
 msgid "Log contact"
 msgstr ""
 
-#: templates/admin-lead.php:161
+#: templates/admin-lead.php:162
+msgid "Excel"
+msgstr ""
+
+#: templates/admin-lead.php:163
 msgid "CSV"
 msgstr ""
 
-#: templates/admin-lead.php:167
+#: templates/admin-lead.php:169
 msgid "Quote summary"
 msgstr ""
 
 #. translators: %d: packing margin percentage.
-#: templates/admin-lead.php:201
+#: templates/admin-lead.php:203
 #, php-format
 msgid "Includes a %d%% margin for packing and gaps."
 msgstr ""
 
-#: templates/admin-lead.php:208
-#: templates/email.php:178
+#: templates/admin-lead.php:210
+#: templates/email.php:179
 #: templates/lead-report.php:200
 msgid "Customer and move"
 msgstr ""
 
-#: templates/admin-lead.php:218
+#: templates/admin-lead.php:220
 #: templates/lead-report.php:212
 msgid "Message from the customer"
 msgstr ""
 
 #. translators: %s: number of rooms.
-#: templates/admin-lead.php:229
+#: templates/admin-lead.php:231
 #, php-format
 msgid "%s room"
 msgid_plural "%s rooms"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/admin-lead.php:302
+#: templates/admin-lead.php:304
 msgid "Update"
 msgstr ""
 
-#: templates/admin-lead.php:319
+#: templates/admin-lead.php:321
 msgid "Done"
 msgstr ""
 
-#: templates/admin-lead.php:325
+#: templates/admin-lead.php:327
 msgid "Change the date"
 msgstr ""
 
-#: templates/admin-lead.php:325
+#: templates/admin-lead.php:327
 msgid "Remind me on"
 msgstr ""
 
-#: templates/admin-lead.php:327
+#: templates/admin-lead.php:329
 msgid "What to do"
 msgstr ""
 
-#: templates/admin-lead.php:328
+#: templates/admin-lead.php:330
 msgid "e.g. Call about the piano"
 msgstr ""
 
-#: templates/admin-lead.php:329
+#: templates/admin-lead.php:331
 msgid "Save follow-up"
 msgstr ""
 
-#: templates/admin-lead.php:334
+#: templates/admin-lead.php:336
 msgid "Notes and activity"
 msgstr ""
 
-#: templates/admin-lead.php:337
+#: templates/admin-lead.php:339
 msgid "Internal note"
 msgstr ""
 
-#: templates/admin-lead.php:338
+#: templates/admin-lead.php:340
 msgid "Add an internal note. Customers never see these."
 msgstr ""
 
-#: templates/admin-lead.php:339
+#: templates/admin-lead.php:341
 msgid "Add note"
 msgstr ""
 
-#: templates/admin-lead.php:358
+#: templates/admin-lead.php:360
 msgid "Lead information"
 msgstr ""
 
-#: templates/admin-lead.php:367
+#: templates/admin-lead.php:369
 msgid "Referrer"
 msgstr ""
 
-#: templates/admin-lead.php:370
+#: templates/admin-lead.php:372
 msgid "Campaign"
 msgstr ""
 
-#: templates/admin-lead.php:373
+#: templates/admin-lead.php:375
 msgid "Consent"
 msgstr ""
 
 #. translators: %s: date and time.
-#: templates/admin-lead.php:376
+#: templates/admin-lead.php:378
 #, php-format
 msgid "Given %s"
 msgstr ""
 
-#: templates/admin-lead.php:384
+#: templates/admin-lead.php:389
 msgid "Notification"
 msgstr ""
 
-#: templates/admin-lead.php:384
+#: templates/admin-lead.php:389
 msgid "Email sent"
 msgstr ""
 
-#: templates/admin-lead.php:388
+#: templates/admin-lead.php:393
 msgid "Delete this lead for good? This cannot be undone."
 msgstr ""
 
-#: templates/admin-lead.php:390
+#: templates/admin-lead.php:395
 msgid "Delete lead"
 msgstr ""
 
 #. translators: 1: customer name, 2: volume.
-#: templates/email.php:79
+#: templates/email.php:80
 #, php-format
 msgid "%1$s sent an inventory of %2$s."
 msgstr ""
 
 #. translators: %s: volume.
-#: templates/email.php:82
+#: templates/email.php:83
 #, php-format
 msgid "Your inventory of %s is with us."
 msgstr ""
 
-#: templates/email.php:98
+#: templates/email.php:99
 msgid "New quote request"
 msgstr ""
 
-#: templates/email.php:98
+#: templates/email.php:99
 msgid "Your moving inventory"
 msgstr ""
 
 #. translators: %s: customer name.
-#: templates/email.php:114
+#: templates/email.php:115
 #, php-format
 msgid "%s has sent their inventory and is waiting for your quote."
 msgstr ""
 
 #. translators: %s: customer first name.
-#: templates/email.php:117
+#: templates/email.php:118
 #, php-format
 msgid "Thanks, %s. Here is a copy of the inventory you sent us. We will be in touch with your quote."
 msgstr ""
 
-#: templates/email.php:178
+#: templates/email.php:179
 msgid "Your details"
 msgstr ""
 
-#: templates/email.php:202
+#: templates/email.php:203
 msgid "Open in WordPress"
 msgstr ""
 
 #. translators: %s: customer first name.
-#: templates/email.php:208
+#: templates/email.php:209
 #, php-format
 msgid "Reply to %s"
 msgstr ""
 
-#: templates/email.php:219
+#: templates/email.php:220
 msgid "What happens next"
 msgstr ""
 
-#: templates/email.php:222
+#: templates/email.php:223
 msgid "We check your inventory and access details."
 msgstr ""
 
-#: templates/email.php:223
+#: templates/email.php:224
 msgid "We send you a quote, or call if anything needs a quick chat."
 msgstr ""
 
-#: templates/email.php:224
+#: templates/email.php:225
 msgid "Reply to this email any time to add or change items."
 msgstr ""
 
 #. translators: %s: site name.
-#: templates/email.php:279
+#: templates/email.php:280
 #, php-format
 msgid "Sent from the volume calculator on %s. Volumes and weights are estimates based on typical item sizes."
 msgstr ""
 
-#: templates/email.php:285
+#: templates/email.php:286
 #: templates/lead-report.php:272
 msgid "Moving & Storage Volume Calculator for WordPress"
 msgstr ""
@@ -6534,7 +6631,7 @@ msgstr ""
 
 #: blocks/calculator/block.json
 msgctxt "block description"
-msgid "A room-by-room moving, removal and storage volume calculator with vehicle suggestions and a quote form."
+msgid "A room-by-room moving volume calculator in cubic feet or cubic metres, with truck, container and storage unit sizes and a quote form."
 msgstr ""
 
 #: blocks/calculator/block.json
@@ -6559,5 +6656,15 @@ msgstr ""
 
 #: blocks/calculator/block.json
 msgctxt "block keyword"
-msgid "cubic"
+msgid "cubic feet"
+msgstr ""
+
+#: blocks/calculator/block.json
+msgctxt "block keyword"
+msgid "moving quote"
+msgstr ""
+
+#: blocks/calculator/block.json
+msgctxt "block keyword"
+msgid "truck"
 msgstr ""
