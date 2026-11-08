@@ -1,6 +1,8 @@
-<h1 align="center">
-  <img src=".wordpress-org/icon-256x256.gif" alt="" width="56" align="center"> Moving &amp; Storage Volume Calculator
-</h1>
+<p align="center">
+  <img src=".github/media/logo-animated.svg" alt="Moving &amp; Storage Volume Calculator logo" width="96" height="96">
+</p>
+
+<h1 align="center">Moving &amp; Storage Volume Calculator</h1>
 
 <p align="center">
   <img src=".wordpress-org/banner-1544x500.jpg" alt="Moving & Storage Volume Calculator for WordPress. Know the volume. Quote the move." width="100%">
@@ -461,7 +463,7 @@ GPL-2.0-or-later. See [LICENSE](LICENSE).
 </p>
 
 <p align="center">
-  <img src=".wordpress-org/icon-128x128.gif" alt="" width="32"><br>
+  <img src=".github/media/logo-animated.svg" alt="" width="44" height="44"><br>
   <sub>Made by <a href="https://github.com/xaviermsd">Harsh Prajapati</a>. Also by the same author:
   <a href="https://wordpress.org/plugins/fieldpilot-for-acf/">FieldPilot, AI and JSON copilot for ACF</a> and
   <a href="https://wordpress.org/plugins/menunest-smart-menu-manager/">MenuNest, the smart menu manager for WordPress</a>.</sub>
