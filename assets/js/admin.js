@@ -182,6 +182,10 @@
 		} );
 		form.addEventListener( 'submit', function () {
 			dirty = false;
+			// The save happens in the background, so the page stays and the note must go.
+			if ( note ) {
+				note.hidden = true;
+			}
 		} );
 		return mark;
 	}
