@@ -71,6 +71,10 @@ Click a task to jump straight to how it works.
 
 ## See it in action
 
+<a href="https://youtu.be/raBU40QdFeY"><img src=".github/media/video-preview.jpg" width="100%" alt="Play the Moving &amp; Storage Volume Calculator guide video on YouTube (4:33)"></a>
+
+[Watch the full guide on YouTube (4:33)](https://youtu.be/raBU40QdFeY). Every screen uses demo data.
+
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{'primaryColor':'#0f1d29','primaryTextColor':'#f2fbff','primaryBorderColor':'#84cc16','lineColor':'#0fb5ba','secondaryColor':'#0f1d29','tertiaryColor':'#0b151e'}}}%%
 flowchart LR
