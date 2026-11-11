@@ -461,6 +461,7 @@ GPL-2.0-or-later. See [LICENSE](LICENSE).
 </p>
 
 <p align="center">
+  <a href="https://www.worklancio.in"><img src="https://raw.githubusercontent.com/xaviermsd/xaviermsd/main/assets/btn-website.png" height="46" alt="Visit my website, worklancio.in"></a>&nbsp;
   <a href="https://wa.me/919898528376?text=Hi%20Harsh%2C%20I%20saw%20the%20Moving%20%26%20Storage%20Volume%20Calculator%20on%20GitHub%20and%20have%20a%20project%20in%20mind."><img src="https://raw.githubusercontent.com/xaviermsd/xaviermsd/main/assets/btn-whatsapp.png" height="46" alt="Chat on WhatsApp"></a>&nbsp;
   <a href="https://www.linkedin.com/in/iamharshprajapati/"><img src="https://raw.githubusercontent.com/xaviermsd/xaviermsd/main/assets/btn-linkedin.png" height="46" alt="Connect on LinkedIn"></a>&nbsp;
   <a href="https://www.instagram.com/harshprajapatiofficial/"><img src="https://raw.githubusercontent.com/xaviermsd/xaviermsd/main/assets/btn-instagram.png" height="46" alt="Follow on Instagram"></a>
@@ -468,7 +469,7 @@ GPL-2.0-or-later. See [LICENSE](LICENSE).
 
 <p align="center">
   <img src=".github/media/logo-animated.svg" alt="" width="44" height="44"><br>
-  <sub>Made by <a href="https://github.com/xaviermsd">Harsh Prajapati</a>. Also by the same author:
+  <sub>Made by <a href="https://github.com/xaviermsd">Harsh Prajapati</a>, freelance web developer at <a href="https://www.worklancio.in">worklancio.in</a>. <a href="https://www.worklancio.in/work/volume-calculator">Read the case study</a>. Also by the same author:
   <a href="https://wordpress.org/plugins/fieldpilot-for-acf/">FieldPilot, AI and JSON copilot for ACF</a> and
   <a href="https://wordpress.org/plugins/menunest-smart-menu-manager/">MenuNest, the smart menu manager for WordPress</a>.</sub>
 </p>
