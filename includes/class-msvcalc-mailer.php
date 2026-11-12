@@ -16,6 +16,11 @@ defined( 'ABSPATH' ) || exit;
 final class MSVCalc_Mailer {
 
 	/**
+	 * Most customer copies the site sends in one hour.
+	 */
+	const COPY_HOURLY_CAP = 20;
+
+	/**
 	 * Sends the notification to the business and, when enabled, a copy to the
 	 * customer. Values must already be sanitized.
 	 *
@@ -47,7 +52,7 @@ final class MSVCalc_Mailer {
 		$body       = self::body( $contact, $result, 'business', $admin_link );
 		$sent       = wp_mail( $to, self::header_text( $subject ), $body, $headers );
 
-		if ( $copy && MSVCalc_Settings::get( 'send_copy' ) ) {
+		if ( $copy && MSVCalc_Settings::get( 'send_copy' ) && self::copy_allowed( (string) $contact['email'] ) ) {
 			$copy_subject = sprintf(
 				/* translators: %s: company name. */
 				__( 'Your moving inventory for %s', 'boxmetric-moving-storage-volume-calculator' ),
@@ -61,6 +66,35 @@ final class MSVCalc_Mailer {
 		}
 
 		return (bool) $sent;
+	}
+
+	/**
+	 * Whether a customer copy may go to this address now. Each address gets
+	 * at most one copy a day, and the whole site at most a set number an
+	 * hour, so the public form cannot be used to send mail to strangers.
+	 *
+	 * @param string $email Customer email address.
+	 * @return bool
+	 */
+	private static function copy_allowed( string $email ): bool {
+		if ( ! is_email( $email ) ) {
+			return false;
+		}
+		$address = 'msvcalc_copy_' . substr( wp_hash( strtolower( $email ) ), 0, 20 );
+		$hour    = 'msvcalc_copies_' . gmdate( 'YmdH' );
+		/**
+		 * Filters how many customer copies the site may send in one hour.
+		 *
+		 * @param int $cap Copies per hour.
+		 */
+		$cap   = (int) apply_filters( 'msvcalc_copy_hourly_cap', self::COPY_HOURLY_CAP );
+		$count = (int) get_transient( $hour );
+		if ( get_transient( $address ) || $count >= $cap ) {
+			return false;
+		}
+		set_transient( $address, 1, DAY_IN_SECONDS );
+		set_transient( $hour, $count + 1, HOUR_IN_SECONDS );
+		return true;
 	}
 
 	/**

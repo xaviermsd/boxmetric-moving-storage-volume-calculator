@@ -363,7 +363,14 @@ $msvcalc_form = static function ( string $action ) use ( $lead_id ): void {
 				<div><dt><?php esc_html_e( 'Received', 'boxmetric-moving-storage-volume-calculator' ); ?></dt><dd><?php echo esc_html( wp_date( $msvcalc_datetime, $msvcalc_received ) ); ?></dd></div>
 				<div><dt><?php esc_html_e( 'Lead source', 'boxmetric-moving-storage-volume-calculator' ); ?></dt><dd><?php echo esc_html( MSVCalc_Leads::source_text( $lead_id ) ); ?></dd></div>
 				<?php if ( ! empty( $msvcalc_source['page'] ) ) : ?>
-					<div><dt><?php esc_html_e( 'Page', 'boxmetric-moving-storage-volume-calculator' ); ?></dt><dd><a href="<?php echo esc_url( (string) $msvcalc_source['page'] ); ?>" target="_blank" rel="noopener"><?php echo esc_html( (string) wp_parse_url( (string) $msvcalc_source['page'], PHP_URL_PATH ) ); ?></a></dd></div>
+					<?php $msvcalc_own_page = strtolower( (string) wp_parse_url( (string) $msvcalc_source['page'], PHP_URL_HOST ) ) === strtolower( (string) wp_parse_url( home_url(), PHP_URL_HOST ) ); ?>
+					<div><dt><?php esc_html_e( 'Page', 'boxmetric-moving-storage-volume-calculator' ); ?></dt><dd>
+						<?php if ( $msvcalc_own_page ) : ?>
+							<a href="<?php echo esc_url( (string) $msvcalc_source['page'] ); ?>" target="_blank" rel="noopener"><?php echo esc_html( (string) wp_parse_url( (string) $msvcalc_source['page'], PHP_URL_PATH ) ); ?></a>
+						<?php else : ?>
+							<?php echo esc_html( (string) $msvcalc_source['page'] ); ?>
+						<?php endif; ?>
+					</dd></div>
 				<?php endif; ?>
 				<?php if ( ! empty( $msvcalc_source['referrer'] ) ) : ?>
 					<div><dt><?php esc_html_e( 'Referrer', 'boxmetric-moving-storage-volume-calculator' ); ?></dt><dd><?php echo esc_html( (string) $msvcalc_source['referrer'] ); ?></dd></div>

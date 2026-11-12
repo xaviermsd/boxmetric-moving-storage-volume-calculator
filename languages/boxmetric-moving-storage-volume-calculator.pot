@@ -3,13 +3,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: BoxMetric: Moving & Storage Volume Calculator 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/moving-storage-volume-calculator\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/boxmetric-moving-storage-volume-calculator\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-12T16:36:09+01:00\n"
+"POT-Creation-Date: 2026-11-12T17:04:19+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: boxmetric-moving-storage-volume-calculator\n"
@@ -3626,7 +3626,7 @@ msgstr ""
 #: data/catalogue.php:4948
 #: includes/class-msvcalc-admin.php:367
 #: includes/class-msvcalc-frontend.php:398
-#: includes/class-msvcalc-leads.php:984
+#: includes/class-msvcalc-leads.php:985
 #: templates/admin-lead.php:60
 #: templates/email.php:41
 #: templates/lead-report.php:178
@@ -4311,7 +4311,7 @@ msgid "Show an estimated weight"
 msgstr ""
 
 #: includes/class-msvcalc-admin.php:365
-#: includes/class-msvcalc-leads.php:974
+#: includes/class-msvcalc-leads.php:975
 msgid "Vehicle"
 msgstr ""
 
@@ -4425,7 +4425,7 @@ msgid "Customer copy"
 msgstr ""
 
 #: includes/class-msvcalc-admin.php:389
-msgid "Email the customer a copy of their inventory"
+msgid "Email the customer a copy of their inventory. Each address gets at most one copy a day."
 msgstr ""
 
 #: includes/class-msvcalc-admin.php:390
@@ -4450,8 +4450,8 @@ msgstr ""
 
 #: includes/class-msvcalc-admin.php:395
 #: includes/class-msvcalc-frontend.php:337
-#: includes/class-msvcalc-leads.php:736
-#: includes/class-msvcalc-leads.php:944
+#: includes/class-msvcalc-leads.php:737
+#: includes/class-msvcalc-leads.php:945
 msgid "Extra services"
 msgstr ""
 
@@ -4460,7 +4460,7 @@ msgid "Button text"
 msgstr ""
 
 #: includes/class-msvcalc-admin.php:397
-#: includes/class-msvcalc-leads.php:1009
+#: includes/class-msvcalc-leads.php:1010
 msgid "Consent text"
 msgstr ""
 
@@ -4668,7 +4668,7 @@ msgstr ""
 
 #: includes/class-msvcalc-admin.php:878
 #: includes/class-msvcalc-frontend.php:441
-#: includes/class-msvcalc-leads.php:1127
+#: includes/class-msvcalc-leads.php:1128
 #: templates/admin-lead.php:239
 #: templates/lead-report.php:230
 msgid "Item"
@@ -4677,7 +4677,7 @@ msgstr ""
 #: includes/class-msvcalc-admin.php:879
 #: includes/class-msvcalc-frontend.php:393
 #: includes/class-msvcalc-frontend.php:443
-#: includes/class-msvcalc-leads.php:964
+#: includes/class-msvcalc-leads.php:965
 #: templates/admin-lead.php:50
 #: templates/admin-lead.php:261
 #: templates/email.php:31
@@ -4703,7 +4703,7 @@ msgid "Volume"
 msgstr ""
 
 #: includes/class-msvcalc-admin.php:883
-#: includes/class-msvcalc-leads.php:959
+#: includes/class-msvcalc-leads.php:960
 msgid "Weight (kg)"
 msgstr ""
 
@@ -4780,9 +4780,9 @@ msgid "Qty"
 msgstr ""
 
 #: includes/class-msvcalc-admin.php:901
-#: includes/class-msvcalc-leads.php:726
-#: includes/class-msvcalc-leads.php:894
-#: includes/class-msvcalc-leads.php:1117
+#: includes/class-msvcalc-leads.php:727
+#: includes/class-msvcalc-leads.php:895
+#: includes/class-msvcalc-leads.php:1118
 #: includes/class-msvcalc-privacy.php:127
 msgid "Name"
 msgstr ""
@@ -4978,7 +4978,7 @@ msgid "Cubic feet"
 msgstr ""
 
 #: includes/class-msvcalc-frontend.php:318
-#: templates/admin-lead.php:391
+#: templates/admin-lead.php:398
 msgid "Units"
 msgstr ""
 
@@ -5222,7 +5222,7 @@ msgid "Includes %d%% for packing and gaps."
 msgstr ""
 
 #: includes/class-msvcalc-frontend.php:394
-#: includes/class-msvcalc-leads.php:969
+#: includes/class-msvcalc-leads.php:970
 #: templates/admin-lead.php:51
 #: templates/email.php:32
 #: templates/lead-report.php:168
@@ -5244,7 +5244,7 @@ msgid "Recommended vehicle"
 msgstr ""
 
 #: includes/class-msvcalc-frontend.php:397
-#: includes/class-msvcalc-leads.php:979
+#: includes/class-msvcalc-leads.php:980
 #: templates/admin-lead.php:59
 #: templates/email.php:40
 #: templates/lead-report.php:177
@@ -5296,30 +5296,30 @@ msgstr ""
 #: includes/class-msvcalc-frontend.php:410
 #: includes/class-msvcalc-frontend.php:457
 #: includes/class-msvcalc-leads-table.php:234
-#: includes/class-msvcalc-leads.php:727
-#: includes/class-msvcalc-leads.php:899
+#: includes/class-msvcalc-leads.php:728
+#: includes/class-msvcalc-leads.php:900
 #: includes/class-msvcalc-privacy.php:128
 #: templates/admin-lead.php:140
 msgid "Email"
 msgstr ""
 
 #: includes/class-msvcalc-frontend.php:411
-#: includes/class-msvcalc-leads.php:728
-#: includes/class-msvcalc-leads.php:904
+#: includes/class-msvcalc-leads.php:729
+#: includes/class-msvcalc-leads.php:905
 #: includes/class-msvcalc-privacy.php:129
 msgid "Phone"
 msgstr ""
 
 #: includes/class-msvcalc-frontend.php:412
-#: includes/class-msvcalc-leads.php:730
-#: includes/class-msvcalc-leads.php:914
+#: includes/class-msvcalc-leads.php:731
+#: includes/class-msvcalc-leads.php:915
 #: includes/class-msvcalc-privacy.php:130
 msgid "Moving from"
 msgstr ""
 
 #: includes/class-msvcalc-frontend.php:413
-#: includes/class-msvcalc-leads.php:732
-#: includes/class-msvcalc-leads.php:924
+#: includes/class-msvcalc-leads.php:733
+#: includes/class-msvcalc-leads.php:925
 #: includes/class-msvcalc-privacy.php:131
 msgid "Moving to"
 msgstr ""
@@ -5334,8 +5334,8 @@ msgstr ""
 
 #: includes/class-msvcalc-frontend.php:416
 #: includes/class-msvcalc-leads-table.php:134
-#: includes/class-msvcalc-leads.php:729
-#: includes/class-msvcalc-leads.php:909
+#: includes/class-msvcalc-leads.php:730
+#: includes/class-msvcalc-leads.php:910
 msgid "Service"
 msgstr ""
 
@@ -5369,7 +5369,7 @@ msgid "This field is required."
 msgstr ""
 
 #: includes/class-msvcalc-frontend.php:424
-#: includes/class-msvcalc-rest.php:244
+#: includes/class-msvcalc-rest.php:248
 msgid "Please enter a valid email address."
 msgstr ""
 
@@ -5632,7 +5632,7 @@ msgid "Nothing overdue"
 msgstr ""
 
 #: includes/class-msvcalc-leads-admin.php:368
-#: includes/class-msvcalc-leads.php:185
+#: includes/class-msvcalc-leads.php:186
 #: templates/lead-report.php:83
 msgid "Converted"
 msgstr ""
@@ -5745,7 +5745,7 @@ msgid "Move"
 msgstr ""
 
 #: includes/class-msvcalc-leads-table.php:58
-#: includes/class-msvcalc-leads.php:883
+#: includes/class-msvcalc-leads.php:884
 #: includes/class-msvcalc-privacy.php:143
 #: templates/admin-lead.php:285
 #: templates/admin-lead.php:298
@@ -5754,14 +5754,14 @@ msgid "Status"
 msgstr ""
 
 #: includes/class-msvcalc-leads-table.php:59
-#: includes/class-msvcalc-leads.php:889
+#: includes/class-msvcalc-leads.php:890
 #: includes/class-msvcalc-privacy.php:158
 #: templates/admin-lead.php:309
 msgid "Follow-up"
 msgstr ""
 
 #: includes/class-msvcalc-leads-table.php:60
-#: includes/class-msvcalc-leads.php:878
+#: includes/class-msvcalc-leads.php:879
 #: templates/admin-lead.php:363
 msgid "Received"
 msgstr ""
@@ -5777,7 +5777,7 @@ msgid "Delete permanently"
 msgstr ""
 
 #: includes/class-msvcalc-leads-table.php:118
-#: templates/admin-lead.php:389
+#: templates/admin-lead.php:396
 msgid "Email failed"
 msgstr ""
 
@@ -5829,221 +5829,221 @@ msgstr ""
 msgid "%s ago"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:135
-#: includes/class-msvcalc-leads.php:137
+#: includes/class-msvcalc-leads.php:136
 #: includes/class-msvcalc-leads.php:138
-#: includes/class-msvcalc-leads.php:1100
+#: includes/class-msvcalc-leads.php:139
+#: includes/class-msvcalc-leads.php:1101
 msgid "Quote requests"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:136
-#: includes/class-msvcalc-leads.php:139
+#: includes/class-msvcalc-leads.php:137
+#: includes/class-msvcalc-leads.php:140
 msgid "Quote request"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:140
+#: includes/class-msvcalc-leads.php:141
 msgid "View quote request"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:141
+#: includes/class-msvcalc-leads.php:142
 msgid "Search quote requests"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:142
+#: includes/class-msvcalc-leads.php:143
 msgid "No quote requests yet. They appear here when visitors send their inventory."
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:143
+#: includes/class-msvcalc-leads.php:144
 msgid "No quote requests in the trash."
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:182
+#: includes/class-msvcalc-leads.php:183
 #: templates/lead-report.php:82
 msgid "New"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:183
+#: includes/class-msvcalc-leads.php:184
 msgid "Contacted"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:184
+#: includes/class-msvcalc-leads.php:185
 msgid "In progress"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:186
+#: includes/class-msvcalc-leads.php:187
 msgid "Lost"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:283
+#: includes/class-msvcalc-leads.php:284
 msgid "Website calculator"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:641
+#: includes/class-msvcalc-leads.php:642
 msgid "Ground floor"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:642
+#: includes/class-msvcalc-leads.php:643
 msgid "House with upstairs"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:643
+#: includes/class-msvcalc-leads.php:644
 msgid "1st floor"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:644
+#: includes/class-msvcalc-leads.php:645
 msgid "2nd floor"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:645
+#: includes/class-msvcalc-leads.php:646
 msgid "3rd floor"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:646
+#: includes/class-msvcalc-leads.php:647
 msgid "4th floor"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:647
+#: includes/class-msvcalc-leads.php:648
 msgid "5th floor or higher"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:658
+#: includes/class-msvcalc-leads.php:659
 msgid "Parking right outside"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:659
+#: includes/class-msvcalc-leads.php:660
 msgid "Parking within 20 m (65 ft)"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:660
+#: includes/class-msvcalc-leads.php:661
 msgid "Long carry or parking permit needed"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:671
+#: includes/class-msvcalc-leads.php:672
 msgid "Packing service"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:672
+#: includes/class-msvcalc-leads.php:673
 msgid "Boxes and packing materials"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:673
+#: includes/class-msvcalc-leads.php:674
 msgid "Furniture dismantling and reassembly"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:674
-#: includes/class-msvcalc-leads.php:748
+#: includes/class-msvcalc-leads.php:675
+#: includes/class-msvcalc-leads.php:749
 msgid "Storage"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:675
+#: includes/class-msvcalc-leads.php:676
 msgid "Disposal of unwanted items"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:676
+#: includes/class-msvcalc-leads.php:677
 msgid "Cleaning"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:694
+#: includes/class-msvcalc-leads.php:695
 msgid "lift available"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:696
+#: includes/class-msvcalc-leads.php:697
 msgid "no lift"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:731
-#: includes/class-msvcalc-leads.php:919
+#: includes/class-msvcalc-leads.php:732
+#: includes/class-msvcalc-leads.php:920
 msgid "Access (from)"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:733
-#: includes/class-msvcalc-leads.php:929
+#: includes/class-msvcalc-leads.php:734
+#: includes/class-msvcalc-leads.php:930
 msgid "Access (to)"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:734
-#: includes/class-msvcalc-leads.php:934
+#: includes/class-msvcalc-leads.php:735
+#: includes/class-msvcalc-leads.php:935
 msgid "Parking"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:735
-#: includes/class-msvcalc-leads.php:939
+#: includes/class-msvcalc-leads.php:736
+#: includes/class-msvcalc-leads.php:940
 #: includes/class-msvcalc-privacy.php:132
 msgid "Move date"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:747
+#: includes/class-msvcalc-leads.php:748
 msgid "House or flat removal"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:749
+#: includes/class-msvcalc-leads.php:750
 msgid "Removal and storage"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:750
+#: includes/class-msvcalc-leads.php:751
 msgid "Office move"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:751
+#: includes/class-msvcalc-leads.php:752
 msgid "International move"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:752
+#: includes/class-msvcalc-leads.php:753
 msgid "Man and van"
 msgstr ""
 
 #. translators: 1: customer name, 2: volume.
-#: includes/class-msvcalc-leads.php:767
+#: includes/class-msvcalc-leads.php:768
 #, php-format
 msgid "%1$s, %2$s"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:849
+#: includes/class-msvcalc-leads.php:850
 msgid "You are not allowed to export quote requests."
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:873
-#: includes/class-msvcalc-leads.php:1112
+#: includes/class-msvcalc-leads.php:874
+#: includes/class-msvcalc-leads.php:1113
 #: templates/admin-lead.php:362
 msgid "Reference"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:949
-#: includes/class-msvcalc-leads.php:1137
+#: includes/class-msvcalc-leads.php:950
+#: includes/class-msvcalc-leads.php:1138
 #: includes/class-msvcalc-privacy.php:134
 msgid "Volume (m³)"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:954
+#: includes/class-msvcalc-leads.php:955
 msgid "Volume (ft³)"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:989
+#: includes/class-msvcalc-leads.php:990
 msgid "Customer message"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:994
+#: includes/class-msvcalc-leads.php:995
 #: templates/admin-lead.php:364
 msgid "Lead source"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:999
-#: templates/admin-lead.php:366
+#: includes/class-msvcalc-leads.php:1000
+#: templates/admin-lead.php:367
 msgid "Page"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:1004
+#: includes/class-msvcalc-leads.php:1005
 #: includes/class-msvcalc-privacy.php:147
 msgid "Consent given"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:1014
+#: includes/class-msvcalc-leads.php:1015
 #: templates/lead-report.php:217
 msgid "Internal notes"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:1019
-#: includes/class-msvcalc-leads.php:1107
+#: includes/class-msvcalc-leads.php:1020
+#: includes/class-msvcalc-leads.php:1108
 #: includes/class-msvcalc-privacy.php:135
 #: templates/admin-lead.php:227
 #: templates/email.php:239
@@ -6052,45 +6052,45 @@ msgid "Inventory"
 msgstr ""
 
 #. translators: %s: lead reference.
-#: includes/class-msvcalc-leads.php:1093
+#: includes/class-msvcalc-leads.php:1094
 #, php-format
 msgid "Quote request %s"
 msgstr ""
 
 #. translators: %s: business name.
-#: includes/class-msvcalc-leads.php:1095
+#: includes/class-msvcalc-leads.php:1096
 #, php-format
 msgid "%s · Quote requests"
 msgstr ""
 
 #. translators: 1: export date and time, 2: number of quote requests.
-#: includes/class-msvcalc-leads.php:1097
+#: includes/class-msvcalc-leads.php:1098
 #, php-format
 msgid "Exported %1$s · %2$s quote request · BoxMetric"
 msgid_plural "Exported %1$s · %2$s quote requests · BoxMetric"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/class-msvcalc-leads.php:1108
+#: includes/class-msvcalc-leads.php:1109
 msgid "Inventory, item by item"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:1122
+#: includes/class-msvcalc-leads.php:1123
 msgid "Room"
 msgstr ""
 
-#: includes/class-msvcalc-leads.php:1132
+#: includes/class-msvcalc-leads.php:1133
 msgid "Quantity"
 msgstr ""
 
 #. translators: 1: customer name, 2: volume.
-#: includes/class-msvcalc-mailer.php:36
+#: includes/class-msvcalc-mailer.php:41
 #, php-format
 msgid "New quote request: %1$s (%2$s)"
 msgstr ""
 
 #. translators: %s: company name.
-#: includes/class-msvcalc-mailer.php:53
+#: includes/class-msvcalc-mailer.php:58
 #, php-format
 msgid "Your moving inventory for %s"
 msgstr ""
@@ -6130,7 +6130,7 @@ msgid "Notes"
 msgstr ""
 
 #: includes/class-msvcalc-privacy.php:149
-#: templates/admin-lead.php:384
+#: templates/admin-lead.php:391
 msgid "Privacy policy shown"
 msgstr ""
 
@@ -6162,39 +6162,39 @@ msgstr ""
 msgid "Sorry, we could not send your request. Please try again or contact us directly."
 msgstr ""
 
-#: includes/class-msvcalc-rest.php:241
+#: includes/class-msvcalc-rest.php:245
 msgid "Please enter your name."
 msgstr ""
 
-#: includes/class-msvcalc-rest.php:253
+#: includes/class-msvcalc-rest.php:257
 msgid "Please enter a valid phone number."
 msgstr ""
 
-#: includes/class-msvcalc-rest.php:263
+#: includes/class-msvcalc-rest.php:267
 msgid "Please tell us where you are moving from."
 msgstr ""
 
-#: includes/class-msvcalc-rest.php:266
+#: includes/class-msvcalc-rest.php:270
 msgid "Please tell us where you are moving to."
 msgstr ""
 
-#: includes/class-msvcalc-rest.php:278
+#: includes/class-msvcalc-rest.php:282
 msgid "Please pick a moving date from today onwards."
 msgstr ""
 
-#: includes/class-msvcalc-rest.php:287
+#: includes/class-msvcalc-rest.php:291
 msgid "Please choose the service you need."
 msgstr ""
 
-#: includes/class-msvcalc-rest.php:299
+#: includes/class-msvcalc-rest.php:303
 msgid "Please choose the floor."
 msgstr ""
 
-#: includes/class-msvcalc-rest.php:318
+#: includes/class-msvcalc-rest.php:322
 msgid "Please agree so we can prepare your quote."
 msgstr ""
 
-#: includes/class-msvcalc-rest.php:324
+#: includes/class-msvcalc-rest.php:328
 msgid "Please check the highlighted fields."
 msgstr ""
 
@@ -6370,37 +6370,37 @@ msgstr ""
 msgid "Lead information"
 msgstr ""
 
-#: templates/admin-lead.php:369
+#: templates/admin-lead.php:376
 msgid "Referrer"
 msgstr ""
 
-#: templates/admin-lead.php:372
+#: templates/admin-lead.php:379
 msgid "Campaign"
 msgstr ""
 
-#: templates/admin-lead.php:375
+#: templates/admin-lead.php:382
 msgid "Consent"
 msgstr ""
 
 #. translators: %s: date and time.
-#: templates/admin-lead.php:378
+#: templates/admin-lead.php:385
 #, php-format
 msgid "Given %s"
 msgstr ""
 
-#: templates/admin-lead.php:389
+#: templates/admin-lead.php:396
 msgid "Notification"
 msgstr ""
 
-#: templates/admin-lead.php:389
+#: templates/admin-lead.php:396
 msgid "Email sent"
 msgstr ""
 
-#: templates/admin-lead.php:393
+#: templates/admin-lead.php:400
 msgid "Delete this lead for good? This cannot be undone."
 msgstr ""
 
-#: templates/admin-lead.php:395
+#: templates/admin-lead.php:402
 msgid "Delete lead"
 msgstr ""
 

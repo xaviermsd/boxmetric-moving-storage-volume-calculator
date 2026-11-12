@@ -150,7 +150,7 @@ final class MSVCalc_Settings {
 			),
 			'send_copy'           => array(
 				'type'    => 'bool',
-				'default' => true,
+				'default' => false,
 			),
 			'field_phone'         => array(
 				'type'    => 'enum',

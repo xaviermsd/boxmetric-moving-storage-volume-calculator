@@ -386,7 +386,7 @@ final class MSVCalc_Admin {
 			'quote_enabled'       => array( 'quote', __( 'Quote form', 'boxmetric-moving-storage-volume-calculator' ), 'checkbox', __( 'Let visitors send their inventory for a quote', 'boxmetric-moving-storage-volume-calculator' ) ),
 			'notify_email'        => array( 'quote', __( 'Send requests to', 'boxmetric-moving-storage-volume-calculator' ), 'email', (string) get_option( 'admin_email' ) ),
 			'company_name'        => array( 'quote', __( 'Company name', 'boxmetric-moving-storage-volume-calculator' ), 'text', MSVCalc_Settings::text( 'company_name' ) ),
-			'send_copy'           => array( 'quote', __( 'Customer copy', 'boxmetric-moving-storage-volume-calculator' ), 'checkbox', __( 'Email the customer a copy of their inventory', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'send_copy'           => array( 'quote', __( 'Customer copy', 'boxmetric-moving-storage-volume-calculator' ), 'checkbox', __( 'Email the customer a copy of their inventory. Each address gets at most one copy a day.', 'boxmetric-moving-storage-volume-calculator' ) ),
 			'field_phone'         => array( 'quote', __( 'Phone field', 'boxmetric-moving-storage-volume-calculator' ), 'select', $visibility ),
 			'field_addresses'     => array( 'quote', __( 'From / to fields', 'boxmetric-moving-storage-volume-calculator' ), 'select', $visibility ),
 			'field_date'          => array( 'quote', __( 'Moving date field', 'boxmetric-moving-storage-volume-calculator' ), 'select', $visibility ),

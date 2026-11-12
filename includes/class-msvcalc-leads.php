@@ -119,6 +119,7 @@ final class MSVCalc_Leads {
 
 		if ( is_admin() ) {
 			add_action( 'admin_init', array( __CLASS__, 'upgrade' ) );
+			add_action( 'admin_init', array( __CLASS__, 'schedule' ) );
 			add_action( 'admin_post_msvcalc_export_leads', array( __CLASS__, 'export_csv' ) );
 		}
 	}

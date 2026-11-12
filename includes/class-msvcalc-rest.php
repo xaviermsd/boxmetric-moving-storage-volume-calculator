@@ -201,6 +201,10 @@ final class MSVCalc_REST {
 			'page'     => $url( $request->get_param( 'source' ) ),
 			'referrer' => $url( $request->get_param( 'referrer' ) ),
 		);
+		// The page must be on this site; anything else is dropped.
+		if ( '' !== $source['page'] && strtolower( (string) wp_parse_url( $source['page'], PHP_URL_HOST ) ) !== strtolower( (string) wp_parse_url( home_url(), PHP_URL_HOST ) ) ) {
+			$source['page'] = '';
+		}
 		$query  = (string) wp_parse_url( $source['page'], PHP_URL_QUERY );
 		$params = array();
 		wp_parse_str( $query, $params );
@@ -365,6 +369,14 @@ final class MSVCalc_REST {
 	 */
 	private static function rate_key(): string {
 		$ip = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
+		/**
+		 * Filters the visitor IP address used for the rate limit. Sites behind
+		 * a proxy or CDN that does not pass on the real address can return it
+		 * here. Forwarded headers are not trusted by default.
+		 *
+		 * @param string $ip The REMOTE_ADDR value.
+		 */
+		$ip = (string) apply_filters( 'msvcalc_client_ip', $ip );
 		if ( '' === $ip || ! filter_var( $ip, FILTER_VALIDATE_IP ) ) {
 			$ip = 'unknown';
 		}

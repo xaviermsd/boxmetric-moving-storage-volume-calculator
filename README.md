@@ -161,7 +161,7 @@ container and storage unit, every customer and move detail, and the full item li
 **Reply** goes straight to the customer.
 
 > [!NOTE]
-> If your site's email fails, the request is still saved as a lead and flagged. The Dashboard shows a notice,
+> If your site's email fails, the request is still saved as a lead and flagged. The plugin's screens show a notice,
 > and the lead has a **Send email again** button.
 
 ---
@@ -397,6 +397,8 @@ There is no build step for the scripts. The block uses the editor's global packa
 
 - **`msvcalc_quote_received`** (action)<br>Fires after a request is saved and emailed: `( int $lead_id, array $contact, array $result )`.
 - **`msvcalc_rate_limit`** (filter)<br>Requests allowed per visitor in the rate-limit window. Default `5`.
+- **`msvcalc_client_ip`** (filter)<br>The visitor IP address used for the rate limit. Sites behind a proxy or CDN that hides the real address can return it here.
+- **`msvcalc_copy_hourly_cap`** (filter)<br>Customer copies the site may send in one hour. Default `20`.
 - **`POST /wp-json/msvcalc/v1/quote`**<br>The endpoint the quote form sends to.
 
 </details>

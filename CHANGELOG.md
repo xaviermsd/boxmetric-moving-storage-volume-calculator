@@ -15,7 +15,7 @@ project uses [Semantic Versioning](https://semver.org/).
 - Box estimator: five quick questions suggest a count for each box size.
 - Quote form with a forgotten-rooms reminder that follows the chosen service, move details, consent and a confirmation screen.
 - Share link, branded print copy, and the list remembered in the visitor's browser.
-- Branded quote request email, with an optional copy for the customer.
+- Branded quote request email, with an optional copy for the customer (off by default, at most one a day per address).
 - Leads: statuses, follow-up reminders, notes, timeline, quick contact actions, and Excel, CSV and PDF export.
 - Failed-email flag with "Send email again", duplicate merging and rate limiting.
 - Staff access to Leads for Editors, privacy exporter and eraser, and automatic clean-up.

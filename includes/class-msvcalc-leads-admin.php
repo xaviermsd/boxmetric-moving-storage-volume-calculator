@@ -179,14 +179,14 @@ final class MSVCalc_Leads_Admin {
 
 	/**
 	 * Warns staff when notification emails failed, so no enquiry goes
-	 * unnoticed. Shown on the Dashboard and the plugin's screens only.
+	 * unnoticed. Shown on the plugin's own screens only.
 	 */
 	public static function mail_notice(): void {
 		if ( ! current_user_can( MSVCalc_Leads::CAP ) ) {
 			return;
 		}
 		$screen = get_current_screen();
-		if ( ! $screen || ( 'dashboard' !== $screen->id && false === strpos( (string) $screen->id, MSVCalc_Admin::MENU_SLUG ) ) ) {
+		if ( ! $screen || false === strpos( (string) $screen->id, MSVCalc_Admin::MENU_SLUG ) ) {
 			return;
 		}
 		$failed = self::count_meta( MSVCalc_Leads::MAIL_META, 'failed' );
