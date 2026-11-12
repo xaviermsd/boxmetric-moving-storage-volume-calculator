@@ -179,14 +179,6 @@ final class MSVCalc_Frontend {
 				</div>
 			</div>
 			<noscript><p class="msvcalc__noscript"><?php esc_html_e( 'Please turn on JavaScript to use the volume calculator.', 'moving-storage-volume-calculator' ); ?></p></noscript>
-			<?php if ( MSVCalc_Settings::get( 'show_credit' ) ) : ?>
-				<p class="msvcalc__credit">
-					<a href="<?php echo esc_url( 'https://wordpress.org/plugins/moving-storage-volume-calculator/' ); ?>" target="_blank" rel="noopener">
-						<?php MSVCalc_Icons::render( 'cube', 14 ); ?>
-						<span><?php esc_html_e( 'Powered by Moving & Storage Volume Calculator', 'moving-storage-volume-calculator' ); ?></span>
-					</a>
-				</p>
-			<?php endif; ?>
 		</div>
 		<?php
 		return (string) ob_get_clean();
@@ -267,7 +259,6 @@ final class MSVCalc_Frontend {
 				'storageKey'  => 'msvcalc_' . substr( md5( home_url() ), 0, 8 ),
 				'companyName' => MSVCalc_Settings::text( 'company_name' ),
 				'siteName'    => wp_specialchars_decode( (string) get_bloginfo( 'name' ), ENT_QUOTES ),
-				'showCredit'  => (bool) $settings['show_credit'],
 			),
 			'i18n'       => self::strings() + self::box_choices(),
 		);
@@ -454,7 +445,6 @@ final class MSVCalc_Frontend {
 			'printMargin'     => __( 'Packing and gaps (%d%%)', 'moving-storage-volume-calculator' ),
 			/* translators: %s: web address of the calculator page. */
 			'printSource'     => __( 'Made with the volume calculator at %s', 'moving-storage-volume-calculator' ),
-			'poweredBy'       => __( 'Powered by Moving & Storage Volume Calculator', 'moving-storage-volume-calculator' ),
 			'printCopy'       => __( 'Print a copy', 'moving-storage-volume-calculator' ),
 			'editList'        => __( 'Change my list', 'moving-storage-volume-calculator' ),
 			'startNew'        => __( 'Start a new list', 'moving-storage-volume-calculator' ),

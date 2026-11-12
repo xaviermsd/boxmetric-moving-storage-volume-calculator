@@ -787,12 +787,6 @@
 			this.main.appendChild( this.quoteView );
 		}
 
-		// The optional credit sits under the list, centred on that column.
-		const credit = this.root.querySelector( '.msvcalc__credit' );
-		if ( credit ) {
-			this.main.appendChild( credit );
-		}
-
 		this.summary = this.buildSummary();
 		this.app.appendChild( h( 'div.msvcalc__body', {}, [ this.main, this.summary ] ) );
 		this.app.appendChild( this.buildDock() );
@@ -3241,14 +3235,11 @@
 		table.appendChild( foot );
 		sheet.appendChild( table );
 
-		// Footer: estimate note, source page, optional credit.
+		// Footer: estimate note and source page.
 		const footer = h( 'footer.msvcalc-print__foot', {}, [
 			h( 'p', { text: this.marginNote.textContent } ),
 			h( 'p', { text: sprintf( t.printSource, pageUrl ) } ),
 		] );
-		if ( s.showCredit ) {
-			footer.appendChild( h( 'p.msvcalc-print__credit', {}, [ icon( 'cube', 12 ), h( 'span', { text: t.poweredBy } ) ] ) );
-		}
 		sheet.appendChild( footer );
 
 		document.body.appendChild( sheet );

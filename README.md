@@ -49,7 +49,7 @@ Built for **moving companies, removal firms, man and van services, self-storage 
 
 - **Better leads, fewer phone calls.** Every enquiry arrives with the full item list, the volume, the weight and the move details, so you can price it straight away.
 - **Fewer surprises on moving day.** Customers are reminded about the rooms they skipped, the most common reason estimates come out too small.
-- **Your brand, not ours.** Your colours, your units, your vehicles. No credit link unless you turn it on.
+- **Your brand, not ours.** Your colours, your units, your vehicles. No credit links anywhere.
 - **Your data stays yours.** Leads live in your own WordPress. Nothing is sent to anyone else.
 
 ## What do you want to do?

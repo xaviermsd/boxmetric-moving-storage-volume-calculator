@@ -58,7 +58,6 @@ final class MSVCalc_Admin {
 		add_action( 'admin_post_msvcalc_save_tables', array( __CLASS__, 'save_tables' ) );
 		add_action( 'admin_post_msvcalc_reset_tables', array( __CLASS__, 'reset_tables' ) );
 		add_filter( 'plugin_action_links_' . plugin_basename( MSVCALC_FILE ), array( __CLASS__, 'action_links' ) );
-		add_filter( 'admin_footer_text', array( __CLASS__, 'footer_text' ) );
 		add_filter( 'removable_query_args', array( __CLASS__, 'removable_args' ) );
 	}
 
@@ -199,26 +198,6 @@ final class MSVCalc_Admin {
 		$settings = sprintf( '<a href="%1$s">%2$s</a>', esc_url( admin_url( 'admin.php?page=' . self::SETTINGS_SLUG ) ), esc_html__( 'Settings', 'moving-storage-volume-calculator' ) );
 		array_unshift( $links, $settings );
 		return $links;
-	}
-
-	/**
-	 * Footer note on the plugin's screens.
-	 *
-	 * @param string|mixed $text Footer text.
-	 * @return string|mixed
-	 */
-	public static function footer_text( $text ) {
-		$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
-		if ( $screen && ( false !== strpos( (string) $screen->id, self::MENU_SLUG ) || MSVCalc_Leads::POST_TYPE === $screen->post_type ) ) {
-			return sprintf(
-				/* translators: 1: plugin name, 2: author name, 3: link to leave a review. */
-				esc_html__( 'Thank you for using %1$s by %2$s. Enjoying it? %3$s', 'moving-storage-volume-calculator' ),
-				'<strong>' . esc_html__( 'Moving & Storage Volume Calculator', 'moving-storage-volume-calculator' ) . '</strong>',
-				esc_html__( 'Harsh Prajapati', 'moving-storage-volume-calculator' ),
-				'<a href="' . esc_url( 'https://wordpress.org/support/plugin/moving-storage-volume-calculator/reviews/#new-post' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Leave a ★★★★★ review', 'moving-storage-volume-calculator' ) . '</a>'
-			);
-		}
-		return $text;
 	}
 
 	/**
@@ -404,7 +383,6 @@ final class MSVCalc_Admin {
 			'accent_2'            => array( 'look', __( 'Gradient colour', 'moving-storage-volume-calculator' ), 'color', __( 'Blended with the main colour in buttons, the total and the fill bars.', 'moving-storage-volume-calculator' ) ),
 			'radius'              => array( 'look', __( 'Corner roundness', 'moving-storage-volume-calculator' ), 'number', 'px' ),
 			'animations'          => array( 'look', __( 'Animations', 'moving-storage-volume-calculator' ), 'checkbox', __( 'Use smooth transitions (always off for visitors who prefer reduced motion)', 'moving-storage-volume-calculator' ) ),
-			'show_credit'         => array( 'look', __( 'Plugin credit', 'moving-storage-volume-calculator' ), 'checkbox', __( 'Show a small "Powered by Moving & Storage Volume Calculator" link under the calculator and in customer emails. Off unless you turn it on; it helps other businesses find this free plugin.', 'moving-storage-volume-calculator' ) ),
 			'quote_enabled'       => array( 'quote', __( 'Quote form', 'moving-storage-volume-calculator' ), 'checkbox', __( 'Let visitors send their inventory for a quote', 'moving-storage-volume-calculator' ) ),
 			'notify_email'        => array( 'quote', __( 'Send requests to', 'moving-storage-volume-calculator' ), 'email', (string) get_option( 'admin_email' ) ),
 			'company_name'        => array( 'quote', __( 'Company name', 'moving-storage-volume-calculator' ), 'text', MSVCalc_Settings::text( 'company_name' ) ),

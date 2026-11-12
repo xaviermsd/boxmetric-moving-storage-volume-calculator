@@ -33,7 +33,7 @@ Visitors list what they are moving, room by room, and see the total volume updat
 * **A forgotten-areas check** before the quote reminds visitors of areas they skipped, such as the garage or garden. It follows the service they pick, so an office move gets office areas and storage gets the usual storage extras.
 * **Undo** after clearing the list.
 * Light, dark or automatic theme in your brand colours.
-* **No credit links unless you want them.** An optional "Powered by" line can be turned on under Volume Calculator > Settings > Look & feel; it is off by default.
+* **No credit links.** Nothing on your site, in your emails or on printouts links back to this plugin.
 
 = For your business =
 

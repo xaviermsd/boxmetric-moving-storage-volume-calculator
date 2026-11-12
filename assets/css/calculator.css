@@ -216,40 +216,6 @@
 	color: var(--msvcalc-muted);
 }
 
-.msvcalc__credit {
-	display: flex;
-	justify-content: center;
-	margin: 22px 0 4px !important;
-	padding: 0 !important;
-	text-align: center;
-	font-size: 0.75rem !important;
-	line-height: 1.4;
-}
-
-.msvcalc__credit a {
-	display: inline-flex;
-	align-items: center;
-	gap: 6px;
-	color: var(--msvcalc-muted) !important;
-	text-decoration: none !important;
-	opacity: 0.85;
-	transition: opacity var(--msvcalc-fast), color var(--msvcalc-fast);
-}
-
-.msvcalc__credit a:hover,
-.msvcalc__credit a:focus-visible {
-	color: var(--msvcalc-accent) !important;
-	opacity: 1;
-}
-
-.msvcalc__credit .msvcalc-icon {
-	color: var(--msvcalc-accent);
-}
-
-.msvcalc--quote .msvcalc__credit {
-	display: flex;
-}
-
 .msvcalc__noscript {
 	padding: 16px;
 	border-radius: var(--msvcalc-r-sm);
@@ -4065,18 +4031,6 @@ html.msvcalc-lock body {
 		margin: 0 0 2pt;
 		overflow-wrap: anywhere;
 	}
-
-	.msvcalc-print__credit {
-		display: flex;
-		align-items: center;
-		gap: 4pt;
-		margin-top: 6pt !important;
-		color: #8a99a6;
-	}
-
-	.msvcalc-print__credit svg {
-		color: var(--msvcalc-print-a, #0fb5ba);
-	}
 }
 
 /* ------------------------------------------------------------------ */
@@ -4116,8 +4070,7 @@ html.msvcalc-lock body {
 
 .msvcalc--sent .msvcalc__toolbar,
 .msvcalc--sent .msvcalc__summary,
-.msvcalc--sent .msvcalc__dock-wrap,
-.msvcalc--sent .msvcalc__credit {
+.msvcalc--sent .msvcalc__dock-wrap {
 	display: none !important;
 }
 

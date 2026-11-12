@@ -269,7 +269,6 @@ $msvcalc_head = static function ( string $title, string $sub ) use ( $msvcalc_co
 			/* translators: %s: business name. */
 			echo esc_html( sprintf( __( '%s · Volumes and weights are estimates based on typical item sizes.', 'moving-storage-volume-calculator' ), $msvcalc_company ) );
 			?>
-			<span><?php esc_html_e( 'Moving & Storage Volume Calculator for WordPress', 'moving-storage-volume-calculator' ); ?></span>
 		</footer>
 	</main>
 <?php endforeach; ?>

@@ -281,15 +281,6 @@ $msvcalc_cell     = 'border-bottom:1px solid #f0f4f6;padding:6px 0;';
 						$company
 					)
 				);
-				if ( $msvcalc_is_business ) :
-					?>
-					<br><span style="color:#8a99a6;"><?php esc_html_e( 'Moving & Storage Volume Calculator for WordPress', 'moving-storage-volume-calculator' ); ?></span>
-					<?php
-				elseif ( MSVCalc_Settings::get( 'show_credit' ) ) :
-					?>
-					<br><a href="<?php echo esc_url( 'https://wordpress.org/plugins/moving-storage-volume-calculator/' ); ?>" style="color:#8a99a6;text-decoration:none;"><?php esc_html_e( 'Powered by Moving & Storage Volume Calculator', 'moving-storage-volume-calculator' ); ?></a>
-					<?php
-				endif;
 				?>
 			</p>
 		</td>

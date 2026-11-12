@@ -135,10 +135,6 @@ final class MSVCalc_Settings {
 				'type'    => 'bool',
 				'default' => true,
 			),
-			'show_credit'         => array(
-				'type'    => 'bool',
-				'default' => false,
-			),
 			// Quote request.
 			'quote_enabled'       => array(
 				'type'    => 'bool',
