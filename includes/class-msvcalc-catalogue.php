@@ -74,27 +74,27 @@ final class MSVCalc_Catalogue {
 		return array(
 			array(
 				'id'   => 'home',
-				'name' => __( 'Home', 'moving-storage-volume-calculator' ),
+				'name' => __( 'Home', 'boxmetric-moving-storage-volume-calculator' ),
 				'icon' => 'living',
 			),
 			array(
 				'id'   => 'outdoor',
-				'name' => __( 'Garage & garden', 'moving-storage-volume-calculator' ),
+				'name' => __( 'Garage & garden', 'boxmetric-moving-storage-volume-calculator' ),
 				'icon' => 'garden',
 			),
 			array(
 				'id'   => 'hobbies',
-				'name' => __( 'Specialty items', 'moving-storage-volume-calculator' ),
+				'name' => __( 'Specialty items', 'boxmetric-moving-storage-volume-calculator' ),
 				'icon' => 'piano',
 			),
 			array(
 				'id'   => 'boxes',
-				'name' => __( 'Boxes & packing', 'moving-storage-volume-calculator' ),
+				'name' => __( 'Boxes & packing', 'boxmetric-moving-storage-volume-calculator' ),
 				'icon' => 'boxes',
 			),
 			array(
 				'id'   => 'business',
-				'name' => __( 'Business', 'moving-storage-volume-calculator' ),
+				'name' => __( 'Business', 'boxmetric-moving-storage-volume-calculator' ),
 				'icon' => 'office',
 			),
 		);

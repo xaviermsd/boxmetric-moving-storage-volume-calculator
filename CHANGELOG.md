@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to Moving & Storage Volume Calculator are listed here.
+All notable changes to BoxMetric are listed here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the
 project uses [Semantic Versioning](https://semver.org/).
 
@@ -20,6 +20,6 @@ project uses [Semantic Versioning](https://semver.org/).
 - Failed-email flag with "Send email again", duplicate merging and rate limiting.
 - Staff access to Leads for Editors, privacy exporter and eraser, and automatic clean-up.
 - Consent record on every lead: when the customer agreed, the exact wording and the privacy policy link shown, also in the exports and the personal data export.
-- Volume Calculator block and `[msvcalc_calculator]` shortcode, light, dark or automatic theme.
+- BoxMetric Volume Calculator block and `[msvcalc_calculator]` shortcode, light, dark or automatic theme.
 
-[1.0.0]: https://github.com/xaviermsd/moving-storage-volume-calculator/releases/tag/v1.0.0
+[1.0.0]: https://github.com/xaviermsd/boxmetric-moving-storage-volume-calculator/releases/tag/v1.0.0

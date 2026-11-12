@@ -280,15 +280,15 @@ final class MSVCalc_Settings {
 		}
 		switch ( $key ) {
 			case 'title':
-				return __( 'How much are you moving?', 'moving-storage-volume-calculator' );
+				return __( 'How much are you moving?', 'boxmetric-moving-storage-volume-calculator' );
 			case 'intro':
-				return __( 'Add your furniture and boxes room by room. We work out the volume, the right vehicle and the storage space you need.', 'moving-storage-volume-calculator' );
+				return __( 'Add your furniture and boxes room by room. We work out the volume, the right vehicle and the storage space you need.', 'boxmetric-moving-storage-volume-calculator' );
 			case 'cta_text':
-				return __( 'Get my free quote', 'moving-storage-volume-calculator' );
+				return __( 'Get my free quote', 'boxmetric-moving-storage-volume-calculator' );
 			case 'consent_text':
-				return __( 'I agree that my details and inventory are stored and used to prepare my quote.', 'moving-storage-volume-calculator' );
+				return __( 'I agree that my details and inventory are stored and used to prepare my quote.', 'boxmetric-moving-storage-volume-calculator' );
 			case 'success_message':
-				return __( 'Thank you! Your inventory is on its way. We will be in touch shortly with your quote.', 'moving-storage-volume-calculator' );
+				return __( 'Thank you! Your inventory is on its way. We will be in touch shortly with your quote.', 'boxmetric-moving-storage-volume-calculator' );
 			case 'company_name':
 				return wp_specialchars_decode( (string) get_bloginfo( 'name' ), ENT_QUOTES );
 			case 'notify_email':
@@ -355,7 +355,7 @@ final class MSVCalc_Settings {
 				case 'email':
 					$value = is_string( $raw ) ? sanitize_email( $raw ) : '';
 					if ( '' !== $value && ! is_email( $value ) ) {
-						add_settings_error( self::OPTION, 'msvcalc_bad_email', __( 'The notification email address is not valid, so the site admin email will be used.', 'moving-storage-volume-calculator' ) );
+						add_settings_error( self::OPTION, 'msvcalc_bad_email', __( 'The notification email address is not valid, so the site admin email will be used.', 'boxmetric-moving-storage-volume-calculator' ) );
 						$value = '';
 					}
 					$output[ $key ] = $value;

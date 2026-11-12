@@ -78,7 +78,7 @@ final class MSVCalc_REST {
 	 */
 	public static function quote_permission() {
 		if ( ! MSVCalc_Settings::get( 'quote_enabled' ) ) {
-			return new WP_Error( 'msvcalc_disabled', __( 'Quote requests are turned off.', 'moving-storage-volume-calculator' ), array( 'status' => 403 ) );
+			return new WP_Error( 'msvcalc_disabled', __( 'Quote requests are turned off.', 'boxmetric-moving-storage-volume-calculator' ), array( 'status' => 403 ) );
 		}
 		return true;
 	}
@@ -104,7 +104,7 @@ final class MSVCalc_REST {
 	public static function quote( WP_REST_Request $request ) {
 		$nonce = $request->get_param( 'nonce' );
 		if ( ! is_string( $nonce ) || ! wp_verify_nonce( sanitize_text_field( $nonce ), self::NONCE_ACTION ) ) {
-			return new WP_Error( 'msvcalc_expired', __( 'Your session has expired. Please try again.', 'moving-storage-volume-calculator' ), array( 'status' => 403 ) );
+			return new WP_Error( 'msvcalc_expired', __( 'Your session has expired. Please try again.', 'boxmetric-moving-storage-volume-calculator' ), array( 'status' => 403 ) );
 		}
 
 		// Honeypot: real visitors never see or fill this field.
@@ -119,7 +119,7 @@ final class MSVCalc_REST {
 		}
 
 		if ( self::rate_limited() ) {
-			return new WP_Error( 'msvcalc_rate_limited', __( 'Too many requests. Please wait a few minutes and try again.', 'moving-storage-volume-calculator' ), array( 'status' => 429 ) );
+			return new WP_Error( 'msvcalc_rate_limited', __( 'Too many requests. Please wait a few minutes and try again.', 'boxmetric-moving-storage-volume-calculator' ), array( 'status' => 429 ) );
 		}
 
 		$contact = self::validate_contact( $request );
@@ -136,7 +136,7 @@ final class MSVCalc_REST {
 		if ( $result['count'] < 1 ) {
 			return new WP_Error(
 				'msvcalc_empty',
-				__( 'Please add at least one item before asking for a quote.', 'moving-storage-volume-calculator' ),
+				__( 'Please add at least one item before asking for a quote.', 'boxmetric-moving-storage-volume-calculator' ),
 				array( 'status' => 400 )
 			);
 		}
@@ -163,7 +163,7 @@ final class MSVCalc_REST {
 		}
 
 		if ( ! $sent && ! $lead_id ) {
-			return new WP_Error( 'msvcalc_not_sent', __( 'Sorry, we could not send your request. Please try again or contact us directly.', 'moving-storage-volume-calculator' ), array( 'status' => 500 ) );
+			return new WP_Error( 'msvcalc_not_sent', __( 'Sorry, we could not send your request. Please try again or contact us directly.', 'boxmetric-moving-storage-volume-calculator' ), array( 'status' => 500 ) );
 		}
 
 		/**
@@ -238,10 +238,10 @@ final class MSVCalc_REST {
 		$contact['notes'] = function_exists( 'mb_substr' ) ? mb_substr( $contact['notes'], 0, 2000 ) : substr( $contact['notes'], 0, 2000 );
 
 		if ( strlen( $contact['name'] ) < 2 ) {
-			$errors['name'] = __( 'Please enter your name.', 'moving-storage-volume-calculator' );
+			$errors['name'] = __( 'Please enter your name.', 'boxmetric-moving-storage-volume-calculator' );
 		}
 		if ( ! is_email( $contact['email'] ) ) {
-			$errors['email'] = __( 'Please enter a valid email address.', 'moving-storage-volume-calculator' );
+			$errors['email'] = __( 'Please enter a valid email address.', 'boxmetric-moving-storage-volume-calculator' );
 		}
 
 		$phone_rule = (string) MSVCalc_Settings::get( 'field_phone' );
@@ -250,7 +250,7 @@ final class MSVCalc_REST {
 		} elseif ( '' !== $contact['phone'] || 'required' === $phone_rule ) {
 			$digits = preg_replace( '/\D+/', '', $contact['phone'] );
 			if ( ! preg_match( '/^[0-9+().\-\s]{6,30}$/', $contact['phone'] ) || strlen( (string) $digits ) < 6 ) {
-				$errors['phone'] = __( 'Please enter a valid phone number.', 'moving-storage-volume-calculator' );
+				$errors['phone'] = __( 'Please enter a valid phone number.', 'boxmetric-moving-storage-volume-calculator' );
 			}
 		}
 
@@ -260,10 +260,10 @@ final class MSVCalc_REST {
 			$contact['to']   = '';
 		} elseif ( 'required' === $address_rule ) {
 			if ( '' === $contact['from'] ) {
-				$errors['from'] = __( 'Please tell us where you are moving from.', 'moving-storage-volume-calculator' );
+				$errors['from'] = __( 'Please tell us where you are moving from.', 'boxmetric-moving-storage-volume-calculator' );
 			}
 			if ( '' === $contact['to'] ) {
-				$errors['to'] = __( 'Please tell us where you are moving to.', 'moving-storage-volume-calculator' );
+				$errors['to'] = __( 'Please tell us where you are moving to.', 'boxmetric-moving-storage-volume-calculator' );
 			}
 		}
 
@@ -275,7 +275,7 @@ final class MSVCalc_REST {
 			$min  = new DateTime( 'today', wp_timezone() );
 			$max  = ( new DateTime( 'today', wp_timezone() ) )->modify( '+3 years' );
 			if ( ! $date || $date->format( 'Y-m-d' ) !== $contact['date'] || $date < $min || $date > $max ) {
-				$errors['date'] = __( 'Please pick a moving date from today onwards.', 'moving-storage-volume-calculator' );
+				$errors['date'] = __( 'Please pick a moving date from today onwards.', 'boxmetric-moving-storage-volume-calculator' );
 			}
 		}
 
@@ -284,7 +284,7 @@ final class MSVCalc_REST {
 			$contact['service'] = '';
 		} elseif ( '' !== $contact['service'] || 'required' === $service_rule ) {
 			if ( ! isset( MSVCalc_Leads::services()[ $contact['service'] ] ) ) {
-				$errors['service'] = __( 'Please choose the service you need.', 'moving-storage-volume-calculator' );
+				$errors['service'] = __( 'Please choose the service you need.', 'boxmetric-moving-storage-volume-calculator' );
 			}
 		}
 
@@ -296,7 +296,7 @@ final class MSVCalc_REST {
 			$contact[ $end . '_floor' ] = 'hidden' !== $access_rule && isset( MSVCalc_Leads::floors()[ $floor ] ) ? $floor : '';
 			$contact[ $end . '_lift' ]  = 'hidden' !== $access_rule && true === rest_sanitize_boolean( $request->get_param( $end . '_lift' ) ) ? '1' : '';
 			if ( 'required' === $access_rule && '' === $contact[ $end . '_floor' ] && ( 'from' === $end || '' !== $contact['to'] ) ) {
-				$errors[ $end . '_floor' ] = __( 'Please choose the floor.', 'moving-storage-volume-calculator' );
+				$errors[ $end . '_floor' ] = __( 'Please choose the floor.', 'boxmetric-moving-storage-volume-calculator' );
 			}
 		}
 		$parking            = $request->get_param( 'parking' );
@@ -315,13 +315,13 @@ final class MSVCalc_REST {
 		}
 
 		if ( true !== rest_sanitize_boolean( $request->get_param( 'consent' ) ) ) {
-			$errors['consent'] = __( 'Please agree so we can prepare your quote.', 'moving-storage-volume-calculator' );
+			$errors['consent'] = __( 'Please agree so we can prepare your quote.', 'boxmetric-moving-storage-volume-calculator' );
 		}
 
 		if ( $errors ) {
 			return new WP_Error(
 				'msvcalc_invalid',
-				__( 'Please check the highlighted fields.', 'moving-storage-volume-calculator' ),
+				__( 'Please check the highlighted fields.', 'boxmetric-moving-storage-volume-calculator' ),
 				array(
 					'status' => 400,
 					'fields' => $errors,

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Build the release zip for WordPress.org: copies the plugin without the files
-# listed in .distignore into build/moving-storage-volume-calculator and zips it.
+# listed in .distignore into build/boxmetric-moving-storage-volume-calculator and zips it.
 set -euo pipefail
 
-SLUG="moving-storage-volume-calculator"
+SLUG="boxmetric-moving-storage-volume-calculator"
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 BUILD="$ROOT/build"
 

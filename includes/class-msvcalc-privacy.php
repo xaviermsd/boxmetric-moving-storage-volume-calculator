@@ -36,13 +36,13 @@ final class MSVCalc_Privacy {
 		if ( ! function_exists( 'wp_add_privacy_policy_content' ) ) {
 			return;
 		}
-		$content  = '<p class="privacy-policy-tutorial">' . esc_html__( 'Moving & Storage Volume Calculator does not track visitors and makes no requests to outside services. It only handles personal data when a visitor sends a quote request.', 'moving-storage-volume-calculator' ) . '</p>';
-		$content .= '<strong class="privacy-policy-tutorial">' . esc_html__( 'Suggested text:', 'moving-storage-volume-calculator' ) . '</strong> ';
-		$content .= '<p>' . esc_html__( 'When you ask for a quote with our volume calculator, we collect the details you enter (such as your name, email address, phone number, moving addresses and date) and your list of items. We use them only to prepare and send your quote. They are emailed to us and kept in our website database until we delete them, or for the period we set for quote requests. You can ask us for a copy of this data or ask us to erase it.', 'moving-storage-volume-calculator' ) . '</p>';
-		$content .= '<p>' . esc_html__( 'With your request we also record when you agreed to our consent statement and its wording, the page you sent it from and the website that referred you (if any). Our team may add internal notes and reminders about your enquiry. All of this is included when you ask for a copy of your data and removed when you ask us to erase it.', 'moving-storage-volume-calculator' ) . '</p>';
-		$content .= '<p>' . esc_html__( 'If you use the calculator without sending a request, your list is kept only in your own browser (local storage) so you can come back to it. It is not sent to us.', 'moving-storage-volume-calculator' ) . '</p>';
+		$content  = '<p class="privacy-policy-tutorial">' . esc_html__( 'BoxMetric does not track visitors and makes no requests to outside services. It only handles personal data when a visitor sends a quote request.', 'boxmetric-moving-storage-volume-calculator' ) . '</p>';
+		$content .= '<strong class="privacy-policy-tutorial">' . esc_html__( 'Suggested text:', 'boxmetric-moving-storage-volume-calculator' ) . '</strong> ';
+		$content .= '<p>' . esc_html__( 'When you ask for a quote with our volume calculator, we collect the details you enter (such as your name, email address, phone number, moving addresses and date) and your list of items. We use them only to prepare and send your quote. They are emailed to us and kept in our website database until we delete them, or for the period we set for quote requests. You can ask us for a copy of this data or ask us to erase it.', 'boxmetric-moving-storage-volume-calculator' ) . '</p>';
+		$content .= '<p>' . esc_html__( 'With your request we also record when you agreed to our consent statement and its wording, the page you sent it from and the website that referred you (if any). Our team may add internal notes and reminders about your enquiry. All of this is included when you ask for a copy of your data and removed when you ask us to erase it.', 'boxmetric-moving-storage-volume-calculator' ) . '</p>';
+		$content .= '<p>' . esc_html__( 'If you use the calculator without sending a request, your list is kept only in your own browser (local storage) so you can come back to it. It is not sent to us.', 'boxmetric-moving-storage-volume-calculator' ) . '</p>';
 
-		wp_add_privacy_policy_content( __( 'Moving & Storage Volume Calculator', 'moving-storage-volume-calculator' ), wp_kses_post( $content ) );
+		wp_add_privacy_policy_content( 'BoxMetric', wp_kses_post( $content ) );
 	}
 
 	/**
@@ -52,8 +52,8 @@ final class MSVCalc_Privacy {
 	 * @return array<string, array<string, mixed>>
 	 */
 	public static function register_exporter( array $exporters ): array {
-		$exporters['moving-storage-volume-calculator'] = array(
-			'exporter_friendly_name' => __( 'Volume calculator quote requests', 'moving-storage-volume-calculator' ),
+		$exporters['boxmetric-moving-storage-volume-calculator'] = array(
+			'exporter_friendly_name' => __( 'Volume calculator quote requests', 'boxmetric-moving-storage-volume-calculator' ),
 			'callback'               => array( __CLASS__, 'export' ),
 		);
 		return $exporters;
@@ -66,8 +66,8 @@ final class MSVCalc_Privacy {
 	 * @return array<string, array<string, mixed>>
 	 */
 	public static function register_eraser( array $erasers ): array {
-		$erasers['moving-storage-volume-calculator'] = array(
-			'eraser_friendly_name' => __( 'Volume calculator quote requests', 'moving-storage-volume-calculator' ),
+		$erasers['boxmetric-moving-storage-volume-calculator'] = array(
+			'eraser_friendly_name' => __( 'Volume calculator quote requests', 'boxmetric-moving-storage-volume-calculator' ),
 			'callback'             => array( __CLASS__, 'erase' ),
 		);
 		return $erasers;
@@ -123,16 +123,16 @@ final class MSVCalc_Privacy {
 			}
 
 			$fields  = array(
-				__( 'Sent', 'moving-storage-volume-calculator' )        => (string) get_the_date( 'Y-m-d H:i', $id ),
-				__( 'Name', 'moving-storage-volume-calculator' )        => (string) ( $contact['name'] ?? '' ),
-				__( 'Email', 'moving-storage-volume-calculator' )       => (string) ( $contact['email'] ?? '' ),
-				__( 'Phone', 'moving-storage-volume-calculator' )       => (string) ( $contact['phone'] ?? '' ),
-				__( 'Moving from', 'moving-storage-volume-calculator' ) => (string) ( $contact['from'] ?? '' ),
-				__( 'Moving to', 'moving-storage-volume-calculator' )   => (string) ( $contact['to'] ?? '' ),
-				__( 'Move date', 'moving-storage-volume-calculator' )   => (string) ( $contact['date'] ?? '' ),
-				__( 'Notes', 'moving-storage-volume-calculator' )       => (string) ( $contact['notes'] ?? '' ),
-				__( 'Volume (m³)', 'moving-storage-volume-calculator' ) => (string) ( $result['m3'] ?? '' ),
-				__( 'Inventory', 'moving-storage-volume-calculator' )   => implode( ', ', $items ),
+				__( 'Sent', 'boxmetric-moving-storage-volume-calculator' )        => (string) get_the_date( 'Y-m-d H:i', $id ),
+				__( 'Name', 'boxmetric-moving-storage-volume-calculator' )        => (string) ( $contact['name'] ?? '' ),
+				__( 'Email', 'boxmetric-moving-storage-volume-calculator' )       => (string) ( $contact['email'] ?? '' ),
+				__( 'Phone', 'boxmetric-moving-storage-volume-calculator' )       => (string) ( $contact['phone'] ?? '' ),
+				__( 'Moving from', 'boxmetric-moving-storage-volume-calculator' ) => (string) ( $contact['from'] ?? '' ),
+				__( 'Moving to', 'boxmetric-moving-storage-volume-calculator' )   => (string) ( $contact['to'] ?? '' ),
+				__( 'Move date', 'boxmetric-moving-storage-volume-calculator' )   => (string) ( $contact['date'] ?? '' ),
+				__( 'Notes', 'boxmetric-moving-storage-volume-calculator' )       => (string) ( $contact['notes'] ?? '' ),
+				__( 'Volume (m³)', 'boxmetric-moving-storage-volume-calculator' ) => (string) ( $result['m3'] ?? '' ),
+				__( 'Inventory', 'boxmetric-moving-storage-volume-calculator' )   => implode( ', ', $items ),
 			);
 			$details = MSVCalc_Leads::detail_rows( $contact );
 			foreach ( $details as $label => $value ) {
@@ -140,22 +140,22 @@ final class MSVCalc_Privacy {
 					$fields[ $label ] = $value;
 				}
 			}
-			$fields[ __( 'Status', 'moving-storage-volume-calculator' ) ] = (string) ( MSVCalc_Leads::statuses()[ MSVCalc_Leads::status( $id ) ] ?? '' );
+			$fields[ __( 'Status', 'boxmetric-moving-storage-volume-calculator' ) ] = (string) ( MSVCalc_Leads::statuses()[ MSVCalc_Leads::status( $id ) ] ?? '' );
 
 			$consent = (array) get_post_meta( $id, MSVCalc_Leads::CONSENT_META, true );
 			if ( ! empty( $consent['time'] ) ) {
-				$fields[ __( 'Consent given', 'moving-storage-volume-calculator' ) ] = wp_date( 'Y-m-d H:i', (int) $consent['time'] ) . ( empty( $consent['text'] ) ? '' : ', ' . (string) $consent['text'] );
+				$fields[ __( 'Consent given', 'boxmetric-moving-storage-volume-calculator' ) ] = wp_date( 'Y-m-d H:i', (int) $consent['time'] ) . ( empty( $consent['text'] ) ? '' : ', ' . (string) $consent['text'] );
 				if ( ! empty( $consent['privacy'] ) ) {
-					$fields[ __( 'Privacy policy shown', 'moving-storage-volume-calculator' ) ] = (string) $consent['privacy'];
+					$fields[ __( 'Privacy policy shown', 'boxmetric-moving-storage-volume-calculator' ) ] = (string) $consent['privacy'];
 				}
 			}
 			$source = (array) get_post_meta( $id, MSVCalc_Leads::SOURCE_META, true );
-			$fields[ __( 'Sent from page', 'moving-storage-volume-calculator' ) ] = (string) ( $source['page'] ?? '' );
-			$fields[ __( 'Referring site', 'moving-storage-volume-calculator' ) ] = (string) ( $source['referrer'] ?? '' );
+			$fields[ __( 'Sent from page', 'boxmetric-moving-storage-volume-calculator' ) ] = (string) ( $source['page'] ?? '' );
+			$fields[ __( 'Referring site', 'boxmetric-moving-storage-volume-calculator' ) ] = (string) ( $source['referrer'] ?? '' );
 
 			$followup = (string) get_post_meta( $id, MSVCalc_Leads::FOLLOWUP_META, true );
 			if ( '' !== $followup ) {
-				$fields[ __( 'Follow-up', 'moving-storage-volume-calculator' ) ] = trim( $followup . ' ' . (string) get_post_meta( $id, MSVCalc_Leads::FOLLOWUP_NOTE_META, true ) );
+				$fields[ __( 'Follow-up', 'boxmetric-moving-storage-volume-calculator' ) ] = trim( $followup . ' ' . (string) get_post_meta( $id, MSVCalc_Leads::FOLLOWUP_NOTE_META, true ) );
 			}
 			$notes = array();
 			foreach ( MSVCalc_Leads::history( $id ) as $entry ) {
@@ -163,7 +163,7 @@ final class MSVCalc_Privacy {
 					$notes[] = wp_date( 'Y-m-d', (int) ( $entry['time'] ?? 0 ) ) . ': ' . (string) $entry['text'];
 				}
 			}
-			$fields[ __( 'Notes by our team', 'moving-storage-volume-calculator' ) ] = implode( "\n", $notes );
+			$fields[ __( 'Notes by our team', 'boxmetric-moving-storage-volume-calculator' ) ] = implode( "\n", $notes );
 
 			$rows = array();
 			foreach ( $fields as $name => $value ) {
@@ -177,7 +177,7 @@ final class MSVCalc_Privacy {
 
 			$data[] = array(
 				'group_id'    => 'msvcalc-quote-requests',
-				'group_label' => __( 'Volume calculator quote requests', 'moving-storage-volume-calculator' ),
+				'group_label' => __( 'Volume calculator quote requests', 'boxmetric-moving-storage-volume-calculator' ),
 				'item_id'     => 'msvcalc-lead-' . $id,
 				'data'        => $rows,
 			);

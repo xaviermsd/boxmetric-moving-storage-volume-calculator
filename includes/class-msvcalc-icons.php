@@ -311,62 +311,62 @@ final class MSVCalc_Icons {
 		$groups   = array(
 			array(
 				'id'    => 'rooms',
-				'name'  => __( 'Rooms & places', 'moving-storage-volume-calculator' ),
+				'name'  => __( 'Rooms & places', 'boxmetric-moving-storage-volume-calculator' ),
 				'icons' => array( 'living', 'bedroom', 'kitchen', 'dining', 'bathroom', 'office', 'kids', 'nursery', 'laundry', 'garage', 'garden', 'boxes', 'hallway', 'specialty', 'loft', 'gym', 'closet', 'outdoor', 'home' ),
 			),
 			array(
 				'id'    => 'seating',
-				'name'  => __( 'Sofas & seating', 'moving-storage-volume-calculator' ),
+				'name'  => __( 'Sofas & seating', 'boxmetric-moving-storage-volume-calculator' ),
 				'icons' => array( 'sofa', 'corner-sofa', 'armchair', 'chaise', 'recliner', 'footstool', 'bean-bag', 'chair', 'office-chair', 'stool', 'bench', 'high-chair', 'salon-chair', 'lounger', 'swing' ),
 			),
 			array(
 				'id'    => 'beds',
-				'name'  => __( 'Beds & wardrobes', 'moving-storage-volume-calculator' ),
+				'name'  => __( 'Beds & wardrobes', 'boxmetric-moving-storage-volume-calculator' ),
 				'icons' => array( 'bed', 'single-bed', 'cot', 'cot-baby', 'mattress', 'bunk-bed', 'headboard', 'day-bed', 'hospital-bed', 'wardrobe', 'drawers', 'bedside', 'dressing-table', 'chest', 'cheval', 'mirror', 'clothes-rail', 'coat-stand', 'shoe-rack' ),
 			),
 			array(
 				'id'    => 'tables',
-				'name'  => __( 'Tables & storage', 'moving-storage-volume-calculator' ),
+				'name'  => __( 'Tables & storage', 'boxmetric-moving-storage-volume-calculator' ),
 				'icons' => array( 'table', 'coffee-table', 'side-table', 'hall-table', 'dining-table', 'desk', 'school-desk', 'meeting-table', 'reception', 'counter', 'prep-table', 'workbench', 'drinks-trolley', 'bookcase', 'cabinet', 'sideboard', 'display-cabinet', 'cupboard', 'shelf', 'shelving', 'media-rack', 'filing', 'pedestal', 'locker', 'safe', 'divider' ),
 			),
 			array(
 				'id'    => 'appliances',
-				'name'  => __( 'Kitchen & appliances', 'moving-storage-volume-calculator' ),
+				'name'  => __( 'Kitchen & appliances', 'boxmetric-moving-storage-volume-calculator' ),
 				'icons' => array( 'fridge', 'fridge-american', 'freezer', 'washer', 'dryer', 'washer-dryer', 'dishwasher', 'cooker', 'range-cooker', 'oven', 'microwave', 'hood', 'kettle', 'coffee-machine', 'water-dispenser', 'pot', 'cutlery', 'wine', 'ice-machine', 'vacuum', 'ironing-board', 'airer', 'laundry-basket', 'mop', 'bin', 'aircon', 'fan', 'ceiling-fan', 'heater' ),
 			),
 			array(
 				'id'    => 'electronics',
-				'name'  => __( 'Electronics & decor', 'moving-storage-volume-calculator' ),
+				'name'  => __( 'Electronics & decor', 'boxmetric-moving-storage-volume-calculator' ),
 				'icons' => array( 'tv', 'computer', 'laptop', 'printer', 'photocopier', 'shredder', 'server', 'speaker', 'player', 'radio', 'projector', 'gamepad', 'arcade', 'register', 'sign', 'whiteboard', 'lamp', 'chandelier', 'clock', 'picture', 'rug', 'plant', 'vase', 'candle', 'curtains', 'fireplace', 'aquarium', 'statue' ),
 			),
 			array(
 				'id'    => 'kids',
-				'name'  => __( 'Kids & baby', 'moving-storage-volume-calculator' ),
+				'name'  => __( 'Kids & baby', 'boxmetric-moving-storage-volume-calculator' ),
 				'icons' => array( 'toys', 'pram', 'gate', 'wagon', 'rocking-horse', 'car-seat', 'playhouse', 'slide', 'trampoline' ),
 			),
 			array(
 				'id'    => 'garden',
-				'name'  => __( 'Garage & garden', 'moving-storage-volume-calculator' ),
+				'name'  => __( 'Garage & garden', 'boxmetric-moving-storage-volume-calculator' ),
 				'icons' => array( 'tools', 'toolbox', 'tool-chest', 'drill', 'saw', 'spade', 'ladder', 'step-ladder', 'mower', 'trimmer', 'hose', 'wheelbarrow', 'garden-set', 'bbq', 'pizza-oven', 'gazebo', 'hammock', 'compost', 'barrel', 'kennel', 'tent', 'umbrella', 'fuel-can', 'paint', 'tyre', 'generator', 'roof-box' ),
 			),
 			array(
 				'id'    => 'hobbies',
-				'name'  => __( 'Hobbies, sport & vehicles', 'moving-storage-volume-calculator' ),
+				'name'  => __( 'Hobbies, sport & vehicles', 'boxmetric-moving-storage-volume-calculator' ),
 				'icons' => array( 'bike', 'motorbike', 'quad', 'car', 'mobility', 'wheelchair', 'dumbbell', 'treadmill', 'punch-bag', 'yoga-mat', 'kayak', 'paddle', 'skis', 'surfboard', 'fishing', 'golf', 'skateboard', 'bowling', 'foosball', 'pool-table', 'hot-tub', 'piano', 'grand-piano', 'keyboard', 'instrument', 'drum', 'easel', 'telescope', 'sewing-machine' ),
 			),
 			array(
 				'id'    => 'packing',
-				'name'  => __( 'Boxes & packing', 'moving-storage-volume-calculator' ),
+				'name'  => __( 'Boxes & packing', 'boxmetric-moving-storage-volume-calculator' ),
 				'icons' => array( 'box', 'crate', 'suitcase', 'bag', 'archive-box', 'books', 'flat-pack', 'garment-bag', 'wardrobe-box', 'trolley' ),
 			),
 			array(
 				'id'    => 'business',
-				'name'  => __( 'Business & trade', 'moving-storage-volume-calculator' ),
+				'name'  => __( 'Business & trade', 'boxmetric-moving-storage-volume-calculator' ),
 				'icons' => array( 'scissors', 'exam-couch', 'medical-trolley', 'microscope', 'mannequin', 'pallet', 'pallet-jack', 'forklift', 'machine', 'conveyor' ),
 			),
 			array(
 				'id'    => 'transport',
-				'name'  => __( 'Vans & storage', 'moving-storage-volume-calculator' ),
+				'name'  => __( 'Vans & storage', 'boxmetric-moving-storage-volume-calculator' ),
 				'icons' => array( 'van', 'luton', 'truck', 'lorry', 'container', 'storage' ),
 			),
 		);
@@ -380,7 +380,7 @@ final class MSVCalc_Icons {
 		if ( $other ) {
 			$groups[] = array(
 				'id'    => 'other',
-				'name'  => __( 'Other', 'moving-storage-volume-calculator' ),
+				'name'  => __( 'Other', 'boxmetric-moving-storage-volume-calculator' ),
 				'icons' => $other,
 			);
 		}

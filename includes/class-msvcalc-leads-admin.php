@@ -48,15 +48,15 @@ final class MSVCalc_Leads_Admin {
 			return;
 		}
 		$new   = self::count_new();
-		$label = __( 'Leads', 'moving-storage-volume-calculator' );
+		$label = __( 'Leads', 'boxmetric-moving-storage-volume-calculator' );
 		if ( $new ) {
 			$label .= ' <span class="awaiting-mod count-' . absint( $new ) . '"><span class="pending-count">' . esc_html( number_format_i18n( $new ) ) . '</span></span>';
 		}
 		// Always inside the plugin menu. Staff who can manage leads but not
-		// the plugin see Volume Calculator with only Leads under it.
+		// the plugin see BoxMetric with only Leads under it.
 		self::$hook = (string) add_submenu_page(
 			MSVCalc_Admin::MENU_SLUG,
-			__( 'Leads', 'moving-storage-volume-calculator' ),
+			__( 'Leads', 'boxmetric-moving-storage-volume-calculator' ),
 			$label,
 			MSVCalc_Leads::CAP,
 			MSVCalc_Admin::LEADS_SLUG,
@@ -198,13 +198,13 @@ final class MSVCalc_Leads_Admin {
 			esc_html(
 				sprintf(
 					/* translators: %s: number of leads. */
-					_n( '%s quote request email could not be sent.', '%s quote request emails could not be sent.', $failed, 'moving-storage-volume-calculator' ),
+					_n( '%s quote request email could not be sent.', '%s quote request emails could not be sent.', $failed, 'boxmetric-moving-storage-volume-calculator' ),
 					number_format_i18n( $failed )
 				)
 			),
-			esc_html__( 'The enquiries are safe in Leads; open them to reply or send the email again.', 'moving-storage-volume-calculator' ),
+			esc_html__( 'The enquiries are safe in Leads; open them to reply or send the email again.', 'boxmetric-moving-storage-volume-calculator' ),
 			esc_url( admin_url( 'admin.php?page=' . MSVCalc_Admin::LEADS_SLUG . '&status=mail_failed' ) ),
-			esc_html__( 'Show them', 'moving-storage-volume-calculator' )
+			esc_html__( 'Show them', 'boxmetric-moving-storage-volume-calculator' )
 		);
 	}
 
@@ -214,11 +214,11 @@ final class MSVCalc_Leads_Admin {
 	public static function handle_lead(): void {
 		$id = isset( $_POST['lead'] ) ? absint( wp_unslash( $_POST['lead'] ) ) : 0;
 		if ( ! current_user_can( MSVCalc_Leads::CAP ) ) {
-			wp_die( esc_html__( 'You are not allowed to manage leads.', 'moving-storage-volume-calculator' ), '', array( 'response' => 403 ) );
+			wp_die( esc_html__( 'You are not allowed to manage leads.', 'boxmetric-moving-storage-volume-calculator' ), '', array( 'response' => 403 ) );
 		}
 		check_admin_referer( 'msvcalc_lead_' . $id );
 		if ( ! $id || MSVCalc_Leads::POST_TYPE !== get_post_type( $id ) ) {
-			wp_die( esc_html__( 'That lead no longer exists.', 'moving-storage-volume-calculator' ), '', array( 'response' => 404 ) );
+			wp_die( esc_html__( 'That lead no longer exists.', 'boxmetric-moving-storage-volume-calculator' ), '', array( 'response' => 404 ) );
 		}
 
 		$do     = isset( $_POST['do'] ) ? sanitize_key( wp_unslash( $_POST['do'] ) ) : '';
@@ -294,7 +294,7 @@ final class MSVCalc_Leads_Admin {
 		}
 		$lead = isset( $_GET['lead'] ) ? absint( wp_unslash( $_GET['lead'] ) ) : 0; // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only view.
 		echo '<div class="wrap msvcalc-wrap msvcalc-leads">';
-		MSVCalc_Admin::page_header( __( 'Leads', 'moving-storage-volume-calculator' ) );
+		MSVCalc_Admin::page_header( __( 'Leads', 'boxmetric-moving-storage-volume-calculator' ) );
 		self::notices();
 		if ( $lead && MSVCalc_Leads::POST_TYPE === get_post_type( $lead ) ) {
 			self::render_lead( $lead );
@@ -313,15 +313,15 @@ final class MSVCalc_Leads_Admin {
 		$count  = isset( $_GET['msvcalc_count'] ) ? absint( wp_unslash( $_GET['msvcalc_count'] ) ) : 0;
 		// phpcs:enable WordPress.Security.NonceVerification.Recommended
 		$map = array(
-			'lead_saved'         => array( 'success', __( 'Lead updated.', 'moving-storage-volume-calculator' ) ),
-			'lead_deleted'       => array( 'success', __( 'Lead deleted.', 'moving-storage-volume-calculator' ) ),
-			'lead_bad_date'      => array( 'error', __( 'Please pick a follow-up date.', 'moving-storage-volume-calculator' ) ),
-			'lead_resent'        => array( 'success', __( 'Notification email sent again.', 'moving-storage-volume-calculator' ) ),
-			'lead_resend_failed' => array( 'error', __( 'The email could not be sent again. Check your site can send email (for example with an SMTP plugin). The lead is safe here.', 'moving-storage-volume-calculator' ) ),
+			'lead_saved'         => array( 'success', __( 'Lead updated.', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'lead_deleted'       => array( 'success', __( 'Lead deleted.', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'lead_bad_date'      => array( 'error', __( 'Please pick a follow-up date.', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'lead_resent'        => array( 'success', __( 'Notification email sent again.', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'lead_resend_failed' => array( 'error', __( 'The email could not be sent again. Check your site can send email (for example with an SMTP plugin). The lead is safe here.', 'boxmetric-moving-storage-volume-calculator' ) ),
 			/* translators: %s: number of leads. */
-			'leads_updated'      => array( 'success', sprintf( _n( '%s lead updated.', '%s leads updated.', $count, 'moving-storage-volume-calculator' ), number_format_i18n( $count ) ) ),
+			'leads_updated'      => array( 'success', sprintf( _n( '%s lead updated.', '%s leads updated.', $count, 'boxmetric-moving-storage-volume-calculator' ), number_format_i18n( $count ) ) ),
 			/* translators: %s: number of leads. */
-			'leads_deleted'      => array( 'success', sprintf( _n( '%s lead deleted.', '%s leads deleted.', $count, 'moving-storage-volume-calculator' ), number_format_i18n( $count ) ) ),
+			'leads_deleted'      => array( 'success', sprintf( _n( '%s lead deleted.', '%s leads deleted.', $count, 'boxmetric-moving-storage-volume-calculator' ), number_format_i18n( $count ) ) ),
 		);
 		if ( isset( $map[ $notice ] ) ) {
 			printf( '<div class="notice notice-%1$s is-dismissible"><p>%2$s</p></div>', esc_attr( $map[ $notice ][0] ), esc_html( $map[ $notice ][1] ) );
@@ -339,36 +339,36 @@ final class MSVCalc_Leads_Admin {
 		$cards   = array(
 			array(
 				'icon'  => 'mail',
-				'label' => __( 'Total leads', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Total leads', 'boxmetric-moving-storage-volume-calculator' ),
 				'value' => $stats['total'],
 				/* translators: %s: number of leads. */
-				'meta'  => sprintf( __( '%s this month', 'moving-storage-volume-calculator' ), number_format_i18n( $stats['month'] ) ),
+				'meta'  => sprintf( __( '%s this month', 'boxmetric-moving-storage-volume-calculator' ), number_format_i18n( $stats['month'] ) ),
 				'url'   => $base,
 				'tone'  => 'brand',
 			),
 			array(
 				'icon'  => 'sparkle',
-				'label' => __( 'New enquiries', 'moving-storage-volume-calculator' ),
+				'label' => __( 'New enquiries', 'boxmetric-moving-storage-volume-calculator' ),
 				'value' => $stats['new'],
-				'meta'  => __( 'Waiting for a first reply', 'moving-storage-volume-calculator' ),
+				'meta'  => __( 'Waiting for a first reply', 'boxmetric-moving-storage-volume-calculator' ),
 				'url'   => add_query_arg( 'status', 'new', $base ),
 				'tone'  => 'new',
 			),
 			array(
 				'icon'  => 'calendar',
-				'label' => __( 'Follow-ups due', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Follow-ups due', 'boxmetric-moving-storage-volume-calculator' ),
 				'value' => $stats['followups'],
 				/* translators: %s: number of overdue follow-ups. */
-				'meta'  => $stats['overdue'] ? sprintf( __( '%s overdue', 'moving-storage-volume-calculator' ), number_format_i18n( $stats['overdue'] ) ) : __( 'Nothing overdue', 'moving-storage-volume-calculator' ),
+				'meta'  => $stats['overdue'] ? sprintf( __( '%s overdue', 'boxmetric-moving-storage-volume-calculator' ), number_format_i18n( $stats['overdue'] ) ) : __( 'Nothing overdue', 'boxmetric-moving-storage-volume-calculator' ),
 				'url'   => add_query_arg( 'status', 'followup', $base ),
 				'tone'  => $stats['overdue'] ? 'warn' : 'calm',
 			),
 			array(
 				'icon'  => 'check',
-				'label' => __( 'Converted', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Converted', 'boxmetric-moving-storage-volume-calculator' ),
 				'value' => $stats['converted'],
 				/* translators: %s: conversion rate in percent. */
-				'meta'  => sprintf( __( '%s%% of closed leads', 'moving-storage-volume-calculator' ), number_format_i18n( $stats['rate'] ) ),
+				'meta'  => sprintf( __( '%s%% of closed leads', 'boxmetric-moving-storage-volume-calculator' ), number_format_i18n( $stats['rate'] ) ),
 				'url'   => add_query_arg( 'status', 'converted', $base ),
 				'tone'  => 'won',
 			),
@@ -386,7 +386,7 @@ final class MSVCalc_Leads_Admin {
 		</div>
 
 		<?php if ( $stats['total'] ) : ?>
-			<div class="msvcalc-pipeline" role="img" aria-label="<?php esc_attr_e( 'Leads by status', 'moving-storage-volume-calculator' ); ?>">
+			<div class="msvcalc-pipeline" role="img" aria-label="<?php esc_attr_e( 'Leads by status', 'boxmetric-moving-storage-volume-calculator' ); ?>">
 				<?php foreach ( MSVCalc_Leads::statuses() as $key => $label ) : ?>
 					<?php
 					if ( ! $stats[ $key ] ) {
@@ -414,9 +414,9 @@ final class MSVCalc_Leads_Admin {
 		<div class="msvcalc-leads__bar">
 			<?php $table->views(); ?>
 			<div class="msvcalc-leads__exports">
-				<a class="button button-primary" href="<?php echo esc_url( wp_nonce_url( add_query_arg( array_merge( $export, array( 'format' => 'xlsx' ) ), admin_url( 'admin-post.php?action=msvcalc_export_leads' ) ), 'msvcalc_export_leads' ) ); ?>"><?php MSVCalc_Icons::render( 'list', 16 ); ?><?php esc_html_e( 'Export Excel', 'moving-storage-volume-calculator' ); ?></a>
-				<a class="button" title="<?php esc_attr_e( 'Plain CSV, for importing into a CRM or another app', 'moving-storage-volume-calculator' ); ?>" href="<?php echo esc_url( wp_nonce_url( add_query_arg( $export, admin_url( 'admin-post.php?action=msvcalc_export_leads' ) ), 'msvcalc_export_leads' ) ); ?>"><?php MSVCalc_Icons::render( 'list', 16 ); ?><?php esc_html_e( 'Export CSV', 'moving-storage-volume-calculator' ); ?></a>
-				<a class="button" target="_blank" rel="noopener" href="<?php echo esc_url( wp_nonce_url( add_query_arg( $export, admin_url( 'admin-post.php?action=msvcalc_lead_report' ) ), 'msvcalc_lead_report' ) ); ?>"><?php MSVCalc_Icons::render( 'print', 16 ); ?><?php esc_html_e( 'Export PDF', 'moving-storage-volume-calculator' ); ?></a>
+				<a class="button button-primary" href="<?php echo esc_url( wp_nonce_url( add_query_arg( array_merge( $export, array( 'format' => 'xlsx' ) ), admin_url( 'admin-post.php?action=msvcalc_export_leads' ) ), 'msvcalc_export_leads' ) ); ?>"><?php MSVCalc_Icons::render( 'list', 16 ); ?><?php esc_html_e( 'Export Excel', 'boxmetric-moving-storage-volume-calculator' ); ?></a>
+				<a class="button" title="<?php esc_attr_e( 'Plain CSV, for importing into a CRM or another app', 'boxmetric-moving-storage-volume-calculator' ); ?>" href="<?php echo esc_url( wp_nonce_url( add_query_arg( $export, admin_url( 'admin-post.php?action=msvcalc_export_leads' ) ), 'msvcalc_export_leads' ) ); ?>"><?php MSVCalc_Icons::render( 'list', 16 ); ?><?php esc_html_e( 'Export CSV', 'boxmetric-moving-storage-volume-calculator' ); ?></a>
+				<a class="button" target="_blank" rel="noopener" href="<?php echo esc_url( wp_nonce_url( add_query_arg( $export, admin_url( 'admin-post.php?action=msvcalc_lead_report' ) ), 'msvcalc_lead_report' ) ); ?>"><?php MSVCalc_Icons::render( 'print', 16 ); ?><?php esc_html_e( 'Export PDF', 'boxmetric-moving-storage-volume-calculator' ); ?></a>
 			</div>
 		</div>
 		<form method="get" class="msvcalc-leads__form">
@@ -424,7 +424,7 @@ final class MSVCalc_Leads_Admin {
 			<?php if ( $filters['status'] ) : ?>
 				<input type="hidden" name="status" value="<?php echo esc_attr( $filters['status'] ); ?>">
 			<?php endif; ?>
-			<?php $table->search_box( __( 'Search leads', 'moving-storage-volume-calculator' ), 'msvcalc-leads' ); ?>
+			<?php $table->search_box( __( 'Search leads', 'boxmetric-moving-storage-volume-calculator' ), 'msvcalc-leads' ); ?>
 			<?php $table->display(); ?>
 		</form>
 		<?php
@@ -445,7 +445,7 @@ final class MSVCalc_Leads_Admin {
 	 */
 	public static function report(): void {
 		if ( ! current_user_can( MSVCalc_Leads::CAP ) ) {
-			wp_die( esc_html__( 'You are not allowed to export leads.', 'moving-storage-volume-calculator' ), '', array( 'response' => 403 ) );
+			wp_die( esc_html__( 'You are not allowed to export leads.', 'boxmetric-moving-storage-volume-calculator' ), '', array( 'response' => 403 ) );
 		}
 		check_admin_referer( 'msvcalc_lead_report' );
 
@@ -493,7 +493,7 @@ final class MSVCalc_Leads_Admin {
 	 */
 	public static function who( int $user_id ): string {
 		$user = $user_id ? get_userdata( $user_id ) : false;
-		return $user ? (string) $user->display_name : __( 'Website', 'moving-storage-volume-calculator' );
+		return $user ? (string) $user->display_name : __( 'Website', 'boxmetric-moving-storage-volume-calculator' );
 	}
 
 	/**
@@ -507,31 +507,31 @@ final class MSVCalc_Leads_Admin {
 		$statuses = MSVCalc_Leads::statuses();
 		switch ( (string) ( $entry['type'] ?? '' ) ) {
 			case 'created':
-				return __( 'Quote request received', 'moving-storage-volume-calculator' );
+				return __( 'Quote request received', 'boxmetric-moving-storage-volume-calculator' );
 			case 'status':
 				/* translators: %s: status name. */
-				return sprintf( __( 'Status set to %s', 'moving-storage-volume-calculator' ), $statuses[ $text ] ?? $text );
+				return sprintf( __( 'Status set to %s', 'boxmetric-moving-storage-volume-calculator' ), $statuses[ $text ] ?? $text );
 			case 'note':
-				return __( 'Note added', 'moving-storage-volume-calculator' );
+				return __( 'Note added', 'boxmetric-moving-storage-volume-calculator' );
 			case 'followup':
 				$parts = explode( ' · ', $text, 2 );
 				/* translators: %s: date. */
-				return sprintf( __( 'Follow-up set for %s', 'moving-storage-volume-calculator' ), mysql2date( (string) get_option( 'date_format' ), $parts[0] ) );
+				return sprintf( __( 'Follow-up set for %s', 'boxmetric-moving-storage-volume-calculator' ), mysql2date( (string) get_option( 'date_format' ), $parts[0] ) );
 			case 'followup_done':
-				return __( 'Follow-up done', 'moving-storage-volume-calculator' );
+				return __( 'Follow-up done', 'boxmetric-moving-storage-volume-calculator' );
 			case 'contact':
 				$how = array(
-					'email'    => __( 'by email', 'moving-storage-volume-calculator' ),
-					'phone'    => __( 'by phone', 'moving-storage-volume-calculator' ),
-					'whatsapp' => __( 'on WhatsApp', 'moving-storage-volume-calculator' ),
+					'email'    => __( 'by email', 'boxmetric-moving-storage-volume-calculator' ),
+					'phone'    => __( 'by phone', 'boxmetric-moving-storage-volume-calculator' ),
+					'whatsapp' => __( 'on WhatsApp', 'boxmetric-moving-storage-volume-calculator' ),
 				);
-				return trim( __( 'Customer contacted', 'moving-storage-volume-calculator' ) . ' ' . ( $how[ $text ] ?? '' ) );
+				return trim( __( 'Customer contacted', 'boxmetric-moving-storage-volume-calculator' ) . ' ' . ( $how[ $text ] ?? '' ) );
 			case 'repeat':
-				return __( 'Customer sent the same list again (not duplicated)', 'moving-storage-volume-calculator' );
+				return __( 'Customer sent the same list again (not duplicated)', 'boxmetric-moving-storage-volume-calculator' );
 			case 'email_failed':
-				return __( 'Notification email could not be sent', 'moving-storage-volume-calculator' );
+				return __( 'Notification email could not be sent', 'boxmetric-moving-storage-volume-calculator' );
 			case 'email_sent':
-				return __( 'Notification email sent again', 'moving-storage-volume-calculator' );
+				return __( 'Notification email sent again', 'boxmetric-moving-storage-volume-calculator' );
 		}
 		return $text;
 	}

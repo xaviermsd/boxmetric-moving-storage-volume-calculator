@@ -1,5 +1,5 @@
 /**
- * Moving & Storage Volume Calculator: icon shapes.
+ * BoxMetric: icon shapes.
  *
  * Drawn for this plugin on a 24 px grid. Generated from
  * includes/class-msvcalc-icons.php by bin/build-icons.php; do not edit by hand.

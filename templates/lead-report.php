@@ -16,8 +16,8 @@ $msvcalc_datetime = (string) get_option( 'date_format' ) . ' ' . (string) get_op
 $msvcalc_date     = (string) get_option( 'date_format' );
 $msvcalc_title    = $lead
 	/* translators: %s: lead reference. */
-	? sprintf( __( 'Lead %s', 'moving-storage-volume-calculator' ), MSVCalc_Leads::reference( $lead ) )
-	: __( 'Leads report', 'moving-storage-volume-calculator' );
+	? sprintf( __( 'Lead %s', 'boxmetric-moving-storage-volume-calculator' ), MSVCalc_Leads::reference( $lead ) )
+	: __( 'Leads report', 'boxmetric-moving-storage-volume-calculator' );
 $msvcalc_accent   = (string) MSVCalc_Settings::get( 'accent' );
 $msvcalc_accent_2 = (string) MSVCalc_Settings::get( 'accent_2' );
 $msvcalc_total_m3 = 0.0;
@@ -49,47 +49,47 @@ $msvcalc_head = static function ( string $title, string $sub ) use ( $msvcalc_co
 <body class="msvcalc-report" style="--msvcalc-r-a:<?php echo esc_attr( $msvcalc_accent ); ?>;--msvcalc-r-b:<?php echo esc_attr( $msvcalc_accent_2 ); ?>;">
 <div class="msvcalc-r-toolbar">
 	<span><?php echo esc_html( $msvcalc_title ); ?></span>
-	<button type="button" class="msvcalc-r-print" data-msvcalc-print><?php MSVCalc_Icons::render( 'print', 16 ); ?><?php esc_html_e( 'Save as PDF', 'moving-storage-volume-calculator' ); ?></button>
+	<button type="button" class="msvcalc-r-print" data-msvcalc-print><?php MSVCalc_Icons::render( 'print', 16 ); ?><?php esc_html_e( 'Save as PDF', 'boxmetric-moving-storage-volume-calculator' ); ?></button>
 </div>
 
 <?php if ( ! $ids ) : ?>
-	<main class="msvcalc-r-page"><p><?php esc_html_e( 'No leads match these filters.', 'moving-storage-volume-calculator' ); ?></p></main>
+	<main class="msvcalc-r-page"><p><?php esc_html_e( 'No leads match these filters.', 'boxmetric-moving-storage-volume-calculator' ); ?></p></main>
 <?php endif; ?>
 
 <?php if ( count( $ids ) > 1 ) : ?>
 	<main class="msvcalc-r-page">
 		<?php
 		/* translators: %s: date. */
-		$msvcalc_head( __( 'Leads report', 'moving-storage-volume-calculator' ), sprintf( __( 'Prepared on %s', 'moving-storage-volume-calculator' ), wp_date( $msvcalc_date ) ) );
+		$msvcalc_head( __( 'Leads report', 'boxmetric-moving-storage-volume-calculator' ), sprintf( __( 'Prepared on %s', 'boxmetric-moving-storage-volume-calculator' ), wp_date( $msvcalc_date ) ) );
 		?>
 		<?php if ( $total > count( $ids ) ) : ?>
 			<p class="msvcalc-r-note">
 				<?php
 				/* translators: 1: leads in this report, 2: leads matching the filters. */
-				echo esc_html( sprintf( __( 'This report shows the newest %1$s of %2$s matching leads. Narrow the filters, or use Export CSV for all of them.', 'moving-storage-volume-calculator' ), number_format_i18n( count( $ids ) ), number_format_i18n( $total ) ) );
+				echo esc_html( sprintf( __( 'This report shows the newest %1$s of %2$s matching leads. Narrow the filters, or use Export CSV for all of them.', 'boxmetric-moving-storage-volume-calculator' ), number_format_i18n( count( $ids ) ), number_format_i18n( $total ) ) );
 				?>
 			</p>
 		<?php endif; ?>
 		<div class="msvcalc-r-stats">
-			<div class="is-main"><span><?php esc_html_e( 'Leads', 'moving-storage-volume-calculator' ); ?></span><strong><?php echo esc_html( number_format_i18n( count( $ids ) ) ); ?></strong></div>
-			<div><span><?php esc_html_e( 'Total volume', 'moving-storage-volume-calculator' ); ?></span><strong><?php echo esc_html( MSVCalc_Calculator::format_volume( $msvcalc_total_m3, (string) MSVCalc_Settings::get( 'units' ) ) ); ?></strong></div>
+			<div class="is-main"><span><?php esc_html_e( 'Leads', 'boxmetric-moving-storage-volume-calculator' ); ?></span><strong><?php echo esc_html( number_format_i18n( count( $ids ) ) ); ?></strong></div>
+			<div><span><?php esc_html_e( 'Total volume', 'boxmetric-moving-storage-volume-calculator' ); ?></span><strong><?php echo esc_html( MSVCalc_Calculator::format_volume( $msvcalc_total_m3, (string) MSVCalc_Settings::get( 'units' ) ) ); ?></strong></div>
 			<?php
 			$msvcalc_counts = array_fill_keys( array_keys( $msvcalc_statuses ), 0 );
 			foreach ( $ids as $msvcalc_id ) {
 				++$msvcalc_counts[ MSVCalc_Leads::status( $msvcalc_id ) ];
 			}
 			?>
-			<div><span><?php esc_html_e( 'New', 'moving-storage-volume-calculator' ); ?></span><strong><?php echo esc_html( number_format_i18n( $msvcalc_counts['new'] ) ); ?></strong></div>
-			<div><span><?php esc_html_e( 'Converted', 'moving-storage-volume-calculator' ); ?></span><strong><?php echo esc_html( number_format_i18n( $msvcalc_counts['converted'] ) ); ?></strong></div>
+			<div><span><?php esc_html_e( 'New', 'boxmetric-moving-storage-volume-calculator' ); ?></span><strong><?php echo esc_html( number_format_i18n( $msvcalc_counts['new'] ) ); ?></strong></div>
+			<div><span><?php esc_html_e( 'Converted', 'boxmetric-moving-storage-volume-calculator' ); ?></span><strong><?php echo esc_html( number_format_i18n( $msvcalc_counts['converted'] ) ); ?></strong></div>
 		</div>
 		<table class="msvcalc-r-table">
 			<thead>
 				<tr>
-					<th><?php esc_html_e( 'Ref.', 'moving-storage-volume-calculator' ); ?></th>
-					<th><?php esc_html_e( 'Customer', 'moving-storage-volume-calculator' ); ?></th>
-					<th><?php esc_html_e( 'Move', 'moving-storage-volume-calculator' ); ?></th>
-					<th><?php esc_html_e( 'Status', 'moving-storage-volume-calculator' ); ?></th>
-					<th class="num"><?php esc_html_e( 'Volume', 'moving-storage-volume-calculator' ); ?></th>
+					<th><?php esc_html_e( 'Ref.', 'boxmetric-moving-storage-volume-calculator' ); ?></th>
+					<th><?php esc_html_e( 'Customer', 'boxmetric-moving-storage-volume-calculator' ); ?></th>
+					<th><?php esc_html_e( 'Move', 'boxmetric-moving-storage-volume-calculator' ); ?></th>
+					<th><?php esc_html_e( 'Status', 'boxmetric-moving-storage-volume-calculator' ); ?></th>
+					<th class="num"><?php esc_html_e( 'Volume', 'boxmetric-moving-storage-volume-calculator' ); ?></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -122,9 +122,9 @@ $msvcalc_head = static function ( string $title, string $sub ) use ( $msvcalc_co
 	$msvcalc_fu     = (string) get_post_meta( $msvcalc_id, MSVCalc_Leads::FOLLOWUP_META, true );
 	$msvcalc_weight = 'ft3' === $msvcalc_u
 		/* translators: %s: weight in pounds. */
-		? sprintf( __( '%s lb', 'moving-storage-volume-calculator' ), number_format_i18n( (int) ( $msvcalc_r['lb'] ?? 0 ) ) )
+		? sprintf( __( '%s lb', 'boxmetric-moving-storage-volume-calculator' ), number_format_i18n( (int) ( $msvcalc_r['lb'] ?? 0 ) ) )
 		/* translators: %s: weight in kilograms. */
-		: sprintf( __( '%s kg', 'moving-storage-volume-calculator' ), number_format_i18n( (int) ( $msvcalc_r['kg'] ?? 0 ) ) );
+		: sprintf( __( '%s kg', 'boxmetric-moving-storage-volume-calculator' ), number_format_i18n( (int) ( $msvcalc_r['kg'] ?? 0 ) ) );
 	$msvcalc_rooms = array();
 	foreach ( (array) ( $msvcalc_r['lines'] ?? array() ) as $msvcalc_line ) {
 		$msvcalc_room = (string) ( $msvcalc_line['room'] ?? '' );
@@ -147,7 +147,7 @@ $msvcalc_head = static function ( string $title, string $sub ) use ( $msvcalc_co
 	<main class="msvcalc-r-page">
 		<?php
 		/* translators: 1: lead reference, 2: date and time. */
-		$msvcalc_head( (string) ( $msvcalc_c['name'] ?? '' ), sprintf( __( '%1$s · received %2$s', 'moving-storage-volume-calculator' ), MSVCalc_Leads::reference( $msvcalc_id ), wp_date( $msvcalc_datetime, (int) get_post_time( 'U', true, $msvcalc_id ) ) ) );
+		$msvcalc_head( (string) ( $msvcalc_c['name'] ?? '' ), sprintf( __( '%1$s · received %2$s', 'boxmetric-moving-storage-volume-calculator' ), MSVCalc_Leads::reference( $msvcalc_id ), wp_date( $msvcalc_datetime, (int) get_post_time( 'U', true, $msvcalc_id ) ) ) );
 		?>
 		<p class="msvcalc-r-tags">
 			<span class="msvcalc-status msvcalc-status--<?php echo esc_attr( $msvcalc_s ); ?>"><?php echo esc_html( $msvcalc_statuses[ $msvcalc_s ] ); ?></span>
@@ -156,26 +156,26 @@ $msvcalc_head = static function ( string $title, string $sub ) use ( $msvcalc_co
 				<span>
 					<?php
 					/* translators: %s: date. */
-					echo esc_html( sprintf( __( 'Follow up %s', 'moving-storage-volume-calculator' ), mysql2date( $msvcalc_date, $msvcalc_fu ) ) );
+					echo esc_html( sprintf( __( 'Follow up %s', 'boxmetric-moving-storage-volume-calculator' ), mysql2date( $msvcalc_date, $msvcalc_fu ) ) );
 					?>
 				</span>
 			<?php endif; ?>
 		</p>
 
 		<div class="msvcalc-r-stats">
-			<div class="is-main"><span><?php esc_html_e( 'Total volume', 'moving-storage-volume-calculator' ); ?></span><strong><?php echo esc_html( MSVCalc_Calculator::format_volume( (float) ( $msvcalc_r['m3'] ?? 0 ), $msvcalc_u ) ); ?></strong></div>
-			<div><span><?php esc_html_e( 'Items', 'moving-storage-volume-calculator' ); ?></span><strong><?php echo esc_html( number_format_i18n( (int) ( $msvcalc_r['count'] ?? 0 ) ) ); ?></strong></div>
-			<div><span><?php esc_html_e( 'Boxes', 'moving-storage-volume-calculator' ); ?></span><strong><?php echo esc_html( number_format_i18n( (int) ( $msvcalc_r['boxes'] ?? 0 ) ) ); ?></strong></div>
-			<div><span><?php esc_html_e( 'Est. weight', 'moving-storage-volume-calculator' ); ?></span><strong><?php echo esc_html( $msvcalc_weight ); ?></strong></div>
+			<div class="is-main"><span><?php esc_html_e( 'Total volume', 'boxmetric-moving-storage-volume-calculator' ); ?></span><strong><?php echo esc_html( MSVCalc_Calculator::format_volume( (float) ( $msvcalc_r['m3'] ?? 0 ), $msvcalc_u ) ); ?></strong></div>
+			<div><span><?php esc_html_e( 'Items', 'boxmetric-moving-storage-volume-calculator' ); ?></span><strong><?php echo esc_html( number_format_i18n( (int) ( $msvcalc_r['count'] ?? 0 ) ) ); ?></strong></div>
+			<div><span><?php esc_html_e( 'Boxes', 'boxmetric-moving-storage-volume-calculator' ); ?></span><strong><?php echo esc_html( number_format_i18n( (int) ( $msvcalc_r['boxes'] ?? 0 ) ) ); ?></strong></div>
+			<div><span><?php esc_html_e( 'Est. weight', 'boxmetric-moving-storage-volume-calculator' ); ?></span><strong><?php echo esc_html( $msvcalc_weight ); ?></strong></div>
 		</div>
 
 		<div class="msvcalc-r-fits">
 			<?php
 			foreach (
 				array(
-					'vehicle'   => __( 'Recommended vehicle', 'moving-storage-volume-calculator' ),
-					'container' => __( 'Shipping container', 'moving-storage-volume-calculator' ),
-					'storage'   => __( 'Storage unit', 'moving-storage-volume-calculator' ),
+					'vehicle'   => __( 'Recommended vehicle', 'boxmetric-moving-storage-volume-calculator' ),
+					'container' => __( 'Shipping container', 'boxmetric-moving-storage-volume-calculator' ),
+					'storage'   => __( 'Storage unit', 'boxmetric-moving-storage-volume-calculator' ),
 				) as $msvcalc_key => $msvcalc_label
 			) :
 				if ( empty( $msvcalc_r[ $msvcalc_key ]['label'] ) ) {
@@ -190,14 +190,14 @@ $msvcalc_head = static function ( string $title, string $sub ) use ( $msvcalc_co
 					<span class="msvcalc-r-muted">
 						<?php
 						/* translators: %d: how full, in percent. */
-						echo esc_html( sprintf( __( '%d%% full', 'moving-storage-volume-calculator' ), $msvcalc_fill ) );
+						echo esc_html( sprintf( __( '%d%% full', 'boxmetric-moving-storage-volume-calculator' ), $msvcalc_fill ) );
 						?>
 					</span>
 				</div>
 			<?php endforeach; ?>
 		</div>
 
-		<h2><?php esc_html_e( 'Customer and move', 'moving-storage-volume-calculator' ); ?></h2>
+		<h2><?php esc_html_e( 'Customer and move', 'boxmetric-moving-storage-volume-calculator' ); ?></h2>
 		<dl class="msvcalc-r-facts">
 			<?php foreach ( MSVCalc_Leads::detail_rows( $msvcalc_c ) as $msvcalc_label => $msvcalc_value ) : ?>
 				<?php
@@ -209,12 +209,12 @@ $msvcalc_head = static function ( string $title, string $sub ) use ( $msvcalc_co
 			<?php endforeach; ?>
 		</dl>
 		<?php if ( ! empty( $msvcalc_c['notes'] ) ) : ?>
-			<h3><?php esc_html_e( 'Message from the customer', 'moving-storage-volume-calculator' ); ?></h3>
+			<h3><?php esc_html_e( 'Message from the customer', 'boxmetric-moving-storage-volume-calculator' ); ?></h3>
 			<blockquote class="msvcalc-quote"><?php echo esc_html( (string) $msvcalc_c['notes'] ); ?></blockquote>
 		<?php endif; ?>
 
 		<?php if ( $msvcalc_notes ) : ?>
-			<h3><?php esc_html_e( 'Internal notes', 'moving-storage-volume-calculator' ); ?></h3>
+			<h3><?php esc_html_e( 'Internal notes', 'boxmetric-moving-storage-volume-calculator' ); ?></h3>
 			<ul class="msvcalc-r-notes">
 				<?php foreach ( $msvcalc_notes as $msvcalc_note ) : ?>
 					<li><span class="msvcalc-r-muted"><?php echo esc_html( wp_date( $msvcalc_date, (int) $msvcalc_note['time'] ) . ' · ' . MSVCalc_Leads_Admin::who( (int) $msvcalc_note['user'] ) ); ?></span><?php echo esc_html( (string) $msvcalc_note['text'] ); ?></li>
@@ -222,13 +222,13 @@ $msvcalc_head = static function ( string $title, string $sub ) use ( $msvcalc_co
 			</ul>
 		<?php endif; ?>
 
-		<h2><?php esc_html_e( 'Inventory', 'moving-storage-volume-calculator' ); ?></h2>
+		<h2><?php esc_html_e( 'Inventory', 'boxmetric-moving-storage-volume-calculator' ); ?></h2>
 		<table class="msvcalc-inventory">
 			<thead>
 				<tr>
-					<th><?php esc_html_e( 'Qty', 'moving-storage-volume-calculator' ); ?></th>
-					<th><?php esc_html_e( 'Item', 'moving-storage-volume-calculator' ); ?></th>
-					<th class="num"><?php esc_html_e( 'Volume', 'moving-storage-volume-calculator' ); ?></th>
+					<th><?php esc_html_e( 'Qty', 'boxmetric-moving-storage-volume-calculator' ); ?></th>
+					<th><?php esc_html_e( 'Item', 'boxmetric-moving-storage-volume-calculator' ); ?></th>
+					<th class="num"><?php esc_html_e( 'Volume', 'boxmetric-moving-storage-volume-calculator' ); ?></th>
 				</tr>
 			</thead>
 			<?php foreach ( $msvcalc_rooms as $msvcalc_room => $msvcalc_group ) : ?>
@@ -252,14 +252,14 @@ $msvcalc_head = static function ( string $title, string $sub ) use ( $msvcalc_co
 						<td colspan="2">
 							<?php
 							/* translators: %d: packing margin percentage. */
-							echo esc_html( sprintf( __( 'Packing and gaps (%d%%)', 'moving-storage-volume-calculator' ), (int) $msvcalc_r['margin'] ) );
+							echo esc_html( sprintf( __( 'Packing and gaps (%d%%)', 'boxmetric-moving-storage-volume-calculator' ), (int) $msvcalc_r['margin'] ) );
 							?>
 						</td>
 						<td class="num"><?php echo esc_html( MSVCalc_Calculator::format_volume( max( 0, (float) ( $msvcalc_r['m3'] ?? 0 ) - (float) ( $msvcalc_r['net_m3'] ?? 0 ) ), $msvcalc_u ) ); ?></td>
 					</tr>
 				<?php endif; ?>
 				<tr class="msvcalc-inventory__total">
-					<td colspan="2"><?php esc_html_e( 'Total volume', 'moving-storage-volume-calculator' ); ?></td>
+					<td colspan="2"><?php esc_html_e( 'Total volume', 'boxmetric-moving-storage-volume-calculator' ); ?></td>
 					<td class="num"><?php echo esc_html( MSVCalc_Calculator::format_volume( (float) ( $msvcalc_r['m3'] ?? 0 ), $msvcalc_u ) ); ?></td>
 				</tr>
 			</tfoot>
@@ -267,7 +267,7 @@ $msvcalc_head = static function ( string $title, string $sub ) use ( $msvcalc_co
 		<footer class="msvcalc-r-foot">
 			<?php
 			/* translators: %s: business name. */
-			echo esc_html( sprintf( __( '%s · Volumes and weights are estimates based on typical item sizes.', 'moving-storage-volume-calculator' ), $msvcalc_company ) );
+			echo esc_html( sprintf( __( '%s · Volumes and weights are estimates based on typical item sizes.', 'boxmetric-moving-storage-volume-calculator' ), $msvcalc_company ) );
 			?>
 		</footer>
 	</main>

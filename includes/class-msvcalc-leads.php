@@ -132,15 +132,15 @@ final class MSVCalc_Leads {
 			self::POST_TYPE,
 			array(
 				'labels'              => array(
-					'name'               => __( 'Quote requests', 'moving-storage-volume-calculator' ),
-					'singular_name'      => __( 'Quote request', 'moving-storage-volume-calculator' ),
-					'menu_name'          => __( 'Quote requests', 'moving-storage-volume-calculator' ),
-					'all_items'          => __( 'Quote requests', 'moving-storage-volume-calculator' ),
-					'edit_item'          => __( 'Quote request', 'moving-storage-volume-calculator' ),
-					'view_item'          => __( 'View quote request', 'moving-storage-volume-calculator' ),
-					'search_items'       => __( 'Search quote requests', 'moving-storage-volume-calculator' ),
-					'not_found'          => __( 'No quote requests yet. They appear here when visitors send their inventory.', 'moving-storage-volume-calculator' ),
-					'not_found_in_trash' => __( 'No quote requests in the trash.', 'moving-storage-volume-calculator' ),
+					'name'               => __( 'Quote requests', 'boxmetric-moving-storage-volume-calculator' ),
+					'singular_name'      => __( 'Quote request', 'boxmetric-moving-storage-volume-calculator' ),
+					'menu_name'          => __( 'Quote requests', 'boxmetric-moving-storage-volume-calculator' ),
+					'all_items'          => __( 'Quote requests', 'boxmetric-moving-storage-volume-calculator' ),
+					'edit_item'          => __( 'Quote request', 'boxmetric-moving-storage-volume-calculator' ),
+					'view_item'          => __( 'View quote request', 'boxmetric-moving-storage-volume-calculator' ),
+					'search_items'       => __( 'Search quote requests', 'boxmetric-moving-storage-volume-calculator' ),
+					'not_found'          => __( 'No quote requests yet. They appear here when visitors send their inventory.', 'boxmetric-moving-storage-volume-calculator' ),
+					'not_found_in_trash' => __( 'No quote requests in the trash.', 'boxmetric-moving-storage-volume-calculator' ),
 				),
 				'public'              => false,
 				'show_ui'             => true,
@@ -179,11 +179,11 @@ final class MSVCalc_Leads {
 	 */
 	public static function statuses(): array {
 		return array(
-			'new'         => __( 'New', 'moving-storage-volume-calculator' ),
-			'contacted'   => __( 'Contacted', 'moving-storage-volume-calculator' ),
-			'in_progress' => __( 'In progress', 'moving-storage-volume-calculator' ),
-			'converted'   => __( 'Converted', 'moving-storage-volume-calculator' ),
-			'lost'        => __( 'Lost', 'moving-storage-volume-calculator' ),
+			'new'         => __( 'New', 'boxmetric-moving-storage-volume-calculator' ),
+			'contacted'   => __( 'Contacted', 'boxmetric-moving-storage-volume-calculator' ),
+			'in_progress' => __( 'In progress', 'boxmetric-moving-storage-volume-calculator' ),
+			'converted'   => __( 'Converted', 'boxmetric-moving-storage-volume-calculator' ),
+			'lost'        => __( 'Lost', 'boxmetric-moving-storage-volume-calculator' ),
 		);
 	}
 
@@ -280,7 +280,7 @@ final class MSVCalc_Leads {
 		if ( '' !== $referrer && $referrer !== $own ) {
 			return preg_replace( '/^www\./', '', $referrer );
 		}
-		return __( 'Website calculator', 'moving-storage-volume-calculator' );
+		return __( 'Website calculator', 'boxmetric-moving-storage-volume-calculator' );
 	}
 
 	/**
@@ -638,13 +638,13 @@ final class MSVCalc_Leads {
 	 */
 	public static function floors(): array {
 		return array(
-			'ground' => __( 'Ground floor', 'moving-storage-volume-calculator' ),
-			'house'  => __( 'House with upstairs', 'moving-storage-volume-calculator' ),
-			'1'      => __( '1st floor', 'moving-storage-volume-calculator' ),
-			'2'      => __( '2nd floor', 'moving-storage-volume-calculator' ),
-			'3'      => __( '3rd floor', 'moving-storage-volume-calculator' ),
-			'4'      => __( '4th floor', 'moving-storage-volume-calculator' ),
-			'5'      => __( '5th floor or higher', 'moving-storage-volume-calculator' ),
+			'ground' => __( 'Ground floor', 'boxmetric-moving-storage-volume-calculator' ),
+			'house'  => __( 'House with upstairs', 'boxmetric-moving-storage-volume-calculator' ),
+			'1'      => __( '1st floor', 'boxmetric-moving-storage-volume-calculator' ),
+			'2'      => __( '2nd floor', 'boxmetric-moving-storage-volume-calculator' ),
+			'3'      => __( '3rd floor', 'boxmetric-moving-storage-volume-calculator' ),
+			'4'      => __( '4th floor', 'boxmetric-moving-storage-volume-calculator' ),
+			'5'      => __( '5th floor or higher', 'boxmetric-moving-storage-volume-calculator' ),
 		);
 	}
 
@@ -655,9 +655,9 @@ final class MSVCalc_Leads {
 	 */
 	public static function parking(): array {
 		return array(
-			'door' => __( 'Parking right outside', 'moving-storage-volume-calculator' ),
-			'near' => __( 'Parking within 20 m (65 ft)', 'moving-storage-volume-calculator' ),
-			'far'  => __( 'Long carry or parking permit needed', 'moving-storage-volume-calculator' ),
+			'door' => __( 'Parking right outside', 'boxmetric-moving-storage-volume-calculator' ),
+			'near' => __( 'Parking within 20 m (65 ft)', 'boxmetric-moving-storage-volume-calculator' ),
+			'far'  => __( 'Long carry or parking permit needed', 'boxmetric-moving-storage-volume-calculator' ),
 		);
 	}
 
@@ -668,12 +668,12 @@ final class MSVCalc_Leads {
 	 */
 	public static function extras(): array {
 		return array(
-			'packing'   => __( 'Packing service', 'moving-storage-volume-calculator' ),
-			'materials' => __( 'Boxes and packing materials', 'moving-storage-volume-calculator' ),
-			'dismantle' => __( 'Furniture dismantling and reassembly', 'moving-storage-volume-calculator' ),
-			'storage'   => __( 'Storage', 'moving-storage-volume-calculator' ),
-			'disposal'  => __( 'Disposal of unwanted items', 'moving-storage-volume-calculator' ),
-			'cleaning'  => __( 'Cleaning', 'moving-storage-volume-calculator' ),
+			'packing'   => __( 'Packing service', 'boxmetric-moving-storage-volume-calculator' ),
+			'materials' => __( 'Boxes and packing materials', 'boxmetric-moving-storage-volume-calculator' ),
+			'dismantle' => __( 'Furniture dismantling and reassembly', 'boxmetric-moving-storage-volume-calculator' ),
+			'storage'   => __( 'Storage', 'boxmetric-moving-storage-volume-calculator' ),
+			'disposal'  => __( 'Disposal of unwanted items', 'boxmetric-moving-storage-volume-calculator' ),
+			'cleaning'  => __( 'Cleaning', 'boxmetric-moving-storage-volume-calculator' ),
 		);
 	}
 
@@ -691,9 +691,9 @@ final class MSVCalc_Leads {
 			$parts[] = self::floors()[ $floor ];
 		}
 		if ( ! empty( $contact[ $end . '_lift' ] ) ) {
-			$parts[] = __( 'lift available', 'moving-storage-volume-calculator' );
+			$parts[] = __( 'lift available', 'boxmetric-moving-storage-volume-calculator' );
 		} elseif ( $floor && ! in_array( $floor, array( 'ground', 'house' ), true ) ) {
-			$parts[] = __( 'no lift', 'moving-storage-volume-calculator' );
+			$parts[] = __( 'no lift', 'boxmetric-moving-storage-volume-calculator' );
 		}
 		return implode( ', ', $parts );
 	}
@@ -723,17 +723,17 @@ final class MSVCalc_Leads {
 	 */
 	public static function detail_rows( array $contact ): array {
 		return array(
-			__( 'Name', 'moving-storage-volume-calculator' )           => (string) ( $contact['name'] ?? '' ),
-			__( 'Email', 'moving-storage-volume-calculator' )          => (string) ( $contact['email'] ?? '' ),
-			__( 'Phone', 'moving-storage-volume-calculator' )          => (string) ( $contact['phone'] ?? '' ),
-			__( 'Service', 'moving-storage-volume-calculator' )        => (string) ( self::services()[ $contact['service'] ?? '' ] ?? '' ),
-			__( 'Moving from', 'moving-storage-volume-calculator' )    => (string) ( $contact['from'] ?? '' ),
-			__( 'Access (from)', 'moving-storage-volume-calculator' )  => self::access_text( $contact, 'from' ),
-			__( 'Moving to', 'moving-storage-volume-calculator' )      => (string) ( $contact['to'] ?? '' ),
-			__( 'Access (to)', 'moving-storage-volume-calculator' )    => self::access_text( $contact, 'to' ),
-			__( 'Parking', 'moving-storage-volume-calculator' )        => (string) ( self::parking()[ $contact['parking'] ?? '' ] ?? '' ),
-			__( 'Move date', 'moving-storage-volume-calculator' )      => ! empty( $contact['date'] ) ? (string) mysql2date( (string) get_option( 'date_format' ), (string) $contact['date'] ) : '',
-			__( 'Extra services', 'moving-storage-volume-calculator' ) => self::extras_text( $contact ),
+			__( 'Name', 'boxmetric-moving-storage-volume-calculator' )           => (string) ( $contact['name'] ?? '' ),
+			__( 'Email', 'boxmetric-moving-storage-volume-calculator' )          => (string) ( $contact['email'] ?? '' ),
+			__( 'Phone', 'boxmetric-moving-storage-volume-calculator' )          => (string) ( $contact['phone'] ?? '' ),
+			__( 'Service', 'boxmetric-moving-storage-volume-calculator' )        => (string) ( self::services()[ $contact['service'] ?? '' ] ?? '' ),
+			__( 'Moving from', 'boxmetric-moving-storage-volume-calculator' )    => (string) ( $contact['from'] ?? '' ),
+			__( 'Access (from)', 'boxmetric-moving-storage-volume-calculator' )  => self::access_text( $contact, 'from' ),
+			__( 'Moving to', 'boxmetric-moving-storage-volume-calculator' )      => (string) ( $contact['to'] ?? '' ),
+			__( 'Access (to)', 'boxmetric-moving-storage-volume-calculator' )    => self::access_text( $contact, 'to' ),
+			__( 'Parking', 'boxmetric-moving-storage-volume-calculator' )        => (string) ( self::parking()[ $contact['parking'] ?? '' ] ?? '' ),
+			__( 'Move date', 'boxmetric-moving-storage-volume-calculator' )      => ! empty( $contact['date'] ) ? (string) mysql2date( (string) get_option( 'date_format' ), (string) $contact['date'] ) : '',
+			__( 'Extra services', 'boxmetric-moving-storage-volume-calculator' ) => self::extras_text( $contact ),
 		);
 	}
 
@@ -744,12 +744,12 @@ final class MSVCalc_Leads {
 	 */
 	public static function services(): array {
 		return array(
-			'removal'       => __( 'House or flat removal', 'moving-storage-volume-calculator' ),
-			'storage'       => __( 'Storage', 'moving-storage-volume-calculator' ),
-			'removal_store' => __( 'Removal and storage', 'moving-storage-volume-calculator' ),
-			'office'        => __( 'Office move', 'moving-storage-volume-calculator' ),
-			'international' => __( 'International move', 'moving-storage-volume-calculator' ),
-			'man_van'       => __( 'Man and van', 'moving-storage-volume-calculator' ),
+			'removal'       => __( 'House or flat removal', 'boxmetric-moving-storage-volume-calculator' ),
+			'storage'       => __( 'Storage', 'boxmetric-moving-storage-volume-calculator' ),
+			'removal_store' => __( 'Removal and storage', 'boxmetric-moving-storage-volume-calculator' ),
+			'office'        => __( 'Office move', 'boxmetric-moving-storage-volume-calculator' ),
+			'international' => __( 'International move', 'boxmetric-moving-storage-volume-calculator' ),
+			'man_van'       => __( 'Man and van', 'boxmetric-moving-storage-volume-calculator' ),
 		);
 	}
 
@@ -764,7 +764,7 @@ final class MSVCalc_Leads {
 	public static function create( array $contact, array $result, array $source = array() ): int {
 		$title = sprintf(
 			/* translators: 1: customer name, 2: volume. */
-			__( '%1$s, %2$s', 'moving-storage-volume-calculator' ),
+			__( '%1$s, %2$s', 'boxmetric-moving-storage-volume-calculator' ),
 			$contact['name'],
 			MSVCalc_Calculator::format_volume( (float) $result['m3'], (string) MSVCalc_Settings::get( 'units' ) )
 		);
@@ -846,7 +846,7 @@ final class MSVCalc_Leads {
 	 */
 	public static function export_csv(): void {
 		if ( ! current_user_can( self::CAP ) ) {
-			wp_die( esc_html__( 'You are not allowed to export quote requests.', 'moving-storage-volume-calculator' ), '', array( 'response' => 403 ) );
+			wp_die( esc_html__( 'You are not allowed to export quote requests.', 'boxmetric-moving-storage-volume-calculator' ), '', array( 'response' => 403 ) );
 		}
 		check_admin_referer( 'msvcalc_export_leads' );
 
@@ -870,153 +870,153 @@ final class MSVCalc_Leads {
 		$status_map     = array_flip( self::statuses() );
 		$columns        = array(
 			array(
-				'label' => __( 'Reference', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Reference', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'text',
 				'width' => 16,
 			),
 			array(
-				'label' => __( 'Received', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Received', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'datetime',
 				'width' => 18,
 			),
 			array(
-				'label'  => __( 'Status', 'moving-storage-volume-calculator' ),
+				'label'  => __( 'Status', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'   => 'status',
 				'width'  => 14,
 				'status' => $status_map,
 			),
 			array(
-				'label' => __( 'Follow-up', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Follow-up', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'date',
 				'width' => 12,
 			),
 			array(
-				'label' => __( 'Name', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Name', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'text',
 				'width' => 28,
 			),
 			array(
-				'label' => __( 'Email', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Email', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'text',
 				'width' => 34,
 			),
 			array(
-				'label' => __( 'Phone', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Phone', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'text',
 				'width' => 18,
 			),
 			array(
-				'label' => __( 'Service', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Service', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'text',
 				'width' => 22,
 			),
 			array(
-				'label' => __( 'Moving from', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Moving from', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'text',
 				'width' => 34,
 			),
 			array(
-				'label' => __( 'Access (from)', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Access (from)', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'text',
 				'width' => 26,
 			),
 			array(
-				'label' => __( 'Moving to', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Moving to', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'text',
 				'width' => 34,
 			),
 			array(
-				'label' => __( 'Access (to)', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Access (to)', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'text',
 				'width' => 26,
 			),
 			array(
-				'label' => __( 'Parking', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Parking', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'text',
 				'width' => 26,
 			),
 			array(
-				'label' => __( 'Move date', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Move date', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'date',
 				'width' => 12,
 			),
 			array(
-				'label' => __( 'Extra services', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Extra services', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'text',
 				'width' => 40,
 			),
 			array(
-				'label' => __( 'Volume (m³)', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Volume (m³)', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'num2',
 				'width' => 12,
 			),
 			array(
-				'label' => __( 'Volume (ft³)', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Volume (ft³)', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'num1',
 				'width' => 12,
 			),
 			array(
-				'label' => __( 'Weight (kg)', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Weight (kg)', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'int',
 				'width' => 12,
 			),
 			array(
-				'label' => __( 'Items', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Items', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'int',
 				'width' => 9,
 			),
 			array(
-				'label' => __( 'Boxes', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Boxes', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'int',
 				'width' => 9,
 			),
 			array(
-				'label' => __( 'Vehicle', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Vehicle', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'text',
 				'width' => 24,
 			),
 			array(
-				'label' => __( 'Shipping container', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Shipping container', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'text',
 				'width' => 22,
 			),
 			array(
-				'label' => __( 'Storage unit', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Storage unit', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'text',
 				'width' => 22,
 			),
 			array(
-				'label' => __( 'Customer message', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Customer message', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'wrap',
 				'width' => 48,
 			),
 			array(
-				'label' => __( 'Lead source', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Lead source', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'text',
 				'width' => 30,
 			),
 			array(
-				'label' => __( 'Page', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Page', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'text',
 				'width' => 40,
 			),
 			array(
-				'label' => __( 'Consent given', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Consent given', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'datetime',
 				'width' => 18,
 			),
 			array(
-				'label' => __( 'Consent text', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Consent text', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'text',
 				'width' => 40,
 			),
 			array(
-				'label' => __( 'Internal notes', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Internal notes', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'wrap',
 				'width' => 48,
 			),
 			array(
-				'label' => __( 'Inventory', 'moving-storage-volume-calculator' ),
+				'label' => __( 'Inventory', 'boxmetric-moving-storage-volume-calculator' ),
 				'type'  => 'text',
 				'width' => 60,
 			),
@@ -1090,51 +1090,51 @@ final class MSVCalc_Leads {
 			$stamp   = wp_date( (string) get_option( 'date_format' ) . ' ' . (string) get_option( 'time_format' ) );
 			$title   = $lead
 				/* translators: %s: lead reference. */
-				? sprintf( __( 'Quote request %s', 'moving-storage-volume-calculator' ), self::reference( $lead ) )
+				? sprintf( __( 'Quote request %s', 'boxmetric-moving-storage-volume-calculator' ), self::reference( $lead ) )
 				/* translators: %s: business name. */
-				: sprintf( __( '%s · Quote requests', 'moving-storage-volume-calculator' ), $company );
+				: sprintf( __( '%s · Quote requests', 'boxmetric-moving-storage-volume-calculator' ), $company );
 			/* translators: 1: export date and time, 2: number of quote requests. */
-			$subtitle = sprintf( _n( 'Exported %1$s · %2$s quote request · Moving & Storage Volume Calculator', 'Exported %1$s · %2$s quote requests · Moving & Storage Volume Calculator', count( $rows ), 'moving-storage-volume-calculator' ), $stamp, number_format_i18n( count( $rows ) ) );
+			$subtitle = sprintf( _n( 'Exported %1$s · %2$s quote request · BoxMetric', 'Exported %1$s · %2$s quote requests · BoxMetric', count( $rows ), 'boxmetric-moving-storage-volume-calculator' ), $stamp, number_format_i18n( count( $rows ) ) );
 			$sheets   = array(
 				array(
-					'name'     => __( 'Quote requests', 'moving-storage-volume-calculator' ),
+					'name'     => __( 'Quote requests', 'boxmetric-moving-storage-volume-calculator' ),
 					'title'    => $title,
 					'subtitle' => $subtitle,
 					'columns'  => $columns,
 					'rows'     => $rows,
 				),
 				array(
-					'name'     => __( 'Inventory', 'moving-storage-volume-calculator' ),
-					'title'    => __( 'Inventory, item by item', 'moving-storage-volume-calculator' ),
+					'name'     => __( 'Inventory', 'boxmetric-moving-storage-volume-calculator' ),
+					'title'    => __( 'Inventory, item by item', 'boxmetric-moving-storage-volume-calculator' ),
 					'subtitle' => $subtitle,
 					'columns'  => array(
 						array(
-							'label' => __( 'Reference', 'moving-storage-volume-calculator' ),
+							'label' => __( 'Reference', 'boxmetric-moving-storage-volume-calculator' ),
 							'type'  => 'text',
 							'width' => 16,
 						),
 						array(
-							'label' => __( 'Name', 'moving-storage-volume-calculator' ),
+							'label' => __( 'Name', 'boxmetric-moving-storage-volume-calculator' ),
 							'type'  => 'text',
 							'width' => 28,
 						),
 						array(
-							'label' => __( 'Room', 'moving-storage-volume-calculator' ),
+							'label' => __( 'Room', 'boxmetric-moving-storage-volume-calculator' ),
 							'type'  => 'text',
 							'width' => 24,
 						),
 						array(
-							'label' => __( 'Item', 'moving-storage-volume-calculator' ),
+							'label' => __( 'Item', 'boxmetric-moving-storage-volume-calculator' ),
 							'type'  => 'text',
 							'width' => 40,
 						),
 						array(
-							'label' => __( 'Quantity', 'moving-storage-volume-calculator' ),
+							'label' => __( 'Quantity', 'boxmetric-moving-storage-volume-calculator' ),
 							'type'  => 'int',
 							'width' => 11,
 						),
 						array(
-							'label' => __( 'Volume (m³)', 'moving-storage-volume-calculator' ),
+							'label' => __( 'Volume (m³)', 'boxmetric-moving-storage-volume-calculator' ),
 							'type'  => 'num2',
 							'width' => 13,
 						),

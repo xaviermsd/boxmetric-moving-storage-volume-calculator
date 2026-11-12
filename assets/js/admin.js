@@ -1,5 +1,5 @@
 /**
- * Moving & Storage Volume Calculator: admin screens.
+ * BoxMetric: admin screens.
  *
  * Settings tabs, colour pickers, copy buttons, and the editors for rooms,
  * items, presets and capacity tables. Editors post their data back as one

@@ -33,7 +33,7 @@ final class MSVCalc_Mailer {
 
 		$subject = sprintf(
 			/* translators: 1: customer name, 2: volume. */
-			__( 'New quote request: %1$s (%2$s)', 'moving-storage-volume-calculator' ),
+			__( 'New quote request: %1$s (%2$s)', 'boxmetric-moving-storage-volume-calculator' ),
 			$contact['name'],
 			$volume
 		);
@@ -50,7 +50,7 @@ final class MSVCalc_Mailer {
 		if ( $copy && MSVCalc_Settings::get( 'send_copy' ) ) {
 			$copy_subject = sprintf(
 				/* translators: %s: company name. */
-				__( 'Your moving inventory for %s', 'moving-storage-volume-calculator' ),
+				__( 'Your moving inventory for %s', 'boxmetric-moving-storage-volume-calculator' ),
 				$company
 			);
 			$copy_headers = array( 'Content-Type: text/html; charset=UTF-8' );

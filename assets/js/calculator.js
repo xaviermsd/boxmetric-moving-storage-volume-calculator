@@ -1,5 +1,5 @@
 /**
- * Moving & Storage Volume Calculator: front-end app.
+ * BoxMetric: front-end app.
  *
  * Plain modern JavaScript, no dependencies. Every calculator on the page is
  * an independent instance that reads the shared window.msvcalcConfig.

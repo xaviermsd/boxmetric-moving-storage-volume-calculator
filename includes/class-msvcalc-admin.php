@@ -10,7 +10,7 @@ declare( strict_types=1 );
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Builds the "Volume Calculator" admin menu and handles its forms.
+ * Builds the "BoxMetric" admin menu and handles its forms.
  */
 final class MSVCalc_Admin {
 
@@ -76,19 +76,19 @@ final class MSVCalc_Admin {
 	 */
 	public static function menu(): void {
 		add_menu_page(
-			__( 'Moving & Storage Volume Calculator', 'moving-storage-volume-calculator' ),
-			__( 'Volume Calculator', 'moving-storage-volume-calculator' ),
+			__( 'BoxMetric: Moving & Storage Volume Calculator', 'boxmetric-moving-storage-volume-calculator' ),
+			'BoxMetric',
 			'manage_options',
 			self::MENU_SLUG,
 			array( __CLASS__, 'page_overview' ),
 			self::menu_icon(),
 			58
 		);
-		add_submenu_page( self::MENU_SLUG, __( 'Overview', 'moving-storage-volume-calculator' ), __( 'Overview', 'moving-storage-volume-calculator' ), 'manage_options', self::MENU_SLUG, array( __CLASS__, 'page_overview' ) );
-		add_submenu_page( self::MENU_SLUG, __( 'Rooms & items', 'moving-storage-volume-calculator' ), __( 'Rooms & items', 'moving-storage-volume-calculator' ), 'manage_options', self::ITEMS_SLUG, array( __CLASS__, 'page_items' ) );
-		add_submenu_page( self::MENU_SLUG, __( 'Vehicles & storage', 'moving-storage-volume-calculator' ), __( 'Vehicles & storage', 'moving-storage-volume-calculator' ), 'manage_options', self::TABLES_SLUG, array( __CLASS__, 'page_tables' ) );
+		add_submenu_page( self::MENU_SLUG, __( 'Overview', 'boxmetric-moving-storage-volume-calculator' ), __( 'Overview', 'boxmetric-moving-storage-volume-calculator' ), 'manage_options', self::MENU_SLUG, array( __CLASS__, 'page_overview' ) );
+		add_submenu_page( self::MENU_SLUG, __( 'Rooms & items', 'boxmetric-moving-storage-volume-calculator' ), __( 'Rooms & items', 'boxmetric-moving-storage-volume-calculator' ), 'manage_options', self::ITEMS_SLUG, array( __CLASS__, 'page_items' ) );
+		add_submenu_page( self::MENU_SLUG, __( 'Vehicles & storage', 'boxmetric-moving-storage-volume-calculator' ), __( 'Vehicles & storage', 'boxmetric-moving-storage-volume-calculator' ), 'manage_options', self::TABLES_SLUG, array( __CLASS__, 'page_tables' ) );
 		MSVCalc_Leads_Admin::add_page();
-		add_submenu_page( self::MENU_SLUG, __( 'Settings', 'moving-storage-volume-calculator' ), __( 'Settings', 'moving-storage-volume-calculator' ), 'manage_options', self::SETTINGS_SLUG, array( __CLASS__, 'page_settings' ) );
+		add_submenu_page( self::MENU_SLUG, __( 'Settings', 'boxmetric-moving-storage-volume-calculator' ), __( 'Settings', 'boxmetric-moving-storage-volume-calculator' ), 'manage_options', self::SETTINGS_SLUG, array( __CLASS__, 'page_settings' ) );
 	}
 
 	/**
@@ -181,10 +181,10 @@ final class MSVCalc_Admin {
 	 */
 	public static function regions(): array {
 		return array(
-			'uk' => __( 'United Kingdom & Ireland', 'moving-storage-volume-calculator' ),
-			'eu' => __( 'Europe', 'moving-storage-volume-calculator' ),
-			'us' => __( 'United States & Canada', 'moving-storage-volume-calculator' ),
-			'au' => __( 'Australia & New Zealand', 'moving-storage-volume-calculator' ),
+			'uk' => __( 'United Kingdom & Ireland', 'boxmetric-moving-storage-volume-calculator' ),
+			'eu' => __( 'Europe', 'boxmetric-moving-storage-volume-calculator' ),
+			'us' => __( 'United States & Canada', 'boxmetric-moving-storage-volume-calculator' ),
+			'au' => __( 'Australia & New Zealand', 'boxmetric-moving-storage-volume-calculator' ),
 		);
 	}
 
@@ -195,7 +195,7 @@ final class MSVCalc_Admin {
 	 * @return array<int|string, string>
 	 */
 	public static function action_links( array $links ): array {
-		$settings = sprintf( '<a href="%1$s">%2$s</a>', esc_url( admin_url( 'admin.php?page=' . self::SETTINGS_SLUG ) ), esc_html__( 'Settings', 'moving-storage-volume-calculator' ) );
+		$settings = sprintf( '<a href="%1$s">%2$s</a>', esc_url( admin_url( 'admin.php?page=' . self::SETTINGS_SLUG ) ), esc_html__( 'Settings', 'boxmetric-moving-storage-volume-calculator' ) );
 		array_unshift( $links, $settings );
 		return $links;
 	}
@@ -218,7 +218,7 @@ final class MSVCalc_Admin {
 		echo '<div class="msvcalc-admin-head">';
 		echo wp_kses( MSVCalc_Icons::logo( 40 ), MSVCalc_Icons::allowed_html() );
 		echo '<div><h1>' . esc_html( $title ) . '</h1>';
-		echo '<p>' . esc_html__( 'Moving & Storage Volume Calculator', 'moving-storage-volume-calculator' ) . ' <span class="msvcalc-version">' . esc_html( MSVCALC_VERSION ) . '</span></p></div>';
+		echo '<p>' . esc_html__( 'BoxMetric: Moving & Storage Volume Calculator', 'boxmetric-moving-storage-volume-calculator' ) . ' <span class="msvcalc-version">' . esc_html( MSVCALC_VERSION ) . '</span></p></div>';
 		echo '</div>';
 		echo '<hr class="wp-header-end">';
 	}
@@ -229,12 +229,12 @@ final class MSVCalc_Admin {
 	private static function notices(): void {
 		$notice = isset( $_GET['msvcalc_notice'] ) ? sanitize_key( wp_unslash( $_GET['msvcalc_notice'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only display of a fixed message.
 		$map    = array(
-			'saved'        => array( 'success', __( 'Changes saved.', 'moving-storage-volume-calculator' ) ),
-			'imported'     => array( 'success', __( 'Items imported.', 'moving-storage-volume-calculator' ) ),
-			'reset'        => array( 'success', __( 'Defaults restored.', 'moving-storage-volume-calculator' ) ),
-			'invalid'      => array( 'error', __( 'Nothing was saved: the data was not valid.', 'moving-storage-volume-calculator' ) ),
-			'bad_file'     => array( 'error', __( 'Please choose a JSON file exported from this plugin (2 MB or smaller).', 'moving-storage-volume-calculator' ) ),
-			'empty_import' => array( 'error', __( 'That file has no valid rooms and items.', 'moving-storage-volume-calculator' ) ),
+			'saved'        => array( 'success', __( 'Changes saved.', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'imported'     => array( 'success', __( 'Items imported.', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'reset'        => array( 'success', __( 'Defaults restored.', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'invalid'      => array( 'error', __( 'Nothing was saved: the data was not valid.', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'bad_file'     => array( 'error', __( 'Please choose a JSON file exported from this plugin (2 MB or smaller).', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'empty_import' => array( 'error', __( 'That file has no valid rooms and items.', 'boxmetric-moving-storage-volume-calculator' ) ),
 		);
 		if ( isset( $map[ $notice ] ) ) {
 			printf( '<div class="notice notice-%1$s is-dismissible"><p>%2$s</p></div>', esc_attr( $map[ $notice ][0] ), esc_html( $map[ $notice ][1] ) );
@@ -266,49 +266,49 @@ final class MSVCalc_Admin {
 		);
 		?>
 		<div class="wrap msvcalc-wrap">
-			<?php self::header( __( 'Overview', 'moving-storage-volume-calculator' ) ); ?>
+			<?php self::header( __( 'Overview', 'boxmetric-moving-storage-volume-calculator' ) ); ?>
 
 			<div class="msvcalc-stats">
 				<div class="msvcalc-stat">
 					<?php MSVCalc_Icons::render( 'list', 22 ); ?>
 					<strong><?php echo esc_html( number_format_i18n( count( $catalogue['items'] ) ) ); ?></strong>
-					<span><?php esc_html_e( 'items in', 'moving-storage-volume-calculator' ); ?> <?php echo esc_html( number_format_i18n( count( $catalogue['rooms'] ) ) ); ?> <?php esc_html_e( 'rooms', 'moving-storage-volume-calculator' ); ?></span>
+					<span><?php esc_html_e( 'items in', 'boxmetric-moving-storage-volume-calculator' ); ?> <?php echo esc_html( number_format_i18n( count( $catalogue['rooms'] ) ) ); ?> <?php esc_html_e( 'rooms', 'boxmetric-moving-storage-volume-calculator' ); ?></span>
 				</div>
 				<div class="msvcalc-stat">
 					<?php MSVCalc_Icons::render( 'mail', 22 ); ?>
 					<strong><?php echo esc_html( number_format_i18n( $leads ) ); ?></strong>
-					<span><?php esc_html_e( 'quote requests', 'moving-storage-volume-calculator' ); ?></span>
+					<span><?php esc_html_e( 'quote requests', 'boxmetric-moving-storage-volume-calculator' ); ?></span>
 				</div>
 				<div class="msvcalc-stat">
 					<?php MSVCalc_Icons::render( 'sparkle', 22 ); ?>
 					<strong><?php echo esc_html( number_format_i18n( $new ) ); ?></strong>
-					<span><?php esc_html_e( 'waiting for a reply', 'moving-storage-volume-calculator' ); ?></span>
+					<span><?php esc_html_e( 'waiting for a reply', 'boxmetric-moving-storage-volume-calculator' ); ?></span>
 				</div>
 			</div>
 
 			<div class="msvcalc-columns">
 				<div class="msvcalc-card">
-					<h2><?php esc_html_e( 'Add the calculator to a page', 'moving-storage-volume-calculator' ); ?></h2>
-					<p><?php esc_html_e( 'In the block editor, add the "Volume Calculator" block. Anywhere else (classic editor, page builders, widgets), paste this shortcode:', 'moving-storage-volume-calculator' ); ?></p>
+					<h2><?php esc_html_e( 'Add the calculator to a page', 'boxmetric-moving-storage-volume-calculator' ); ?></h2>
+					<p><?php esc_html_e( 'In the block editor, add the "BoxMetric Volume Calculator" block. Anywhere else (classic editor, page builders, widgets), paste this shortcode:', 'boxmetric-moving-storage-volume-calculator' ); ?></p>
 					<div class="msvcalc-copy">
 						<code id="msvcalc-shortcode">[<?php echo esc_html( MSVCalc_Frontend::SHORTCODE ); ?>]</code>
-						<button type="button" class="button" data-msvcalc-copy="#msvcalc-shortcode"><?php esc_html_e( 'Copy', 'moving-storage-volume-calculator' ); ?></button>
+						<button type="button" class="button" data-msvcalc-copy="#msvcalc-shortcode"><?php esc_html_e( 'Copy', 'boxmetric-moving-storage-volume-calculator' ); ?></button>
 					</div>
-					<p class="msvcalc-muted"><?php esc_html_e( 'Optional attributes: units="m3" or "ft3", theme="light", "dark" or "auto", quote="no" to hide the quote form, title="…", intro="…", accent="#0fb5ba".', 'moving-storage-volume-calculator' ); ?></p>
+					<p class="msvcalc-muted"><?php esc_html_e( 'Optional attributes: units="m3" or "ft3", theme="light", "dark" or "auto", quote="no" to hide the quote form, title="…", intro="…", accent="#0fb5ba".', 'boxmetric-moving-storage-volume-calculator' ); ?></p>
 				</div>
 				<div class="msvcalc-card">
-					<h2><?php esc_html_e( 'Make it yours', 'moving-storage-volume-calculator' ); ?></h2>
+					<h2><?php esc_html_e( 'Make it yours', 'boxmetric-moving-storage-volume-calculator' ); ?></h2>
 					<ul class="msvcalc-links">
-						<li><a href="<?php echo esc_url( admin_url( 'admin.php?page=' . self::SETTINGS_SLUG ) ); ?>"><?php MSVCalc_Icons::render( 'sparkle', 18 ); ?><?php esc_html_e( 'Colours, units, region and the quote form', 'moving-storage-volume-calculator' ); ?></a></li>
-						<li><a href="<?php echo esc_url( admin_url( 'admin.php?page=' . self::ITEMS_SLUG ) ); ?>"><?php MSVCalc_Icons::render( 'list', 18 ); ?><?php esc_html_e( 'Rooms, items, volumes and quick-start presets', 'moving-storage-volume-calculator' ); ?></a></li>
-						<li><a href="<?php echo esc_url( admin_url( 'admin.php?page=' . self::TABLES_SLUG ) ); ?>"><?php MSVCalc_Icons::render( 'truck', 18 ); ?><?php esc_html_e( 'Your vans, trucks, containers and storage units', 'moving-storage-volume-calculator' ); ?></a></li>
-						<li><a href="<?php echo esc_url( admin_url( 'admin.php?page=' . self::LEADS_SLUG ) ); ?>"><?php MSVCalc_Icons::render( 'mail', 18 ); ?><?php esc_html_e( 'Leads: follow-ups, notes, CSV and PDF export', 'moving-storage-volume-calculator' ); ?></a></li>
+						<li><a href="<?php echo esc_url( admin_url( 'admin.php?page=' . self::SETTINGS_SLUG ) ); ?>"><?php MSVCalc_Icons::render( 'sparkle', 18 ); ?><?php esc_html_e( 'Colours, units, region and the quote form', 'boxmetric-moving-storage-volume-calculator' ); ?></a></li>
+						<li><a href="<?php echo esc_url( admin_url( 'admin.php?page=' . self::ITEMS_SLUG ) ); ?>"><?php MSVCalc_Icons::render( 'list', 18 ); ?><?php esc_html_e( 'Rooms, items, volumes and quick-start presets', 'boxmetric-moving-storage-volume-calculator' ); ?></a></li>
+						<li><a href="<?php echo esc_url( admin_url( 'admin.php?page=' . self::TABLES_SLUG ) ); ?>"><?php MSVCalc_Icons::render( 'truck', 18 ); ?><?php esc_html_e( 'Your vans, trucks, containers and storage units', 'boxmetric-moving-storage-volume-calculator' ); ?></a></li>
+						<li><a href="<?php echo esc_url( admin_url( 'admin.php?page=' . self::LEADS_SLUG ) ); ?>"><?php MSVCalc_Icons::render( 'mail', 18 ); ?><?php esc_html_e( 'Leads: follow-ups, notes, CSV and PDF export', 'boxmetric-moving-storage-volume-calculator' ); ?></a></li>
 					</ul>
 				</div>
 			</div>
 
-			<h2 class="msvcalc-preview-title"><?php esc_html_e( 'Live preview', 'moving-storage-volume-calculator' ); ?></h2>
-			<p class="msvcalc-muted"><?php esc_html_e( 'This is how visitors see the calculator. Quote requests sent from this preview are real.', 'moving-storage-volume-calculator' ); ?></p>
+			<h2 class="msvcalc-preview-title"><?php esc_html_e( 'Live preview', 'boxmetric-moving-storage-volume-calculator' ); ?></h2>
+			<p class="msvcalc-muted"><?php esc_html_e( 'This is how visitors see the calculator. Quote requests sent from this preview are real.', 'boxmetric-moving-storage-volume-calculator' ); ?></p>
 			<div class="msvcalc-preview">
 				<?php
 				echo MSVCalc_Frontend::render( array() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Rendered by the plugin's own template, every value inside is escaped.
@@ -325,10 +325,10 @@ final class MSVCalc_Admin {
 	 */
 	private static function tabs(): array {
 		return array(
-			'calculator' => __( 'Calculator', 'moving-storage-volume-calculator' ),
-			'look'       => __( 'Look & feel', 'moving-storage-volume-calculator' ),
-			'quote'      => __( 'Quote form', 'moving-storage-volume-calculator' ),
-			'privacy'    => __( 'Data & privacy', 'moving-storage-volume-calculator' ),
+			'calculator' => __( 'Calculator', 'boxmetric-moving-storage-volume-calculator' ),
+			'look'       => __( 'Look & feel', 'boxmetric-moving-storage-volume-calculator' ),
+			'quote'      => __( 'Quote form', 'boxmetric-moving-storage-volume-calculator' ),
+			'privacy'    => __( 'Data & privacy', 'boxmetric-moving-storage-volume-calculator' ),
 		);
 	}
 
@@ -339,77 +339,77 @@ final class MSVCalc_Admin {
 	 */
 	private static function fields(): array {
 		$visibility = array(
-			'required' => __( 'Required', 'moving-storage-volume-calculator' ),
-			'optional' => __( 'Optional', 'moving-storage-volume-calculator' ),
-			'hidden'   => __( 'Hidden', 'moving-storage-volume-calculator' ),
+			'required' => __( 'Required', 'boxmetric-moving-storage-volume-calculator' ),
+			'optional' => __( 'Optional', 'boxmetric-moving-storage-volume-calculator' ),
+			'hidden'   => __( 'Hidden', 'boxmetric-moving-storage-volume-calculator' ),
 		);
 
 		return array(
 			'units'               => array(
 				'calculator',
-				__( 'Default unit', 'moving-storage-volume-calculator' ),
+				__( 'Default unit', 'boxmetric-moving-storage-volume-calculator' ),
 				'select',
 				array(
-					'm3'  => __( 'Cubic metres (m³)', 'moving-storage-volume-calculator' ),
-					'ft3' => __( 'Cubic feet (ft³)', 'moving-storage-volume-calculator' ),
+					'm3'  => __( 'Cubic metres (m³)', 'boxmetric-moving-storage-volume-calculator' ),
+					'ft3' => __( 'Cubic feet (ft³)', 'boxmetric-moving-storage-volume-calculator' ),
 				),
 			),
-			'unit_toggle'         => array( 'calculator', __( 'Unit switch', 'moving-storage-volume-calculator' ), 'checkbox', __( 'Let visitors switch between m³ and ft³', 'moving-storage-volume-calculator' ) ),
-			'region'              => array( 'calculator', __( 'Region', 'moving-storage-volume-calculator' ), 'select', self::regions(), __( 'Picks the vehicle and storage unit sizes used for suggestions.', 'moving-storage-volume-calculator' ) ),
-			'margin'              => array( 'calculator', __( 'Packing margin', 'moving-storage-volume-calculator' ), 'number', '%', __( 'Extra space for packing, padding and gaps, added to the total. 10% is typical.', 'moving-storage-volume-calculator' ) ),
-			'show_presets'        => array( 'calculator', __( 'Quick start', 'moving-storage-volume-calculator' ), 'checkbox', __( 'Show ready-made lists (few items, studio, 1 to 5 bed, garage, storage unit, office, shop, café)', 'moving-storage-volume-calculator' ) ),
-			'show_search'         => array( 'calculator', __( 'Search', 'moving-storage-volume-calculator' ), 'checkbox', __( 'Show the item search', 'moving-storage-volume-calculator' ) ),
-			'show_custom'         => array( 'calculator', __( 'Custom items', 'moving-storage-volume-calculator' ), 'checkbox', __( 'Let visitors add items that are not listed', 'moving-storage-volume-calculator' ) ),
-			'show_boxes'          => array( 'calculator', __( 'Box count', 'moving-storage-volume-calculator' ), 'checkbox', __( 'Show the number of boxes', 'moving-storage-volume-calculator' ) ),
-			'show_weight'         => array( 'calculator', __( 'Weight', 'moving-storage-volume-calculator' ), 'checkbox', __( 'Show an estimated weight', 'moving-storage-volume-calculator' ) ),
-			'show_vehicle'        => array( 'calculator', __( 'Vehicle', 'moving-storage-volume-calculator' ), 'checkbox', __( 'Suggest a van or truck', 'moving-storage-volume-calculator' ) ),
-			'show_container'      => array( 'calculator', __( 'Container', 'moving-storage-volume-calculator' ), 'checkbox', __( 'Suggest a shipping container (for international moves)', 'moving-storage-volume-calculator' ) ),
-			'show_storage'        => array( 'calculator', __( 'Storage unit', 'moving-storage-volume-calculator' ), 'checkbox', __( 'Suggest a storage unit size', 'moving-storage-volume-calculator' ) ),
-			'show_print'          => array( 'calculator', __( 'Print', 'moving-storage-volume-calculator' ), 'checkbox', __( 'Show a print button for the inventory', 'moving-storage-volume-calculator' ) ),
-			'remember'            => array( 'calculator', __( 'Remember the list', 'moving-storage-volume-calculator' ), 'checkbox', __( 'Keep the visitor\'s list in their browser so they can come back to it', 'moving-storage-volume-calculator' ) ),
-			'title'               => array( 'calculator', __( 'Heading', 'moving-storage-volume-calculator' ), 'text', __( 'How much are you moving?', 'moving-storage-volume-calculator' ) ),
-			'intro'               => array( 'calculator', __( 'Introduction', 'moving-storage-volume-calculator' ), 'textarea', MSVCalc_Settings::text( 'intro' ) ),
+			'unit_toggle'         => array( 'calculator', __( 'Unit switch', 'boxmetric-moving-storage-volume-calculator' ), 'checkbox', __( 'Let visitors switch between m³ and ft³', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'region'              => array( 'calculator', __( 'Region', 'boxmetric-moving-storage-volume-calculator' ), 'select', self::regions(), __( 'Picks the vehicle and storage unit sizes used for suggestions.', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'margin'              => array( 'calculator', __( 'Packing margin', 'boxmetric-moving-storage-volume-calculator' ), 'number', '%', __( 'Extra space for packing, padding and gaps, added to the total. 10% is typical.', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'show_presets'        => array( 'calculator', __( 'Quick start', 'boxmetric-moving-storage-volume-calculator' ), 'checkbox', __( 'Show ready-made lists (few items, studio, 1 to 5 bed, garage, storage unit, office, shop, café)', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'show_search'         => array( 'calculator', __( 'Search', 'boxmetric-moving-storage-volume-calculator' ), 'checkbox', __( 'Show the item search', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'show_custom'         => array( 'calculator', __( 'Custom items', 'boxmetric-moving-storage-volume-calculator' ), 'checkbox', __( 'Let visitors add items that are not listed', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'show_boxes'          => array( 'calculator', __( 'Box count', 'boxmetric-moving-storage-volume-calculator' ), 'checkbox', __( 'Show the number of boxes', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'show_weight'         => array( 'calculator', __( 'Weight', 'boxmetric-moving-storage-volume-calculator' ), 'checkbox', __( 'Show an estimated weight', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'show_vehicle'        => array( 'calculator', __( 'Vehicle', 'boxmetric-moving-storage-volume-calculator' ), 'checkbox', __( 'Suggest a van or truck', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'show_container'      => array( 'calculator', __( 'Container', 'boxmetric-moving-storage-volume-calculator' ), 'checkbox', __( 'Suggest a shipping container (for international moves)', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'show_storage'        => array( 'calculator', __( 'Storage unit', 'boxmetric-moving-storage-volume-calculator' ), 'checkbox', __( 'Suggest a storage unit size', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'show_print'          => array( 'calculator', __( 'Print', 'boxmetric-moving-storage-volume-calculator' ), 'checkbox', __( 'Show a print button for the inventory', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'remember'            => array( 'calculator', __( 'Remember the list', 'boxmetric-moving-storage-volume-calculator' ), 'checkbox', __( 'Keep the visitor\'s list in their browser so they can come back to it', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'title'               => array( 'calculator', __( 'Heading', 'boxmetric-moving-storage-volume-calculator' ), 'text', __( 'How much are you moving?', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'intro'               => array( 'calculator', __( 'Introduction', 'boxmetric-moving-storage-volume-calculator' ), 'textarea', MSVCalc_Settings::text( 'intro' ) ),
 			'theme'               => array(
 				'look',
-				__( 'Theme', 'moving-storage-volume-calculator' ),
+				__( 'Theme', 'boxmetric-moving-storage-volume-calculator' ),
 				'select',
 				array(
-					'light' => __( 'Light', 'moving-storage-volume-calculator' ),
-					'dark'  => __( 'Dark', 'moving-storage-volume-calculator' ),
-					'auto'  => __( 'Follow the visitor\'s device', 'moving-storage-volume-calculator' ),
+					'light' => __( 'Light', 'boxmetric-moving-storage-volume-calculator' ),
+					'dark'  => __( 'Dark', 'boxmetric-moving-storage-volume-calculator' ),
+					'auto'  => __( 'Follow the visitor\'s device', 'boxmetric-moving-storage-volume-calculator' ),
 				),
 			),
-			'accent'              => array( 'look', __( 'Main colour', 'moving-storage-volume-calculator' ), 'color' ),
-			'accent_2'            => array( 'look', __( 'Gradient colour', 'moving-storage-volume-calculator' ), 'color', __( 'Blended with the main colour in buttons, the total and the fill bars.', 'moving-storage-volume-calculator' ) ),
-			'radius'              => array( 'look', __( 'Corner roundness', 'moving-storage-volume-calculator' ), 'number', 'px' ),
-			'animations'          => array( 'look', __( 'Animations', 'moving-storage-volume-calculator' ), 'checkbox', __( 'Use smooth transitions (always off for visitors who prefer reduced motion)', 'moving-storage-volume-calculator' ) ),
-			'quote_enabled'       => array( 'quote', __( 'Quote form', 'moving-storage-volume-calculator' ), 'checkbox', __( 'Let visitors send their inventory for a quote', 'moving-storage-volume-calculator' ) ),
-			'notify_email'        => array( 'quote', __( 'Send requests to', 'moving-storage-volume-calculator' ), 'email', (string) get_option( 'admin_email' ) ),
-			'company_name'        => array( 'quote', __( 'Company name', 'moving-storage-volume-calculator' ), 'text', MSVCalc_Settings::text( 'company_name' ) ),
-			'send_copy'           => array( 'quote', __( 'Customer copy', 'moving-storage-volume-calculator' ), 'checkbox', __( 'Email the customer a copy of their inventory', 'moving-storage-volume-calculator' ) ),
-			'field_phone'         => array( 'quote', __( 'Phone field', 'moving-storage-volume-calculator' ), 'select', $visibility ),
-			'field_addresses'     => array( 'quote', __( 'From / to fields', 'moving-storage-volume-calculator' ), 'select', $visibility ),
-			'field_date'          => array( 'quote', __( 'Moving date field', 'moving-storage-volume-calculator' ), 'select', $visibility ),
-			'field_service'       => array( 'quote', __( 'Service field', 'moving-storage-volume-calculator' ), 'select', $visibility ),
-			'field_access'        => array( 'quote', __( 'Floor, lift and parking', 'moving-storage-volume-calculator' ), 'select', $visibility ),
-			'field_extras'        => array( 'quote', __( 'Extra services', 'moving-storage-volume-calculator' ), 'select', array_intersect_key( $visibility, array_flip( array( 'optional', 'hidden' ) ) ) ),
-			'cta_text'            => array( 'quote', __( 'Button text', 'moving-storage-volume-calculator' ), 'text', MSVCalc_Settings::text( 'cta_text' ) ),
-			'consent_text'        => array( 'quote', __( 'Consent text', 'moving-storage-volume-calculator' ), 'textarea', MSVCalc_Settings::text( 'consent_text' ) ),
-			'success_message'     => array( 'quote', __( 'Thank-you message', 'moving-storage-volume-calculator' ), 'textarea', MSVCalc_Settings::text( 'success_message' ) ),
-			'thank_you_page'      => array( 'quote', __( 'Thank-you page', 'moving-storage-volume-calculator' ), 'page', __( 'Optional. Send visitors to this page after a request, for example to track conversions.', 'moving-storage-volume-calculator' ) ),
-			'store_leads'         => array( 'privacy', __( 'Store requests', 'moving-storage-volume-calculator' ), 'checkbox', __( 'Keep quote requests in WordPress (Volume Calculator > Leads) as well as emailing them', 'moving-storage-volume-calculator' ) ),
+			'accent'              => array( 'look', __( 'Main colour', 'boxmetric-moving-storage-volume-calculator' ), 'color' ),
+			'accent_2'            => array( 'look', __( 'Gradient colour', 'boxmetric-moving-storage-volume-calculator' ), 'color', __( 'Blended with the main colour in buttons, the total and the fill bars.', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'radius'              => array( 'look', __( 'Corner roundness', 'boxmetric-moving-storage-volume-calculator' ), 'number', 'px' ),
+			'animations'          => array( 'look', __( 'Animations', 'boxmetric-moving-storage-volume-calculator' ), 'checkbox', __( 'Use smooth transitions (always off for visitors who prefer reduced motion)', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'quote_enabled'       => array( 'quote', __( 'Quote form', 'boxmetric-moving-storage-volume-calculator' ), 'checkbox', __( 'Let visitors send their inventory for a quote', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'notify_email'        => array( 'quote', __( 'Send requests to', 'boxmetric-moving-storage-volume-calculator' ), 'email', (string) get_option( 'admin_email' ) ),
+			'company_name'        => array( 'quote', __( 'Company name', 'boxmetric-moving-storage-volume-calculator' ), 'text', MSVCalc_Settings::text( 'company_name' ) ),
+			'send_copy'           => array( 'quote', __( 'Customer copy', 'boxmetric-moving-storage-volume-calculator' ), 'checkbox', __( 'Email the customer a copy of their inventory', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'field_phone'         => array( 'quote', __( 'Phone field', 'boxmetric-moving-storage-volume-calculator' ), 'select', $visibility ),
+			'field_addresses'     => array( 'quote', __( 'From / to fields', 'boxmetric-moving-storage-volume-calculator' ), 'select', $visibility ),
+			'field_date'          => array( 'quote', __( 'Moving date field', 'boxmetric-moving-storage-volume-calculator' ), 'select', $visibility ),
+			'field_service'       => array( 'quote', __( 'Service field', 'boxmetric-moving-storage-volume-calculator' ), 'select', $visibility ),
+			'field_access'        => array( 'quote', __( 'Floor, lift and parking', 'boxmetric-moving-storage-volume-calculator' ), 'select', $visibility ),
+			'field_extras'        => array( 'quote', __( 'Extra services', 'boxmetric-moving-storage-volume-calculator' ), 'select', array_intersect_key( $visibility, array_flip( array( 'optional', 'hidden' ) ) ) ),
+			'cta_text'            => array( 'quote', __( 'Button text', 'boxmetric-moving-storage-volume-calculator' ), 'text', MSVCalc_Settings::text( 'cta_text' ) ),
+			'consent_text'        => array( 'quote', __( 'Consent text', 'boxmetric-moving-storage-volume-calculator' ), 'textarea', MSVCalc_Settings::text( 'consent_text' ) ),
+			'success_message'     => array( 'quote', __( 'Thank-you message', 'boxmetric-moving-storage-volume-calculator' ), 'textarea', MSVCalc_Settings::text( 'success_message' ) ),
+			'thank_you_page'      => array( 'quote', __( 'Thank-you page', 'boxmetric-moving-storage-volume-calculator' ), 'page', __( 'Optional. Send visitors to this page after a request, for example to track conversions.', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'store_leads'         => array( 'privacy', __( 'Store requests', 'boxmetric-moving-storage-volume-calculator' ), 'checkbox', __( 'Keep quote requests in WordPress (BoxMetric > Leads) as well as emailing them', 'boxmetric-moving-storage-volume-calculator' ) ),
 			'leads_access'        => array(
 				'privacy',
-				__( 'Who can manage leads', 'moving-storage-volume-calculator' ),
+				__( 'Who can manage leads', 'boxmetric-moving-storage-volume-calculator' ),
 				'select',
 				array(
-					'admins'  => __( 'Administrators only', 'moving-storage-volume-calculator' ),
-					'editors' => __( 'Administrators and Editors', 'moving-storage-volume-calculator' ),
+					'admins'  => __( 'Administrators only', 'boxmetric-moving-storage-volume-calculator' ),
+					'editors' => __( 'Administrators and Editors', 'boxmetric-moving-storage-volume-calculator' ),
 				),
-				__( 'Editors see only the Leads screen, never the plugin settings. A role editor plugin can also give the msvcalc_manage_leads capability to any other role.', 'moving-storage-volume-calculator' ),
+				__( 'Editors see only the Leads screen, never the plugin settings. A role editor plugin can also give the msvcalc_manage_leads capability to any other role.', 'boxmetric-moving-storage-volume-calculator' ),
 			),
-			'retention_days'      => array( 'privacy', __( 'Keep requests for', 'moving-storage-volume-calculator' ), 'number', __( 'days', 'moving-storage-volume-calculator' ), __( 'Older requests are deleted automatically. 0 keeps them until you delete them.', 'moving-storage-volume-calculator' ) ),
-			'delete_on_uninstall' => array( 'privacy', __( 'Remove data', 'moving-storage-volume-calculator' ), 'checkbox', __( 'Delete all settings, edited items and quote requests when the plugin is deleted', 'moving-storage-volume-calculator' ) ),
+			'retention_days'      => array( 'privacy', __( 'Keep requests for', 'boxmetric-moving-storage-volume-calculator' ), 'number', __( 'days', 'boxmetric-moving-storage-volume-calculator' ), __( 'Older requests are deleted automatically. 0 keeps them until you delete them.', 'boxmetric-moving-storage-volume-calculator' ) ),
+			'delete_on_uninstall' => array( 'privacy', __( 'Remove data', 'boxmetric-moving-storage-volume-calculator' ), 'checkbox', __( 'Delete all settings, edited items and quote requests when the plugin is deleted', 'boxmetric-moving-storage-volume-calculator' ) ),
 		);
 	}
 
@@ -507,7 +507,7 @@ final class MSVCalc_Admin {
 					esc_attr( (string) ( $field[3] ?? '' ) ),
 					esc_textarea( (string) $value )
 				);
-				echo '<p class="description">' . esc_html__( 'Leave empty to use the default text shown in grey.', 'moving-storage-volume-calculator' ) . '</p>';
+				echo '<p class="description">' . esc_html__( 'Leave empty to use the default text shown in grey.', 'boxmetric-moving-storage-volume-calculator' ) . '</p>';
 				break;
 
 			case 'color':
@@ -527,7 +527,7 @@ final class MSVCalc_Admin {
 						'name'              => esc_attr( $name ),
 						'id'                => esc_attr( $id ),
 						'selected'          => (int) $value,
-						'show_option_none'  => esc_html__( 'Stay on the calculator', 'moving-storage-volume-calculator' ),
+						'show_option_none'  => esc_html__( 'Stay on the calculator', 'boxmetric-moving-storage-volume-calculator' ),
 						'option_none_value' => '0',
 					)
 				);
@@ -550,7 +550,7 @@ final class MSVCalc_Admin {
 		$tabs = self::tabs();
 		?>
 		<div class="wrap msvcalc-wrap">
-			<?php self::header( __( 'Settings', 'moving-storage-volume-calculator' ) ); ?>
+			<?php self::header( __( 'Settings', 'boxmetric-moving-storage-volume-calculator' ) ); ?>
 			<?php settings_errors(); ?>
 			<form method="post" action="options.php" class="msvcalc-settings">
 				<?php settings_fields( MSVCalc_Settings::GROUP ); ?>
@@ -577,9 +577,9 @@ final class MSVCalc_Admin {
 					if ( 'privacy' === $tab && '' === get_privacy_policy_url() ) {
 						printf(
 							'<div class="notice notice-warning inline"><p>%1$s <a href="%2$s">%3$s</a></p></div>',
-							esc_html__( 'Your site has no published privacy policy page, so the quote form cannot link to one. Publish one so customers can see how their details are used.', 'moving-storage-volume-calculator' ),
+							esc_html__( 'Your site has no published privacy policy page, so the quote form cannot link to one. Publish one so customers can see how their details are used.', 'boxmetric-moving-storage-volume-calculator' ),
 							esc_url( admin_url( 'options-privacy.php' ) ),
-							esc_html__( 'Set up a privacy policy page', 'moving-storage-volume-calculator' )
+							esc_html__( 'Set up a privacy policy page', 'boxmetric-moving-storage-volume-calculator' )
 						);
 					}
 					do_settings_sections( self::SETTINGS_SLUG . '-' . $tab );
@@ -603,12 +603,12 @@ final class MSVCalc_Admin {
 		}
 		?>
 		<div class="wrap msvcalc-wrap">
-			<?php self::header( __( 'Rooms & items', 'moving-storage-volume-calculator' ) ); ?>
+			<?php self::header( __( 'Rooms & items', 'boxmetric-moving-storage-volume-calculator' ) ); ?>
 			<?php self::notices(); ?>
 			<p class="msvcalc-lead-text">
-				<?php esc_html_e( 'Rename, add or remove rooms and items, tune volumes to match your own surveys, and choose which items show first. Volumes are entered in your default unit.', 'moving-storage-volume-calculator' ); ?>
+				<?php esc_html_e( 'Rename, add or remove rooms and items, tune volumes to match your own surveys, and choose which items show first. Volumes are entered in your default unit.', 'boxmetric-moving-storage-volume-calculator' ); ?>
 				<?php if ( MSVCalc_Catalogue::is_customised() ) : ?>
-					<span class="msvcalc-badge"><?php esc_html_e( 'Customised', 'moving-storage-volume-calculator' ); ?></span>
+					<span class="msvcalc-badge"><?php esc_html_e( 'Customised', 'boxmetric-moving-storage-volume-calculator' ); ?></span>
 				<?php endif; ?>
 			</p>
 
@@ -617,41 +617,41 @@ final class MSVCalc_Admin {
 				<?php wp_nonce_field( 'msvcalc_save_catalogue', 'msvcalc_nonce' ); ?>
 				<textarea name="msvcalc_catalogue_json" id="msvcalc-catalogue-json" hidden></textarea>
 				<div id="msvcalc-items-editor" class="msvcalc-editor" data-editor="items">
-					<p class="msvcalc-muted"><?php esc_html_e( 'Loading the editor…', 'moving-storage-volume-calculator' ); ?></p>
+					<p class="msvcalc-muted"><?php esc_html_e( 'Loading the editor…', 'boxmetric-moving-storage-volume-calculator' ); ?></p>
 				</div>
 				<div class="msvcalc-savebar">
-					<?php submit_button( __( 'Save rooms & items', 'moving-storage-volume-calculator' ), 'primary', 'submit', false ); ?>
-					<span class="msvcalc-dirty" hidden><?php esc_html_e( 'You have unsaved changes.', 'moving-storage-volume-calculator' ); ?></span>
+					<?php submit_button( __( 'Save rooms & items', 'boxmetric-moving-storage-volume-calculator' ), 'primary', 'submit', false ); ?>
+					<span class="msvcalc-dirty" hidden><?php esc_html_e( 'You have unsaved changes.', 'boxmetric-moving-storage-volume-calculator' ); ?></span>
 				</div>
 			</form>
 
 			<div class="msvcalc-columns msvcalc-tools">
 				<div class="msvcalc-card">
-					<h2><?php esc_html_e( 'Export', 'moving-storage-volume-calculator' ); ?></h2>
-					<p><?php esc_html_e( 'Download your rooms, items and presets as a JSON file, to back them up or copy them to another site.', 'moving-storage-volume-calculator' ); ?></p>
+					<h2><?php esc_html_e( 'Export', 'boxmetric-moving-storage-volume-calculator' ); ?></h2>
+					<p><?php esc_html_e( 'Download your rooms, items and presets as a JSON file, to back them up or copy them to another site.', 'boxmetric-moving-storage-volume-calculator' ); ?></p>
 					<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
 						<input type="hidden" name="action" value="msvcalc_export_catalogue">
 						<?php wp_nonce_field( 'msvcalc_export_catalogue', 'msvcalc_nonce' ); ?>
-						<?php submit_button( __( 'Download JSON', 'moving-storage-volume-calculator' ), 'secondary', 'submit', false ); ?>
+						<?php submit_button( __( 'Download JSON', 'boxmetric-moving-storage-volume-calculator' ), 'secondary', 'submit', false ); ?>
 					</form>
 				</div>
 				<div class="msvcalc-card">
-					<h2><?php esc_html_e( 'Import', 'moving-storage-volume-calculator' ); ?></h2>
-					<p><?php esc_html_e( 'Replace the current rooms, items and presets with a file exported from this plugin.', 'moving-storage-volume-calculator' ); ?></p>
+					<h2><?php esc_html_e( 'Import', 'boxmetric-moving-storage-volume-calculator' ); ?></h2>
+					<p><?php esc_html_e( 'Replace the current rooms, items and presets with a file exported from this plugin.', 'boxmetric-moving-storage-volume-calculator' ); ?></p>
 					<form method="post" enctype="multipart/form-data" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
 						<input type="hidden" name="action" value="msvcalc_import_catalogue">
 						<?php wp_nonce_field( 'msvcalc_import_catalogue', 'msvcalc_nonce' ); ?>
 						<input type="file" name="msvcalc_import" accept=".json,application/json" required>
-						<?php submit_button( __( 'Import', 'moving-storage-volume-calculator' ), 'secondary', 'submit', false ); ?>
+						<?php submit_button( __( 'Import', 'boxmetric-moving-storage-volume-calculator' ), 'secondary', 'submit', false ); ?>
 					</form>
 				</div>
 				<div class="msvcalc-card">
-					<h2><?php esc_html_e( 'Restore defaults', 'moving-storage-volume-calculator' ); ?></h2>
-					<p><?php esc_html_e( 'Go back to the rooms, items and presets that ship with the plugin. Your edits are removed.', 'moving-storage-volume-calculator' ); ?></p>
-					<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" data-msvcalc-confirm="<?php esc_attr_e( 'Restore the default rooms and items? Your edits will be lost.', 'moving-storage-volume-calculator' ); ?>">
+					<h2><?php esc_html_e( 'Restore defaults', 'boxmetric-moving-storage-volume-calculator' ); ?></h2>
+					<p><?php esc_html_e( 'Go back to the rooms, items and presets that ship with the plugin. Your edits are removed.', 'boxmetric-moving-storage-volume-calculator' ); ?></p>
+					<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" data-msvcalc-confirm="<?php esc_attr_e( 'Restore the default rooms and items? Your edits will be lost.', 'boxmetric-moving-storage-volume-calculator' ); ?>">
 						<input type="hidden" name="action" value="msvcalc_reset_catalogue">
 						<?php wp_nonce_field( 'msvcalc_reset_catalogue', 'msvcalc_nonce' ); ?>
-						<?php submit_button( __( 'Restore defaults', 'moving-storage-volume-calculator' ), 'delete', 'submit', false ); ?>
+						<?php submit_button( __( 'Restore defaults', 'boxmetric-moving-storage-volume-calculator' ), 'delete', 'submit', false ); ?>
 					</form>
 				</div>
 			</div>
@@ -668,27 +668,27 @@ final class MSVCalc_Admin {
 		}
 		?>
 		<div class="wrap msvcalc-wrap">
-			<?php self::header( __( 'Vehicles & storage', 'moving-storage-volume-calculator' ) ); ?>
+			<?php self::header( __( 'Vehicles & storage', 'boxmetric-moving-storage-volume-calculator' ) ); ?>
 			<?php self::notices(); ?>
-			<p class="msvcalc-lead-text"><?php esc_html_e( 'The calculator suggests the smallest vehicle, container and storage unit that holds the visitor\'s load. Enter usable (load) capacity, not the gross body size. Add your own fleet and unit sizes for an exact match.', 'moving-storage-volume-calculator' ); ?></p>
+			<p class="msvcalc-lead-text"><?php esc_html_e( 'The calculator suggests the smallest vehicle, container and storage unit that holds the visitor\'s load. Enter usable (load) capacity, not the gross body size. Add your own fleet and unit sizes for an exact match.', 'boxmetric-moving-storage-volume-calculator' ); ?></p>
 
 			<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" id="msvcalc-tables-form">
 				<input type="hidden" name="action" value="msvcalc_save_tables">
 				<?php wp_nonce_field( 'msvcalc_save_tables', 'msvcalc_nonce' ); ?>
 				<textarea name="msvcalc_tables_json" id="msvcalc-tables-json" hidden></textarea>
 				<div id="msvcalc-tables-editor" class="msvcalc-editor" data-editor="tables">
-					<p class="msvcalc-muted"><?php esc_html_e( 'Loading the editor…', 'moving-storage-volume-calculator' ); ?></p>
+					<p class="msvcalc-muted"><?php esc_html_e( 'Loading the editor…', 'boxmetric-moving-storage-volume-calculator' ); ?></p>
 				</div>
 				<div class="msvcalc-savebar">
-					<?php submit_button( __( 'Save vehicles & storage', 'moving-storage-volume-calculator' ), 'primary', 'submit', false ); ?>
-					<span class="msvcalc-dirty" hidden><?php esc_html_e( 'You have unsaved changes.', 'moving-storage-volume-calculator' ); ?></span>
+					<?php submit_button( __( 'Save vehicles & storage', 'boxmetric-moving-storage-volume-calculator' ), 'primary', 'submit', false ); ?>
+					<span class="msvcalc-dirty" hidden><?php esc_html_e( 'You have unsaved changes.', 'boxmetric-moving-storage-volume-calculator' ); ?></span>
 				</div>
 			</form>
 
-			<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" class="msvcalc-reset-form" data-msvcalc-confirm="<?php esc_attr_e( 'Restore the default vehicles, containers and storage units?', 'moving-storage-volume-calculator' ); ?>">
+			<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" class="msvcalc-reset-form" data-msvcalc-confirm="<?php esc_attr_e( 'Restore the default vehicles, containers and storage units?', 'boxmetric-moving-storage-volume-calculator' ); ?>">
 				<input type="hidden" name="action" value="msvcalc_reset_tables">
 				<?php wp_nonce_field( 'msvcalc_reset_tables', 'msvcalc_nonce' ); ?>
-				<?php submit_button( __( 'Restore defaults', 'moving-storage-volume-calculator' ), 'delete', 'submit', false ); ?>
+				<?php submit_button( __( 'Restore defaults', 'boxmetric-moving-storage-volume-calculator' ), 'delete', 'submit', false ); ?>
 			</form>
 		</div>
 		<?php
@@ -700,7 +700,7 @@ final class MSVCalc_Admin {
 	 */
 	private static function require_capability(): void {
 		if ( ! current_user_can( 'manage_options' ) ) {
-			wp_die( esc_html__( 'You are not allowed to change the volume calculator.', 'moving-storage-volume-calculator' ), '', array( 'response' => 403 ) );
+			wp_die( esc_html__( 'You are not allowed to change the volume calculator.', 'boxmetric-moving-storage-volume-calculator' ), '', array( 'response' => 403 ) );
 		}
 	}
 
@@ -766,7 +766,7 @@ final class MSVCalc_Admin {
 		self::require_capability();
 		check_admin_referer( 'msvcalc_export_catalogue', 'msvcalc_nonce' );
 		$payload = array(
-			'plugin'  => 'moving-storage-volume-calculator',
+			'plugin'  => 'boxmetric-moving-storage-volume-calculator',
 			'version' => MSVCALC_VERSION,
 			'units'   => 'm3',
 		) + MSVCalc_Catalogue::get();
@@ -862,64 +862,64 @@ final class MSVCalc_Admin {
 	 */
 	private static function editor_strings(): array {
 		return array(
-			'rooms'         => __( 'Rooms', 'moving-storage-volume-calculator' ),
-			'addRoom'       => __( 'Add room', 'moving-storage-volume-calculator' ),
-			'roomName'      => __( 'Room name', 'moving-storage-volume-calculator' ),
-			'roomGroup'     => __( 'Category', 'moving-storage-volume-calculator' ),
-			'chooseIcon'    => __( 'Choose icon', 'moving-storage-volume-calculator' ),
-			'findIcon'      => __( 'Find an icon', 'moving-storage-volume-calculator' ),
-			'noIcons'       => __( 'No icons match.', 'moving-storage-volume-calculator' ),
-			'newRoom'       => __( 'New room', 'moving-storage-volume-calculator' ),
-			'deleteRoom'    => __( 'Delete room', 'moving-storage-volume-calculator' ),
-			'deleteRoomQ'   => __( 'Delete this room and all its items?', 'moving-storage-volume-calculator' ),
-			'moveUp'        => __( 'Move up', 'moving-storage-volume-calculator' ),
-			'moveDown'      => __( 'Move down', 'moving-storage-volume-calculator' ),
-			'icon'          => __( 'Icon', 'moving-storage-volume-calculator' ),
-			'item'          => __( 'Item', 'moving-storage-volume-calculator' ),
-			'items'         => __( 'Items', 'moving-storage-volume-calculator' ),
-			'addItem'       => __( 'Add item', 'moving-storage-volume-calculator' ),
-			'newItem'       => __( 'New item', 'moving-storage-volume-calculator' ),
-			'volume'        => __( 'Volume', 'moving-storage-volume-calculator' ),
-			'weight'        => __( 'Weight (kg)', 'moving-storage-volume-calculator' ),
-			'aliases'       => __( 'Search words', 'moving-storage-volume-calculator' ),
-			'aliasesHelp'   => __( 'Comma separated, e.g. couch, settee', 'moving-storage-volume-calculator' ),
-			'popular'       => __( 'Common', 'moving-storage-volume-calculator' ),
-			'popularHelp'   => __( 'Shown before "Show all items"', 'moving-storage-volume-calculator' ),
-			'box'           => __( 'Box', 'moving-storage-volume-calculator' ),
-			'boxHelp'       => __( 'Counted as a packing box', 'moving-storage-volume-calculator' ),
-			'delete'        => __( 'Delete', 'moving-storage-volume-calculator' ),
-			'filter'        => __( 'Filter items', 'moving-storage-volume-calculator' ),
-			'presets'       => __( 'Quick-start presets', 'moving-storage-volume-calculator' ),
-			'presetsHelp'   => __( 'Typical inventories visitors can start from. Set the quantity of each item.', 'moving-storage-volume-calculator' ),
-			'preset'        => __( 'Preset', 'moving-storage-volume-calculator' ),
-			'addPreset'     => __( 'Add preset', 'moving-storage-volume-calculator' ),
-			'newPreset'     => __( 'New preset', 'moving-storage-volume-calculator' ),
-			'deletePreset'  => __( 'Delete preset', 'moving-storage-volume-calculator' ),
-			'presetTotal'   => __( 'Preset total', 'moving-storage-volume-calculator' ),
-			'addToPreset'   => __( 'Add an item to this preset…', 'moving-storage-volume-calculator' ),
-			'qty'           => __( 'Qty', 'moving-storage-volume-calculator' ),
-			'name'          => __( 'Name', 'moving-storage-volume-calculator' ),
-			'note'          => __( 'Note', 'moving-storage-volume-calculator' ),
-			'capacity'      => __( 'Usable capacity', 'moving-storage-volume-calculator' ),
-			'addRow'        => __( 'Add row', 'moving-storage-volume-calculator' ),
-			'vehicles'      => __( 'Vans & trucks', 'moving-storage-volume-calculator' ),
-			'containers'    => __( 'Shipping containers', 'moving-storage-volume-calculator' ),
-			'storage'       => __( 'Storage units', 'moving-storage-volume-calculator' ),
-			'region'        => __( 'Region', 'moving-storage-volume-calculator' ),
-			'density'       => __( 'Average density', 'moving-storage-volume-calculator' ),
-			'densityHelp'   => __( 'kg per m³ of household goods, used for the weight estimate when an item has no weight. 150-200 is typical.', 'moving-storage-volume-calculator' ),
-			'unsaved'       => __( 'You have unsaved changes.', 'moving-storage-volume-calculator' ),
-			'copied'        => __( 'Copied', 'moving-storage-volume-calculator' ),
-			'working'       => __( 'Working on it…', 'moving-storage-volume-calculator' ),
-			'saving'        => __( 'Saving…', 'moving-storage-volume-calculator' ),
-			'loading'       => __( 'Loading…', 'moving-storage-volume-calculator' ),
-			'preparingCsv'  => __( 'Preparing your download…', 'moving-storage-volume-calculator' ),
-			'preparingPdf'  => __( 'Preparing your PDF…', 'moving-storage-volume-calculator' ),
-			'failed'        => __( 'That did not work. Please try again.', 'moving-storage-volume-calculator' ),
-			'none'          => __( 'Nothing here yet.', 'moving-storage-volume-calculator' ),
+			'rooms'         => __( 'Rooms', 'boxmetric-moving-storage-volume-calculator' ),
+			'addRoom'       => __( 'Add room', 'boxmetric-moving-storage-volume-calculator' ),
+			'roomName'      => __( 'Room name', 'boxmetric-moving-storage-volume-calculator' ),
+			'roomGroup'     => __( 'Category', 'boxmetric-moving-storage-volume-calculator' ),
+			'chooseIcon'    => __( 'Choose icon', 'boxmetric-moving-storage-volume-calculator' ),
+			'findIcon'      => __( 'Find an icon', 'boxmetric-moving-storage-volume-calculator' ),
+			'noIcons'       => __( 'No icons match.', 'boxmetric-moving-storage-volume-calculator' ),
+			'newRoom'       => __( 'New room', 'boxmetric-moving-storage-volume-calculator' ),
+			'deleteRoom'    => __( 'Delete room', 'boxmetric-moving-storage-volume-calculator' ),
+			'deleteRoomQ'   => __( 'Delete this room and all its items?', 'boxmetric-moving-storage-volume-calculator' ),
+			'moveUp'        => __( 'Move up', 'boxmetric-moving-storage-volume-calculator' ),
+			'moveDown'      => __( 'Move down', 'boxmetric-moving-storage-volume-calculator' ),
+			'icon'          => __( 'Icon', 'boxmetric-moving-storage-volume-calculator' ),
+			'item'          => __( 'Item', 'boxmetric-moving-storage-volume-calculator' ),
+			'items'         => __( 'Items', 'boxmetric-moving-storage-volume-calculator' ),
+			'addItem'       => __( 'Add item', 'boxmetric-moving-storage-volume-calculator' ),
+			'newItem'       => __( 'New item', 'boxmetric-moving-storage-volume-calculator' ),
+			'volume'        => __( 'Volume', 'boxmetric-moving-storage-volume-calculator' ),
+			'weight'        => __( 'Weight (kg)', 'boxmetric-moving-storage-volume-calculator' ),
+			'aliases'       => __( 'Search words', 'boxmetric-moving-storage-volume-calculator' ),
+			'aliasesHelp'   => __( 'Comma separated, e.g. couch, settee', 'boxmetric-moving-storage-volume-calculator' ),
+			'popular'       => __( 'Common', 'boxmetric-moving-storage-volume-calculator' ),
+			'popularHelp'   => __( 'Shown before "Show all items"', 'boxmetric-moving-storage-volume-calculator' ),
+			'box'           => __( 'Box', 'boxmetric-moving-storage-volume-calculator' ),
+			'boxHelp'       => __( 'Counted as a packing box', 'boxmetric-moving-storage-volume-calculator' ),
+			'delete'        => __( 'Delete', 'boxmetric-moving-storage-volume-calculator' ),
+			'filter'        => __( 'Filter items', 'boxmetric-moving-storage-volume-calculator' ),
+			'presets'       => __( 'Quick-start presets', 'boxmetric-moving-storage-volume-calculator' ),
+			'presetsHelp'   => __( 'Typical inventories visitors can start from. Set the quantity of each item.', 'boxmetric-moving-storage-volume-calculator' ),
+			'preset'        => __( 'Preset', 'boxmetric-moving-storage-volume-calculator' ),
+			'addPreset'     => __( 'Add preset', 'boxmetric-moving-storage-volume-calculator' ),
+			'newPreset'     => __( 'New preset', 'boxmetric-moving-storage-volume-calculator' ),
+			'deletePreset'  => __( 'Delete preset', 'boxmetric-moving-storage-volume-calculator' ),
+			'presetTotal'   => __( 'Preset total', 'boxmetric-moving-storage-volume-calculator' ),
+			'addToPreset'   => __( 'Add an item to this preset…', 'boxmetric-moving-storage-volume-calculator' ),
+			'qty'           => __( 'Qty', 'boxmetric-moving-storage-volume-calculator' ),
+			'name'          => __( 'Name', 'boxmetric-moving-storage-volume-calculator' ),
+			'note'          => __( 'Note', 'boxmetric-moving-storage-volume-calculator' ),
+			'capacity'      => __( 'Usable capacity', 'boxmetric-moving-storage-volume-calculator' ),
+			'addRow'        => __( 'Add row', 'boxmetric-moving-storage-volume-calculator' ),
+			'vehicles'      => __( 'Vans & trucks', 'boxmetric-moving-storage-volume-calculator' ),
+			'containers'    => __( 'Shipping containers', 'boxmetric-moving-storage-volume-calculator' ),
+			'storage'       => __( 'Storage units', 'boxmetric-moving-storage-volume-calculator' ),
+			'region'        => __( 'Region', 'boxmetric-moving-storage-volume-calculator' ),
+			'density'       => __( 'Average density', 'boxmetric-moving-storage-volume-calculator' ),
+			'densityHelp'   => __( 'kg per m³ of household goods, used for the weight estimate when an item has no weight. 150-200 is typical.', 'boxmetric-moving-storage-volume-calculator' ),
+			'unsaved'       => __( 'You have unsaved changes.', 'boxmetric-moving-storage-volume-calculator' ),
+			'copied'        => __( 'Copied', 'boxmetric-moving-storage-volume-calculator' ),
+			'working'       => __( 'Working on it…', 'boxmetric-moving-storage-volume-calculator' ),
+			'saving'        => __( 'Saving…', 'boxmetric-moving-storage-volume-calculator' ),
+			'loading'       => __( 'Loading…', 'boxmetric-moving-storage-volume-calculator' ),
+			'preparingCsv'  => __( 'Preparing your download…', 'boxmetric-moving-storage-volume-calculator' ),
+			'preparingPdf'  => __( 'Preparing your PDF…', 'boxmetric-moving-storage-volume-calculator' ),
+			'failed'        => __( 'That did not work. Please try again.', 'boxmetric-moving-storage-volume-calculator' ),
+			'none'          => __( 'Nothing here yet.', 'boxmetric-moving-storage-volume-calculator' ),
 			/* translators: %d: number of items. */
-			'itemCount'     => __( '%d items', 'moving-storage-volume-calculator' ),
-			'invalidVolume' => __( 'Enter a volume above zero.', 'moving-storage-volume-calculator' ),
+			'itemCount'     => __( '%d items', 'boxmetric-moving-storage-volume-calculator' ),
+			'invalidVolume' => __( 'Enter a volume above zero.', 'boxmetric-moving-storage-volume-calculator' ),
 		);
 	}
 }

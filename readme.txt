@@ -1,4 +1,4 @@
-=== Moving & Storage Volume Calculator ===
+=== BoxMetric: Moving & Storage Volume Calculator ===
 Contributors: xaviermsd
 Tags: moving calculator, moving company, volume calculator, moving quote, removals
 Requires at least: 6.7
@@ -12,7 +12,7 @@ Moving volume calculator in cubic feet and m³. Customers list items room by roo
 
 == Description ==
 
-**Moving & Storage Volume Calculator** adds a free moving volume calculator to your WordPress site, in cubic feet or cubic metres. It answers the questions your customers already search for: *how much stuff do I have, what size moving truck or removal van do I need, what size storage unit, and how many boxes?* When they are done, they send you the full inventory as a quote request.
+**BoxMetric** adds a free moving volume calculator to your WordPress site, in cubic feet or cubic metres. It answers the questions your customers already search for: *how much stuff do I have, what size moving truck or removal van do I need, what size storage unit, and how many boxes?* When they are done, they send you the full inventory as a quote request.
 
 Visitors list what they are moving, room by room, and see the total volume update as they go. The calculator suggests the van or truck, the shipping container and the storage unit that fit. Each request reaches you with the item list, volume, weight, addresses, floors, parking and moving date, so you can price the job without a home survey or a long phone call.
 
@@ -39,7 +39,7 @@ Visitors list what they are moving, room by room, and see the total volume updat
 
 * **Quote requests** with the visitor's name, email, phone, addresses, moving date and service, floor and lift at each address, parking and extra services (packing, dismantling, storage, disposal, cleaning), plus the full item list and totals.
 * **Email notification** to you, with an optional copy to the customer.
-* **Quote requests are kept in WordPress** under Volume Calculator > Leads, with a status, follow-ups and notes for each, and can be exported as a branded Excel file, a plain CSV file for your CRM, or a PDF report.
+* **Quote requests are kept in WordPress** under BoxMetric > Leads, with a status, follow-ups and notes for each, and can be exported as a branded Excel file, a plain CSV file for your CRM, or a PDF report.
 * **Edit everything.** Change any room, item, volume or preset, and choose from more than 220 icons sorted into categories. Add your own vans, trucks and storage units. Export and import your item list as JSON.
 * **Regional tables** for the UK, Europe, the United States and Australia.
 * **Spam protection** with a hidden field, a security token and a limit on requests per visitor. No captcha and no third-party service.
@@ -54,15 +54,15 @@ Visitors list what they are moving, room by room, and see the total volume updat
 
 == Installation ==
 
-1. Go to Plugins > Add New, search for "Moving & Storage Volume Calculator", click Install Now, then Activate.
-2. Open Volume Calculator > Settings. Choose your region and unit, and enter the email address that should receive quote requests.
-3. Add the "Volume Calculator" block to any page, or paste the shortcode `[msvcalc_calculator]`.
+1. Go to Plugins > Add New, search for "BoxMetric", click Install Now, then Activate.
+2. Open BoxMetric > Settings. Choose your region and unit, and enter the email address that should receive quote requests.
+3. Add the "BoxMetric Volume Calculator" block to any page, or paste the shortcode `[msvcalc_calculator]`.
 
 == Frequently Asked Questions ==
 
 = How do I add a moving volume calculator to my WordPress website? =
 
-Install the plugin, then add the "Volume Calculator" block to any page, or paste the shortcode `[msvcalc_calculator]` anywhere shortcodes work, including page builders. Choose your region, unit (cubic feet or cubic metres) and the email that should receive quote requests under Volume Calculator > Settings.
+Install the plugin, then add the "BoxMetric Volume Calculator" block to any page, or paste the shortcode `[msvcalc_calculator]` anywhere shortcodes work, including page builders. Choose your region, unit (cubic feet or cubic metres) and the email that should receive quote requests under BoxMetric > Settings.
 
 = Is this a moving cost calculator? =
 
@@ -70,7 +70,7 @@ No prices are shown to the customer. Moving costs depend on your rates, distance
 
 = How can a moving company get more leads from its website? =
 
-Give visitors a useful tool instead of a plain contact form. People planning a move want to know how much they have and what size truck or storage unit they need. This calculator answers that, then asks for their details to "Get my free quote". Every lead arrives complete and is kept under Volume Calculator > Leads, with statuses, follow-up reminders, notes and Excel, CSV or PDF export.
+Give visitors a useful tool instead of a plain contact form. People planning a move want to know how much they have and what size truck or storage unit they need. This calculator answers that, then asks for their details to "Get my free quote". Every lead arrives complete and is kept under BoxMetric > Leads, with statuses, follow-up reminders, notes and Excel, CSV or PDF export.
 
 = How many cubic feet is a 1, 2, 3 or 4 bedroom house? =
 
@@ -115,7 +115,7 @@ Yes. Quick Starts cover a storage unit, a garage and shed, a small office, a sho
 
 = Can I use my own vans, trucks and storage units? =
 
-Yes. Edit the sizes or add your own under Volume Calculator > Vehicles & storage. Every room, item, volume, icon and Quick Start can be changed under Rooms & items.
+Yes. Edit the sizes or add your own under BoxMetric > Vehicles & storage. Every room, item, volume, icon and Quick Start can be changed under Rooms & items.
 
 = Can I change the settings for one page only? =
 
@@ -123,11 +123,11 @@ Yes. The shortcode accepts `units` (m3 or ft3), `theme` (light, dark or auto), `
 
 = Emails are not arriving. What can I do? =
 
-The plugin uses WordPress's own email function. If your site's other emails also go missing, install an SMTP plugin to send through a proper mail service. While "Store requests" is on, every request is also saved under Volume Calculator > Leads, and a failed email is flagged there with a "Send email again" button.
+The plugin uses WordPress's own email function. If your site's other emails also go missing, install an SMTP plugin to send through a proper mail service. While "Store requests" is on, every request is also saved under BoxMetric > Leads, and a failed email is flagged there with a "Send email again" button.
 
 = What happens to my data when I delete the plugin? =
 
-By default your settings, items and quote requests are kept, in case you reinstall. Turn on "Remove data" in Volume Calculator > Settings > Data & privacy to delete them with the plugin.
+By default your settings, items and quote requests are kept, in case you reinstall. Turn on "Remove data" in BoxMetric > Settings > Data & privacy to delete them with the plugin.
 
 == Screenshots ==
 

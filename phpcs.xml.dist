@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="Moving &amp; Storage Volume Calculator">
-	<description>WordPress Coding Standards and PHP compatibility for Moving &amp; Storage Volume Calculator.</description>
+<ruleset name="BoxMetric">
+	<description>WordPress Coding Standards and PHP compatibility for BoxMetric.</description>
 
 	<file>.</file>
 	<exclude-pattern>/vendor/*</exclude-pattern>
@@ -21,7 +21,7 @@
 	<rule ref="WordPress.WP.I18n">
 		<properties>
 			<property name="text_domain" type="array">
-				<element value="moving-storage-volume-calculator"/>
+				<element value="boxmetric-moving-storage-volume-calculator"/>
 			</property>
 		</properties>
 	</rule>

@@ -23,7 +23,7 @@ $msvcalc_json = str_replace( '    ', "\t", (string) $msvcalc_json );
 
 $msvcalc_loader = json_encode( MSVCalc_Icons::LOADER, JSON_UNESCAPED_SLASHES );
 
-$msvcalc_js = "/**\n * Moving & Storage Volume Calculator: icon shapes.\n *\n * Drawn for this plugin on a 24 px grid. Generated from\n * includes/class-msvcalc-icons.php by bin/build-icons.php; do not edit by hand.\n *\n * @package MSVCalc\n */\nwindow.msvcalcIcons = " . $msvcalc_json . ";\n\n// The loader mark (see MSVCalc_Icons::LOADER).\nwindow.msvcalcLoader = " . $msvcalc_loader . ";\n";
+$msvcalc_js = "/**\n * BoxMetric: icon shapes.\n *\n * Drawn for this plugin on a 24 px grid. Generated from\n * includes/class-msvcalc-icons.php by bin/build-icons.php; do not edit by hand.\n *\n * @package MSVCalc\n */\nwindow.msvcalcIcons = " . $msvcalc_json . ";\n\n// The loader mark (see MSVCalc_Icons::LOADER).\nwindow.msvcalcLoader = " . $msvcalc_loader . ";\n";
 
 file_put_contents( dirname( __DIR__ ) . '/assets/js/icons.js', $msvcalc_js );
 echo 'Wrote assets/js/icons.js with ' . count( MSVCalc_Icons::shapes() ) . " icons\n";

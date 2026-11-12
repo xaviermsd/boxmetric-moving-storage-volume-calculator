@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Moving & Storage Volume Calculator
+ * Plugin Name:       BoxMetric: Moving & Storage Volume Calculator
  * Description:       A room-by-room removal, storage and moving volume calculator. Visitors add their items, see the total in cubic metres or cubic feet, get a van, container and storage unit suggestion, and send you a quote request.
  * Version:           1.0.0
  * Requires at least: 6.7
@@ -9,7 +9,7 @@
  * Author URI:        https://github.com/xaviermsd
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       moving-storage-volume-calculator
+ * Text Domain:       boxmetric-moving-storage-volume-calculator
  * Domain Path:       /languages
  *
  * @package MSVCalc

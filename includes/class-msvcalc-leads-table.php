@@ -52,12 +52,12 @@ final class MSVCalc_Leads_Table extends WP_List_Table {
 	public function get_columns() {
 		return array(
 			'cb'       => '<input type="checkbox">',
-			'customer' => __( 'Customer', 'moving-storage-volume-calculator' ),
-			'volume'   => __( 'Quote', 'moving-storage-volume-calculator' ),
-			'move'     => __( 'Move', 'moving-storage-volume-calculator' ),
-			'status'   => __( 'Status', 'moving-storage-volume-calculator' ),
-			'followup' => __( 'Follow-up', 'moving-storage-volume-calculator' ),
-			'received' => __( 'Received', 'moving-storage-volume-calculator' ),
+			'customer' => __( 'Customer', 'boxmetric-moving-storage-volume-calculator' ),
+			'volume'   => __( 'Quote', 'boxmetric-moving-storage-volume-calculator' ),
+			'move'     => __( 'Move', 'boxmetric-moving-storage-volume-calculator' ),
+			'status'   => __( 'Status', 'boxmetric-moving-storage-volume-calculator' ),
+			'followup' => __( 'Follow-up', 'boxmetric-moving-storage-volume-calculator' ),
+			'received' => __( 'Received', 'boxmetric-moving-storage-volume-calculator' ),
 		);
 	}
 
@@ -84,9 +84,9 @@ final class MSVCalc_Leads_Table extends WP_List_Table {
 		$actions = array();
 		foreach ( MSVCalc_Leads::statuses() as $key => $label ) {
 			/* translators: %s: status name. */
-			$actions[ 'status_' . $key ] = sprintf( __( 'Mark as %s', 'moving-storage-volume-calculator' ), $label );
+			$actions[ 'status_' . $key ] = sprintf( __( 'Mark as %s', 'boxmetric-moving-storage-volume-calculator' ), $label );
 		}
-		$actions['delete'] = __( 'Delete permanently', 'moving-storage-volume-calculator' );
+		$actions['delete'] = __( 'Delete permanently', 'boxmetric-moving-storage-volume-calculator' );
 		return $actions;
 	}
 
@@ -109,13 +109,13 @@ final class MSVCalc_Leads_Table extends WP_List_Table {
 				esc_html( number_format_i18n( $count ) )
 			);
 		};
-		$views   = array( 'all' => $link( '', __( 'All', 'moving-storage-volume-calculator' ), $stats['total'] ) );
+		$views   = array( 'all' => $link( '', __( 'All', 'boxmetric-moving-storage-volume-calculator' ), $stats['total'] ) );
 		foreach ( MSVCalc_Leads::statuses() as $key => $label ) {
 			$views[ $key ] = $link( $key, $label, $stats[ $key ] );
 		}
-		$views['followup'] = $link( 'followup', __( 'Follow-ups due', 'moving-storage-volume-calculator' ), $stats['followups'] );
+		$views['followup'] = $link( 'followup', __( 'Follow-ups due', 'boxmetric-moving-storage-volume-calculator' ), $stats['followups'] );
 		if ( $stats['failed'] || 'mail_failed' === $current ) {
-			$views['mail_failed'] = $link( 'mail_failed', __( 'Email failed', 'moving-storage-volume-calculator' ), $stats['failed'] );
+			$views['mail_failed'] = $link( 'mail_failed', __( 'Email failed', 'boxmetric-moving-storage-volume-calculator' ), $stats['failed'] );
 		}
 		return $views;
 	}
@@ -131,24 +131,24 @@ final class MSVCalc_Leads_Table extends WP_List_Table {
 		}
 		?>
 		<div class="alignleft actions msvcalc-leads__filters">
-			<label class="screen-reader-text" for="msvcalc-filter-service"><?php esc_html_e( 'Service', 'moving-storage-volume-calculator' ); ?></label>
+			<label class="screen-reader-text" for="msvcalc-filter-service"><?php esc_html_e( 'Service', 'boxmetric-moving-storage-volume-calculator' ); ?></label>
 			<select id="msvcalc-filter-service" name="service">
-				<option value=""><?php esc_html_e( 'All services', 'moving-storage-volume-calculator' ); ?></option>
+				<option value=""><?php esc_html_e( 'All services', 'boxmetric-moving-storage-volume-calculator' ); ?></option>
 				<?php foreach ( MSVCalc_Leads::services() as $key => $label ) : ?>
 					<option value="<?php echo esc_attr( $key ); ?>" <?php selected( $this->filters['service'], $key ); ?>><?php echo esc_html( $label ); ?></option>
 				<?php endforeach; ?>
 			</select>
 			<label class="msvcalc-leads__date">
-				<span><?php esc_html_e( 'From', 'moving-storage-volume-calculator' ); ?></span>
+				<span><?php esc_html_e( 'From', 'boxmetric-moving-storage-volume-calculator' ); ?></span>
 				<input type="date" name="date_from" value="<?php echo esc_attr( $this->filters['from'] ); ?>">
 			</label>
 			<label class="msvcalc-leads__date">
-				<span><?php esc_html_e( 'To', 'moving-storage-volume-calculator' ); ?></span>
+				<span><?php esc_html_e( 'To', 'boxmetric-moving-storage-volume-calculator' ); ?></span>
 				<input type="date" name="date_to" value="<?php echo esc_attr( $this->filters['to'] ); ?>">
 			</label>
-			<?php submit_button( __( 'Filter', 'moving-storage-volume-calculator' ), '', 'filter_action', false ); ?>
+			<?php submit_button( __( 'Filter', 'boxmetric-moving-storage-volume-calculator' ), '', 'filter_action', false ); ?>
 			<?php if ( $this->filters['service'] || $this->filters['from'] || $this->filters['to'] || $this->filters['s'] ) : ?>
-				<a class="button-link" href="<?php echo esc_url( add_query_arg( array_filter( array( 'status' => $this->filters['status'] ) ), admin_url( 'admin.php?page=' . MSVCalc_Admin::LEADS_SLUG ) ) ); ?>"><?php esc_html_e( 'Clear filters', 'moving-storage-volume-calculator' ); ?></a>
+				<a class="button-link" href="<?php echo esc_url( add_query_arg( array_filter( array( 'status' => $this->filters['status'] ) ), admin_url( 'admin.php?page=' . MSVCalc_Admin::LEADS_SLUG ) ) ); ?>"><?php esc_html_e( 'Clear filters', 'boxmetric-moving-storage-volume-calculator' ); ?></a>
 			<?php endif; ?>
 		</div>
 		<?php
@@ -183,10 +183,10 @@ final class MSVCalc_Leads_Table extends WP_List_Table {
 	 */
 	public function no_items() {
 		if ( array_filter( array( $this->filters['status'], $this->filters['service'], $this->filters['from'], $this->filters['to'], $this->filters['s'] ) ) ) {
-			esc_html_e( 'No leads match these filters.', 'moving-storage-volume-calculator' );
+			esc_html_e( 'No leads match these filters.', 'boxmetric-moving-storage-volume-calculator' );
 			return;
 		}
-		esc_html_e( 'No leads yet. Every quote request sent from the calculator appears here.', 'moving-storage-volume-calculator' );
+		esc_html_e( 'No leads yet. Every quote request sent from the calculator appears here.', 'boxmetric-moving-storage-volume-calculator' );
 	}
 
 	/**
@@ -199,7 +199,7 @@ final class MSVCalc_Leads_Table extends WP_List_Table {
 		return sprintf(
 			'<label class="screen-reader-text" for="msvcalc-lead-%1$d">%2$s</label><input type="checkbox" id="msvcalc-lead-%1$d" name="lead_ids[]" value="%1$d">',
 			(int) $item->ID,
-			esc_html__( 'Select lead', 'moving-storage-volume-calculator' )
+			esc_html__( 'Select lead', 'boxmetric-moving-storage-volume-calculator' )
 		);
 	}
 
@@ -228,12 +228,12 @@ final class MSVCalc_Leads_Table extends WP_List_Table {
 		$out .= '</div></div>';
 
 		$actions = array(
-			'view' => '<a href="' . esc_url( $link ) . '">' . esc_html__( 'Open', 'moving-storage-volume-calculator' ) . '</a>',
+			'view' => '<a href="' . esc_url( $link ) . '">' . esc_html__( 'Open', 'boxmetric-moving-storage-volume-calculator' ) . '</a>',
 		);
 		if ( ! empty( $contact['email'] ) ) {
-			$actions['email'] = '<a href="' . esc_url( 'mailto:' . $contact['email'] ) . '">' . esc_html__( 'Email', 'moving-storage-volume-calculator' ) . '</a>';
+			$actions['email'] = '<a href="' . esc_url( 'mailto:' . $contact['email'] ) . '">' . esc_html__( 'Email', 'boxmetric-moving-storage-volume-calculator' ) . '</a>';
 		}
-		$actions['pdf'] = '<a target="_blank" rel="noopener" href="' . esc_url( wp_nonce_url( admin_url( 'admin-post.php?action=msvcalc_lead_report&lead=' . (int) $item->ID ), 'msvcalc_lead_report' ) ) . '">' . esc_html__( 'PDF', 'moving-storage-volume-calculator' ) . '</a>';
+		$actions['pdf'] = '<a target="_blank" rel="noopener" href="' . esc_url( wp_nonce_url( admin_url( 'admin-post.php?action=msvcalc_lead_report&lead=' . (int) $item->ID ), 'msvcalc_lead_report' ) ) . '">' . esc_html__( 'PDF', 'boxmetric-moving-storage-volume-calculator' ) . '</a>';
 
 		return $out . $this->row_actions( $actions );
 	}
@@ -250,7 +250,7 @@ final class MSVCalc_Leads_Table extends WP_List_Table {
 		$units  = (string) ( $data['units'] ?? 'm3' );
 		$out    = '<strong class="msvcalc-volume">' . esc_html( MSVCalc_Calculator::format_volume( (float) ( $result['m3'] ?? 0 ), $units ) ) . '</strong>';
 		/* translators: %s: number of items. */
-		$out .= '<br><span class="msvcalc-muted">' . esc_html( sprintf( _n( '%s item', '%s items', (int) ( $result['count'] ?? 0 ), 'moving-storage-volume-calculator' ), number_format_i18n( (int) ( $result['count'] ?? 0 ) ) ) );
+		$out .= '<br><span class="msvcalc-muted">' . esc_html( sprintf( _n( '%s item', '%s items', (int) ( $result['count'] ?? 0 ), 'boxmetric-moving-storage-volume-calculator' ), number_format_i18n( (int) ( $result['count'] ?? 0 ) ) ) );
 		if ( ! empty( $result['vehicle']['label'] ) ) {
 			$out .= ' · ' . esc_html( (string) $result['vehicle']['label'] );
 		}
@@ -322,7 +322,7 @@ final class MSVCalc_Leads_Table extends WP_List_Table {
 	protected function column_received( $item ) {
 		$time = (int) get_post_time( 'U', true, $item );
 		/* translators: %s: time span, e.g. "2 hours". */
-		$ago = sprintf( __( '%s ago', 'moving-storage-volume-calculator' ), human_time_diff( $time ) );
+		$ago = sprintf( __( '%s ago', 'boxmetric-moving-storage-volume-calculator' ), human_time_diff( $time ) );
 		return '<span title="' . esc_attr( wp_date( (string) get_option( 'date_format' ) . ' ' . (string) get_option( 'time_format' ), $time ) ) . '">' . esc_html( $ago ) . '</span><br><span class="msvcalc-muted">' . esc_html( MSVCalc_Leads::source_text( (int) $item->ID ) ) . '</span>';
 	}
 

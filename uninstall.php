@@ -4,7 +4,7 @@
  *
  * The scheduled clean-up is always removed. Settings, edited items and quote
  * requests are only deleted when "Remove data" is ticked in
- * Volume Calculator > Settings > Data & privacy.
+ * BoxMetric > Settings > Data & privacy.
  *
  * @package MSVCalc
  */

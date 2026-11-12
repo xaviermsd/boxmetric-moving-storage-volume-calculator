@@ -1,11 +1,13 @@
 <p align="center">
-  <img src=".github/media/logo-animated.svg" alt="Moving &amp; Storage Volume Calculator logo" width="96" height="96">
+  <img src=".github/media/logo-animated.svg" alt="BoxMetric logo" width="96" height="96">
 </p>
 
-<h1 align="center">Moving &amp; Storage Volume Calculator</h1>
+<h1 align="center">BoxMetric</h1>
+
+<p align="center"><b>Moving &amp; Storage Volume Calculator for WordPress</b></p>
 
 <p align="center">
-  <img src=".wordpress-org/banner-1544x500.jpg" alt="Moving & Storage Volume Calculator for WordPress. Know the volume. Quote the move." width="100%">
+  <img src=".wordpress-org/banner-1544x500.jpg" alt="BoxMetric, the moving and storage volume calculator for WordPress. Know the volume. Quote the move." width="100%">
 </p>
 
 <p align="center">
@@ -16,7 +18,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/xaviermsd/moving-storage-volume-calculator/releases/latest"><img src="https://img.shields.io/badge/Download-Latest%20zip-84cc16?style=for-the-badge&logo=github&logoColor=84cc16&labelColor=0f1d29" alt="Download the latest release zip"></a>
+  <a href="https://github.com/xaviermsd/boxmetric-moving-storage-volume-calculator/releases/latest"><img src="https://img.shields.io/badge/Download-Latest%20zip-84cc16?style=for-the-badge&logo=github&logoColor=84cc16&labelColor=0f1d29" alt="Download the latest release zip"></a>
   <a href="#see-it-in-action"><img src="https://img.shields.io/badge/See%20it-In%20action-0fb5ba?style=for-the-badge&logo=wordpress&logoColor=0fb5ba&labelColor=0f1d29" alt="See it in action"></a>
 </p>
 
@@ -64,14 +66,14 @@ Click a task to jump straight to how it works.
 - **Follow up every enquiry until it is booked**<br>**Leads**: statuses, follow-up reminders, notes, Excel, CSV and PDF · [Show me](#manage-every-lead)
 
 > [!TIP]
-> Add the **Volume Calculator** block to any page, or the shortcode `[msvcalc_calculator]`. It works out of
+> Add the **BoxMetric Volume Calculator** block to any page, or the shortcode `[msvcalc_calculator]`. It works out of
 > the box with UK, European, US or Australian vehicle and storage sizes.
 
 ---
 
 ## See it in action
 
-<a href="https://youtu.be/raBU40QdFeY"><img src=".github/media/video-preview.jpg" width="100%" alt="Play the Moving &amp; Storage Volume Calculator guide video on YouTube (4:33)"></a>
+<a href="https://youtu.be/raBU40QdFeY"><img src=".github/media/video-preview.jpg" width="100%" alt="Play the BoxMetric guide video on YouTube (4:33)"></a>
 
 [Watch the full guide on YouTube (4:33)](https://youtu.be/raBU40QdFeY). Every screen uses demo data.
 
@@ -134,7 +136,7 @@ One click adds them all to the list, and it can be undone.
 <summary><b>Choose which fields to show</b></summary>
 <br>
 
-Under **Volume Calculator > Settings > Quote form** you choose which fields appear and which are required,
+Under **BoxMetric > Settings > Quote form** you choose which fields appear and which are required,
 the thank-you message or page, the email that receives requests, and whether the customer gets a copy.
 
 </details>
@@ -168,7 +170,7 @@ container and storage unit, every customer and move detail, and the full item li
 
 <img src=".wordpress-org/screenshot-6.png" alt="The Leads list with totals, status views, filters and Excel, CSV and PDF export" width="100%">
 
-**Volume Calculator > Leads** keeps every enquiry in one place.
+**BoxMetric > Leads** keeps every enquiry in one place.
 
 - Totals for new enquiries, follow-ups due and your conversion rate.
 - Status views: New, Contacted, In progress, Converted and Lost.
@@ -214,11 +216,11 @@ Under **Settings > Data & privacy > Who can manage leads**, choose **Administrat
 
 **From GitHub**
 
-1. Download `moving-storage-volume-calculator.zip` from the [latest release](https://github.com/xaviermsd/moving-storage-volume-calculator/releases/latest).
+1. Download `boxmetric-moving-storage-volume-calculator.zip` from the [latest release](https://github.com/xaviermsd/boxmetric-moving-storage-volume-calculator/releases/latest).
 2. In WordPress, go to **Plugins > Add New > Upload Plugin** and choose the zip.
 3. Click **Install Now**, then **Activate**.
 
-Then add the **Volume Calculator** block to a page, or paste the shortcode:
+Then add the **BoxMetric Volume Calculator** block to a page, or paste the shortcode:
 
 ```text
 [msvcalc_calculator]
@@ -228,7 +230,7 @@ Then add the **Volume Calculator** block to a page, or paste the shortcode:
 
 ## Make it yours
 
-**Volume Calculator** in the admin menu:
+**BoxMetric** in the admin menu:
 
 - **Overview**<br>Quick links, the shortcode and what is waiting for a reply.
 - **Rooms & items**<br>Edit any room, item, volume or Quick Start, choose from more than 220 icons, and import or export the list as JSON.
@@ -259,7 +261,7 @@ The questions movers and their customers ask most, answered with the plugin's ow
 <details>
 <summary><b>How do I add a moving volume calculator to my WordPress website?</b></summary>
 
-Install the plugin, then add the "Volume Calculator" block to any page, or paste the shortcode `[msvcalc_calculator]` anywhere shortcodes work, including page builders. Choose your region, unit (cubic feet or cubic metres) and the email that should receive quote requests under Volume Calculator → Settings.
+Install the plugin, then add the "BoxMetric Volume Calculator" block to any page, or paste the shortcode `[msvcalc_calculator]` anywhere shortcodes work, including page builders. Choose your region, unit (cubic feet or cubic metres) and the email that should receive quote requests under BoxMetric → Settings.
 
 </details>
 
@@ -273,7 +275,7 @@ No prices are shown to the customer. Moving costs depend on your rates, distance
 <details>
 <summary><b>How can a moving company get more leads from its website?</b></summary>
 
-Give visitors a useful tool instead of a plain contact form. People planning a move want to know how much they have and what size truck or storage unit they need. This calculator answers that, then asks for their details to "Get my free quote". Every lead arrives complete and is kept under Volume Calculator → Leads, with statuses, follow-up reminders, notes and Excel, CSV or PDF export.
+Give visitors a useful tool instead of a plain contact form. People planning a move want to know how much they have and what size truck or storage unit they need. This calculator answers that, then asks for their details to "Get my free quote". Every lead arrives complete and is kept under BoxMetric → Leads, with statuses, follow-up reminders, notes and Excel, CSV or PDF export.
 
 </details>
 
@@ -345,7 +347,7 @@ Yes. Quick Starts cover a storage unit, a garage and shed, a small office, a sho
 <details>
 <summary><b>Can I use my own vans, trucks and storage units?</b></summary>
 
-Yes. Edit the sizes or add your own under Volume Calculator → Vehicles & storage. Every room, item, volume, icon and Quick Start can be changed under Rooms & items.
+Yes. Edit the sizes or add your own under BoxMetric → Vehicles & storage. Every room, item, volume, icon and Quick Start can be changed under Rooms & items.
 
 </details>
 
@@ -359,14 +361,14 @@ Yes. The shortcode accepts `units` (m3 or ft3), `theme` (light, dark or auto), `
 <details>
 <summary><b>Emails are not arriving. What can I do?</b></summary>
 
-The plugin uses WordPress's own email function. If your site's other emails also go missing, install an SMTP plugin to send through a proper mail service. While "Store requests" is on, every request is also saved under Volume Calculator → Leads, and a failed email is flagged there with a "Send email again" button.
+The plugin uses WordPress's own email function. If your site's other emails also go missing, install an SMTP plugin to send through a proper mail service. While "Store requests" is on, every request is also saved under BoxMetric → Leads, and a failed email is flagged there with a "Send email again" button.
 
 </details>
 
 <details>
 <summary><b>What happens to my data when I delete the plugin?</b></summary>
 
-By default your settings, items and quote requests are kept, in case you reinstall. Turn on "Remove data" in Volume Calculator → Settings → Data & privacy to delete them with the plugin.
+By default your settings, items and quote requests are kept, in case you reinstall. Turn on "Remove data" in BoxMetric → Settings → Data & privacy to delete them with the plugin.
 
 </details>
 
@@ -382,7 +384,7 @@ By default your settings, items and quote requests are kept, in case you reinsta
 phpcs                                   # WordPress Coding Standards + PHP 7.4+ compatibility
 php bin/build-icons.php                 # rebuild assets/js/icons.js after editing icons
 bash bin/build-zip.sh                   # release zip in build/, without development files
-wp i18n make-pot . languages/moving-storage-volume-calculator.pot --exclude=build,bin
+wp i18n make-pot . languages/boxmetric-moving-storage-volume-calculator.pot --exclude=build,bin
 ```
 
 There is no build step for the scripts. The block uses the editor's global packages.
@@ -415,12 +417,12 @@ There is no build step for the scripts. The block uses the editor's global packa
 <br>
 
 ```
-moving-storage-volume-calculator.php   Plugin header and loader
+boxmetric-msvc.php                     Plugin header and loader
 uninstall.php                          Removes data only when the user asked for it
 includes/                              One class per job (calculator, leads, mailer, REST, privacy, ...)
 templates/                             Admin screens, the email and the PDF report
 assets/                                Scripts, styles and icons for the calculator and the admin
-blocks/                                The Volume Calculator block
+blocks/                                The BoxMetric Volume Calculator block
 data/                                  Shipped rooms, items, presets and regional tables
 languages/                             Translation template
 .wordpress-org/                        Banner, icon and screenshots for the listing
@@ -444,7 +446,7 @@ languages/                             Translation template
 
 ## Contributing
 
-Issues and pull requests are welcome on [GitHub](https://github.com/xaviermsd/moving-storage-volume-calculator/issues).
+Issues and pull requests are welcome on [GitHub](https://github.com/xaviermsd/boxmetric-moving-storage-volume-calculator/issues).
 For a security issue, please contact me privately instead of opening a public issue.
 
 ## License

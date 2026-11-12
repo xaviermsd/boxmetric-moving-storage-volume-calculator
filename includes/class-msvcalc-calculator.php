@@ -96,7 +96,7 @@ final class MSVCalc_Calculator {
 			$weight += $m3 * $density * $qty;
 			$count  += $qty;
 			$lines[] = array(
-				'room' => __( 'Custom items', 'moving-storage-volume-calculator' ),
+				'room' => __( 'Custom items', 'boxmetric-moving-storage-volume-calculator' ),
 				'name' => $name,
 				'icon' => MSVCalc_Icons::valid( $icon ) ? $icon : 'box',
 				'qty'  => $qty,
@@ -155,7 +155,7 @@ final class MSVCalc_Calculator {
 
 		if ( $full > 0 ) {
 			/* translators: 1: number of vehicles or units, 2: their name. */
-			$parts[] = sprintf( __( '%1$d × %2$s', 'moving-storage-volume-calculator' ), $full, $largest['name'] );
+			$parts[] = sprintf( __( '%1$d × %2$s', 'boxmetric-moving-storage-volume-calculator' ), $full, $largest['name'] );
 		}
 		$extra = null;
 		if ( $rest > 0.01 ) {
@@ -166,7 +166,7 @@ final class MSVCalc_Calculator {
 				}
 			}
 			/* translators: 1: number of vehicles or units, 2: their name. */
-			$parts[] = sprintf( __( '%1$d × %2$s', 'moving-storage-volume-calculator' ), 1, $extra ? $extra['name'] : $largest['name'] );
+			$parts[] = sprintf( __( '%1$d × %2$s', 'boxmetric-moving-storage-volume-calculator' ), 1, $extra ? $extra['name'] : $largest['name'] );
 		}
 
 		$capacity = $full * $largest['m3'] + ( $rest > 0.01 ? ( $extra ? $extra['m3'] : $largest['m3'] ) : 0 );
@@ -189,9 +189,9 @@ final class MSVCalc_Calculator {
 	public static function format_volume( float $m3, string $unit ): string {
 		if ( 'ft3' === $unit ) {
 			/* translators: %s: volume in cubic feet. */
-			return sprintf( __( '%s ft³', 'moving-storage-volume-calculator' ), number_format_i18n( $m3 * self::FT3_PER_M3, 0 ) );
+			return sprintf( __( '%s ft³', 'boxmetric-moving-storage-volume-calculator' ), number_format_i18n( $m3 * self::FT3_PER_M3, 0 ) );
 		}
 		/* translators: %s: volume in cubic metres. */
-		return sprintf( __( '%s m³', 'moving-storage-volume-calculator' ), number_format_i18n( $m3, 2 ) );
+		return sprintf( __( '%s m³', 'boxmetric-moving-storage-volume-calculator' ), number_format_i18n( $m3, 2 ) );
 	}
 }

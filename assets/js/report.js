@@ -1,5 +1,5 @@
 /**
- * Moving & Storage Volume Calculator: lead report. "Save as PDF" opens the
+ * BoxMetric: lead report. "Save as PDF" opens the
  * browser's print dialog, where the report can be saved as a PDF.
  *
  * @package MSVCalc
