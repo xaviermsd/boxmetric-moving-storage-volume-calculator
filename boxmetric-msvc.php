@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       BoxMetric: Moving & Storage Volume Calculator
  * Description:       A room-by-room removal, storage and moving volume calculator. Visitors add their items, see the total in cubic metres or cubic feet, get a van, container and storage unit suggestion, and send you a quote request.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.7
  * Requires PHP:      7.4
  * Author:            Harsh Prajapati
@@ -19,7 +19,7 @@ declare( strict_types=1 );
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'MSVCALC_VERSION', '1.0.0' );
+define( 'MSVCALC_VERSION', '1.0.1' );
 define( 'MSVCALC_FILE', __FILE__ );
 define( 'MSVCALC_DIR', plugin_dir_path( __FILE__ ) );
 define( 'MSVCALC_URL', plugin_dir_url( __FILE__ ) );

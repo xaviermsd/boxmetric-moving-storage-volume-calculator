@@ -4,7 +4,7 @@ Tags: moving calculator, moving company, volume calculator, moving quote, remova
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -141,10 +141,20 @@ By default your settings, items and quote requests are kept, in case you reinsta
 
 == Changelog ==
 
+= 1.0.1 =
+* New name: BoxMetric: Moving & Storage Volume Calculator.
+* Removed the optional "Powered by" link. The plugin adds no credit links anywhere.
+* The customer copy email is now off by default, and each address gets at most one copy a day.
+* The daily clean-up of old quote requests starts again on its own if it ever stops.
+* Security improvements to the quote form.
+
 = 1.0.0 =
 * First release.
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+New name, BoxMetric, and security improvements to the quote form.
 
 = 1.0.0 =
 First release.

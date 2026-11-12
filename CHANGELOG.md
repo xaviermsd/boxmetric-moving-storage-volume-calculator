@@ -4,6 +4,24 @@ All notable changes to BoxMetric are listed here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the
 project uses [Semantic Versioning](https://semver.org/).
 
+## [1.0.1] - 2026-11-12
+
+### Changed
+
+- New name: BoxMetric: Moving & Storage Volume Calculator. The slug and text domain are now `boxmetric-moving-storage-volume-calculator`. The shortcode and saved data are unchanged.
+- The customer copy email is off by default. Each address gets at most one copy a day, and the site sends at most 20 an hour.
+- The daily clean-up of old quote requests re-schedules itself if the event goes missing.
+- The failed-email notice shows on the plugin's own screens only.
+
+### Removed
+
+- The optional "Powered by" link, and the plugin name line in emails, the PDF report and the admin footer.
+
+### Security
+
+- A lead's Page link is only kept for addresses on your own site.
+- New `msvcalc_client_ip` filter, so sites behind a proxy or CDN can rate-limit by the real visitor address.
+
 ## [1.0.0] - 2026-11-08
 
 ### Added
@@ -22,4 +40,5 @@ project uses [Semantic Versioning](https://semver.org/).
 - Consent record on every lead: when the customer agreed, the exact wording and the privacy policy link shown, also in the exports and the personal data export.
 - BoxMetric Volume Calculator block and `[msvcalc_calculator]` shortcode, light, dark or automatic theme.
 
+[1.0.1]: https://github.com/xaviermsd/boxmetric-moving-storage-volume-calculator/releases/tag/v1.0.1
 [1.0.0]: https://github.com/xaviermsd/boxmetric-moving-storage-volume-calculator/releases/tag/v1.0.0
