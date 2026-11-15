@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".github/media/logo-animated.svg" alt="BoxMetric logo" width="96" height="96">
+  <img src=".wordpress-org/icon-256x256.gif" alt="BoxMetric logo" width="96" height="96">
 </p>
 
 <h1 align="center">BoxMetric</h1>
@@ -18,11 +18,13 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/xaviermsd/boxmetric-moving-storage-volume-calculator/releases/latest"><img src="https://img.shields.io/badge/Download-Latest%20zip-84cc16?style=for-the-badge&logo=github&logoColor=84cc16&labelColor=0f1d29" alt="Download the latest release zip"></a>
-  <a href="#see-it-in-action"><img src="https://img.shields.io/badge/See%20it-In%20action-0fb5ba?style=for-the-badge&logo=wordpress&logoColor=0fb5ba&labelColor=0f1d29" alt="See it in action"></a>
+  <a href="https://wordpress.org/plugins/boxmetric-moving-storage-volume-calculator/"><img src="https://img.shields.io/badge/WordPress.org-Get%20BoxMetric-84cc16?style=for-the-badge&logo=wordpress&logoColor=84cc16&labelColor=0f1d29" alt="Get BoxMetric on WordPress.org"></a>
+  <a href="https://downloads.wordpress.org/plugin/boxmetric-moving-storage-volume-calculator.latest-stable.zip"><img src="https://img.shields.io/badge/Download-Latest%20zip-0fb5ba?style=for-the-badge&logo=github&logoColor=0fb5ba&labelColor=0f1d29" alt="Download the latest zip"></a>
+  <a href="#see-it-in-action"><img src="https://img.shields.io/badge/See%20it-In%20action-a9bdcc?style=for-the-badge&logo=youtube&logoColor=a9bdcc&labelColor=0f1d29" alt="See it in action"></a>
 </p>
 
 <p align="center">
+  <a href="https://wordpress.org/plugins/boxmetric-moving-storage-volume-calculator/"><img src="https://img.shields.io/wordpress/plugin/v/boxmetric-moving-storage-volume-calculator?label=version&color=84cc16&labelColor=0f1d29" alt="Version on WordPress.org"></a>
   <img src="https://img.shields.io/badge/WordPress-6.7%2B-0fb5ba?labelColor=0f1d29" alt="WordPress 6.7+">
   <img src="https://img.shields.io/badge/PHP-7.4%2B-0fb5ba?labelColor=0f1d29" alt="PHP 7.4+">
   <img src="https://img.shields.io/badge/items-441-84cc16?labelColor=0f1d29" alt="441 items">
@@ -214,9 +216,16 @@ Under **Settings > Data & privacy > Who can manage leads**, choose **Administrat
 
 ## Install in a minute
 
-**From GitHub**
+**From WordPress (easiest)**
 
-1. Download `boxmetric-moving-storage-volume-calculator.zip` from the [latest release](https://github.com/xaviermsd/boxmetric-moving-storage-volume-calculator/releases/latest).
+1. In WordPress, go to **Plugins > Add New** and search for **BoxMetric**.
+2. Click **Install Now**, then **Activate**.
+
+You get updates straight from [WordPress.org](https://wordpress.org/plugins/boxmetric-moving-storage-volume-calculator/).
+
+**From a zip**
+
+1. Download the [latest zip from WordPress.org](https://downloads.wordpress.org/plugin/boxmetric-moving-storage-volume-calculator.latest-stable.zip), or from the [GitHub releases](https://github.com/xaviermsd/boxmetric-moving-storage-volume-calculator/releases/latest).
 2. In WordPress, go to **Plugins > Add New > Upload Plugin** and choose the zip.
 3. Click **Install Now**, then **Activate**.
 
