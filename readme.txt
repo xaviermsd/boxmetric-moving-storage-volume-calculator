@@ -18,6 +18,12 @@ Visitors list what they are moving, room by room, and see the total volume updat
 
 **Made for:** moving companies, removal firms, man and van services, self-storage operators, international movers and shipping companies, and office and commercial movers. Sizes are included for the UK, Europe, the United States and Australia.
 
+= See it in action =
+
+Watch the full guide (4:33): a customer builds a list, asks for a quote, and the request lands in Leads. Every screen uses demo data.
+
+https://www.youtube.com/watch?v=NWQb5rNFaXc
+
 = For your visitors =
 
 * **441 items in 21 rooms**, from sofas and wardrobes to pianos, hot tubs, shop fittings, salon chairs and pallets. Volumes are checked against a dozen published moving-company calculators.
