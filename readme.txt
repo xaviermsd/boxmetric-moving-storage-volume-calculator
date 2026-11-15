@@ -44,6 +44,22 @@ Visitors list what they are moving, room by room, and see the total volume updat
 * **Regional tables** for the UK, Europe, the United States and Australia.
 * **Spam protection** with a hidden field, a security token and a limit on requests per visitor. No captcha and no third-party service.
 
+= Add it to any page =
+
+Add the **BoxMetric Volume Calculator** block, or paste this shortcode anywhere shortcodes work, including page builders:
+
+`[msvcalc_calculator]`
+
+Change it for one page with these options:
+
+* `units`: `m3` or `ft3`, for example `[msvcalc_calculator units="ft3"]`
+* `theme`: `light`, `dark` or `auto`
+* `quote`: `yes` or `no`, to show or hide the quote form
+* `title` and `intro`: your own heading and intro text
+* `accent`: a hex colour, for example `[msvcalc_calculator accent="#0fb5ba"]`
+
+The block has the same options in its sidebar.
+
 = Built the WordPress way =
 
 * A block and a shortcode. Scripts and styles load only on pages that show the calculator.
