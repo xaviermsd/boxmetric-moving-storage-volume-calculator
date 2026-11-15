@@ -481,7 +481,7 @@ GPL-2.0-or-later. See [LICENSE](LICENSE).
 </p>
 
 <p align="center">
-  <img src=".github/media/logo-animated.svg" alt="" width="44" height="44"><br>
+  <img src=".wordpress-org/icon-256x256.gif" alt="" width="44" height="44"><br>
   <sub>Made by <a href="https://github.com/xaviermsd">Harsh Prajapati</a>, freelance web developer at <a href="https://www.worklancio.in">worklancio.in</a>. <a href="https://www.worklancio.in/work/volume-calculator">Read the case study</a>. Also by the same author:
   <a href="https://wordpress.org/plugins/fieldpilot-for-acf/">FieldPilot, AI and JSON copilot for ACF</a> and
   <a href="https://wordpress.org/plugins/menunest-smart-menu-manager/">MenuNest, the smart menu manager for WordPress</a>.</sub>
